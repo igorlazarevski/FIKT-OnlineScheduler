@@ -37,6 +37,13 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> Query1()
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> query;
+            query = this.GetQuery<global::LightSwitchApplication.Implementation.Predmet>("Predmets");
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -77,6 +84,10 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::LightSwitchApplication.Implementation.TipNaAktivnost))
             {
                 return new global::LightSwitchApplication.Implementation.TipNaAktivnost();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.StatusPredmet))
+            {
+                return new global::LightSwitchApplication.Implementation.StatusPredmet();
             }
     
             return base.CreateObject(type);
@@ -129,6 +140,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.TipNaAktivnost))
             {
                 return new global::LightSwitchApplication.Implementation.TipNaAktivnost();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.StatusPredmet))
+            {
+                return new global::LightSwitchApplication.Implementation.StatusPredmet();
             }
             return null;
         }
@@ -210,6 +225,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.TipNaAktivnost) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.TipNaAktivnost);
+            }
+            if (typeof(global::LightSwitchApplication.StatusPredmet) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.StatusPredmet);
             }
             return null;
         }
@@ -478,6 +497,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Predmet.DetailsClass.IImplementation.StatusPredmet
+        {
+            get
+            {
+                return this.StatusPredmet;
+            }
+            set
+            {
+                this.StatusPredmet = (global::LightSwitchApplication.Implementation.StatusPredmet)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("StatusPredmet");
+                }
+            }
+        }
+        
         partial void OnID_profesorChanged()
         {
             if (this.__host != null)
@@ -491,6 +526,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("Semestar");
+            }
+        }
+        
+        partial void OnID_StatusChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("StatusPredmet");
             }
         }
         
@@ -617,19 +660,19 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.Semestar.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Semestar.DetailsClass.IImplementation.Predmets
-        {
-            get
-            {
-                return this.Predmets;
-            }
-        }
-        
         global::System.Collections.IEnumerable global::LightSwitchApplication.Semestar.DetailsClass.IImplementation.Students
         {
             get
             {
                 return this.Students;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Semestar.DetailsClass.IImplementation.Predmets
+        {
+            get
+            {
+                return this.Predmets;
             }
         }
         
@@ -769,6 +812,47 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.Aktivnosts;
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class StatusPredmet :
+        global::LightSwitchApplication.StatusPredmet.DetailsClass.IImplementation
+    {
+    
+        global::System.Collections.IEnumerable global::LightSwitchApplication.StatusPredmet.DetailsClass.IImplementation.Predmets
+        {
+            get
+            {
+                return this.Predmets;
             }
         }
         

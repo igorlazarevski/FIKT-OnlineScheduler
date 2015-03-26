@@ -131,29 +131,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Predmet> Predmets
-        {
-            get
-            {
-                return global::LightSwitchApplication.Semestar.DetailsClass.GetValue(this, global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> PredmetsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.Semestar.DetailsClass.GetQuery(this, global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Student> Students
         {
             get
@@ -169,6 +146,29 @@ namespace LightSwitchApplication
             get
             {
                 return global::LightSwitchApplication.Semestar.DetailsClass.GetQuery(this, global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Students);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Predmet> Predmets
+        {
+            get
+            {
+                return global::LightSwitchApplication.Semestar.DetailsClass.GetValue(this, global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> PredmetsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Semestar.DetailsClass.GetQuery(this, global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets);
             }
         }
 
@@ -270,19 +270,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet> Predmets
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Student> Students
                 {
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Students) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Student>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet> Predmets
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>;
                     }
                 }
                 
@@ -294,8 +294,8 @@ namespace LightSwitchApplication
             {
                 new int ID_semestar { get; set; }
                 new global::System.Nullable<int> Br_semestar { get; set; }
-                new global::System.Collections.IEnumerable Predmets { get; }
                 new global::System.Collections.IEnumerable Students { get; }
+                new global::System.Collections.IEnumerable Predmets { get; }
             }
             #pragma warning restore 109
     
@@ -380,26 +380,6 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Entry
-                    Predmets = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
-                        "Predmets",
-                        global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties._Predmets_Stub,
-                        global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties._Predmets_GetReferencedEntities,
-                        global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties._Predmets_GetEntityCollection);
-                private static void _Predmets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Semestar.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.Semestar.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Predmets, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Predmet> _Predmets_GetReferencedEntities(global::LightSwitchApplication.Semestar.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass>(global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets, ref d._Predmets);
-                }
-                private static global::System.Collections.IEnumerable _Predmets_GetEntityCollection(global::LightSwitchApplication.Semestar.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Predmets;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Student>.Entry
                     Students = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Student>.Entry(
                         "Students",
@@ -419,6 +399,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.Students;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Entry
+                    Predmets = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
+                        "Predmets",
+                        global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties._Predmets_Stub,
+                        global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties._Predmets_GetReferencedEntities,
+                        global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties._Predmets_GetEntityCollection);
+                private static void _Predmets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Semestar.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.Semestar.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Predmets, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Predmet> _Predmets_GetReferencedEntities(global::LightSwitchApplication.Semestar.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass>(global::LightSwitchApplication.Semestar.DetailsClass.PropertySetProperties.Predmets, ref d._Predmets);
+                }
+                private static global::System.Collections.IEnumerable _Predmets_GetEntityCollection(global::LightSwitchApplication.Semestar.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Predmets;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -428,10 +428,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::System.Nullable<int>>.Data _Br_semestar;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Predmets;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Student>.Data _Students;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Student>.Data _Students;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Predmets;
             
         }
     

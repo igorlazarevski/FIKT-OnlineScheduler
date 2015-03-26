@@ -74,4 +74,12 @@
         created: [lightSwitchApplication.TipNaAktivnost]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.StatusPredmet, {
+        /// <field>
+        /// Called when a new statusPredmet is created.
+        /// <br/>created(msls.application.StatusPredmet entity)
+        /// </field>
+        created: [lightSwitchApplication.StatusPredmet]
+    });
+
 }(msls.application));

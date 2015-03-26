@@ -21,7 +21,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <KeyProperty
@@ -153,7 +152,7 @@
           MaxLength="50"
           Name="tekoven_semestar"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Izbrani_predmeti/Properties[tekoven_semestar]" />
         <SsdlProperty
           Name="ID_izbraniPredmeti"

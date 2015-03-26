@@ -45,6 +45,7 @@
     <WarningLevel>4</WarningLevel>
     <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
     <NoWarn>1522</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -212,6 +213,10 @@
     <LightSwitchModel Include="DataSources\On_line_rasporedData\sysdiagrams.lsml" />
     <LightSwitchModel Include="DataSources\On_line_rasporedData\TipNaAktivnosts.lsml" />
     <LightSwitchModel Include="Properties\DataSources\On_line_rasporedData.lsml" />
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\StatusPredmets.lsml" />
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\Query1.lsml">
+      <DependentUpon>Predmets.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -31,32 +31,17 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="Predmets"
-        Association="FK_Predmet_Semestar"
-        FromEnd="Semestar"
-        ToEnd="Predmet" />
-      <NavigationProperty
         Name="Students"
         Association="FK_Student_Semestar"
         FromEnd="Semestar"
         ToEnd="Student" />
+      <NavigationProperty
+        Name="Predmets"
+        Association="FK_Predmet_Semestar"
+        FromEnd="Semestar"
+        ToEnd="Predmet" />
     </EntityType.Properties>
   </EntityType>
-  <Association
-    Name="FK_Predmet_Semestar">
-    <AssociationEnd
-      Name="Semestar"
-      Multiplicity="One"
-      EntityType="Semestar">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="Predmet"
-      Multiplicity="Many"
-      EntityType="Predmet" />
-  </Association>
   <Association
     Name="FK_Student_Semestar">
     <AssociationEnd
@@ -83,16 +68,6 @@
       CanInsert="True"
       CanUpdate="True"
       EntityType="Semestar" />
-    <AssociationSet
-      Name="FK_Predmet_Semestar"
-      Association="FK_Predmet_Semestar">
-      <AssociationSetEnd
-        Name="Semestar"
-        EntitySet="Semestars" />
-      <AssociationSetEnd
-        Name="Predmet"
-        EntitySet="Predmets" />
-    </AssociationSet>
     <AssociationSet
       Name="FK_Student_Semestar"
       Association="FK_Student_Semestar">
@@ -183,7 +158,32 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_Predmet_Semestar"
+      Association="FK_Predmet_Semestar">
+      <AssociationSetEnd
+        Name="Semestar"
+        EntitySet="Semestars" />
+      <AssociationSetEnd
+        Name="Predmet"
+        EntitySet="Predmets" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_Predmet_Semestar">
+    <AssociationEnd
+      Name="Semestar"
+      Multiplicity="One"
+      EntityType="Semestar">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Predmet"
+      Multiplicity="Many"
+      EntityType="Predmet" />
+  </Association>
   <DataService
     Name="On_line_rasporedDataDataService">
     <DataService.Attributes>

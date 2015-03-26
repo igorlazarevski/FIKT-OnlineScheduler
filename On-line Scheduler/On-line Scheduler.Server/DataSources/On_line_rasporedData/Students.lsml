@@ -30,7 +30,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -39,7 +38,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -48,7 +46,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -57,7 +54,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -66,14 +62,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ActiveStudent"
-        PropertyType=":Boolean?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -86,6 +74,13 @@
         Association="FK_Student_Semestar"
         FromEnd="Student"
         ToEnd="Semestar" />
+      <EntityProperty
+        Name="ActiveStudent"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -226,34 +221,34 @@
           MaxLength="50"
           Name="Ime"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Student/Properties[Ime]" />
         <SsdlProperty
           MaxLength="50"
           Name="Prezime"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Student/Properties[Prezime]" />
         <SsdlProperty
           MaxLength="50"
           Name="Nasoka"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Student/Properties[Nasoka]" />
         <SsdlProperty
           MaxLength="50"
           Name="Email"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Student/Properties[Email]" />
         <SsdlProperty
           MaxLength="50"
           Name="Lozinka"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Student/Properties[Lozinka]" />
         <SsdlProperty
-          Name="FlagStudent"
+          Name="ActiveStudent"
           Nullable="True"
           Type="bit"
           Property="Student/Properties[ActiveStudent]" />

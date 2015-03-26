@@ -28,7 +28,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <KeyProperty
@@ -185,7 +184,7 @@
           MaxLength="50"
           Name="Opis"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Prostorija/Properties[Opis]" />
         <SsdlProperty
           Name="ID_prostorija"

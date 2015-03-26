@@ -21,7 +21,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <KeyProperty
@@ -173,7 +172,7 @@
           MaxLength="50"
           Name="Ime"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="TipNaAktivnost/Properties[Ime]" />
         <SsdlProperty
           Name="ID_tipNaAktivnost"

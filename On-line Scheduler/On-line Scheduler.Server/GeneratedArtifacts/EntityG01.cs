@@ -83,7 +83,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.TimeSpan> Vreme_pocetok
+        public global::System.Nullable<global::System.DateTime> Vreme_pocetok
         {
             get
             {
@@ -107,7 +107,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.TimeSpan> Vreme_kraj
+        public global::System.Nullable<global::System.DateTime> Vreme_kraj
         {
             get
             {
@@ -348,19 +348,19 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>> Vreme_pocetok
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>> Vreme_pocetok
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Vreme_pocetok) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>;
+                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Vreme_pocetok) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>> Vreme_kraj
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>> Vreme_kraj
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Vreme_kraj) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>;
+                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Vreme_kraj) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>;
                     }
                 }
                 
@@ -418,8 +418,8 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new global::System.Nullable<global::System.TimeSpan> Vreme_pocetok { get; set; }
-                new global::System.Nullable<global::System.TimeSpan> Vreme_kraj { get; set; }
+                new global::System.Nullable<global::System.DateTime> Vreme_pocetok { get; set; }
+                new global::System.Nullable<global::System.DateTime> Vreme_kraj { get; set; }
                 new string Den { get; set; }
                 new int ID_aktivnost { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Predmet { get; set; }
@@ -436,8 +436,8 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Entry
-                    Vreme_pocetok = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    Vreme_pocetok = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
                         "Vreme_pocetok",
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_pocetok_Stub,
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_pocetok_ComputeIsReadOnly,
@@ -445,7 +445,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_pocetok_GetImplementationValue,
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_pocetok_SetImplementationValue,
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_pocetok_OnValueChanged);
-                private static void _Vreme_pocetok_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
+                private static void _Vreme_pocetok_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
                 {
                     c(d, ref d._Vreme_pocetok, sf);
                 }
@@ -459,13 +459,13 @@ namespace LightSwitchApplication
                 {
                     e.Vreme_pocetok_Validate(r);
                 }
-                private static global::System.Nullable<global::System.TimeSpan> _Vreme_pocetok_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
+                private static global::System.Nullable<global::System.DateTime> _Vreme_pocetok_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
                 {
                     return d.ImplementationEntity.Vreme_pocetok;
                 }
-                private static void _Vreme_pocetok_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, global::System.Nullable<global::System.TimeSpan> v)
+                private static void _Vreme_pocetok_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
                 {
-                    d.ImplementationEntity.Vreme_pocetok = v;
+                    d.ImplementationEntity.Vreme_pocetok = global::LightSwitchApplication.Aktivnost.DetailsClass.ClearDateTimeKind(v);
                 }
                 private static void _Vreme_pocetok_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
                 {
@@ -473,8 +473,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Entry
-                    Vreme_kraj = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    Vreme_kraj = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
                         "Vreme_kraj",
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_kraj_Stub,
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_kraj_ComputeIsReadOnly,
@@ -482,7 +482,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_kraj_GetImplementationValue,
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_kraj_SetImplementationValue,
                         global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Vreme_kraj_OnValueChanged);
-                private static void _Vreme_kraj_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
+                private static void _Vreme_kraj_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
                 {
                     c(d, ref d._Vreme_kraj, sf);
                 }
@@ -496,13 +496,13 @@ namespace LightSwitchApplication
                 {
                     e.Vreme_kraj_Validate(r);
                 }
-                private static global::System.Nullable<global::System.TimeSpan> _Vreme_kraj_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
+                private static global::System.Nullable<global::System.DateTime> _Vreme_kraj_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
                 {
                     return d.ImplementationEntity.Vreme_kraj;
                 }
-                private static void _Vreme_kraj_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, global::System.Nullable<global::System.TimeSpan> v)
+                private static void _Vreme_kraj_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
                 {
-                    d.ImplementationEntity.Vreme_kraj = v;
+                    d.ImplementationEntity.Vreme_kraj = global::LightSwitchApplication.Aktivnost.DetailsClass.ClearDateTimeKind(v);
                 }
                 private static void _Vreme_kraj_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
                 {
@@ -770,10 +770,10 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Data _Vreme_pocetok;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _Vreme_pocetok;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.TimeSpan>>.Data _Vreme_kraj;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _Vreme_kraj;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string>.Data _Den;

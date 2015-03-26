@@ -384,6 +384,42 @@ namespace LightSwitchApplication
         partial void TipNaAktivnosts_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TipNaAktivnost, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Inserting(global::LightSwitchApplication.StatusPredmet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Inserted(global::LightSwitchApplication.StatusPredmet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Updating(global::LightSwitchApplication.StatusPredmet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Updated(global::LightSwitchApplication.StatusPredmet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Deleting(global::LightSwitchApplication.StatusPredmet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Deleted(global::LightSwitchApplication.StatusPredmet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Validate(global::LightSwitchApplication.StatusPredmet entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void StatusPredmets_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.StatusPredmet, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -394,6 +430,21 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query1_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void Query1_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query1_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Predmet> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void Query1_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Predmet> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void Query1_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -1108,6 +1159,82 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.StatusPredmet>
+                __StatusPredmetsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.StatusPredmet>(
+                    "StatusPredmets",
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_CanInsert,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_CanUpdate,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_CanDelete,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_CanRead,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Inserting,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Inserted,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Updating,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Updated,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Deleting,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Deleted,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Validate,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__StatusPredmets_Filter);
+            private static bool __StatusPredmets_CanInsert(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.StatusPredmets_CanInsert(ref result);
+                return result;
+            }
+            private static bool __StatusPredmets_CanUpdate(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.StatusPredmets_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __StatusPredmets_CanDelete(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.StatusPredmets_CanDelete(ref result);
+                return result;
+            }
+            private static bool __StatusPredmets_CanRead(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.StatusPredmets_CanRead(ref result);
+                return result;
+            }
+            private static void __StatusPredmets_Inserting(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e)
+            {
+                d.StatusPredmets_Inserting(e);
+            }
+            private static void __StatusPredmets_Inserted(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e)
+            {
+                d.StatusPredmets_Inserted(e);
+            }
+            private static void __StatusPredmets_Updating(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e)
+            {
+                d.StatusPredmets_Updating(e);
+            }
+            private static void __StatusPredmets_Updated(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e)
+            {
+                d.StatusPredmets_Updated(e);
+            }
+            private static void __StatusPredmets_Deleting(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e)
+            {
+                d.StatusPredmets_Deleting(e);
+            }
+            private static void __StatusPredmets_Deleted(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e)
+            {
+                d.StatusPredmets_Deleted(e);
+            }
+            private static void __StatusPredmets_Validate(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.StatusPredmet e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.StatusPredmets_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.StatusPredmet, bool>> __StatusPredmets_Filter(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.StatusPredmet, bool>> filter = null;
+                d.StatusPredmets_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.On_line_rasporedDataService>
                 __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.On_line_rasporedDataService>(
                     "SaveChanges",
@@ -1131,6 +1258,40 @@ namespace LightSwitchApplication
             private static void __SaveChanges_Failed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args, global::System.Exception ex)
             {
                 d.SaveChanges_ExecuteFailed(ex);
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.Predmet>
+                __Query1Entry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.Predmet>(
+                    "Query1",
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__Query1_CanExecute,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__Query1_Executing,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__Query1_Executed,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__Query1_Failed,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__Query1_PreprocessQuery);
+            private static bool __Query1_CanExecute(global::LightSwitchApplication.On_line_rasporedDataService d, bool r)
+            {
+                d.Query1_CanExecute(ref r);
+                return r;
+            }
+            private static void __Query1_Executing(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
+            {
+                d.Query1_Executing();
+            }
+            private static void __Query1_Executed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
+            {
+                d.Query1_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Predmet>)args[0]);
+            }
+            private static void __Query1_Failed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args, global::System.Exception ex)
+            {
+                d.Query1_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __Query1_PreprocessQuery(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Predmet> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Predmet>)args[0];
+                d.Query1_PreprocessQuery(ref query);
+                return query;
             }
     
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]

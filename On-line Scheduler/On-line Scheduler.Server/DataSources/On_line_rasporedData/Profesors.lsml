@@ -28,7 +28,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -37,7 +36,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -46,7 +44,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -55,7 +52,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -64,7 +60,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -73,7 +68,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -82,7 +76,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <KeyProperty
@@ -95,6 +88,11 @@
           <NotSearchable />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <NavigationProperty
+        Name="Aktivnosts"
+        Association="FK_Aktivnost_Profesor"
+        FromEnd="Profesor"
+        ToEnd="Aktivnost" />
       <EntityProperty
         Name="ActiveProfesor"
         PropertyType=":Boolean?">
@@ -102,11 +100,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <NavigationProperty
-        Name="Aktivnosts"
-        Association="FK_Aktivnost_Profesor"
-        FromEnd="Profesor"
-        ToEnd="Aktivnost" />
       <NavigationProperty
         Name="Predmets"
         Association="FK_Predmet_Profesor"
@@ -129,21 +122,6 @@
       Multiplicity="Many"
       EntityType="Aktivnost" />
   </Association>
-  <Association
-    Name="FK_Predmet_Profesor">
-    <AssociationEnd
-      Name="Profesor"
-      Multiplicity="One"
-      EntityType="Profesor">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="Predmet"
-      Multiplicity="Many"
-      EntityType="Predmet" />
-  </Association>
   <EntityContainer
     Name="On_line_rasporedData">
     <EntityContainer.Attributes>
@@ -164,16 +142,6 @@
       <AssociationSetEnd
         Name="Aktivnost"
         EntitySet="Aktivnosts" />
-    </AssociationSet>
-    <AssociationSet
-      Name="FK_Predmet_Profesor"
-      Association="FK_Predmet_Profesor">
-      <AssociationSetEnd
-        Name="Profesor"
-        EntitySet="Profesors" />
-      <AssociationSetEnd
-        Name="Predmet"
-        EntitySet="Predmets" />
     </AssociationSet>
     <QueryOperation
       Name="Profesors_Single"
@@ -255,7 +223,32 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_Predmet_Profesor"
+      Association="FK_Predmet_Profesor">
+      <AssociationSetEnd
+        Name="Profesor"
+        EntitySet="Profesors" />
+      <AssociationSetEnd
+        Name="Predmet"
+        EntitySet="Predmets" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_Predmet_Profesor">
+    <AssociationEnd
+      Name="Profesor"
+      Multiplicity="One"
+      EntityType="Profesor">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Predmet"
+      Multiplicity="Many"
+      EntityType="Predmet" />
+  </Association>
   <DataService
     Name="On_line_rasporedDataDataService">
     <DataService.Attributes>
@@ -276,43 +269,43 @@
           MaxLength="50"
           Name="Korisnicko_ime"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Korisnicko_ime]" />
         <SsdlProperty
           MaxLength="50"
           Name="Lozinka"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Lozinka]" />
         <SsdlProperty
           MaxLength="50"
           Name="Ime"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Ime]" />
         <SsdlProperty
           MaxLength="50"
           Name="Prezime"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Prezime]" />
         <SsdlProperty
           MaxLength="50"
           Name="Titula"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Titula]" />
         <SsdlProperty
           MaxLength="50"
           Name="Email"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Email]" />
         <SsdlProperty
           MaxLength="50"
           Name="Telefon"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Profesor/Properties[Telefon]" />
         <SsdlProperty
           Name="ID_profesor"
@@ -321,7 +314,7 @@
           Type="int"
           Property="Profesor/Properties[ID_profesor]" />
         <SsdlProperty
-          Name="FlagProfesor"
+          Name="ActiveProfesor"
           Nullable="True"
           Type="bit"
           Property="Profesor/Properties[ActiveProfesor]" />
