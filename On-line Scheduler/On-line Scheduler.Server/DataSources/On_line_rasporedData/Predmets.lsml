@@ -33,19 +33,12 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Status"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Nasoka"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -58,6 +51,13 @@
         Association="FK_Izbrani_predmeti_Predmet"
         FromEnd="Predmet"
         ToEnd="Izbrani_predmeti" />
+      <EntityProperty
+        Name="ActivePredmet"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <NavigationProperty
         Name="Profesor"
         Association="FK_Predmet_Profesor"
@@ -69,12 +69,18 @@
         FromEnd="Predmet"
         ToEnd="Semestar" />
       <EntityProperty
-        Name="ActivePredmet"
-        PropertyType=":Boolean?">
+        Name="br_krediti"
+        PropertyType=":Int32">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="StatusPredmet"
+        Association="FK_Predmet_StatusPredmet"
+        FromEnd="Predmet"
+        ToEnd="StatusPredmet" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -244,14 +250,8 @@
           Property="Predmet/Properties[Ime]" />
         <SsdlProperty
           MaxLength="50"
-          Name="Status"
-          Nullable="True"
-          Type="nvarchar"
-          Property="Predmet/Properties[Status]" />
-        <SsdlProperty
-          MaxLength="50"
           Name="Nasoka"
-          Nullable="True"
+          Nullable="False"
           Type="nvarchar"
           Property="Predmet/Properties[Nasoka]" />
         <SsdlProperty
@@ -259,6 +259,11 @@
           Nullable="True"
           Type="bit"
           Property="Predmet/Properties[ActivePredmet]" />
+        <SsdlProperty
+          Name="br_krediti"
+          Nullable="False"
+          Type="int"
+          Property="Predmet/Properties[br_krediti]" />
         <SsdlForeignKeyProperty
           Name="ID_profesor"
           Nullable="False"
@@ -269,6 +274,11 @@
           Nullable="False"
           Type="int"
           PropertyName="ID_semestar" />
+        <SsdlForeignKeyProperty
+          Name="ID_Status"
+          Nullable="True"
+          Type="int"
+          PropertyName="ID_Status" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping

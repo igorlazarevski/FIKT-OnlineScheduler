@@ -30,11 +30,12 @@
         <MappingFragment StoreEntitySet="Predmets">
           <ScalarProperty Name="ID_predmet" ColumnName="ID_predmet" />
           <ScalarProperty Name="Ime" ColumnName="Ime" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Nasoka" ColumnName="Nasoka" />
+          <ScalarProperty Name="ActivePredmet" ColumnName="ActivePredmet" />
           <ScalarProperty Name="ID_profesor" ColumnName="ID_profesor" />
           <ScalarProperty Name="ID_semestar" ColumnName="ID_semestar" />
-          <ScalarProperty Name="ActivePredmet" ColumnName="ActivePredmet" />
+          <ScalarProperty Name="br_krediti" ColumnName="br_krediti" />
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -50,7 +51,7 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Telefon" ColumnName="Telefon" />
           <ScalarProperty Name="ID_profesor" ColumnName="ID_profesor" />
-          <ScalarProperty Name="ActiveProfesor" ColumnName="FlagProfesor" />
+          <ScalarProperty Name="ActiveProfesor" ColumnName="ActiveProfesor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -80,8 +81,8 @@
           <ScalarProperty Name="Nasoka" ColumnName="Nasoka" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
-          <ScalarProperty Name="ActiveStudent" ColumnName="FlagStudent" />
           <ScalarProperty Name="ID_semestar" ColumnName="ID_semestar" />
+          <ScalarProperty Name="ActiveStudent" ColumnName="ActiveStudent" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -101,6 +102,14 @@
         <MappingFragment StoreEntitySet="TipNaAktivnosts">
           <ScalarProperty Name="Ime" ColumnName="Ime" />
           <ScalarProperty Name="ID_tipNaAktivnost" ColumnName="ID_tipNaAktivnost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusPredmets">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.StatusPredmet)">
+        <MappingFragment StoreEntitySet="StatusPredmets">
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

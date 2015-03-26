@@ -17,20 +17,20 @@
     <EntityType.Properties>
       <EntityProperty
         Name="Vreme_pocetok"
-        PropertyType=":TimeSpan?">
+        PropertyType=":DateTime?">
         <EntityProperty.Attributes>
           <DateTimeConstraint
-            Precision="7"
+            Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Vreme_kraj"
-        PropertyType=":TimeSpan?">
+        PropertyType=":DateTime?">
         <EntityProperty.Attributes>
           <DateTimeConstraint
-            Precision="7"
+            Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
         </EntityProperty.Attributes>
@@ -41,7 +41,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <KeyProperty
@@ -182,18 +181,18 @@
         <SsdlProperty
           Name="Vreme_pocetok"
           Nullable="True"
-          Type="time"
+          Type="smalldatetime"
           Property="Aktivnost/Properties[Vreme_pocetok]" />
         <SsdlProperty
           Name="Vreme_kraj"
           Nullable="True"
-          Type="time"
+          Type="smalldatetime"
           Property="Aktivnost/Properties[Vreme_kraj]" />
         <SsdlProperty
           MaxLength="50"
           Name="Den"
           Nullable="True"
-          Type="varchar"
+          Type="nvarchar"
           Property="Aktivnost/Properties[Den]" />
         <SsdlProperty
           Name="ID_aktivnost"

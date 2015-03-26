@@ -24,10 +24,11 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Profesor", "Profesor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Profesor), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Profesor", "Profesor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Profesor), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Prostorija", "Prostorija", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Prostorija), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Semestar", "Semestar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Semestar), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Student_Semestar", "Semestar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Semestar), "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Student), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Semestar", "Semestar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Semestar), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Izbrani_predmeti_Student", "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Student), "Izbrani_predmeti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Izbrani_predmeti), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_TipNaAktivnost", "TipNaAktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TipNaAktivnost), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_StatusPredmet", "StatusPredmet", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.StatusPredmet), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 
 #endregion
 
@@ -219,6 +220,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TipNaAktivnost> _TipNaAktivnosts;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<StatusPredmet> StatusPredmets
+        {
+            get
+            {
+                if ((_StatusPredmets == null))
+                {
+                    _StatusPredmets = base.CreateObjectSet<StatusPredmet>("StatusPredmets");
+                }
+                return _StatusPredmets;
+            }
+        }
+        private ObjectSet<StatusPredmet> _StatusPredmets;
 
         #endregion
 
@@ -295,6 +312,14 @@ namespace LightSwitchApplication.Implementation
         {
             base.AddObject("TipNaAktivnosts", tipNaAktivnost);
         }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the StatusPredmets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToStatusPredmets(StatusPredmet statusPredmet)
+        {
+            base.AddObject("StatusPredmets", statusPredmet);
+        }
 
         #endregion
 
@@ -342,7 +367,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.TimeSpan> Vreme_pocetok
+        public Nullable<global::System.DateTime> Vreme_pocetok
         {
             get
             {
@@ -357,8 +382,8 @@ namespace LightSwitchApplication.Implementation
                 OnVreme_pocetokChanged();
             }
         }
-        private Nullable<global::System.TimeSpan> _Vreme_pocetok;
-        partial void OnVreme_pocetokChanging(Nullable<global::System.TimeSpan> value);
+        private Nullable<global::System.DateTime> _Vreme_pocetok;
+        partial void OnVreme_pocetokChanging(Nullable<global::System.DateTime> value);
         partial void OnVreme_pocetokChanged();
     
         /// <summary>
@@ -366,7 +391,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.TimeSpan> Vreme_kraj
+        public Nullable<global::System.DateTime> Vreme_kraj
         {
             get
             {
@@ -381,8 +406,8 @@ namespace LightSwitchApplication.Implementation
                 OnVreme_krajChanged();
             }
         }
-        private Nullable<global::System.TimeSpan> _Vreme_kraj;
-        partial void OnVreme_krajChanging(Nullable<global::System.TimeSpan> value);
+        private Nullable<global::System.DateTime> _Vreme_kraj;
+        partial void OnVreme_krajChanging(Nullable<global::System.DateTime> value);
         partial void OnVreme_krajChanged();
     
         /// <summary>
@@ -920,14 +945,18 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Predmet object.
         /// </summary>
         /// <param name="iD_predmet">Initial value of the ID_predmet property.</param>
+        /// <param name="nasoka">Initial value of the Nasoka property.</param>
         /// <param name="iD_profesor">Initial value of the ID_profesor property.</param>
         /// <param name="iD_semestar">Initial value of the ID_semestar property.</param>
-        public static Predmet CreatePredmet(global::System.String iD_predmet, global::System.Int32 iD_profesor, global::System.Int32 iD_semestar)
+        /// <param name="br_krediti">Initial value of the br_krediti property.</param>
+        public static Predmet CreatePredmet(global::System.String iD_predmet, global::System.String nasoka, global::System.Int32 iD_profesor, global::System.Int32 iD_semestar, global::System.Int32 br_krediti)
         {
             Predmet predmet = new Predmet();
             predmet.ID_predmet = iD_predmet;
+            predmet.Nasoka = nasoka;
             predmet.ID_profesor = iD_profesor;
             predmet.ID_semestar = iD_semestar;
+            predmet.br_krediti = br_krediti;
             return predmet;
         }
 
@@ -989,31 +1018,7 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Status
-        {
-            get
-            {
-                return _Status;
-            }
-            set
-            {
-                OnStatusChanging(value);
-                ReportPropertyChanging("Status");
-                _Status = value;
-                ReportPropertyChanged("Status");
-                OnStatusChanged();
-            }
-        }
-        private global::System.String _Status;
-        partial void OnStatusChanging(global::System.String value);
-        partial void OnStatusChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Nasoka
         {
@@ -1033,6 +1038,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Nasoka;
         partial void OnNasokaChanging(global::System.String value);
         partial void OnNasokaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> ActivePredmet
+        {
+            get
+            {
+                return _ActivePredmet;
+            }
+            set
+            {
+                OnActivePredmetChanging(value);
+                ReportPropertyChanging("ActivePredmet");
+                _ActivePredmet = value;
+                ReportPropertyChanged("ActivePredmet");
+                OnActivePredmetChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _ActivePredmet;
+        partial void OnActivePredmetChanging(Nullable<global::System.Boolean> value);
+        partial void OnActivePredmetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1085,26 +1114,50 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> ActivePredmet
+        public global::System.Int32 br_krediti
         {
             get
             {
-                return _ActivePredmet;
+                return _br_krediti;
             }
             set
             {
-                OnActivePredmetChanging(value);
-                ReportPropertyChanging("ActivePredmet");
-                _ActivePredmet = value;
-                ReportPropertyChanged("ActivePredmet");
-                OnActivePredmetChanged();
+                Onbr_kreditiChanging(value);
+                ReportPropertyChanging("br_krediti");
+                _br_krediti = value;
+                ReportPropertyChanged("br_krediti");
+                Onbr_kreditiChanged();
             }
         }
-        private Nullable<global::System.Boolean> _ActivePredmet;
-        partial void OnActivePredmetChanging(Nullable<global::System.Boolean> value);
-        partial void OnActivePredmetChanged();
+        private global::System.Int32 _br_krediti;
+        partial void Onbr_kreditiChanging(global::System.Int32 value);
+        partial void Onbr_kreditiChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ID_Status
+        {
+            get
+            {
+                return _ID_Status;
+            }
+            set
+            {
+                OnID_StatusChanging(value);
+                ReportPropertyChanging("ID_Status");
+                _ID_Status = value;
+                ReportPropertyChanged("ID_Status");
+                OnID_StatusChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ID_Status;
+        partial void OnID_StatusChanging(Nullable<global::System.Int32> value);
+        partial void OnID_StatusChanged();
 
         #endregion
 
@@ -1227,6 +1280,44 @@ namespace LightSwitchApplication.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Semestar>("LightSwitchApplication.FK_Predmet_Semestar", "Semestar", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Predmet_StatusPredmet", "StatusPredmet")]
+        public StatusPredmet StatusPredmet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StatusPredmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "StatusPredmet").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StatusPredmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "StatusPredmet").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<StatusPredmet> StatusPredmetReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<StatusPredmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "StatusPredmet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<StatusPredmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "StatusPredmet", value);
                 }
             }
         }
@@ -1774,6 +1865,28 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Student_Semestar", "Student")]
+        public EntityCollection<Student> Students
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Student>("LightSwitchApplication.FK_Student_Semestar", "Student");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Student>("LightSwitchApplication.FK_Student_Semestar", "Student", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Predmet_Semestar", "Predmet")]
         public EntityCollection<Predmet> Predmets
         {
@@ -1789,6 +1902,93 @@ namespace LightSwitchApplication.Implementation
                 }
             }
         }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="StatusPredmet")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class StatusPredmet : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new StatusPredmet object.
+        /// </summary>
+        /// <param name="iD_Status">Initial value of the ID_Status property.</param>
+        /// <param name="status">Initial value of the Status property.</param>
+        public static StatusPredmet CreateStatusPredmet(global::System.Int32 iD_Status, global::System.String status)
+        {
+            StatusPredmet statusPredmet = new StatusPredmet();
+            statusPredmet.ID_Status = iD_Status;
+            statusPredmet.Status = status;
+            return statusPredmet;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Status
+        {
+            get
+            {
+                return _ID_Status;
+            }
+            set
+            {
+                if (_ID_Status != value)
+                {
+                    OnID_StatusChanging(value);
+                    ReportPropertyChanging("ID_Status");
+                    _ID_Status = value;
+                    ReportPropertyChanged("ID_Status");
+                    OnID_StatusChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID_Status;
+        partial void OnID_StatusChanging(global::System.Int32 value);
+        partial void OnID_StatusChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                OnStatusChanging(value);
+                ReportPropertyChanging("Status");
+                _Status = value;
+                ReportPropertyChanged("Status");
+                OnStatusChanged();
+            }
+        }
+        private global::System.String _Status;
+        partial void OnStatusChanging(global::System.String value);
+        partial void OnStatusChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1796,18 +1996,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Student_Semestar", "Student")]
-        public EntityCollection<Student> Students
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Predmet_StatusPredmet", "Predmet")]
+        public EntityCollection<Predmet> Predmets
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Student>("LightSwitchApplication.FK_Student_Semestar", "Student");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Predmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "Predmet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Student>("LightSwitchApplication.FK_Student_Semestar", "Student", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Predmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "Predmet", value);
                 }
             }
         }
@@ -1993,30 +2193,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> ActiveStudent
-        {
-            get
-            {
-                return _ActiveStudent;
-            }
-            set
-            {
-                OnActiveStudentChanging(value);
-                ReportPropertyChanging("ActiveStudent");
-                _ActiveStudent = value;
-                ReportPropertyChanged("ActiveStudent");
-                OnActiveStudentChanged();
-            }
-        }
-        private Nullable<global::System.Boolean> _ActiveStudent;
-        partial void OnActiveStudentChanging(Nullable<global::System.Boolean> value);
-        partial void OnActiveStudentChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 ID_semestar
@@ -2037,6 +2213,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _ID_semestar;
         partial void OnID_semestarChanging(global::System.Int32 value);
         partial void OnID_semestarChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> ActiveStudent
+        {
+            get
+            {
+                return _ActiveStudent;
+            }
+            set
+            {
+                OnActiveStudentChanging(value);
+                ReportPropertyChanging("ActiveStudent");
+                _ActiveStudent = value;
+                ReportPropertyChanged("ActiveStudent");
+                OnActiveStudentChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _ActiveStudent;
+        partial void OnActiveStudentChanging(Nullable<global::System.Boolean> value);
+        partial void OnActiveStudentChanged();
 
         #endregion
 

@@ -10,6 +10,7 @@
     <EntitySet Name="Students" EntityType="On_line_rasporedDataStore.Student" store:Type="Tables" Schema="dbo" Table="Student" />
     <EntitySet Name="sysdiagrams" EntityType="On_line_rasporedDataStore.sysdiagram" store:Type="Tables" Schema="dbo" Table="sysdiagrams" />
     <EntitySet Name="TipNaAktivnosts" EntityType="On_line_rasporedDataStore.TipNaAktivnost" store:Type="Tables" Schema="dbo" Table="TipNaAktivnost" />
+    <EntitySet Name="StatusPredmets" EntityType="On_line_rasporedDataStore.StatusPredmet" store:Type="Tables" Schema="dbo" Table="StatusPredmet" />
     <AssociationSet Name="FK_Aktivnost_Predmet" Association="On_line_rasporedDataStore.FK_Aktivnost_Predmet">
       <End Role="Predmet" EntitySet="Predmets" />
       <End Role="Aktivnost" EntitySet="Aktivnosts" />
@@ -30,13 +31,13 @@
       <End Role="Prostorija" EntitySet="Prostorijas" />
       <End Role="Aktivnost" EntitySet="Aktivnosts" />
     </AssociationSet>
-    <AssociationSet Name="FK_Predmet_Semestar" Association="On_line_rasporedDataStore.FK_Predmet_Semestar">
-      <End Role="Semestar" EntitySet="Semestars" />
-      <End Role="Predmet" EntitySet="Predmets" />
-    </AssociationSet>
     <AssociationSet Name="FK_Student_Semestar" Association="On_line_rasporedDataStore.FK_Student_Semestar">
       <End Role="Semestar" EntitySet="Semestars" />
       <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Predmet_Semestar" Association="On_line_rasporedDataStore.FK_Predmet_Semestar">
+      <End Role="Semestar" EntitySet="Semestars" />
+      <End Role="Predmet" EntitySet="Predmets" />
     </AssociationSet>
     <AssociationSet Name="FK_Izbrani_predmeti_Student" Association="On_line_rasporedDataStore.FK_Izbrani_predmeti_Student">
       <End Role="Student" EntitySet="Students" />
@@ -46,14 +47,18 @@
       <End Role="TipNaAktivnost" EntitySet="TipNaAktivnosts" />
       <End Role="Aktivnost" EntitySet="Aktivnosts" />
     </AssociationSet>
+    <AssociationSet Name="FK_Predmet_StatusPredmet" Association="On_line_rasporedDataStore.FK_Predmet_StatusPredmet">
+      <End Role="StatusPredmet" EntitySet="StatusPredmets" />
+      <End Role="Predmet" EntitySet="Predmets" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Aktivnost">
     <Key>
       <PropertyRef Name="ID_aktivnost" />
     </Key>
-    <Property Name="Vreme_pocetok" Type="time" />
-    <Property Name="Vreme_kraj" Type="time" />
-    <Property Name="Den" Type="varchar" MaxLength="50" />
+    <Property Name="Vreme_pocetok" Type="smalldatetime" />
+    <Property Name="Vreme_kraj" Type="smalldatetime" />
+    <Property Name="Den" Type="nvarchar" MaxLength="50" />
     <Property Name="ID_aktivnost" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ID_predmet" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="ID_profesor" Type="int" Nullable="false" />
@@ -64,7 +69,7 @@
     <Key>
       <PropertyRef Name="ID_izbraniPredmeti" />
     </Key>
-    <Property Name="tekoven_semestar" Type="varchar" MaxLength="50" />
+    <Property Name="tekoven_semestar" Type="nvarchar" MaxLength="50" />
     <Property Name="ID_izbraniPredmeti" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ID_predmet" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Br_indeks" Type="nvarchar" Nullable="false" MaxLength="20" />
@@ -75,33 +80,34 @@
     </Key>
     <Property Name="ID_predmet" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Ime" Type="nvarchar" MaxLength="50" />
-    <Property Name="Status" Type="nvarchar" MaxLength="50" />
-    <Property Name="Nasoka" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nasoka" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="ActivePredmet" Type="bit" />
+    <Property Name="br_krediti" Type="int" Nullable="false" />
     <Property Name="ID_profesor" Type="int" Nullable="false" />
     <Property Name="ID_semestar" Type="int" Nullable="false" />
+    <Property Name="ID_Status" Type="int" />
   </EntityType>
   <EntityType Name="Profesor">
     <Key>
       <PropertyRef Name="ID_profesor" />
     </Key>
     <Property Name="Br_kabinet" Type="int" />
-    <Property Name="Korisnicko_ime" Type="varchar" MaxLength="50" />
-    <Property Name="Lozinka" Type="varchar" MaxLength="50" />
-    <Property Name="Ime" Type="varchar" MaxLength="50" />
-    <Property Name="Prezime" Type="varchar" MaxLength="50" />
-    <Property Name="Titula" Type="varchar" MaxLength="50" />
-    <Property Name="Email" Type="varchar" MaxLength="50" />
-    <Property Name="Telefon" Type="varchar" MaxLength="50" />
+    <Property Name="Korisnicko_ime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lozinka" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Titula" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
     <Property Name="ID_profesor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="FlagProfesor" Type="bit" />
+    <Property Name="ActiveProfesor" Type="bit" />
   </EntityType>
   <EntityType Name="Prostorija">
     <Key>
       <PropertyRef Name="ID_prostorija" />
     </Key>
     <Property Name="Br_prostorija" Type="int" />
-    <Property Name="Opis" Type="varchar" MaxLength="50" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
     <Property Name="ID_prostorija" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="Semestar">
@@ -116,12 +122,12 @@
       <PropertyRef Name="Br_indeks" />
     </Key>
     <Property Name="Br_indeks" Type="nvarchar" Nullable="false" MaxLength="20" />
-    <Property Name="Ime" Type="varchar" MaxLength="50" />
-    <Property Name="Prezime" Type="varchar" MaxLength="50" />
-    <Property Name="Nasoka" Type="varchar" MaxLength="50" />
-    <Property Name="Email" Type="varchar" MaxLength="50" />
-    <Property Name="Lozinka" Type="varchar" MaxLength="50" />
-    <Property Name="FlagStudent" Type="bit" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nasoka" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lozinka" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActiveStudent" Type="bit" />
     <Property Name="ID_semestar" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagram">
@@ -138,8 +144,15 @@
     <Key>
       <PropertyRef Name="ID_tipNaAktivnost" />
     </Key>
-    <Property Name="Ime" Type="varchar" MaxLength="50" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" />
     <Property Name="ID_tipNaAktivnost" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="StatusPredmet">
+    <Key>
+      <PropertyRef Name="ID_Status" />
+    </Key>
+    <Property Name="ID_Status" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Aktivnost_Predmet">
     <End Role="Predmet" Type="On_line_rasporedDataStore.Predmet" Multiplicity="1">
@@ -211,20 +224,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Predmet_Semestar">
-    <End Role="Semestar" Type="On_line_rasporedDataStore.Semestar" Multiplicity="1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="Predmet" Type="On_line_rasporedDataStore.Predmet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Semestar">
-        <PropertyRef Name="ID_semestar" />
-      </Principal>
-      <Dependent Role="Predmet">
-        <PropertyRef Name="ID_semestar" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Student_Semestar">
     <End Role="Semestar" Type="On_line_rasporedDataStore.Semestar" Multiplicity="1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -235,6 +234,20 @@
         <PropertyRef Name="ID_semestar" />
       </Principal>
       <Dependent Role="Student">
+        <PropertyRef Name="ID_semestar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Predmet_Semestar">
+    <End Role="Semestar" Type="On_line_rasporedDataStore.Semestar" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Predmet" Type="On_line_rasporedDataStore.Predmet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semestar">
+        <PropertyRef Name="ID_semestar" />
+      </Principal>
+      <Dependent Role="Predmet">
         <PropertyRef Name="ID_semestar" />
       </Dependent>
     </ReferentialConstraint>
@@ -264,6 +277,20 @@
       </Principal>
       <Dependent Role="Aktivnost">
         <PropertyRef Name="ID_TipNaAktivnost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Predmet_StatusPredmet">
+    <End Role="StatusPredmet" Type="On_line_rasporedDataStore.StatusPredmet" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Predmet" Type="On_line_rasporedDataStore.Predmet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusPredmet">
+        <PropertyRef Name="ID_Status" />
+      </Principal>
+      <Dependent Role="Predmet">
+        <PropertyRef Name="ID_Status" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

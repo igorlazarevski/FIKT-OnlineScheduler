@@ -20,10 +20,10 @@ window.myapp = msls.application;
         /// <param name="entitySet" type="msls.EntitySet" optional="true">
         /// The entity set that should contain this aktivnost.
         /// </param>
-        /// <field name="Vreme_pocetok" type="Object">
+        /// <field name="Vreme_pocetok" type="Date">
         /// Gets or sets the vreme_pocetok for this aktivnost.
         /// </field>
-        /// <field name="Vreme_kraj" type="Object">
+        /// <field name="Vreme_kraj" type="Date">
         /// Gets or sets the vreme_kraj for this aktivnost.
         /// </field>
         /// <field name="Den" type="String">
@@ -88,9 +88,6 @@ window.myapp = msls.application;
         /// <field name="Ime" type="String">
         /// Gets or sets the ime for this predmet.
         /// </field>
-        /// <field name="Status" type="String">
-        /// Gets or sets the status for this predmet.
-        /// </field>
         /// <field name="Nasoka" type="String">
         /// Gets or sets the nasoka for this predmet.
         /// </field>
@@ -100,14 +97,20 @@ window.myapp = msls.application;
         /// <field name="Izbrani_predmetis" type="msls.EntityCollection" elementType="msls.application.Izbrani_predmeti">
         /// Gets the izbrani_predmetis for this predmet.
         /// </field>
+        /// <field name="ActivePredmet" type="Boolean">
+        /// Gets or sets the activePredmet for this predmet.
+        /// </field>
         /// <field name="Profesor" type="msls.application.Profesor">
         /// Gets or sets the profesor for this predmet.
         /// </field>
         /// <field name="Semestar" type="msls.application.Semestar">
         /// Gets or sets the semestar for this predmet.
         /// </field>
-        /// <field name="ActivePredmet" type="Boolean">
-        /// Gets or sets the activePredmet for this predmet.
+        /// <field name="br_krediti" type="Number">
+        /// Gets or sets the br_krediti for this predmet.
+        /// </field>
+        /// <field name="StatusPredmet" type="msls.application.StatusPredmet">
+        /// Gets or sets the statusPredmet for this predmet.
         /// </field>
         /// <field name="details" type="msls.application.Predmet.Details">
         /// Gets the details for this predmet.
@@ -149,11 +152,11 @@ window.myapp = msls.application;
         /// <field name="ID_profesor" type="Number">
         /// Gets or sets the iD_profesor for this profesor.
         /// </field>
-        /// <field name="ActiveProfesor" type="Boolean">
-        /// Gets or sets the activeProfesor for this profesor.
-        /// </field>
         /// <field name="Aktivnosts" type="msls.EntityCollection" elementType="msls.application.Aktivnost">
         /// Gets the aktivnosts for this profesor.
+        /// </field>
+        /// <field name="ActiveProfesor" type="Boolean">
+        /// Gets or sets the activeProfesor for this profesor.
         /// </field>
         /// <field name="Predmets" type="msls.EntityCollection" elementType="msls.application.Predmet">
         /// Gets the predmets for this profesor.
@@ -202,11 +205,11 @@ window.myapp = msls.application;
         /// <field name="Br_semestar" type="Number">
         /// Gets or sets the br_semestar for this semestar.
         /// </field>
-        /// <field name="Predmets" type="msls.EntityCollection" elementType="msls.application.Predmet">
-        /// Gets the predmets for this semestar.
-        /// </field>
         /// <field name="Students" type="msls.EntityCollection" elementType="msls.application.Student">
         /// Gets the students for this semestar.
+        /// </field>
+        /// <field name="Predmets" type="msls.EntityCollection" elementType="msls.application.Predmet">
+        /// Gets the predmets for this semestar.
         /// </field>
         /// <field name="details" type="msls.application.Semestar.Details">
         /// Gets the details for this semestar.
@@ -239,14 +242,14 @@ window.myapp = msls.application;
         /// <field name="Lozinka" type="String">
         /// Gets or sets the lozinka for this student.
         /// </field>
-        /// <field name="ActiveStudent" type="Boolean">
-        /// Gets or sets the activeStudent for this student.
-        /// </field>
         /// <field name="Izbrani_predmetis" type="msls.EntityCollection" elementType="msls.application.Izbrani_predmeti">
         /// Gets the izbrani_predmetis for this student.
         /// </field>
         /// <field name="Semestar" type="msls.application.Semestar">
         /// Gets or sets the semestar for this student.
+        /// </field>
+        /// <field name="ActiveStudent" type="Boolean">
+        /// Gets or sets the activeStudent for this student.
         /// </field>
         /// <field name="details" type="msls.application.Student.Details">
         /// Gets the details for this student.
@@ -304,6 +307,28 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function StatusPredmet(entitySet) {
+        /// <summary>
+        /// Represents the StatusPredmet entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this statusPredmet.
+        /// </param>
+        /// <field name="ID_Status" type="Number">
+        /// Gets or sets the iD_Status for this statusPredmet.
+        /// </field>
+        /// <field name="Status" type="String">
+        /// Gets or sets the status for this statusPredmet.
+        /// </field>
+        /// <field name="Predmets" type="msls.EntityCollection" elementType="msls.application.Predmet">
+        /// Gets the predmets for this statusPredmet.
+        /// </field>
+        /// <field name="details" type="msls.application.StatusPredmet.Details">
+        /// Gets the details for this statusPredmet.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function On_line_rasporedData(dataWorkspace) {
         /// <summary>
         /// Represents the On_line_rasporedData data service.
@@ -338,6 +363,9 @@ window.myapp = msls.application;
         /// <field name="TipNaAktivnosts" type="msls.EntitySet">
         /// Gets the TipNaAktivnosts entity set.
         /// </field>
+        /// <field name="StatusPredmets" type="msls.EntitySet">
+        /// Gets the StatusPredmets entity set.
+        /// </field>
         /// <field name="details" type="msls.application.On_line_rasporedData.Details">
         /// Gets the details for this data service.
         /// </field>
@@ -359,8 +387,8 @@ window.myapp = msls.application;
     msls._addToNamespace("msls.application", {
 
         Aktivnost: $defineEntity(Aktivnost, [
-            { name: "Vreme_pocetok", type: Object },
-            { name: "Vreme_kraj", type: Object },
+            { name: "Vreme_pocetok", type: Date },
+            { name: "Vreme_kraj", type: Date },
             { name: "Den", type: String },
             { name: "ID_aktivnost", type: Number, isReadOnly: true },
             { name: "Predmet", kind: "reference", type: Predmet },
@@ -379,13 +407,14 @@ window.myapp = msls.application;
         Predmet: $defineEntity(Predmet, [
             { name: "ID_predmet", type: String },
             { name: "Ime", type: String },
-            { name: "Status", type: String },
             { name: "Nasoka", type: String },
             { name: "Aktivnosts", kind: "collection", elementType: Aktivnost },
             { name: "Izbrani_predmetis", kind: "collection", elementType: Izbrani_predmeti },
+            { name: "ActivePredmet", type: Boolean },
             { name: "Profesor", kind: "reference", type: Profesor },
             { name: "Semestar", kind: "reference", type: Semestar },
-            { name: "ActivePredmet", type: Boolean }
+            { name: "br_krediti", type: Number },
+            { name: "StatusPredmet", kind: "reference", type: StatusPredmet }
         ]),
 
         Profesor: $defineEntity(Profesor, [
@@ -398,8 +427,8 @@ window.myapp = msls.application;
             { name: "Email", type: String },
             { name: "Telefon", type: String },
             { name: "ID_profesor", type: Number, isReadOnly: true },
-            { name: "ActiveProfesor", type: Boolean },
             { name: "Aktivnosts", kind: "collection", elementType: Aktivnost },
+            { name: "ActiveProfesor", type: Boolean },
             { name: "Predmets", kind: "collection", elementType: Predmet }
         ]),
 
@@ -413,8 +442,8 @@ window.myapp = msls.application;
         Semestar: $defineEntity(Semestar, [
             { name: "ID_semestar", type: Number },
             { name: "Br_semestar", type: Number },
-            { name: "Predmets", kind: "collection", elementType: Predmet },
-            { name: "Students", kind: "collection", elementType: Student }
+            { name: "Students", kind: "collection", elementType: Student },
+            { name: "Predmets", kind: "collection", elementType: Predmet }
         ]),
 
         Student: $defineEntity(Student, [
@@ -424,9 +453,9 @@ window.myapp = msls.application;
             { name: "Nasoka", type: String },
             { name: "Email", type: String },
             { name: "Lozinka", type: String },
-            { name: "ActiveStudent", type: Boolean },
             { name: "Izbrani_predmetis", kind: "collection", elementType: Izbrani_predmeti },
-            { name: "Semestar", kind: "reference", type: Semestar }
+            { name: "Semestar", kind: "reference", type: Semestar },
+            { name: "ActiveStudent", type: Boolean }
         ]),
 
         sysdiagram: $defineEntity(sysdiagram, [
@@ -443,6 +472,12 @@ window.myapp = msls.application;
             { name: "Aktivnosts", kind: "collection", elementType: Aktivnost }
         ]),
 
+        StatusPredmet: $defineEntity(StatusPredmet, [
+            { name: "ID_Status", type: Number, isReadOnly: true },
+            { name: "Status", type: String },
+            { name: "Predmets", kind: "collection", elementType: Predmet }
+        ]),
+
         On_line_rasporedData: $defineDataService(On_line_rasporedData, lightSwitchApplication.rootUri + "/On_line_rasporedData.svc", [
             { name: "Aktivnosts", elementType: Aktivnost },
             { name: "Izbrani_predmetis", elementType: Izbrani_predmeti },
@@ -452,7 +487,8 @@ window.myapp = msls.application;
             { name: "Semestars", elementType: Semestar },
             { name: "Students", elementType: Student },
             { name: "sysdiagrams", elementType: sysdiagram },
-            { name: "TipNaAktivnosts", elementType: TipNaAktivnost }
+            { name: "TipNaAktivnosts", elementType: TipNaAktivnost },
+            { name: "StatusPredmets", elementType: StatusPredmet }
         ], [
             {
                 name: "Aktivnosts_SingleOrDefault", value: function (ID_aktivnost) {
@@ -515,6 +551,21 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.TipNaAktivnosts },
                         lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/TipNaAktivnosts(" + "ID_tipNaAktivnost=" + $toODataString(ID_tipNaAktivnost, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "StatusPredmets_SingleOrDefault", value: function (ID_Status) {
+                    return new $DataServiceQuery({ _entitySet: this.StatusPredmets },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/StatusPredmets(" + "ID_Status=" + $toODataString(ID_Status, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Query1", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.Predmets },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/Query1()",
+                        {
+                        });
                 }
             }
         ]),
