@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Predmet">
+    Name="Nasoka">
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -16,98 +16,65 @@
     </EntityType.Methods>
     <EntityType.Properties>
       <KeyProperty
-        Name="ID_predmet"
-        PropertyType=":String">
+        Name="ID_Nasoka"
+        IsReadOnly="True"
+        PropertyType=":Int32">
         <KeyProperty.Attributes>
+          <Hidden />
           <Required />
-          <MaxLength
-            Value="50" />
+          <NotSearchable />
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
-        Name="Ime"
-        PropertyType=":String?">
+        Name="Nasok"
+        PropertyType=":String">
         <EntityProperty.Attributes>
+          <Required />
           <MaxLength
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="Aktivnosts"
-        Association="FK_Aktivnost_Predmet"
-        FromEnd="Predmet"
-        ToEnd="Aktivnost" />
-      <NavigationProperty
-        Name="Izbrani_predmetis"
-        Association="FK_Izbrani_predmeti_Predmet"
-        FromEnd="Predmet"
-        ToEnd="Izbrani_predmeti" />
-      <EntityProperty
-        Name="ActivePredmet"
-        PropertyType=":Boolean?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <NavigationProperty
-        Name="Profesor"
-        Association="FK_Predmet_Profesor"
-        FromEnd="Predmet"
-        ToEnd="Profesor" />
-      <NavigationProperty
-        Name="Semestar"
-        Association="FK_Predmet_Semestar"
-        FromEnd="Predmet"
-        ToEnd="Semestar" />
-      <EntityProperty
-        Name="br_krediti"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <NavigationProperty
-        Name="StatusPredmet"
-        Association="FK_Predmet_StatusPredmet"
-        FromEnd="Predmet"
-        ToEnd="StatusPredmet" />
-      <NavigationProperty
-        Name="Nasoka1"
+        Name="Predmets"
         Association="FK_Predmet_Nasoka"
-        FromEnd="Predmet"
-        ToEnd="Nasoka" />
+        FromEnd="Nasoka"
+        ToEnd="Predmet" />
+      <NavigationProperty
+        Name="Students"
+        Association="FK_Student_Nasoka"
+        FromEnd="Nasoka"
+        ToEnd="Student" />
     </EntityType.Properties>
   </EntityType>
   <Association
-    Name="FK_Aktivnost_Predmet">
+    Name="FK_Predmet_Nasoka">
     <AssociationEnd
-      Name="Predmet"
+      Name="Nasoka"
       Multiplicity="One"
-      EntityType="Predmet">
+      EntityType="Nasoka">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
-      Name="Aktivnost"
+      Name="Predmet"
       Multiplicity="Many"
-      EntityType="Aktivnost" />
+      EntityType="Predmet" />
   </Association>
   <Association
-    Name="FK_Izbrani_predmeti_Predmet">
+    Name="FK_Student_Nasoka">
     <AssociationEnd
-      Name="Predmet"
+      Name="Nasoka"
       Multiplicity="One"
-      EntityType="Predmet">
+      EntityType="Nasoka">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
-      Name="Izbrani_predmeti"
+      Name="Student"
       Multiplicity="Many"
-      EntityType="Izbrani_predmeti" />
+      EntityType="Student" />
   </Association>
   <EntityContainer
     Name="On_line_rasporedData">
@@ -115,34 +82,34 @@
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Predmets"
+      Name="Nasokas"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Predmet" />
+      EntityType="Nasoka" />
     <AssociationSet
-      Name="FK_Aktivnost_Predmet"
-      Association="FK_Aktivnost_Predmet">
+      Name="FK_Predmet_Nasoka"
+      Association="FK_Predmet_Nasoka">
+      <AssociationSetEnd
+        Name="Nasoka"
+        EntitySet="Nasokas" />
       <AssociationSetEnd
         Name="Predmet"
         EntitySet="Predmets" />
-      <AssociationSetEnd
-        Name="Aktivnost"
-        EntitySet="Aktivnosts" />
     </AssociationSet>
     <AssociationSet
-      Name="FK_Izbrani_predmeti_Predmet"
-      Association="FK_Izbrani_predmeti_Predmet">
+      Name="FK_Student_Nasoka"
+      Association="FK_Student_Nasoka">
       <AssociationSetEnd
-        Name="Predmet"
-        EntitySet="Predmets" />
+        Name="Nasoka"
+        EntitySet="Nasokas" />
       <AssociationSetEnd
-        Name="Izbrani_predmeti"
-        EntitySet="Izbrani_predmetis" />
+        Name="Student"
+        EntitySet="Students" />
     </AssociationSet>
     <QueryOperation
-      Name="Predmets_Single"
-      ReturnType="Predmet">
+      Name="Nasokas_Single"
+      ReturnType="Nasoka">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -155,12 +122,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="ID_predmet" />
+                  Member="ID_Nasoka" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="ID_predmet" />
+                Parameter="ID_Nasoka" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -168,21 +135,21 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Predmets" />
+            Member="Nasokas" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="ID_predmet"
-        ParameterType="Microsoft.LightSwitch:String?">
+        Name="ID_Nasoka"
+        ParameterType="Microsoft.LightSwitch:Int32?">
         <QueryOperationParameter.Attributes>
           <Description
-            Value="The value of the 'ID_predmet' key property of the entity to retrieve." />
+            Value="The value of the 'ID_Nasoka' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Predmets_SingleOrDefault"
-      ReturnType="Predmet">
+      Name="Nasokas_SingleOrDefault"
+      ReturnType="Nasoka">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -195,12 +162,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="ID_predmet" />
+                  Member="ID_Nasoka" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="ID_predmet" />
+                Parameter="ID_Nasoka" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -208,15 +175,15 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Predmets" />
+            Member="Nasokas" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="ID_predmet"
-        ParameterType="Microsoft.LightSwitch:String?">
+        Name="ID_Nasoka"
+        ParameterType="Microsoft.LightSwitch:Int32?">
         <QueryOperationParameter.Attributes>
           <Description
-            Value="The value of the 'ID_predmet' key property of the entity to retrieve." />
+            Value="The value of the 'ID_Nasoka' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -227,93 +194,63 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Predmets">
+      EntitySet="Nasokas">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
           Schema="dbo"
-          Table="Predmet" />
+          Table="Nasoka" />
         <SsdlProperty
-          MaxLength="50"
-          Name="ID_predmet"
-          Nullable="False"
-          Type="nvarchar"
-          Property="Predmet/Properties[ID_predmet]" />
-        <SsdlProperty
-          MaxLength="50"
-          Name="Ime"
-          Nullable="True"
-          Type="nvarchar"
-          Property="Predmet/Properties[Ime]" />
-        <SsdlProperty
-          Name="ActivePredmet"
-          Nullable="True"
-          Type="bit"
-          Property="Predmet/Properties[ActivePredmet]" />
-        <SsdlProperty
-          Name="br_krediti"
-          Nullable="False"
-          Type="int"
-          Property="Predmet/Properties[br_krediti]" />
-        <SsdlForeignKeyProperty
           Name="ID_Nasoka"
           Nullable="False"
+          StoreGeneratedPattern="Identity"
           Type="int"
-          PropertyName="ID_Nasoka" />
-        <SsdlForeignKeyProperty
-          Name="ID_profesor"
+          Property="Nasoka/Properties[ID_Nasoka]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nasok"
           Nullable="False"
-          Type="int"
-          PropertyName="ID_profesor" />
-        <SsdlForeignKeyProperty
-          Name="ID_semestar"
-          Nullable="False"
-          Type="int"
-          PropertyName="ID_semestar" />
-        <SsdlForeignKeyProperty
-          Name="ID_Status"
-          Nullable="False"
-          Type="int"
-          PropertyName="ID_Status" />
+          Type="nvarchar"
+          Property="Nasoka/Properties[Nasok]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping
-      AssociationSet="FK_Aktivnost_Predmet">
+      AssociationSet="FK_Predmet_Nasoka">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
-          Name="FK_Aktivnost_Predmet" />
+          Name="FK_Predmet_Nasoka" />
         <SsdlAssociationSetEnd
-          End="On_line_rasporedData/Members[FK_Aktivnost_Predmet]/Members[Predmet]">
+          End="On_line_rasporedData/Members[FK_Predmet_Nasoka]/Members[Nasoka]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
-              Name="ID_predmet" />
+              Name="ID_Nasoka" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="On_line_rasporedData/Members[FK_Aktivnost_Predmet]/Members[Aktivnost]">
+          End="On_line_rasporedData/Members[FK_Predmet_Nasoka]/Members[Predmet]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
-              Name="ID_predmet" />
+              Name="ID_Nasoka" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
-      AssociationSet="FK_Izbrani_predmeti_Predmet">
+      AssociationSet="FK_Student_Nasoka">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
-          Name="FK_Izbrani_predmeti_Predmet" />
+          Name="FK_Student_Nasoka" />
         <SsdlAssociationSetEnd
-          End="On_line_rasporedData/Members[FK_Izbrani_predmeti_Predmet]/Members[Predmet]">
+          End="On_line_rasporedData/Members[FK_Student_Nasoka]/Members[Nasoka]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
-              Name="ID_predmet" />
+              Name="ID_Nasoka" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="On_line_rasporedData/Members[FK_Izbrani_predmeti_Predmet]/Members[Izbrani_predmeti]">
+          End="On_line_rasporedData/Members[FK_Student_Nasoka]/Members[Student]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
-              Name="ID_predmet" />
+              Name="ID_Nasoka" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

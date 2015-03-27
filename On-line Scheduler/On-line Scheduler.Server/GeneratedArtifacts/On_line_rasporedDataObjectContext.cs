@@ -19,6 +19,9 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Den", "Den", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Den), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Nasoka", "Nasoka", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Nasoka), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Student_Nasoka", "Nasoka", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Nasoka), "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Student), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Predmet", "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Predmet), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Izbrani_predmeti_Predmet", "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Predmet), "Izbrani_predmeti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Izbrani_predmeti), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Profesor", "Profesor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Profesor), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
@@ -26,9 +29,9 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Prostorija", "Prostorija", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Prostorija), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Student_Semestar", "Semestar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Semestar), "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Student), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Semestar", "Semestar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Semestar), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_StatusPredmet", "StatusPredmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.StatusPredmet), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Izbrani_predmeti_Student", "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Student), "Izbrani_predmeti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Izbrani_predmeti), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_TipNaAktivnost", "TipNaAktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TipNaAktivnost), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_StatusPredmet", "StatusPredmet", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.StatusPredmet), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 
 #endregion
 
@@ -96,6 +99,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Den> Dens
+        {
+            get
+            {
+                if ((_Dens == null))
+                {
+                    _Dens = base.CreateObjectSet<Den>("Dens");
+                }
+                return _Dens;
+            }
+        }
+        private ObjectSet<Den> _Dens;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Izbrani_predmeti> Izbrani_predmetis
         {
             get
@@ -108,6 +127,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Izbrani_predmeti> _Izbrani_predmetis;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Nasoka> Nasokas
+        {
+            get
+            {
+                if ((_Nasokas == null))
+                {
+                    _Nasokas = base.CreateObjectSet<Nasoka>("Nasokas");
+                }
+                return _Nasokas;
+            }
+        }
+        private ObjectSet<Nasoka> _Nasokas;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -176,6 +211,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<StatusPredmet> StatusPredmets
+        {
+            get
+            {
+                if ((_StatusPredmets == null))
+                {
+                    _StatusPredmets = base.CreateObjectSet<StatusPredmet>("StatusPredmets");
+                }
+                return _StatusPredmets;
+            }
+        }
+        private ObjectSet<StatusPredmet> _StatusPredmets;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Student> Students
         {
             get
@@ -220,22 +271,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TipNaAktivnost> _TipNaAktivnosts;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<StatusPredmet> StatusPredmets
-        {
-            get
-            {
-                if ((_StatusPredmets == null))
-                {
-                    _StatusPredmets = base.CreateObjectSet<StatusPredmet>("StatusPredmets");
-                }
-                return _StatusPredmets;
-            }
-        }
-        private ObjectSet<StatusPredmet> _StatusPredmets;
 
         #endregion
 
@@ -250,11 +285,27 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Dens EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToDens(Den den)
+        {
+            base.AddObject("Dens", den);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Izbrani_predmetis EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToIzbrani_predmetis(Izbrani_predmeti izbrani_predmeti)
         {
             base.AddObject("Izbrani_predmetis", izbrani_predmeti);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Nasokas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToNasokas(Nasoka nasoka)
+        {
+            base.AddObject("Nasokas", nasoka);
         }
     
         /// <summary>
@@ -290,6 +341,14 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the StatusPredmets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToStatusPredmets(StatusPredmet statusPredmet)
+        {
+            base.AddObject("StatusPredmets", statusPredmet);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Students EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToStudents(Student student)
@@ -311,14 +370,6 @@ namespace LightSwitchApplication.Implementation
         public void AddToTipNaAktivnosts(TipNaAktivnost tipNaAktivnost)
         {
             base.AddObject("TipNaAktivnosts", tipNaAktivnost);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the StatusPredmets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToStatusPredmets(StatusPredmet statusPredmet)
-        {
-            base.AddObject("StatusPredmets", statusPredmet);
         }
 
         #endregion
@@ -347,7 +398,8 @@ namespace LightSwitchApplication.Implementation
         /// <param name="iD_profesor">Initial value of the ID_profesor property.</param>
         /// <param name="iD_prostorija">Initial value of the ID_prostorija property.</param>
         /// <param name="iD_TipNaAktivnost">Initial value of the ID_TipNaAktivnost property.</param>
-        public static Aktivnost CreateAktivnost(global::System.Int32 iD_aktivnost, global::System.String iD_predmet, global::System.Int32 iD_profesor, global::System.Int32 iD_prostorija, global::System.Int32 iD_TipNaAktivnost)
+        /// <param name="iD_Den">Initial value of the ID_Den property.</param>
+        public static Aktivnost CreateAktivnost(global::System.Int32 iD_aktivnost, global::System.String iD_predmet, global::System.Int32 iD_profesor, global::System.Int32 iD_prostorija, global::System.Int32 iD_TipNaAktivnost, global::System.Int32 iD_Den)
         {
             Aktivnost aktivnost = new Aktivnost();
             aktivnost.ID_aktivnost = iD_aktivnost;
@@ -355,6 +407,7 @@ namespace LightSwitchApplication.Implementation
             aktivnost.ID_profesor = iD_profesor;
             aktivnost.ID_prostorija = iD_prostorija;
             aktivnost.ID_TipNaAktivnost = iD_TipNaAktivnost;
+            aktivnost.ID_Den = iD_Den;
             return aktivnost;
         }
 
@@ -409,30 +462,6 @@ namespace LightSwitchApplication.Implementation
         private Nullable<global::System.DateTime> _Vreme_kraj;
         partial void OnVreme_krajChanging(Nullable<global::System.DateTime> value);
         partial void OnVreme_krajChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Den
-        {
-            get
-            {
-                return _Den;
-            }
-            set
-            {
-                OnDenChanging(value);
-                ReportPropertyChanging("Den");
-                _Den = value;
-                ReportPropertyChanged("Den");
-                OnDenChanged();
-            }
-        }
-        private global::System.String _Den;
-        partial void OnDenChanging(global::System.String value);
-        partial void OnDenChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -556,6 +585,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _ID_TipNaAktivnost;
         partial void OnID_TipNaAktivnostChanging(global::System.Int32 value);
         partial void OnID_TipNaAktivnostChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Den
+        {
+            get
+            {
+                return _ID_Den;
+            }
+            set
+            {
+                OnID_DenChanging(value);
+                ReportPropertyChanging("ID_Den");
+                _ID_Den = value;
+                ReportPropertyChanged("ID_Den");
+                OnID_DenChanged();
+            }
+        }
+        private global::System.Int32 _ID_Den;
+        partial void OnID_DenChanging(global::System.Int32 value);
+        partial void OnID_DenChanged();
 
         #endregion
 
@@ -710,6 +763,151 @@ namespace LightSwitchApplication.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipNaAktivnost>("LightSwitchApplication.FK_Aktivnost_TipNaAktivnost", "TipNaAktivnost", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Aktivnost_Den", "Den")]
+        public Den Den
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Den>("LightSwitchApplication.FK_Aktivnost_Den", "Den").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Den>("LightSwitchApplication.FK_Aktivnost_Den", "Den").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Den> DenReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Den>("LightSwitchApplication.FK_Aktivnost_Den", "Den");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Den>("LightSwitchApplication.FK_Aktivnost_Den", "Den", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Den")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Den : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Den object.
+        /// </summary>
+        /// <param name="iD_Den">Initial value of the ID_Den property.</param>
+        public static Den CreateDen(global::System.Int32 iD_Den)
+        {
+            Den den = new Den();
+            den.ID_Den = iD_Den;
+            return den;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Den
+        {
+            get
+            {
+                return _ID_Den;
+            }
+            set
+            {
+                if (_ID_Den != value)
+                {
+                    OnID_DenChanging(value);
+                    ReportPropertyChanging("ID_Den");
+                    _ID_Den = value;
+                    ReportPropertyChanged("ID_Den");
+                    OnID_DenChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID_Den;
+        partial void OnID_DenChanging(global::System.Int32 value);
+        partial void OnID_DenChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Den1
+        {
+            get
+            {
+                return _Den1;
+            }
+            set
+            {
+                OnDen1Changing(value);
+                ReportPropertyChanging("Den1");
+                _Den1 = value;
+                ReportPropertyChanged("Den1");
+                OnDen1Changed();
+            }
+        }
+        private global::System.String _Den1;
+        partial void OnDen1Changing(global::System.String value);
+        partial void OnDen1Changed();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Aktivnost_Den", "Aktivnost")]
+        public EntityCollection<Aktivnost> Aktivnosts
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Aktivnost>("LightSwitchApplication.FK_Aktivnost_Den", "Aktivnost");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Aktivnost>("LightSwitchApplication.FK_Aktivnost_Den", "Aktivnost", value);
                 }
             }
         }
@@ -934,6 +1132,137 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Nasoka")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Nasoka : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Nasoka object.
+        /// </summary>
+        /// <param name="iD_Nasoka">Initial value of the ID_Nasoka property.</param>
+        /// <param name="nasok">Initial value of the Nasok property.</param>
+        public static Nasoka CreateNasoka(global::System.Int32 iD_Nasoka, global::System.String nasok)
+        {
+            Nasoka nasoka = new Nasoka();
+            nasoka.ID_Nasoka = iD_Nasoka;
+            nasoka.Nasok = nasok;
+            return nasoka;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Nasoka
+        {
+            get
+            {
+                return _ID_Nasoka;
+            }
+            set
+            {
+                if (_ID_Nasoka != value)
+                {
+                    OnID_NasokaChanging(value);
+                    ReportPropertyChanging("ID_Nasoka");
+                    _ID_Nasoka = value;
+                    ReportPropertyChanged("ID_Nasoka");
+                    OnID_NasokaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID_Nasoka;
+        partial void OnID_NasokaChanging(global::System.Int32 value);
+        partial void OnID_NasokaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nasok
+        {
+            get
+            {
+                return _Nasok;
+            }
+            set
+            {
+                OnNasokChanging(value);
+                ReportPropertyChanging("Nasok");
+                _Nasok = value;
+                ReportPropertyChanged("Nasok");
+                OnNasokChanged();
+            }
+        }
+        private global::System.String _Nasok;
+        partial void OnNasokChanging(global::System.String value);
+        partial void OnNasokChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Predmet_Nasoka", "Predmet")]
+        public EntityCollection<Predmet> Predmets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Predmet>("LightSwitchApplication.FK_Predmet_Nasoka", "Predmet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Predmet>("LightSwitchApplication.FK_Predmet_Nasoka", "Predmet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Student_Nasoka", "Student")]
+        public EntityCollection<Student> Students
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Student>("LightSwitchApplication.FK_Student_Nasoka", "Student");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Student>("LightSwitchApplication.FK_Student_Nasoka", "Student", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Predmet")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -945,18 +1274,20 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Predmet object.
         /// </summary>
         /// <param name="iD_predmet">Initial value of the ID_predmet property.</param>
-        /// <param name="nasoka">Initial value of the Nasoka property.</param>
         /// <param name="iD_profesor">Initial value of the ID_profesor property.</param>
         /// <param name="iD_semestar">Initial value of the ID_semestar property.</param>
         /// <param name="br_krediti">Initial value of the br_krediti property.</param>
-        public static Predmet CreatePredmet(global::System.String iD_predmet, global::System.String nasoka, global::System.Int32 iD_profesor, global::System.Int32 iD_semestar, global::System.Int32 br_krediti)
+        /// <param name="iD_Status">Initial value of the ID_Status property.</param>
+        /// <param name="iD_Nasoka">Initial value of the ID_Nasoka property.</param>
+        public static Predmet CreatePredmet(global::System.String iD_predmet, global::System.Int32 iD_profesor, global::System.Int32 iD_semestar, global::System.Int32 br_krediti, global::System.Int32 iD_Status, global::System.Int32 iD_Nasoka)
         {
             Predmet predmet = new Predmet();
             predmet.ID_predmet = iD_predmet;
-            predmet.Nasoka = nasoka;
             predmet.ID_profesor = iD_profesor;
             predmet.ID_semestar = iD_semestar;
             predmet.br_krediti = br_krediti;
+            predmet.ID_Status = iD_Status;
+            predmet.ID_Nasoka = iD_Nasoka;
             return predmet;
         }
 
@@ -1014,30 +1345,6 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Ime;
         partial void OnImeChanging(global::System.String value);
         partial void OnImeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Nasoka
-        {
-            get
-            {
-                return _Nasoka;
-            }
-            set
-            {
-                OnNasokaChanging(value);
-                ReportPropertyChanging("Nasoka");
-                _Nasoka = value;
-                ReportPropertyChanged("Nasoka");
-                OnNasokaChanged();
-            }
-        }
-        private global::System.String _Nasoka;
-        partial void OnNasokaChanging(global::System.String value);
-        partial void OnNasokaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1138,9 +1445,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> ID_Status
+        public global::System.Int32 ID_Status
         {
             get
             {
@@ -1155,9 +1462,33 @@ namespace LightSwitchApplication.Implementation
                 OnID_StatusChanged();
             }
         }
-        private Nullable<global::System.Int32> _ID_Status;
-        partial void OnID_StatusChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _ID_Status;
+        partial void OnID_StatusChanging(global::System.Int32 value);
         partial void OnID_StatusChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Nasoka
+        {
+            get
+            {
+                return _ID_Nasoka;
+            }
+            set
+            {
+                OnID_NasokaChanging(value);
+                ReportPropertyChanging("ID_Nasoka");
+                _ID_Nasoka = value;
+                ReportPropertyChanged("ID_Nasoka");
+                OnID_NasokaChanged();
+            }
+        }
+        private global::System.Int32 _ID_Nasoka;
+        partial void OnID_NasokaChanging(global::System.Int32 value);
+        partial void OnID_NasokaChanged();
 
         #endregion
 
@@ -1318,6 +1649,44 @@ namespace LightSwitchApplication.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<StatusPredmet>("LightSwitchApplication.FK_Predmet_StatusPredmet", "StatusPredmet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Predmet_Nasoka", "Nasoka")]
+        public Nasoka Nasoka1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Nasoka>("LightSwitchApplication.FK_Predmet_Nasoka", "Nasoka").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Nasoka>("LightSwitchApplication.FK_Predmet_Nasoka", "Nasoka").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Nasoka> Nasoka1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Nasoka>("LightSwitchApplication.FK_Predmet_Nasoka", "Nasoka");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Nasoka>("LightSwitchApplication.FK_Predmet_Nasoka", "Nasoka", value);
                 }
             }
         }
@@ -2031,11 +2400,13 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="br_indeks">Initial value of the Br_indeks property.</param>
         /// <param name="iD_semestar">Initial value of the ID_semestar property.</param>
-        public static Student CreateStudent(global::System.String br_indeks, global::System.Int32 iD_semestar)
+        /// <param name="iD_Nasoka">Initial value of the ID_Nasoka property.</param>
+        public static Student CreateStudent(global::System.String br_indeks, global::System.Int32 iD_semestar, global::System.Int32 iD_Nasoka)
         {
             Student student = new Student();
             student.Br_indeks = br_indeks;
             student.ID_semestar = iD_semestar;
+            student.ID_Nasoka = iD_Nasoka;
             return student;
         }
 
@@ -2117,30 +2488,6 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Prezime;
         partial void OnPrezimeChanging(global::System.String value);
         partial void OnPrezimeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Nasoka
-        {
-            get
-            {
-                return _Nasoka;
-            }
-            set
-            {
-                OnNasokaChanging(value);
-                ReportPropertyChanging("Nasoka");
-                _Nasoka = value;
-                ReportPropertyChanged("Nasoka");
-                OnNasokaChanged();
-            }
-        }
-        private global::System.String _Nasoka;
-        partial void OnNasokaChanging(global::System.String value);
-        partial void OnNasokaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2237,6 +2584,30 @@ namespace LightSwitchApplication.Implementation
         private Nullable<global::System.Boolean> _ActiveStudent;
         partial void OnActiveStudentChanging(Nullable<global::System.Boolean> value);
         partial void OnActiveStudentChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Nasoka
+        {
+            get
+            {
+                return _ID_Nasoka;
+            }
+            set
+            {
+                OnID_NasokaChanging(value);
+                ReportPropertyChanging("ID_Nasoka");
+                _ID_Nasoka = value;
+                ReportPropertyChanged("ID_Nasoka");
+                OnID_NasokaChanged();
+            }
+        }
+        private global::System.Int32 _ID_Nasoka;
+        partial void OnID_NasokaChanging(global::System.Int32 value);
+        partial void OnID_NasokaChanged();
 
         #endregion
 
@@ -2299,6 +2670,44 @@ namespace LightSwitchApplication.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Semestar>("LightSwitchApplication.FK_Student_Semestar", "Semestar", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Student_Nasoka", "Nasoka")]
+        public Nasoka Nasoka1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Nasoka>("LightSwitchApplication.FK_Student_Nasoka", "Nasoka").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Nasoka>("LightSwitchApplication.FK_Student_Nasoka", "Nasoka").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Nasoka> Nasoka1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Nasoka>("LightSwitchApplication.FK_Student_Nasoka", "Nasoka");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Nasoka>("LightSwitchApplication.FK_Student_Nasoka", "Nasoka", value);
                 }
             }
         }

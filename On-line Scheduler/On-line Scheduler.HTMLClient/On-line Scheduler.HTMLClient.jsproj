@@ -66,11 +66,8 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
-    <Content Include="Screens\Aktivnosts\ПрегледАктивност.lsml.js">
-      <DependentUpon>ПрегледАктивност.lsml</DependentUpon>
-    </Content>
-    <Content Include="Screens\Aktivnosts\ПрегледАктивности.lsml.js">
-      <DependentUpon>ПрегледАктивности.lsml</DependentUpon>
+    <Content Include="Screens\Администратор.lsml.js">
+      <DependentUpon>Администратор.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
@@ -96,20 +93,16 @@
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
-    <LightSwitchModel Include="Properties\On_line_rasporedData\Aktivnosts.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
-    <LightSwitchModel Include="Screens\Aktivnosts\ДодајИзмениАктивност.lsml" />
-    <LightSwitchModel Include="Screens\Aktivnosts\ПрегледАктивности.lsml" />
-    <LightSwitchModel Include="Screens\Aktivnosts\ПрегледАктивност.lsml" />
+    <LightSwitchModel Include="Screens\ИзмениАктивност.lsml" />
+    <LightSwitchModel Include="Screens\ДодајАктивност.lsml" />
     <LightSwitchModel Include="Screens\ДодајПрофесор.lsml" />
-    <LightSwitchModel Include="Screens\ЛистаНаПрофесори.lsml" />
     <LightSwitchModel Include="Screens\ИзмениПрофесор.lsml" />
     <LightSwitchModel Include="Screens\ИзмениСтудент.lsml" />
     <LightSwitchModel Include="Screens\ДодајСтудент.lsml" />
-    <LightSwitchModel Include="Screens\ЛистаНаСтуденти.lsml" />
     <LightSwitchModel Include="Screens\ДодајПредмет.lsml" />
     <LightSwitchModel Include="Screens\ИзмениПредмет.lsml" />
-    <LightSwitchModel Include="Screens\ЛистаНаПредмети.lsml" />
+    <LightSwitchModel Include="Screens\Администратор.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
@@ -127,6 +120,9 @@
     <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\On_line_rasporedData\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\Microsoft.LightSwitch.Build.Tasks.targets" />

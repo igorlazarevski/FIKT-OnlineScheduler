@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class Student : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>
+    public sealed partial class Prostorija : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the Student entity.
+        /// Initializes a new instance of the Prostorija entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Student()
+        public Prostorija()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Student(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Student> entitySet)
+        public Prostorija(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Prostorija> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Student.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.Prostorija.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Student_Created();
+        partial void Prostorija_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Student_AllowSaveWithErrors(ref bool result);
+        partial void Prostorija_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,215 +83,91 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Br_indeks
+        public global::System.Nullable<int> Br_prostorija
         {
             get
             {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Br_indeks);
+                return global::LightSwitchApplication.Prostorija.DetailsClass.GetValue(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Br_prostorija);
             }
             set
             {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Br_indeks, value);
+                global::LightSwitchApplication.Prostorija.DetailsClass.SetValue(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Br_prostorija, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Br_indeks_IsReadOnly(ref bool result);
+        partial void Br_prostorija_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Br_indeks_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Br_prostorija_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Br_indeks_Changed();
+        partial void Br_prostorija_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Ime
+        public string Opis
         {
             get
             {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Ime);
+                return global::LightSwitchApplication.Prostorija.DetailsClass.GetValue(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Opis);
             }
             set
             {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Ime, value);
+                global::LightSwitchApplication.Prostorija.DetailsClass.SetValue(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Opis, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Ime_IsReadOnly(ref bool result);
+        partial void Opis_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Ime_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Opis_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Ime_Changed();
+        partial void Opis_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Prezime
+        public int ID_prostorija
         {
             get
             {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Prezime);
-            }
-            set
-            {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Prezime, value);
+                return global::LightSwitchApplication.Prostorija.DetailsClass.GetValue(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.ID_prostorija);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Prezime_IsReadOnly(ref bool result);
+        partial void ID_prostorija_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Prezime_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void ID_prostorija_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Prezime_Changed();
+        partial void ID_prostorija_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Nasoka
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Aktivnost> Aktivnosts
         {
             get
             {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Nasoka);
-            }
-            set
-            {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Nasoka, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasoka_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasoka_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasoka_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Email
-        {
-            get
-            {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Email);
-            }
-            set
-            {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Email, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Email_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Email_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Email_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Lozinka
-        {
-            get
-            {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Lozinka);
-            }
-            set
-            {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Lozinka, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Lozinka_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Lozinka_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Lozinka_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> ActiveStudent
-        {
-            get
-            {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.ActiveStudent);
-            }
-            set
-            {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.ActiveStudent, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveStudent_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveStudent_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveStudent_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Izbrani_predmeti> Izbrani_predmetis
-        {
-            get
-            {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Izbrani_predmetis);
+                return global::LightSwitchApplication.Prostorija.DetailsClass.GetValue(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Aktivnosts);
             }
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Izbrani_predmeti> Izbrani_predmetisQuery
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Aktivnost> AktivnostsQuery
         {
             get
             {
-                return global::LightSwitchApplication.Student.DetailsClass.GetQuery(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Izbrani_predmetis);
+                return global::LightSwitchApplication.Prostorija.DetailsClass.GetQuery(this, global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Aktivnosts);
             }
         }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Semestar Semestar
-        {
-            get
-            {
-                return global::LightSwitchApplication.Student.DetailsClass.GetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Semestar);
-            }
-            set
-            {
-                global::LightSwitchApplication.Student.DetailsClass.SetValue(this, global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Semestar, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Semestar_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Semestar_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Semestar_Changed();
 
         #endregion
     
@@ -302,37 +178,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Student,
-                global::LightSwitchApplication.Student.DetailsClass,
-                global::LightSwitchApplication.Student.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Student.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>>
+                global::LightSwitchApplication.Prostorija,
+                global::LightSwitchApplication.Prostorija.DetailsClass,
+                global::LightSwitchApplication.Prostorija.DetailsClass.IImplementation,
+                global::LightSwitchApplication.Prostorija.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Br_indeks;
+                var initializeEntry = global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Br_prostorija;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>.Entry
-                __StudentEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Student.DetailsClass.__Student_CreateNew,
-                    global::LightSwitchApplication.Student.DetailsClass.__Student_Created,
-                    global::LightSwitchApplication.Student.DetailsClass.__Student_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Student __Student_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Student> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass>.Entry
+                __ProstorijaEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Prostorija.DetailsClass.__Prostorija_CreateNew,
+                    global::LightSwitchApplication.Prostorija.DetailsClass.__Prostorija_Created,
+                    global::LightSwitchApplication.Prostorija.DetailsClass.__Prostorija_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.Prostorija __Prostorija_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Prostorija> es)
             {
-                return new global::LightSwitchApplication.Student(es);
+                return new global::LightSwitchApplication.Prostorija(es);
             }
-            private static void __Student_Created(global::LightSwitchApplication.Student e)
+            private static void __Prostorija_Created(global::LightSwitchApplication.Prostorija e)
             {
-                e.Student_Created();
+                e.Prostorija_Created();
             }
-            private static bool __Student_AllowSaveWithErrors(global::LightSwitchApplication.Student e)
+            private static bool __Prostorija_AllowSaveWithErrors(global::LightSwitchApplication.Prostorija e)
             {
                 bool result = false;
-                e.Student_AllowSaveWithErrors(ref result);
+                e.Prostorija_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -340,7 +216,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass> Commands
             {
                 get
                 {
@@ -348,7 +224,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass> Methods
             {
                 get
                 {
@@ -356,7 +232,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Student.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.Prostorija.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -368,82 +244,42 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string> Br_indeks
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::System.Nullable<int>> Br_prostorija
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Br_indeks) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Br_prostorija) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::System.Nullable<int>>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string> Ime
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, string> Opis
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Ime) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Opis) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string> Prezime
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, int> ID_prostorija
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Prezime) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.ID_prostorija) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string> Nasoka
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::LightSwitchApplication.Aktivnost> Aktivnosts
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Nasoka) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string> Email
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Email) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string> Lozinka
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Lozinka) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::System.Nullable<bool>> ActiveStudent
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.ActiveStudent) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::System.Nullable<bool>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti> Izbrani_predmetis
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Izbrani_predmetis) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Semestar> Semestar
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Semestar) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Semestar>;
+                        return base.GetItem(global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Aktivnosts) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::LightSwitchApplication.Aktivnost>;
                     }
                 }
                 
@@ -453,15 +289,10 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new string Br_indeks { get; set; }
-                new string Ime { get; set; }
-                new string Prezime { get; set; }
-                new string Nasoka { get; set; }
-                new string Email { get; set; }
-                new string Lozinka { get; set; }
-                new global::System.Nullable<bool> ActiveStudent { get; set; }
-                new global::System.Collections.IEnumerable Izbrani_predmetis { get; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Semestar { get; set; }
+                new global::System.Nullable<int> Br_prostorija { get; set; }
+                new string Opis { get; set; }
+                new int ID_prostorija { get; }
+                new global::System.Collections.IEnumerable Aktivnosts { get; }
             }
             #pragma warning restore 109
     
@@ -472,359 +303,145 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry
-                    Br_indeks = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry(
-                        "Br_indeks",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Br_indeks_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Br_indeks_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Br_indeks_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Br_indeks_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Br_indeks_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Br_indeks_OnValueChanged);
-                private static void _Br_indeks_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::System.Nullable<int>>.Entry
+                    Br_prostorija = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "Br_prostorija",
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Br_prostorija_Stub,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Br_prostorija_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Br_prostorija_Validate,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Br_prostorija_GetImplementationValue,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Br_prostorija_SetImplementationValue,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Br_prostorija_OnValueChanged);
+                private static void _Br_prostorija_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Prostorija.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.Prostorija.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Br_indeks, sf);
+                    c(d, ref d._Br_prostorija, sf);
                 }
-                private static bool _Br_indeks_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
+                private static bool _Br_prostorija_ComputeIsReadOnly(global::LightSwitchApplication.Prostorija e)
                 {
                     bool result = false;
-                    e.Br_indeks_IsReadOnly(ref result);
+                    e.Br_prostorija_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Br_indeks_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Br_prostorija_Validate(global::LightSwitchApplication.Prostorija e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Br_indeks_Validate(r);
+                    e.Br_prostorija_Validate(r);
                 }
-                private static string _Br_indeks_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
+                private static global::System.Nullable<int> _Br_prostorija_GetImplementationValue(global::LightSwitchApplication.Prostorija.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Br_indeks;
+                    return d.ImplementationEntity.Br_prostorija;
                 }
-                private static void _Br_indeks_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, string v)
+                private static void _Br_prostorija_SetImplementationValue(global::LightSwitchApplication.Prostorija.DetailsClass d, global::System.Nullable<int> v)
                 {
-                    d.ImplementationEntity.Br_indeks = v;
+                    d.ImplementationEntity.Br_prostorija = v;
                 }
-                private static void _Br_indeks_OnValueChanged(global::LightSwitchApplication.Student e)
+                private static void _Br_prostorija_OnValueChanged(global::LightSwitchApplication.Prostorija e)
                 {
-                    e.Br_indeks_Changed();
+                    e.Br_prostorija_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry
-                    Ime = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry(
-                        "Ime",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Ime_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Ime_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Ime_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Ime_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Ime_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Ime_OnValueChanged);
-                private static void _Ime_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, string>.Entry
+                    Opis = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, string>.Entry(
+                        "Opis",
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Opis_Stub,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Opis_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Opis_Validate,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Opis_GetImplementationValue,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Opis_SetImplementationValue,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Opis_OnValueChanged);
+                private static void _Opis_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Prostorija.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, string>.Data> c, global::LightSwitchApplication.Prostorija.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Ime, sf);
+                    c(d, ref d._Opis, sf);
                 }
-                private static bool _Ime_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
+                private static bool _Opis_ComputeIsReadOnly(global::LightSwitchApplication.Prostorija e)
                 {
                     bool result = false;
-                    e.Ime_IsReadOnly(ref result);
+                    e.Opis_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Ime_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Opis_Validate(global::LightSwitchApplication.Prostorija e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Ime_Validate(r);
+                    e.Opis_Validate(r);
                 }
-                private static string _Ime_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
+                private static string _Opis_GetImplementationValue(global::LightSwitchApplication.Prostorija.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Ime;
+                    return d.ImplementationEntity.Opis;
                 }
-                private static void _Ime_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, string v)
+                private static void _Opis_SetImplementationValue(global::LightSwitchApplication.Prostorija.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.Ime = v;
+                    d.ImplementationEntity.Opis = v;
                 }
-                private static void _Ime_OnValueChanged(global::LightSwitchApplication.Student e)
+                private static void _Opis_OnValueChanged(global::LightSwitchApplication.Prostorija e)
                 {
-                    e.Ime_Changed();
+                    e.Opis_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry
-                    Prezime = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry(
-                        "Prezime",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Prezime_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Prezime_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Prezime_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Prezime_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Prezime_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Prezime_OnValueChanged);
-                private static void _Prezime_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, int>.Entry
+                    ID_prostorija = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, int>.Entry(
+                        "ID_prostorija",
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._ID_prostorija_Stub,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._ID_prostorija_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._ID_prostorija_Validate,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._ID_prostorija_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._ID_prostorija_OnValueChanged);
+                private static void _ID_prostorija_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Prostorija.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, int>.Data> c, global::LightSwitchApplication.Prostorija.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Prezime, sf);
+                    c(d, ref d._ID_prostorija, sf);
                 }
-                private static bool _Prezime_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
+                private static bool _ID_prostorija_ComputeIsReadOnly(global::LightSwitchApplication.Prostorija e)
                 {
                     bool result = false;
-                    e.Prezime_IsReadOnly(ref result);
+                    e.ID_prostorija_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Prezime_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ID_prostorija_Validate(global::LightSwitchApplication.Prostorija e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Prezime_Validate(r);
+                    e.ID_prostorija_Validate(r);
                 }
-                private static string _Prezime_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
+                private static int _ID_prostorija_GetImplementationValue(global::LightSwitchApplication.Prostorija.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Prezime;
+                    return d.ImplementationEntity.ID_prostorija;
                 }
-                private static void _Prezime_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, string v)
+                private static void _ID_prostorija_OnValueChanged(global::LightSwitchApplication.Prostorija e)
                 {
-                    d.ImplementationEntity.Prezime = v;
-                }
-                private static void _Prezime_OnValueChanged(global::LightSwitchApplication.Student e)
-                {
-                    e.Prezime_Changed();
+                    e.ID_prostorija_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry
-                    Nasoka = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry(
-                        "Nasoka",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Nasoka_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Nasoka_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Nasoka_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Nasoka_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Nasoka_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Nasoka_OnValueChanged);
-                private static void _Nasoka_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::LightSwitchApplication.Aktivnost>.Entry
+                    Aktivnosts = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::LightSwitchApplication.Aktivnost>.Entry(
+                        "Aktivnosts",
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Aktivnosts_Stub,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Aktivnosts_GetReferencedEntities,
+                        global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties._Aktivnosts_GetEntityCollection);
+                private static void _Aktivnosts_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Prostorija.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::LightSwitchApplication.Aktivnost>.Data> c, global::LightSwitchApplication.Prostorija.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Nasoka, sf);
+                    c(d, ref d._Aktivnosts, sf);
                 }
-                private static bool _Nasoka_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Aktivnost> _Aktivnosts_GetReferencedEntities(global::LightSwitchApplication.Prostorija.DetailsClass d)
                 {
-                    bool result = false;
-                    e.Nasoka_IsReadOnly(ref result);
-                    return result;
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass>(global::LightSwitchApplication.Prostorija.DetailsClass.PropertySetProperties.Aktivnosts, ref d._Aktivnosts);
                 }
-                private static void _Nasoka_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static global::System.Collections.IEnumerable _Aktivnosts_GetEntityCollection(global::LightSwitchApplication.Prostorija.DetailsClass d)
                 {
-                    e.Nasoka_Validate(r);
-                }
-                private static string _Nasoka_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Nasoka;
-                }
-                private static void _Nasoka_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Nasoka = v;
-                }
-                private static void _Nasoka_OnValueChanged(global::LightSwitchApplication.Student e)
-                {
-                    e.Nasoka_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry
-                    Email = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry(
-                        "Email",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Email_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Email_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Email_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Email_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Email_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Email_OnValueChanged);
-                private static void _Email_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Email, sf);
-                }
-                private static bool _Email_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
-                {
-                    bool result = false;
-                    e.Email_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Email_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Email_Validate(r);
-                }
-                private static string _Email_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Email;
-                }
-                private static void _Email_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Email = v;
-                }
-                private static void _Email_OnValueChanged(global::LightSwitchApplication.Student e)
-                {
-                    e.Email_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry
-                    Lozinka = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Entry(
-                        "Lozinka",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Lozinka_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Lozinka_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Lozinka_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Lozinka_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Lozinka_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Lozinka_OnValueChanged);
-                private static void _Lozinka_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Lozinka, sf);
-                }
-                private static bool _Lozinka_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
-                {
-                    bool result = false;
-                    e.Lozinka_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Lozinka_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Lozinka_Validate(r);
-                }
-                private static string _Lozinka_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Lozinka;
-                }
-                private static void _Lozinka_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Lozinka = v;
-                }
-                private static void _Lozinka_OnValueChanged(global::LightSwitchApplication.Student e)
-                {
-                    e.Lozinka_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::System.Nullable<bool>>.Entry
-                    ActiveStudent = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::System.Nullable<bool>>.Entry(
-                        "ActiveStudent",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._ActiveStudent_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._ActiveStudent_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._ActiveStudent_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._ActiveStudent_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._ActiveStudent_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._ActiveStudent_OnValueChanged);
-                private static void _ActiveStudent_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ActiveStudent, sf);
-                }
-                private static bool _ActiveStudent_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
-                {
-                    bool result = false;
-                    e.ActiveStudent_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _ActiveStudent_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.ActiveStudent_Validate(r);
-                }
-                private static global::System.Nullable<bool> _ActiveStudent_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ActiveStudent;
-                }
-                private static void _ActiveStudent_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, global::System.Nullable<bool> v)
-                {
-                    d.ImplementationEntity.ActiveStudent = v;
-                }
-                private static void _ActiveStudent_OnValueChanged(global::LightSwitchApplication.Student e)
-                {
-                    e.ActiveStudent_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Entry
-                    Izbrani_predmetis = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Entry(
-                        "Izbrani_predmetis",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Izbrani_predmetis_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Izbrani_predmetis_GetReferencedEntities,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Izbrani_predmetis_GetEntityCollection);
-                private static void _Izbrani_predmetis_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Izbrani_predmetis, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Izbrani_predmeti> _Izbrani_predmetis_GetReferencedEntities(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Izbrani_predmeti, global::LightSwitchApplication.Izbrani_predmeti.DetailsClass>(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Izbrani_predmetis, ref d._Izbrani_predmetis);
-                }
-                private static global::System.Collections.IEnumerable _Izbrani_predmetis_GetEntityCollection(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Izbrani_predmetis;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Semestar>.Entry
-                    Semestar = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Semestar>.Entry(
-                        "Semestar",
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_Stub,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_Validate,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_GetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_SetImplementationValue,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_Refresh,
-                        global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties._Semestar_OnValueChanged);
-                private static void _Semestar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Student.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Semestar>.Data> c, global::LightSwitchApplication.Student.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Semestar, sf);
-                }
-                private static bool _Semestar_ComputeIsReadOnly(global::LightSwitchApplication.Student e)
-                {
-                    bool result = false;
-                    e.Semestar_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Semestar_Validate(global::LightSwitchApplication.Student e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Semestar_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Semestar_GetCoreImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Semestar;
-                }
-                private static global::LightSwitchApplication.Semestar _Semestar_GetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Semestar, global::LightSwitchApplication.Semestar.DetailsClass>(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Semestar, ref d._Semestar);
-                }
-                private static void _Semestar_SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass d, global::LightSwitchApplication.Semestar v)
-                {
-                    d.SetImplementationValue(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Semestar, ref d._Semestar, (i, ev) => i.Semestar = ev, v);
-                }
-                private static void _Semestar_Refresh(global::LightSwitchApplication.Student.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Student.DetailsClass.PropertySetProperties.Semestar, ref d._Semestar);
-                }
-                private static void _Semestar_OnValueChanged(global::LightSwitchApplication.Student e)
-                {
-                    e.Semestar_Changed();
+                    return d.ImplementationEntity.Aktivnosts;
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data _Br_indeks;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::System.Nullable<int>>.Data _Br_prostorija;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data _Ime;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, string>.Data _Opis;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data _Prezime;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, int>.Data _ID_prostorija;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data _Nasoka;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data _Email;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, string>.Data _Lozinka;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::System.Nullable<bool>>.Data _ActiveStudent;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Data _Izbrani_predmetis;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass, global::LightSwitchApplication.Semestar>.Data _Semestar;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Prostorija, global::LightSwitchApplication.Prostorija.DetailsClass, global::LightSwitchApplication.Aktivnost>.Data _Aktivnosts;
             
         }
     
