@@ -10,12 +10,28 @@
         created: [lightSwitchApplication.Aktivnost]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Den, {
+        /// <field>
+        /// Called when a new den is created.
+        /// <br/>created(msls.application.Den entity)
+        /// </field>
+        created: [lightSwitchApplication.Den]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.Izbrani_predmeti, {
         /// <field>
         /// Called when a new izbrani_predmeti is created.
         /// <br/>created(msls.application.Izbrani_predmeti entity)
         /// </field>
         created: [lightSwitchApplication.Izbrani_predmeti]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Nasoka, {
+        /// <field>
+        /// Called when a new nasoka is created.
+        /// <br/>created(msls.application.Nasoka entity)
+        /// </field>
+        created: [lightSwitchApplication.Nasoka]
     });
 
     msls._addEntryPoints(lightSwitchApplication.Predmet, {
@@ -80,14 +96,6 @@
         /// <br/>created(msls.application.TipNaAktivnost entity)
         /// </field>
         created: [lightSwitchApplication.TipNaAktivnost]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.Nasoka, {
-        /// <field>
-        /// Called when a new nasoka is created.
-        /// <br/>created(msls.application.Nasoka entity)
-        /// </field>
-        created: [lightSwitchApplication.Nasoka]
     });
 
 }(msls.application));

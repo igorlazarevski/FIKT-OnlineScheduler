@@ -293,35 +293,6 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Den"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Ден" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Aktivnost/Properties[Den]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Large"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
                   Name="Vreme_pocetok"
                   Kind="Value"
                   DataType=":DateTime?">
@@ -408,28 +379,28 @@
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showДодајИзмениАктивност]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="ДодајПрофесор/Properties[Aktivnosts]" />
-                            <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајИзмениАктивност]/Parameters[Aktivnost]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <ConstantExpression
                           Value="msls-add"
                           ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showДодајАктивност]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="ДодајПрофесор/Properties[Aktivnosts]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -581,28 +552,28 @@
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showДодајИзмениАктивност]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="ДодајПрофесор/Properties[Aktivnosts]" />
-                            <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајИзмениАктивност]/Parameters[Aktivnost]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <ConstantExpression
                           Value="msls-add"
                           ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showДодајПредмет]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="ДодајПрофесор/Properties[Predmets]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showДодајПредмет]/Parameters[Predmet]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

@@ -38,8 +38,5 @@
     <ApplicationNavigationMethodLink
       Name="link"
       Method="!module/Methods[showАдминистратор]" />
-    <ApplicationNavigationMethodLink
-      Name="link3"
-      Method="!module/Methods[showПрегледАктивности]" />
   </Application.NavigationItems>
 </Application>

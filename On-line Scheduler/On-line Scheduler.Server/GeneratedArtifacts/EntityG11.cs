@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class Nasoka : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass>
+    public sealed partial class sysdiagram : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the Nasoka entity.
+        /// Initializes a new instance of the sysdiagram entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Nasoka()
+        public sysdiagram()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Nasoka(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Nasoka> entitySet)
+        public sysdiagram(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.sysdiagram> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Nasoka.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.sysdiagram.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasoka_Created();
+        partial void sysdiagram_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasoka_AllowSaveWithErrors(ref bool result);
+        partial void sysdiagram_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,90 +83,116 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int ID_Nasoka
+        public string name
         {
             get
             {
-                return global::LightSwitchApplication.Nasoka.DetailsClass.GetValue(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.ID_Nasoka);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ID_Nasoka_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ID_Nasoka_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ID_Nasoka_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Nasok
-        {
-            get
-            {
-                return global::LightSwitchApplication.Nasoka.DetailsClass.GetValue(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Nasok);
+                return global::LightSwitchApplication.sysdiagram.DetailsClass.GetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.name);
             }
             set
             {
-                global::LightSwitchApplication.Nasoka.DetailsClass.SetValue(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Nasok, value);
+                global::LightSwitchApplication.sysdiagram.DetailsClass.SetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.name, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasok_IsReadOnly(ref bool result);
+        partial void name_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasok_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void name_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nasok_Changed();
+        partial void name_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Predmet> Predmets
+        public int principal_id
         {
             get
             {
-                return global::LightSwitchApplication.Nasoka.DetailsClass.GetValue(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Predmets);
+                return global::LightSwitchApplication.sysdiagram.DetailsClass.GetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.principal_id);
+            }
+            set
+            {
+                global::LightSwitchApplication.sysdiagram.DetailsClass.SetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.principal_id, value);
             }
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> PredmetsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.Nasoka.DetailsClass.GetQuery(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Predmets);
-            }
-        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void principal_id_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void principal_id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void principal_id_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Student> Students
+        public int diagram_id
         {
             get
             {
-                return global::LightSwitchApplication.Nasoka.DetailsClass.GetValue(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Students);
+                return global::LightSwitchApplication.sysdiagram.DetailsClass.GetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.diagram_id);
             }
         }
         
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void diagram_id_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void diagram_id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void diagram_id_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Student> StudentsQuery
+        public global::System.Nullable<int> version
         {
             get
             {
-                return global::LightSwitchApplication.Nasoka.DetailsClass.GetQuery(this, global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Students);
+                return global::LightSwitchApplication.sysdiagram.DetailsClass.GetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.version);
+            }
+            set
+            {
+                global::LightSwitchApplication.sysdiagram.DetailsClass.SetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.version, value);
             }
         }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void version_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void version_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void version_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public byte[] definition
+        {
+            get
+            {
+                return global::LightSwitchApplication.sysdiagram.DetailsClass.GetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.definition);
+            }
+            set
+            {
+                global::LightSwitchApplication.sysdiagram.DetailsClass.SetValue(this, global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.definition, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void definition_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void definition_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void definition_Changed();
 
         #endregion
     
@@ -177,37 +203,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Nasoka,
-                global::LightSwitchApplication.Nasoka.DetailsClass,
-                global::LightSwitchApplication.Nasoka.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Nasoka.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass>>
+                global::LightSwitchApplication.sysdiagram,
+                global::LightSwitchApplication.sysdiagram.DetailsClass,
+                global::LightSwitchApplication.sysdiagram.DetailsClass.IImplementation,
+                global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.ID_Nasoka;
+                var initializeEntry = global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.name;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass>.Entry
-                __NasokaEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Nasoka.DetailsClass.__Nasoka_CreateNew,
-                    global::LightSwitchApplication.Nasoka.DetailsClass.__Nasoka_Created,
-                    global::LightSwitchApplication.Nasoka.DetailsClass.__Nasoka_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Nasoka __Nasoka_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Nasoka> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass>.Entry
+                __sysdiagramEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass>.Entry(
+                    global::LightSwitchApplication.sysdiagram.DetailsClass.__sysdiagram_CreateNew,
+                    global::LightSwitchApplication.sysdiagram.DetailsClass.__sysdiagram_Created,
+                    global::LightSwitchApplication.sysdiagram.DetailsClass.__sysdiagram_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.sysdiagram __sysdiagram_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.sysdiagram> es)
             {
-                return new global::LightSwitchApplication.Nasoka(es);
+                return new global::LightSwitchApplication.sysdiagram(es);
             }
-            private static void __Nasoka_Created(global::LightSwitchApplication.Nasoka e)
+            private static void __sysdiagram_Created(global::LightSwitchApplication.sysdiagram e)
             {
-                e.Nasoka_Created();
+                e.sysdiagram_Created();
             }
-            private static bool __Nasoka_AllowSaveWithErrors(global::LightSwitchApplication.Nasoka e)
+            private static bool __sysdiagram_AllowSaveWithErrors(global::LightSwitchApplication.sysdiagram e)
             {
                 bool result = false;
-                e.Nasoka_AllowSaveWithErrors(ref result);
+                e.sysdiagram_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -215,7 +241,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass> Commands
             {
                 get
                 {
@@ -223,7 +249,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass> Methods
             {
                 get
                 {
@@ -231,7 +257,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Nasoka.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -243,42 +269,50 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, int> ID_Nasoka
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, string> name
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.ID_Nasoka) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.name) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, string> Nasok
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int> principal_id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Nasok) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.principal_id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Predmet> Predmets
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int> diagram_id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Predmets) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Predmet>;
+                        return base.GetItem(global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.diagram_id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Student> Students
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, global::System.Nullable<int>> version
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Students) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Student>;
+                        return base.GetItem(global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.version) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, byte[]> definition
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties.definition) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, byte[]>;
                     }
                 }
                 
@@ -288,10 +322,11 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int ID_Nasoka { get; }
-                new string Nasok { get; set; }
-                new global::System.Collections.IEnumerable Predmets { get; }
-                new global::System.Collections.IEnumerable Students { get; }
+                new string name { get; set; }
+                new int principal_id { get; set; }
+                new int diagram_id { get; }
+                new global::System.Nullable<int> version { get; set; }
+                new byte[] definition { get; set; }
             }
             #pragma warning restore 109
     
@@ -302,128 +337,202 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, int>.Entry
-                    ID_Nasoka = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, int>.Entry(
-                        "ID_Nasoka",
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._ID_Nasoka_Stub,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._ID_Nasoka_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._ID_Nasoka_Validate,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._ID_Nasoka_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, string>.Entry
+                    name = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, string>.Entry(
+                        "name",
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._name_Stub,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._name_ComputeIsReadOnly,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._name_Validate,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._name_GetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._name_SetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._name_OnValueChanged);
+                private static void _name_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.sysdiagram.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, string>.Data> c, global::LightSwitchApplication.sysdiagram.DetailsClass d, object sf)
+                {
+                    c(d, ref d._name, sf);
+                }
+                private static bool _name_ComputeIsReadOnly(global::LightSwitchApplication.sysdiagram e)
+                {
+                    bool result = false;
+                    e.name_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _name_Validate(global::LightSwitchApplication.sysdiagram e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.name_Validate(r);
+                }
+                private static string _name_GetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d)
+                {
+                    return d.ImplementationEntity.name;
+                }
+                private static void _name_SetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.name = v;
+                }
+                private static void _name_OnValueChanged(global::LightSwitchApplication.sysdiagram e)
+                {
+                    e.name_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Entry
+                    principal_id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Entry(
+                        "principal_id",
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._principal_id_Stub,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._principal_id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._principal_id_Validate,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._principal_id_GetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._principal_id_SetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._principal_id_OnValueChanged);
+                private static void _principal_id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.sysdiagram.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Data> c, global::LightSwitchApplication.sysdiagram.DetailsClass d, object sf)
+                {
+                    c(d, ref d._principal_id, sf);
+                }
+                private static bool _principal_id_ComputeIsReadOnly(global::LightSwitchApplication.sysdiagram e)
+                {
+                    bool result = false;
+                    e.principal_id_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _principal_id_Validate(global::LightSwitchApplication.sysdiagram e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.principal_id_Validate(r);
+                }
+                private static int _principal_id_GetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d)
+                {
+                    return d.ImplementationEntity.principal_id;
+                }
+                private static void _principal_id_SetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d, int v)
+                {
+                    d.ImplementationEntity.principal_id = v;
+                }
+                private static void _principal_id_OnValueChanged(global::LightSwitchApplication.sysdiagram e)
+                {
+                    e.principal_id_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Entry
+                    diagram_id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Entry(
+                        "diagram_id",
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._diagram_id_Stub,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._diagram_id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._diagram_id_Validate,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._diagram_id_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._ID_Nasoka_OnValueChanged);
-                private static void _ID_Nasoka_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Nasoka.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, int>.Data> c, global::LightSwitchApplication.Nasoka.DetailsClass d, object sf)
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._diagram_id_OnValueChanged);
+                private static void _diagram_id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.sysdiagram.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Data> c, global::LightSwitchApplication.sysdiagram.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ID_Nasoka, sf);
+                    c(d, ref d._diagram_id, sf);
                 }
-                private static bool _ID_Nasoka_ComputeIsReadOnly(global::LightSwitchApplication.Nasoka e)
+                private static bool _diagram_id_ComputeIsReadOnly(global::LightSwitchApplication.sysdiagram e)
                 {
                     bool result = false;
-                    e.ID_Nasoka_IsReadOnly(ref result);
+                    e.diagram_id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ID_Nasoka_Validate(global::LightSwitchApplication.Nasoka e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _diagram_id_Validate(global::LightSwitchApplication.sysdiagram e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.ID_Nasoka_Validate(r);
+                    e.diagram_id_Validate(r);
                 }
-                private static int _ID_Nasoka_GetImplementationValue(global::LightSwitchApplication.Nasoka.DetailsClass d)
+                private static int _diagram_id_GetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d)
                 {
-                    return d.ImplementationEntity.ID_Nasoka;
+                    return d.ImplementationEntity.diagram_id;
                 }
-                private static void _ID_Nasoka_OnValueChanged(global::LightSwitchApplication.Nasoka e)
+                private static void _diagram_id_OnValueChanged(global::LightSwitchApplication.sysdiagram e)
                 {
-                    e.ID_Nasoka_Changed();
+                    e.diagram_id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, string>.Entry
-                    Nasok = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, string>.Entry(
-                        "Nasok",
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Nasok_Stub,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Nasok_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Nasok_Validate,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Nasok_GetImplementationValue,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Nasok_SetImplementationValue,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Nasok_OnValueChanged);
-                private static void _Nasok_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Nasoka.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, string>.Data> c, global::LightSwitchApplication.Nasoka.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, global::System.Nullable<int>>.Entry
+                    version = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "version",
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._version_Stub,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._version_ComputeIsReadOnly,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._version_Validate,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._version_GetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._version_SetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._version_OnValueChanged);
+                private static void _version_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.sysdiagram.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.sysdiagram.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Nasok, sf);
+                    c(d, ref d._version, sf);
                 }
-                private static bool _Nasok_ComputeIsReadOnly(global::LightSwitchApplication.Nasoka e)
+                private static bool _version_ComputeIsReadOnly(global::LightSwitchApplication.sysdiagram e)
                 {
                     bool result = false;
-                    e.Nasok_IsReadOnly(ref result);
+                    e.version_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Nasok_Validate(global::LightSwitchApplication.Nasoka e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _version_Validate(global::LightSwitchApplication.sysdiagram e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Nasok_Validate(r);
+                    e.version_Validate(r);
                 }
-                private static string _Nasok_GetImplementationValue(global::LightSwitchApplication.Nasoka.DetailsClass d)
+                private static global::System.Nullable<int> _version_GetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Nasok;
+                    return d.ImplementationEntity.version;
                 }
-                private static void _Nasok_SetImplementationValue(global::LightSwitchApplication.Nasoka.DetailsClass d, string v)
+                private static void _version_SetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d, global::System.Nullable<int> v)
                 {
-                    d.ImplementationEntity.Nasok = v;
+                    d.ImplementationEntity.version = v;
                 }
-                private static void _Nasok_OnValueChanged(global::LightSwitchApplication.Nasoka e)
+                private static void _version_OnValueChanged(global::LightSwitchApplication.sysdiagram e)
                 {
-                    e.Nasok_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Predmet>.Entry
-                    Predmets = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
-                        "Predmets",
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Predmets_Stub,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Predmets_GetReferencedEntities,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Predmets_GetEntityCollection);
-                private static void _Predmets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Nasoka.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.Nasoka.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Predmets, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Predmet> _Predmets_GetReferencedEntities(global::LightSwitchApplication.Nasoka.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass>(global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Predmets, ref d._Predmets);
-                }
-                private static global::System.Collections.IEnumerable _Predmets_GetEntityCollection(global::LightSwitchApplication.Nasoka.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Predmets;
+                    e.version_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Student>.Entry
-                    Students = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Student>.Entry(
-                        "Students",
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Students_Stub,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Students_GetReferencedEntities,
-                        global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties._Students_GetEntityCollection);
-                private static void _Students_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Nasoka.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Student>.Data> c, global::LightSwitchApplication.Nasoka.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, byte[]>.Entry
+                    definition = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, byte[]>.Entry(
+                        "definition",
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._definition_Stub,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._definition_ComputeIsReadOnly,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._definition_Validate,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._definition_GetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._definition_SetImplementationValue,
+                        global::LightSwitchApplication.sysdiagram.DetailsClass.PropertySetProperties._definition_OnValueChanged);
+                private static void _definition_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.sysdiagram.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, byte[]>.Data> c, global::LightSwitchApplication.sysdiagram.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Students, sf);
+                    c(d, ref d._definition, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Student> _Students_GetReferencedEntities(global::LightSwitchApplication.Nasoka.DetailsClass d)
+                private static bool _definition_ComputeIsReadOnly(global::LightSwitchApplication.sysdiagram e)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Student, global::LightSwitchApplication.Student.DetailsClass>(global::LightSwitchApplication.Nasoka.DetailsClass.PropertySetProperties.Students, ref d._Students);
+                    bool result = false;
+                    e.definition_IsReadOnly(ref result);
+                    return result;
                 }
-                private static global::System.Collections.IEnumerable _Students_GetEntityCollection(global::LightSwitchApplication.Nasoka.DetailsClass d)
+                private static void _definition_Validate(global::LightSwitchApplication.sysdiagram e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    return d.ImplementationEntity.Students;
+                    e.definition_Validate(r);
+                }
+                private static byte[] _definition_GetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d)
+                {
+                    return d.ImplementationEntity.definition;
+                }
+                private static void _definition_SetImplementationValue(global::LightSwitchApplication.sysdiagram.DetailsClass d, byte[] v)
+                {
+                    d.ImplementationEntity.definition = v;
+                }
+                private static void _definition_OnValueChanged(global::LightSwitchApplication.sysdiagram e)
+                {
+                    e.definition_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, int>.Data _ID_Nasoka;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, string>.Data _name;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, string>.Data _Nasok;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Data _principal_id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Predmets;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, int>.Data _diagram_id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Nasoka, global::LightSwitchApplication.Nasoka.DetailsClass, global::LightSwitchApplication.Student>.Data _Students;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, global::System.Nullable<int>>.Data _version;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.sysdiagram, global::LightSwitchApplication.sysdiagram.DetailsClass, byte[]>.Data _definition;
             
         }
     

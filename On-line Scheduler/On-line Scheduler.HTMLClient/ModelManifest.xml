@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Properties\Client.lsml" Checksum="D9C4C1FCB8583786C063BE5731E91C1FA837192621D833D47E7E8F687C06051A" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Properties\Proxies.lsml" Checksum="AE34D3319E6FF272FC3A1656ED533F3E840661FA8299C13B0386B911018E2E52" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ДодајПредмет.lsml" Checksum="EF1046E620DB429666A65965C7D3DC2AAFD6D556AB60E0B55A0697C7AC4DF890" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ДодајСтудент.lsml" Checksum="1BBCEB0BFAC19D9419C84D29106585D0E43FA6F20E05DA4024C9D9F148FDECFE" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ИзмениПредмет.lsml" Checksum="0EB914272B8E03DF24E644285AC6BB25E16183F9A4A7A4BAC6A6E4D9615FA215" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ИзмениСтудент.lsml" Checksum="8D16AA59323DC88E86F3031F5300A929861D288632EDFC6051906161552930F3" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ЛистаНаПредмети.lsml" Checksum="767218E4295E6902288846E330007636A195E7C9517F1B53FFB9E19E801BACDB" />
-    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ЛистаНаСтуденти.lsml" Checksum="49BEEA26E102A67C964C40C847824384DAFC727AEF6054A1D803353F4AB0A03F" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Properties\Client.lsml" Checksum="9C6485D2D96F4E3D9C16F8E4BC7790C338AE2B99F5DD06473447F1C7BBA13311" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Properties\Proxies.lsml" Checksum="EB6187B2D0AE21AB34EAD2A4E8C38D1B36AC5D71433EE20AD306A94876A1774B" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\AddEditAktivnost.lsml" Checksum="C6EABD1864606CA52B084720AF6F4AF9A6DD7A4257CFB44DB673951A0413B33A" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\Администратор.lsml" Checksum="9B74994CE806B4D12D0FECF1E2DD04E02916C4E50C90C6B8E2E3929DF1643596" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ДодајПредмет.lsml" Checksum="60AFD5A86742B04CDC6F849211E173FA116ECC280699909748FC32FB388B30D0" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ДодајПрофесор.lsml" Checksum="6BD32F12E8F3EBD7C4C2E15A0A56CA6F55E6DEF6005D17B756839713B682AEC6" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ДодајСтудент.lsml" Checksum="1C4C84F790DB88DD499DF385B874F36CBFF9A4F16FA233D569FF22D438162F60" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ИзмениПредмет.lsml" Checksum="946EF93058D7AD414A2317177250BF7A4FC28BE22A2F802E64D13B08B5CCFDDF" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ИзмениПрофесор.lsml" Checksum="8052FA479C9B63CF6D87A5C45E73A1160AC82D25244CA6690B1F11A4B7E716F0" />
+    <Document FullPath="D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\Screens\ИзмениСтудент.lsml" Checksum="67C0B72C1A409494869C7E38B4DDE024906672938C4E63A921656C329D63F9B3" />
   </Documents>
 </ModelDocumentManifest>

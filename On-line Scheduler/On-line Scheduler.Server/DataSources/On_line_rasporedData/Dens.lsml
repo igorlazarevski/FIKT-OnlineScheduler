@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Aktivnost">
+    Name="Den">
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -15,28 +15,8 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="Vreme_pocetok"
-        PropertyType=":DateTime?">
-        <EntityProperty.Attributes>
-          <DateTimeConstraint
-            Precision="0"
-            PreserveSeconds="True" />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Vreme_kraj"
-        PropertyType=":DateTime?">
-        <EntityProperty.Attributes>
-          <DateTimeConstraint
-            Precision="0"
-            PreserveSeconds="True" />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <KeyProperty
-        Name="ID_aktivnost"
+        Name="ID_Den"
         IsReadOnly="True"
         PropertyType=":Int32">
         <KeyProperty.Attributes>
@@ -45,47 +25,60 @@
           <NotSearchable />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <EntityProperty
+        Name="Den1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <NavigationProperty
-        Name="Predmet"
-        Association="FK_Aktivnost_Predmet"
-        FromEnd="Aktivnost"
-        ToEnd="Predmet" />
-      <NavigationProperty
-        Name="Profesor"
-        Association="FK_Aktivnost_Profesor"
-        FromEnd="Aktivnost"
-        ToEnd="Profesor" />
-      <NavigationProperty
-        Name="Prostorija"
-        Association="FK_Aktivnost_Prostorija"
-        FromEnd="Aktivnost"
-        ToEnd="Prostorija" />
-      <NavigationProperty
-        Name="TipNaAktivnost"
-        Association="FK_Aktivnost_TipNaAktivnost"
-        FromEnd="Aktivnost"
-        ToEnd="TipNaAktivnost" />
-      <NavigationProperty
-        Name="Den"
+        Name="Aktivnosts"
         Association="FK_Aktivnost_Den"
-        FromEnd="Aktivnost"
-        ToEnd="Den" />
+        FromEnd="Den"
+        ToEnd="Aktivnost" />
     </EntityType.Properties>
   </EntityType>
+  <Association
+    Name="FK_Aktivnost_Den">
+    <AssociationEnd
+      Name="Den"
+      Multiplicity="One"
+      EntityType="Den">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Aktivnost"
+      Multiplicity="Many"
+      EntityType="Aktivnost" />
+  </Association>
   <EntityContainer
     Name="On_line_rasporedData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Aktivnosts"
+      Name="Dens"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Aktivnost" />
+      EntityType="Den" />
+    <AssociationSet
+      Name="FK_Aktivnost_Den"
+      Association="FK_Aktivnost_Den">
+      <AssociationSetEnd
+        Name="Den"
+        EntitySet="Dens" />
+      <AssociationSetEnd
+        Name="Aktivnost"
+        EntitySet="Aktivnosts" />
+    </AssociationSet>
     <QueryOperation
-      Name="Aktivnosts_Single"
-      ReturnType="Aktivnost">
+      Name="Dens_Single"
+      ReturnType="Den">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -98,12 +91,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="ID_aktivnost" />
+                  Member="ID_Den" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="ID_aktivnost" />
+                Parameter="ID_Den" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -111,21 +104,21 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Aktivnosts" />
+            Member="Dens" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="ID_aktivnost"
+        Name="ID_Den"
         ParameterType="Microsoft.LightSwitch:Int32?">
         <QueryOperationParameter.Attributes>
           <Description
-            Value="The value of the 'ID_aktivnost' key property of the entity to retrieve." />
+            Value="The value of the 'ID_Den' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Aktivnosts_SingleOrDefault"
-      ReturnType="Aktivnost">
+      Name="Dens_SingleOrDefault"
+      ReturnType="Den">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -138,12 +131,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="ID_aktivnost" />
+                  Member="ID_Den" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="ID_aktivnost" />
+                Parameter="ID_Den" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -151,15 +144,15 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Aktivnosts" />
+            Member="Dens" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="ID_aktivnost"
+        Name="ID_Den"
         ParameterType="Microsoft.LightSwitch:Int32?">
         <QueryOperationParameter.Attributes>
           <Description
-            Value="The value of the 'ID_aktivnost' key property of the entity to retrieve." />
+            Value="The value of the 'ID_Den' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -170,54 +163,45 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Aktivnosts">
+      EntitySet="Dens">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
           Schema="dbo"
-          Table="Aktivnost" />
+          Table="Den" />
         <SsdlProperty
-          Name="ID_aktivnost"
+          Name="ID_Den"
           Nullable="False"
           StoreGeneratedPattern="Identity"
           Type="int"
-          Property="Aktivnost/Properties[ID_aktivnost]" />
+          Property="Den/Properties[ID_Den]" />
         <SsdlProperty
-          Name="Vreme_pocetok"
-          Nullable="True"
-          Type="smalldatetime"
-          Property="Aktivnost/Properties[Vreme_pocetok]" />
-        <SsdlProperty
-          Name="Vreme_kraj"
-          Nullable="True"
-          Type="smalldatetime"
-          Property="Aktivnost/Properties[Vreme_kraj]" />
-        <SsdlForeignKeyProperty
-          Name="ID_Den"
-          Nullable="False"
-          Type="int"
-          PropertyName="ID_Den" />
-        <SsdlForeignKeyProperty
           MaxLength="50"
-          Name="ID_predmet"
-          Nullable="False"
+          Name="Den"
+          Nullable="True"
           Type="nvarchar"
-          PropertyName="ID_predmet" />
-        <SsdlForeignKeyProperty
-          Name="ID_profesor"
-          Nullable="False"
-          Type="int"
-          PropertyName="ID_profesor" />
-        <SsdlForeignKeyProperty
-          Name="ID_prostorija"
-          Nullable="False"
-          Type="int"
-          PropertyName="ID_prostorija" />
-        <SsdlForeignKeyProperty
-          Name="ID_TipNaAktivnost"
-          Nullable="False"
-          Type="int"
-          PropertyName="ID_TipNaAktivnost" />
+          Property="Den/Properties[Den1]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Aktivnost_Den">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Aktivnost_Den" />
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[FK_Aktivnost_Den]/Members[Den]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID_Den" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[FK_Aktivnost_Den]/Members[Aktivnost]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID_Den" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>
