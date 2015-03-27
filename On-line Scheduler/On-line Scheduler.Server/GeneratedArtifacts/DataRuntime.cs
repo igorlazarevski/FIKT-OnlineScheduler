@@ -221,6 +221,19 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
+        /// Gets the StatusPredmets entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.StatusPredmet> StatusPredmets
+        {
+            get
+            {
+                return global::LightSwitchApplication.On_line_rasporedData.DetailsClass.GetValue(this, global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties.StatusPredmets);
+            }
+        }
+        
+        /// <summary>
         /// Gets the Students entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
@@ -260,15 +273,15 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the StatusPredmets entity set.  The entity set provides members to access entities of a specific type.
+        /// Gets the Nasokas entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.StatusPredmet> StatusPredmets
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Nasoka> Nasokas
         {
             get
             {
-                return global::LightSwitchApplication.On_line_rasporedData.DetailsClass.GetValue(this, global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties.StatusPredmets);
+                return global::LightSwitchApplication.On_line_rasporedData.DetailsClass.GetValue(this, global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties.Nasokas);
             }
         }
         
@@ -343,6 +356,14 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> Query1()
+        {
+            return this.Details.Methods.Query1.CreateInvocation().Execute();
+        }
+        
+        /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s).
         /// </summary>
         /// <param name="ID_profesor">
@@ -406,6 +427,28 @@ namespace LightSwitchApplication
         public global::LightSwitchApplication.Semestar Semestars_SingleOrDefault(global::System.Nullable<int> ID_semestar)
         {
             return this.Details.Methods.Semestars_SingleOrDefault.CreateInvocation(ID_semestar).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ID_Status">
+        /// The value of the 'ID_Status' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.StatusPredmet StatusPredmets_Single(global::System.Nullable<int> ID_Status)
+        {
+            return this.Details.Methods.StatusPredmets_Single.CreateInvocation(ID_Status).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ID_Status">
+        /// The value of the 'ID_Status' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.StatusPredmet StatusPredmets_SingleOrDefault(global::System.Nullable<int> ID_Status)
+        {
+            return this.Details.Methods.StatusPredmets_SingleOrDefault.CreateInvocation(ID_Status).Execute();
         }
         
         /// <summary>
@@ -477,31 +520,23 @@ namespace LightSwitchApplication
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s).
         /// </summary>
-        /// <param name="ID_Status">
-        /// The value of the 'ID_Status' key property of the entity to retrieve.
+        /// <param name="ID_Nasoka">
+        /// The value of the 'ID_Nasoka' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.StatusPredmet StatusPredmets_Single(global::System.Nullable<int> ID_Status)
+        public global::LightSwitchApplication.Nasoka Nasokas_Single(global::System.Nullable<int> ID_Nasoka)
         {
-            return this.Details.Methods.StatusPredmets_Single.CreateInvocation(ID_Status).Execute();
+            return this.Details.Methods.Nasokas_Single.CreateInvocation(ID_Nasoka).Execute();
         }
         
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
         /// </summary>
-        /// <param name="ID_Status">
-        /// The value of the 'ID_Status' key property of the entity to retrieve.
+        /// <param name="ID_Nasoka">
+        /// The value of the 'ID_Nasoka' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.StatusPredmet StatusPredmets_SingleOrDefault(global::System.Nullable<int> ID_Status)
+        public global::LightSwitchApplication.Nasoka Nasokas_SingleOrDefault(global::System.Nullable<int> ID_Nasoka)
         {
-            return this.Details.Methods.StatusPredmets_SingleOrDefault.CreateInvocation(ID_Status).Execute();
-        }
-        
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> Query1()
-        {
-            return this.Details.Methods.Query1.CreateInvocation().Execute();
+            return this.Details.Methods.Nasokas_SingleOrDefault.CreateInvocation(ID_Nasoka).Execute();
         }
         
         #endregion
@@ -600,6 +635,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet> Query1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Query1) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor> Profesors_Single
                 {
                     get
@@ -645,6 +688,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Semestars_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Semestar>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet> StatusPredmets_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.StatusPredmets_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet> StatusPredmets_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.StatusPredmets_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>;
                     }
                 }
                 
@@ -696,27 +755,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet> StatusPredmets_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka> Nasokas_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.StatusPredmets_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>;
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Nasokas_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet> StatusPredmets_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka> Nasokas_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.StatusPredmets_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet> Query1
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Query1) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>;
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Nasokas_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>;
                     }
                 }
                 
@@ -781,6 +832,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet> StatusPredmets
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties.StatusPredmets) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Student> Students
                 {
                     get
@@ -805,11 +864,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet> StatusPredmets
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka> Nasokas
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties.StatusPredmets) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>;
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties.Nasokas) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>;
                     }
                 }
                 
@@ -882,6 +941,16 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry
+                    Query1 = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
+                        "Query1",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._Query1_Stub);
+                private static void _Query1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Query1, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Entry
                     Profesors_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Entry(
                         "Profesors_Single",
@@ -939,6 +1008,26 @@ namespace LightSwitchApplication
                 private static void _Semestars_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Semestar>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
                 {
                     c(d, ref d._Semestars_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry
+                    StatusPredmets_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry(
+                        "StatusPredmets_Single",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._StatusPredmets_Single_Stub);
+                private static void _StatusPredmets_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._StatusPredmets_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry
+                    StatusPredmets_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry(
+                        "StatusPredmets_SingleOrDefault",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._StatusPredmets_SingleOrDefault_Stub);
+                private static void _StatusPredmets_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._StatusPredmets_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1002,33 +1091,23 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry
-                    StatusPredmets_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry(
-                        "StatusPredmets_Single",
-                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._StatusPredmets_Single_Stub);
-                private static void _StatusPredmets_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Entry
+                    Nasokas_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Entry(
+                        "Nasokas_Single",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._Nasokas_Single_Stub);
+                private static void _Nasokas_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._StatusPredmets_Single, sf);
+                    c(d, ref d._Nasokas_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry
-                    StatusPredmets_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry(
-                        "StatusPredmets_SingleOrDefault",
-                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._StatusPredmets_SingleOrDefault_Stub);
-                private static void _StatusPredmets_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Entry
+                    Nasokas_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Entry(
+                        "Nasokas_SingleOrDefault",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._Nasokas_SingleOrDefault_Stub);
+                private static void _Nasokas_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._StatusPredmets_SingleOrDefault, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry
-                    Query1 = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
-                        "Query1",
-                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._Query1_Stub);
-                private static void _Query1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Query1, sf);
+                    c(d, ref d._Nasokas_SingleOrDefault, sf);
                 }
     
             }
@@ -1100,6 +1179,16 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry
+                    StatusPredmets = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry(
+                        "StatusPredmets",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties._StatusPredmets_Stub);
+                private static void _StatusPredmets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._StatusPredmets, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Student>.Entry
                     Students = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Student>.Entry(
                         "Students",
@@ -1130,13 +1219,13 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry
-                    StatusPredmets = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Entry(
-                        "StatusPredmets",
-                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties._StatusPredmets_Stub);
-                private static void _StatusPredmets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Entry
+                    Nasokas = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Entry(
+                        "Nasokas",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.PropertySetProperties._Nasokas_Stub);
+                private static void _Nasokas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._StatusPredmets, sf);
+                    c(d, ref d._Nasokas, sf);
                 }
      
             }
@@ -1160,6 +1249,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Semestar>.Data _Semestars;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data _StatusPredmets;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Student>.Data _Students;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1169,7 +1261,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.TipNaAktivnost>.Data _TipNaAktivnosts;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data _StatusPredmets;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Data _Nasokas;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Aktivnost>.Data _Aktivnosts_Single;
@@ -1190,6 +1282,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Predmets_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Query1;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Data _Profesors_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1206,6 +1301,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Semestar>.Data _Semestars_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data _StatusPredmets_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data _StatusPredmets_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Student>.Data _Students_Single;
@@ -1226,13 +1327,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.TipNaAktivnost>.Data _TipNaAktivnosts_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data _StatusPredmets_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Data _Nasokas_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.StatusPredmet>.Data _StatusPredmets_SingleOrDefault;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Query1;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Nasoka>.Data _Nasokas_SingleOrDefault;
             
         }
     

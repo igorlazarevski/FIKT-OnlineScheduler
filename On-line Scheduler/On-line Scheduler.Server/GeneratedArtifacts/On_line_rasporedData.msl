@@ -30,12 +30,12 @@
         <MappingFragment StoreEntitySet="Predmets">
           <ScalarProperty Name="ID_predmet" ColumnName="ID_predmet" />
           <ScalarProperty Name="Ime" ColumnName="Ime" />
-          <ScalarProperty Name="Nasoka" ColumnName="Nasoka" />
           <ScalarProperty Name="ActivePredmet" ColumnName="ActivePredmet" />
           <ScalarProperty Name="ID_profesor" ColumnName="ID_profesor" />
           <ScalarProperty Name="ID_semestar" ColumnName="ID_semestar" />
           <ScalarProperty Name="br_krediti" ColumnName="br_krediti" />
           <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+          <ScalarProperty Name="ID_Nasoka" ColumnName="ID_Nasoka" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -72,17 +72,25 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="StatusPredmets">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.StatusPredmet)">
+        <MappingFragment StoreEntitySet="StatusPredmets">
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Student)">
         <MappingFragment StoreEntitySet="Students">
           <ScalarProperty Name="Br_indeks" ColumnName="Br_indeks" />
           <ScalarProperty Name="Ime" ColumnName="Ime" />
           <ScalarProperty Name="Prezime" ColumnName="Prezime" />
-          <ScalarProperty Name="Nasoka" ColumnName="Nasoka" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
           <ScalarProperty Name="ID_semestar" ColumnName="ID_semestar" />
           <ScalarProperty Name="ActiveStudent" ColumnName="ActiveStudent" />
+          <ScalarProperty Name="ID_Nasoka" ColumnName="ID_Nasoka" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -105,11 +113,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="StatusPredmets">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.StatusPredmet)">
-        <MappingFragment StoreEntitySet="StatusPredmets">
-          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+    <EntitySetMapping Name="Nasokas">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Nasoka)">
+        <MappingFragment StoreEntitySet="Nasokas">
+          <ScalarProperty Name="ID_Nasoka" ColumnName="ID_Nasoka" />
+          <ScalarProperty Name="Nasok" ColumnName="Nasok" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

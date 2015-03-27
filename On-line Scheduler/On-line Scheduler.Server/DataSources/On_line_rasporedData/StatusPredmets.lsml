@@ -45,6 +45,7 @@
     Name="FK_Predmet_StatusPredmet">
     <AssociationEnd
       Name="StatusPredmet"
+      Multiplicity="One"
       EntityType="StatusPredmet">
       <AssociationEnd.Attributes>
         <DeleteRule />

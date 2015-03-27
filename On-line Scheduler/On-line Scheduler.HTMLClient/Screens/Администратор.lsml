@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ЛистаНаПредмети">
+    Name="Администратор">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
       <DisplayName
-        Value="Администрација на ентитети" />
+        Value="Администратор" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -36,13 +36,13 @@
               View="Microsoft.LightSwitch.MobileWeb:TileList">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="Predmets" />
+                  Value="Предмети" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ЛистаНаПредмети/Properties[Predmets]" />
+                      Member="Администратор/Properties[Predmets]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -87,24 +87,6 @@
                       <ChainExpression>
                         <MemberExpression
                           Member="Predmet/Properties[Ime]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Nasoka"
-                  IsHidden="True"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Насока" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Predmet/Properties[Nasoka]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -235,7 +217,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ЛистаНаПредмети/Properties[Predmets]" />
+                        Member="Администратор/Properties[Predmets]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -245,11 +227,11 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="SearchPredmets"
+                Name="SearchStudents"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Пребарај" />
+                    Value="Пребарај Предмет" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -257,7 +239,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="ЛистаНаПредмети/Properties[Predmets]" />
+                          Member="Администратор/Properties[Predmets]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -269,7 +251,7 @@
                       <ChainExpression>
                         <ConstantExpression
                           Value="msls-search"
-                          ResultType="Microsoft.LightSwitch:String" />
+                          ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -280,7 +262,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Додај предмет" />
+                    Value="Додај Предмет" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -291,7 +273,7 @@
                           Target="!module/Methods[showДодајПредмет]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="ЛистаНаПредмети/Properties[Predmets]" />
+                              Collection="Администратор/Properties[Predmets]" />
                             <CreateNewEntity
                               TargetParameter="!module/Methods[showДодајПредмет]/Parameters[Predmet]" />
                           </CallExpression.Attributes>
@@ -316,7 +298,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Измени предмет" />
+                    Value="Измени Предмет" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -327,13 +309,13 @@
                           Target="!module/Methods[showИзмениПредмет]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="ЛистаНаПредмети/Properties[Predmets]" />
+                              Collection="Администратор/Properties[Predmets]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Predmet">
                             <ChainExpression>
                               <MemberExpression
-                                Member="ЛистаНаПредмети/Properties[Predmets]" />
+                                Member="Администратор/Properties[Predmets]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -367,12 +349,16 @@
               Name="Students"
               Kind="Collection"
               DataType="CollectionView$Student"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Студенти" />
+              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ЛистаНаПредмети/Properties[Students]" />
+                      Member="Администратор/Properties[Students]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -389,6 +375,10 @@
                   Name="Br_indeks"
                   Kind="Value"
                   DataType=":String">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Бр индекс" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -402,6 +392,10 @@
                   Name="Ime2"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Име" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -415,6 +409,10 @@
                   Name="Prezime1"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Презиме" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -425,22 +423,13 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Nasoka1"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Student/Properties[Nasoka]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Email"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Емаил" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -451,23 +440,13 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Lozinka"
-                  IsHidden="True"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Student/Properties[Lozinka]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Semestar2"
                   Kind="Details"
                   DataType="Semestar">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Семестар" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -491,6 +470,10 @@
                   Name="ActiveStudent"
                   Kind="Value"
                   DataType=":Boolean?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Активен студент" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -504,21 +487,31 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="ShowИзмениСтудент"
+                Name="SearchStudents1"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Пребарај Студент" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
                     <ScreenExpressionTree>
                       <ChainExpression>
+                        <MemberExpression
+                          Member="Администратор/Properties[Students]" />
                         <CallExpression
-                          Target="!module/Methods[showИзмениСтудент]">
-                          <CallExpression.Attributes>
-                            <CreateNewEntity
-                              EntityType="Student"
-                              TargetParameter="!module/Methods[showИзмениСтудент]/Parameters[Student]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
+                          Target="showSearch" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-search"
+                          ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -527,6 +520,10 @@
               <ContentItem
                 Name="ShowДодајСтудент"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Додај Студент" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -535,11 +532,65 @@
                         <CallExpression
                           Target="!module/Methods[showДодајСтудент]">
                           <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="Администратор/Properties[Students]" />
                             <CreateNewEntity
-                              EntityType="Student"
                               TargetParameter="!module/Methods[showДодајСтудент]/Parameters[Student]" />
                           </CallExpression.Attributes>
                         </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-add"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ShowИзмениСтудент"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Измени Студент" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showДодајСтудент]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="Администратор/Properties[Students]" />
+                          </CallExpression.Attributes>
+                          <ArgumentExpression
+                            Parameter="Student">
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Администратор/Properties[Students]" />
+                              <MemberExpression
+                                Member="selectedItem" />
+                            </ChainExpression>
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-edit"
+                          ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -558,12 +609,16 @@
               Name="Profesors"
               Kind="Collection"
               DataType="CollectionView$Profesor"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Професори" />
+              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ЛистаНаПредмети/Properties[Profesors]" />
+                      Member="Администратор/Properties[Profesors]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -571,6 +626,10 @@
                 Name="ProfesorsTemplate"
                 Kind="Details"
                 DataType="Profesor">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Професор" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
@@ -580,6 +639,10 @@
                   Name="Br_kabinet1"
                   Kind="Value"
                   DataType=":Int32?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Бр кабинет" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -593,6 +656,10 @@
                   Name="Korisnicko_ime1"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Корисничко име" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -620,6 +687,10 @@
                   Name="Ime4"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Име" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -633,6 +704,10 @@
                   Name="Prezime3"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Презиме" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -646,6 +721,10 @@
                   Name="Titula1"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Титула" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -659,6 +738,10 @@
                   Name="Email2"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Емаил" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -672,6 +755,10 @@
                   Name="Telefon1"
                   Kind="Value"
                   DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Телефон" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -685,6 +772,10 @@
                   Name="ActiveProfesor1"
                   Kind="Value"
                   DataType=":Boolean?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Активен професор" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -696,6 +787,118 @@
                 </ContentItem>
               </ContentItem>
             </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="SearchProfesors"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Пребарај Професор" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Администратор/Properties[Profesors]" />
+                        <CallExpression
+                          Target="showSearch" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-search"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="AddProfesor"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Додај Професор" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showДодајПрофесор]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="Администратор/Properties[Profesors]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showДодајПрофесор]/Parameters[Profesor]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-add"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="EditProfesor"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Измени Професор" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showДодајПрофесор]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="Администратор/Properties[Profesors]" />
+                          </CallExpression.Attributes>
+                          <ArgumentExpression
+                            Parameter="Profesor">
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Администратор/Properties[Profesors]" />
+                              <MemberExpression
+                                Member="selectedItem" />
+                            </ChainExpression>
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-edit"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem.CommandItems>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
@@ -778,7 +981,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ЛистаНаПредмети/Properties[Predmets]/Query" />
+              Target="Администратор/Properties[Predmets]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -804,7 +1007,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ЛистаНаПредмети/Properties[Students]/Query" />
+              Target="Администратор/Properties[Students]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -830,7 +1033,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ЛистаНаПредмети/Properties[Profesors]/Query" />
+              Target="Администратор/Properties[Profesors]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -838,10 +1041,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showЛистаНаПредмети">
+      Name="showАдминистратор">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ЛистаНаПредмети" />
+          TargetScreen="Администратор" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

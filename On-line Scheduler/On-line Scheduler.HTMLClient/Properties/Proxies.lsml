@@ -124,4 +124,22 @@
         Target="ServiceInterface:FK_Predmet_StatusPredmet" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Nasoka" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Predmet_Nasoka" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Student_Nasoka" />
+    </Association.Attributes>
+  </Association>
 </Application>

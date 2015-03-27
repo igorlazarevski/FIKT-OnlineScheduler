@@ -66,6 +66,9 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\Aktivnosts\ДодајИзмениАктивност.lsml.js">
+      <DependentUpon>ДодајИзмениАктивност.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Aktivnosts\ПрегледАктивност.lsml.js">
       <DependentUpon>ПрегледАктивност.lsml</DependentUpon>
     </Content>
@@ -102,14 +105,12 @@
     <LightSwitchModel Include="Screens\Aktivnosts\ПрегледАктивности.lsml" />
     <LightSwitchModel Include="Screens\Aktivnosts\ПрегледАктивност.lsml" />
     <LightSwitchModel Include="Screens\ДодајПрофесор.lsml" />
-    <LightSwitchModel Include="Screens\ЛистаНаПрофесори.lsml" />
     <LightSwitchModel Include="Screens\ИзмениПрофесор.lsml" />
     <LightSwitchModel Include="Screens\ИзмениСтудент.lsml" />
     <LightSwitchModel Include="Screens\ДодајСтудент.lsml" />
-    <LightSwitchModel Include="Screens\ЛистаНаСтуденти.lsml" />
     <LightSwitchModel Include="Screens\ДодајПредмет.lsml" />
     <LightSwitchModel Include="Screens\ИзмениПредмет.lsml" />
-    <LightSwitchModel Include="Screens\ЛистаНаПредмети.lsml" />
+    <LightSwitchModel Include="Screens\Администратор.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">

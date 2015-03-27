@@ -179,6 +179,18 @@
           Schema="dbo"
           Table="Aktivnost" />
         <SsdlProperty
+          Name="ID_aktivnost"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Aktivnost/Properties[ID_aktivnost]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Den"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Aktivnost/Properties[Den]" />
+        <SsdlProperty
           Name="Vreme_pocetok"
           Nullable="True"
           Type="smalldatetime"
@@ -188,18 +200,6 @@
           Nullable="True"
           Type="smalldatetime"
           Property="Aktivnost/Properties[Vreme_kraj]" />
-        <SsdlProperty
-          MaxLength="50"
-          Name="Den"
-          Nullable="True"
-          Type="nvarchar"
-          Property="Aktivnost/Properties[Den]" />
-        <SsdlProperty
-          Name="ID_aktivnost"
-          Nullable="False"
-          StoreGeneratedPattern="Identity"
-          Type="int"
-          Property="Aktivnost/Properties[ID_aktivnost]" />
         <SsdlForeignKeyProperty
           MaxLength="50"
           Name="ID_predmet"

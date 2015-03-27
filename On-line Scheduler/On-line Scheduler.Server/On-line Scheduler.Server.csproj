@@ -217,6 +217,7 @@
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Query1.lsml">
       <DependentUpon>Predmets.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\Nasokas.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

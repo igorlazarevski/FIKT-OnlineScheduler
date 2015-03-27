@@ -84,9 +84,26 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Nasoka"
+                  Name="br_krediti"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":Int32">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Бр кредити" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Predmet/Properties[br_krediti]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Nasoka1"
+                  Kind="Details"
+                  DataType="Nasoka">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Насока" />
@@ -95,10 +112,20 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Predmet/Properties[Nasoka]" />
+                          Member="Predmet/Properties[Nasoka1]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Nasoka"
+                    Kind="Details"
+                    DataType="Nasoka">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -127,9 +154,37 @@
                 Name="right"
                 Kind="Group">
                 <ContentItem
+                  Name="StatusPredmet"
+                  Kind="Details"
+                  DataType="StatusPredmet">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Статус" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Predmet/Properties[StatusPredmet]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="StatusPredmet1"
+                    Kind="Details"
+                    DataType="StatusPredmet">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
                   Name="Profesor"
                   Kind="Details"
-                  DataType="Profesor">
+                  DataType="Profesor"
+                  View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Професор" />
@@ -143,10 +198,10 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="Profesor1"
+                    Name="ProfesorTemplate"
                     Kind="Details"
                     DataType="Profesor"
-                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                    View="Microsoft.LightSwitch.MobileWeb:Summary">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />

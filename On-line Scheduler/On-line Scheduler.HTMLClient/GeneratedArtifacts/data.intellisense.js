@@ -50,6 +50,14 @@
         created: [lightSwitchApplication.Semestar]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.StatusPredmet, {
+        /// <field>
+        /// Called when a new statusPredmet is created.
+        /// <br/>created(msls.application.StatusPredmet entity)
+        /// </field>
+        created: [lightSwitchApplication.StatusPredmet]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.Student, {
         /// <field>
         /// Called when a new student is created.
@@ -74,12 +82,12 @@
         created: [lightSwitchApplication.TipNaAktivnost]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.StatusPredmet, {
+    msls._addEntryPoints(lightSwitchApplication.Nasoka, {
         /// <field>
-        /// Called when a new statusPredmet is created.
-        /// <br/>created(msls.application.StatusPredmet entity)
+        /// Called when a new nasoka is created.
+        /// <br/>created(msls.application.Nasoka entity)
         /// </field>
-        created: [lightSwitchApplication.StatusPredmet]
+        created: [lightSwitchApplication.Nasoka]
     });
 
 }(msls.application));

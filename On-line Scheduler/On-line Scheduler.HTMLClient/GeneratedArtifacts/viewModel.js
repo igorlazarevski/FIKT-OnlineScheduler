@@ -80,6 +80,34 @@
         $Screen.call(this, dataWorkspace, "ПрегледАктивности", parameters);
     }
 
+    function Администратор(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the Администратор screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Predmets" type="msls.VisualCollection" elementType="msls.application.Predmet">
+        /// Gets the predmets for this screen.
+        /// </field>
+        /// <field name="Students" type="msls.VisualCollection" elementType="msls.application.Student">
+        /// Gets the students for this screen.
+        /// </field>
+        /// <field name="Profesors" type="msls.VisualCollection" elementType="msls.application.Profesor">
+        /// Gets the profesors for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.Администратор.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "Администратор", parameters);
+    }
+
     function ДодајПредмет(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the ДодајПредмет screen.
@@ -233,78 +261,6 @@
         $Screen.call(this, dataWorkspace, "ИзмениСтудент", parameters);
     }
 
-    function ЛистаНаПредмети(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the ЛистаНаПредмети screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Predmets" type="msls.VisualCollection" elementType="msls.application.Predmet">
-        /// Gets the predmets for this screen.
-        /// </field>
-        /// <field name="Students" type="msls.VisualCollection" elementType="msls.application.Student">
-        /// Gets the students for this screen.
-        /// </field>
-        /// <field name="Profesors" type="msls.VisualCollection" elementType="msls.application.Profesor">
-        /// Gets the profesors for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.ЛистаНаПредмети.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "ЛистаНаПредмети", parameters);
-    }
-
-    function ЛистаНаПрофесори(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the ЛистаНаПрофесори screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Profesors" type="msls.VisualCollection" elementType="msls.application.Profesor">
-        /// Gets the profesors for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.ЛистаНаПрофесори.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "ЛистаНаПрофесори", parameters);
-    }
-
-    function ЛистаНаСтуденти(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the ЛистаНаСтуденти screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Students" type="msls.VisualCollection" elementType="msls.application.Student">
-        /// Gets the students for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.ЛистаНаСтуденти.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "ЛистаНаСтуденти", parameters);
-    }
-
     msls._addToNamespace("msls.application", {
 
         ДодајИзмениАктивност: $defineScreen(ДодајИзмениАктивност, [
@@ -331,6 +287,28 @@
                 }
             },
             { name: "ID_predmet", kind: "local", type: lightSwitchApplication.Predmet }
+        ], [
+        ]),
+
+        Администратор: $defineScreen(Администратор, [
+            {
+                name: "Predmets", kind: "collection", elementType: lightSwitchApplication.Predmet,
+                createQuery: function () {
+                    return this.dataWorkspace.On_line_rasporedData.Predmets.filter("(ActivePredmet ne null) and (ActivePredmet eq true)").expand("Profesor").expand("Semestar");
+                }
+            },
+            {
+                name: "Students", kind: "collection", elementType: lightSwitchApplication.Student,
+                createQuery: function () {
+                    return this.dataWorkspace.On_line_rasporedData.Students.expand("Semestar");
+                }
+            },
+            {
+                name: "Profesors", kind: "collection", elementType: lightSwitchApplication.Profesor,
+                createQuery: function () {
+                    return this.dataWorkspace.On_line_rasporedData.Profesors;
+                }
+            }
         ], [
         ]),
 
@@ -442,48 +420,6 @@
         ], [
         ]),
 
-        ЛистаНаПредмети: $defineScreen(ЛистаНаПредмети, [
-            {
-                name: "Predmets", kind: "collection", elementType: lightSwitchApplication.Predmet,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.Predmets.filter("(ActivePredmet ne null) and (ActivePredmet eq true)").expand("Profesor").expand("Semestar");
-                }
-            },
-            {
-                name: "Students", kind: "collection", elementType: lightSwitchApplication.Student,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.Students.expand("Semestar");
-                }
-            },
-            {
-                name: "Profesors", kind: "collection", elementType: lightSwitchApplication.Profesor,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.Profesors;
-                }
-            }
-        ], [
-        ]),
-
-        ЛистаНаПрофесори: $defineScreen(ЛистаНаПрофесори, [
-            {
-                name: "Profesors", kind: "collection", elementType: lightSwitchApplication.Profesor,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.Profesors;
-                }
-            }
-        ], [
-        ]),
-
-        ЛистаНаСтуденти: $defineScreen(ЛистаНаСтуденти, [
-            {
-                name: "Students", kind: "collection", elementType: lightSwitchApplication.Student,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.Students.expand("Semestar");
-                }
-            }
-        ], [
-        ]),
-
         showДодајИзмениАктивност: $defineShowScreen(function showДодајИзмениАктивност(Aktivnost, options) {
             /// <summary>
             /// Asynchronously navigates forward to the ДодајИзмениАктивност screen.
@@ -518,6 +454,18 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
             return lightSwitchApplication.showScreen("ПрегледАктивности", parameters, options);
+        }),
+
+        showАдминистратор: $defineShowScreen(function showАдминистратор(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the Администратор screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("Администратор", parameters, options);
         }),
 
         showДодајПредмет: $defineShowScreen(function showДодајПредмет(Predmet, options) {
@@ -590,42 +538,6 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("ИзмениСтудент", parameters, options);
-        }),
-
-        showЛистаНаПредмети: $defineShowScreen(function showЛистаНаПредмети(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the ЛистаНаПредмети screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("ЛистаНаПредмети", parameters, options);
-        }),
-
-        showЛистаНаПрофесори: $defineShowScreen(function showЛистаНаПрофесори(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the ЛистаНаПрофесори screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("ЛистаНаПрофесори", parameters, options);
-        }),
-
-        showЛистаНаСтуденти: $defineShowScreen(function showЛистаНаСтуденти(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the ЛистаНаСтуденти screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("ЛистаНаСтуденти", parameters, options);
         })
 
     });

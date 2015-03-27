@@ -176,6 +176,12 @@
           Schema="dbo"
           Table="Prostorija" />
         <SsdlProperty
+          Name="ID_prostorija"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Prostorija/Properties[ID_prostorija]" />
+        <SsdlProperty
           Name="Br_prostorija"
           Nullable="True"
           Type="int"
@@ -186,12 +192,6 @@
           Nullable="True"
           Type="nvarchar"
           Property="Prostorija/Properties[Opis]" />
-        <SsdlProperty
-          Name="ID_prostorija"
-          Nullable="False"
-          StoreGeneratedPattern="Identity"
-          Type="int"
-          Property="Prostorija/Properties[ID_prostorija]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping

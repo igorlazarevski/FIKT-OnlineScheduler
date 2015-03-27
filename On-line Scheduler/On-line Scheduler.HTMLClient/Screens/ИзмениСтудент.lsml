@@ -50,23 +50,6 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="Br_indeks"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Бр. индекс" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Student/Properties[Br_indeks]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Ime"
                   Kind="Value"
                   DataType=":String?">
@@ -101,9 +84,9 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Nasoka"
-                  Kind="Value"
-                  DataType=":String?">
+                  Name="Nasoka1"
+                  Kind="Details"
+                  DataType="Nasoka">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Насока" />
@@ -112,10 +95,20 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Student/Properties[Nasoka]" />
+                          Member="Student/Properties[Nasoka1]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Nasoka"
+                    Kind="Details"
+                    DataType="Nasoka">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -143,6 +136,33 @@
               <ContentItem
                 Name="right"
                 Kind="Group">
+                <ContentItem
+                  Name="Semestar"
+                  Kind="Details"
+                  DataType="Semestar">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Семестар" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Student/Properties[Semestar]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate"
+                    Kind="Details"
+                    DataType="Semestar">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
                 <ContentItem
                   Name="Email"
                   Kind="Value"
@@ -176,33 +196,6 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Semestar"
-                  Kind="Details"
-                  DataType="Semestar">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Семестар" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Student/Properties[Semestar]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate"
-                    Kind="Details"
-                    DataType="Semestar">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
                 <ContentItem
                   Name="ActiveStudent"
