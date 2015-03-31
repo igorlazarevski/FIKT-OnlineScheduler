@@ -261,6 +261,12 @@
           Schema="dbo"
           Table="Profesor" />
         <SsdlProperty
+          Name="ID_profesor"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Profesor/Properties[ID_profesor]" />
+        <SsdlProperty
           Name="Br_kabinet"
           Nullable="True"
           Type="int"
@@ -307,12 +313,6 @@
           Nullable="True"
           Type="nvarchar"
           Property="Profesor/Properties[Telefon]" />
-        <SsdlProperty
-          Name="ID_profesor"
-          Nullable="False"
-          StoreGeneratedPattern="Identity"
-          Type="int"
-          Property="Profesor/Properties[ID_profesor]" />
         <SsdlProperty
           Name="ActiveProfesor"
           Nullable="True"

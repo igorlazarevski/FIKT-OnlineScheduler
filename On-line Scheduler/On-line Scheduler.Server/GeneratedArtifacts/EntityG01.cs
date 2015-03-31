@@ -131,30 +131,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Den
-        {
-            get
-            {
-                return global::LightSwitchApplication.Aktivnost.DetailsClass.GetValue(this, global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den);
-            }
-            set
-            {
-                global::LightSwitchApplication.Aktivnost.DetailsClass.SetValue(this, global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Den_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Den_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Den_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public int ID_aktivnost
         {
             get
@@ -266,6 +242,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TipNaAktivnost_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Den Den
+        {
+            get
+            {
+                return global::LightSwitchApplication.Aktivnost.DetailsClass.GetValue(this, global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den);
+            }
+            set
+            {
+                global::LightSwitchApplication.Aktivnost.DetailsClass.SetValue(this, global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Den_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Den_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Den_Changed();
+
         #endregion
     
         #region Details Class
@@ -364,14 +364,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string> Den
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, int> ID_aktivnost
                 {
                     get
@@ -412,6 +404,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Den> Den
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Den>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -420,12 +420,12 @@ namespace LightSwitchApplication
             {
                 new global::System.Nullable<global::System.DateTime> Vreme_pocetok { get; set; }
                 new global::System.Nullable<global::System.DateTime> Vreme_kraj { get; set; }
-                new string Den { get; set; }
                 new int ID_aktivnost { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Predmet { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Profesor { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Prostorija { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation TipNaAktivnost { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Den { get; set; }
             }
             #pragma warning restore 109
     
@@ -507,43 +507,6 @@ namespace LightSwitchApplication
                 private static void _Vreme_kraj_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
                 {
                     e.Vreme_kraj_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string>.Entry
-                    Den = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string>.Entry(
-                        "Den",
-                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_Stub,
-                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_Validate,
-                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_GetImplementationValue,
-                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_SetImplementationValue,
-                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_OnValueChanged);
-                private static void _Den_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Den, sf);
-                }
-                private static bool _Den_ComputeIsReadOnly(global::LightSwitchApplication.Aktivnost e)
-                {
-                    bool result = false;
-                    e.Den_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Den_Validate(global::LightSwitchApplication.Aktivnost e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Den_Validate(r);
-                }
-                private static string _Den_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Den;
-                }
-                private static void _Den_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Den = v;
-                }
-                private static void _Den_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
-                {
-                    e.Den_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -767,6 +730,53 @@ namespace LightSwitchApplication
                     e.TipNaAktivnost_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Den>.Entry
+                    Den = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Den>.Entry(
+                        "Den",
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_Stub,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_Validate,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_GetImplementationValue,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_SetImplementationValue,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_Refresh,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Den_OnValueChanged);
+                private static void _Den_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Den>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Den, sf);
+                }
+                private static bool _Den_ComputeIsReadOnly(global::LightSwitchApplication.Aktivnost e)
+                {
+                    bool result = false;
+                    e.Den_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Den_Validate(global::LightSwitchApplication.Aktivnost e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Den_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Den_GetCoreImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Den;
+                }
+                private static global::LightSwitchApplication.Den _Den_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Den, global::LightSwitchApplication.Den.DetailsClass>(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den, ref d._Den);
+                }
+                private static void _Den_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, global::LightSwitchApplication.Den v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den, ref d._Den, (i, ev) => i.Den = ev, v);
+                }
+                private static void _Den_Refresh(global::LightSwitchApplication.Aktivnost.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Den, ref d._Den);
+                }
+                private static void _Den_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
+                {
+                    e.Den_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -774,9 +784,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _Vreme_kraj;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, string>.Data _Den;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, int>.Data _ID_aktivnost;
@@ -792,6 +799,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.TipNaAktivnost>.Data _TipNaAktivnost;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Den>.Data _Den;
             
         }
     

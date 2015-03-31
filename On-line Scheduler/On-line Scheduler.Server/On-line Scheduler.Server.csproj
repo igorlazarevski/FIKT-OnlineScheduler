@@ -192,6 +192,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\On_line_rasporedData\_On_line_rasporedDataService.lsml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +218,8 @@
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Query1.lsml">
       <DependentUpon>Predmets.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\Nasokas.lsml" />
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\Dens.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

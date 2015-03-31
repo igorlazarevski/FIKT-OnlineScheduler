@@ -41,14 +41,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Nasoka"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Email"
         PropertyType=":String?">
         <EntityProperty.Attributes>
@@ -81,6 +73,11 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Nasoka1"
+        Association="FK_Student_Nasoka"
+        FromEnd="Student"
+        ToEnd="Nasoka" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -231,12 +228,6 @@
           Property="Student/Properties[Prezime]" />
         <SsdlProperty
           MaxLength="50"
-          Name="Nasoka"
-          Nullable="True"
-          Type="nvarchar"
-          Property="Student/Properties[Nasoka]" />
-        <SsdlProperty
-          MaxLength="50"
           Name="Email"
           Nullable="True"
           Type="nvarchar"
@@ -252,6 +243,11 @@
           Nullable="True"
           Type="bit"
           Property="Student/Properties[ActiveStudent]" />
+        <SsdlForeignKeyProperty
+          Name="ID_Nasoka"
+          Nullable="False"
+          Type="int"
+          PropertyName="ID_Nasoka" />
         <SsdlForeignKeyProperty
           Name="ID_semestar"
           Nullable="False"

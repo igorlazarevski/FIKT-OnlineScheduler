@@ -37,15 +37,6 @@
   <Application.NavigationItems>
     <ApplicationNavigationMethodLink
       Name="link"
-      Method="!module/Methods[showЛистаНаПредмети]" />
-    <ApplicationNavigationMethodLink
-      Name="link1"
-      Method="!module/Methods[showЛистаНаСтуденти]" />
-    <ApplicationNavigationMethodLink
-      Name="link2"
-      Method="!module/Methods[showЛистаНаПрофесори]" />
-    <ApplicationNavigationMethodLink
-      Name="link3"
-      Method="!module/Methods[showПрегледАктивности]" />
+      Method="!module/Methods[showАдминистратор]" />
   </Application.NavigationItems>
 </Application>

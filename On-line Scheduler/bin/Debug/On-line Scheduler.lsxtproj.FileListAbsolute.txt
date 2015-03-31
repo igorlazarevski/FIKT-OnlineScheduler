@@ -176,5 +176,4 @@ D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\b
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Scripts\Generated\resources.js
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Content\Resources\Generated\model.json
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Content\Resources\msls.lang-en-us.resjson
-D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\Aktivnosts\ПрегледАктивност.lsml.js
-D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\Aktivnosts\ПрегледАктивности.lsml.js
+D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\Администратор.lsml.js

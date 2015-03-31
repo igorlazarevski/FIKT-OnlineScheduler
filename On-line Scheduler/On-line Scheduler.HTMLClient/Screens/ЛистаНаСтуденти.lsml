@@ -138,23 +138,6 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
-                  Name="Nasoka"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Насока" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Student/Properties[Nasoka]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Br_indeks1"
                   Kind="Value"
                   DataType=":String">
