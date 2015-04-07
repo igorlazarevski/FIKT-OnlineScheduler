@@ -316,6 +316,29 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Nasoka1_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.SpisokPolaganje> SpisokPolaganjes
+        {
+            get
+            {
+                return global::LightSwitchApplication.Predmet.DetailsClass.GetValue(this, global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.SpisokPolaganjes);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SpisokPolaganje> SpisokPolaganjesQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Predmet.DetailsClass.GetQuery(this, global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.SpisokPolaganjes);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -478,6 +501,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje> SpisokPolaganjes
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.SpisokPolaganjes) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -494,6 +525,7 @@ namespace LightSwitchApplication
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Semestar { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation StatusPredmet { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Nasoka1 { get; set; }
+                new global::System.Collections.IEnumerable SpisokPolaganjes { get; }
             }
             #pragma warning restore 109
     
@@ -879,6 +911,26 @@ namespace LightSwitchApplication
                     e.Nasoka1_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje>.Entry
+                    SpisokPolaganjes = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje>.Entry(
+                        "SpisokPolaganjes",
+                        global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties._SpisokPolaganjes_Stub,
+                        global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties._SpisokPolaganjes_GetReferencedEntities,
+                        global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties._SpisokPolaganjes_GetEntityCollection);
+                private static void _SpisokPolaganjes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Predmet.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje>.Data> c, global::LightSwitchApplication.Predmet.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SpisokPolaganjes, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SpisokPolaganje> _SpisokPolaganjes_GetReferencedEntities(global::LightSwitchApplication.Predmet.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.SpisokPolaganje, global::LightSwitchApplication.SpisokPolaganje.DetailsClass>(global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.SpisokPolaganjes, ref d._SpisokPolaganjes);
+                }
+                private static global::System.Collections.IEnumerable _SpisokPolaganjes_GetEntityCollection(global::LightSwitchApplication.Predmet.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SpisokPolaganjes;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -910,6 +962,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.Nasoka>.Data _Nasoka1;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje>.Data _SpisokPolaganjes;
             
         }
     

@@ -151,6 +151,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> Otkazan
+        {
+            get
+            {
+                return global::LightSwitchApplication.Aktivnost.DetailsClass.GetValue(this, global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Otkazan);
+            }
+            set
+            {
+                global::LightSwitchApplication.Aktivnost.DetailsClass.SetValue(this, global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Otkazan, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Otkazan_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Otkazan_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Otkazan_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.Predmet Predmet
         {
             get
@@ -372,6 +396,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<bool>> Otkazan
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties.Otkazan) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<bool>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Predmet> Predmet
                 {
                     get
@@ -421,6 +453,7 @@ namespace LightSwitchApplication
                 new global::System.Nullable<global::System.DateTime> Vreme_pocetok { get; set; }
                 new global::System.Nullable<global::System.DateTime> Vreme_kraj { get; set; }
                 new int ID_aktivnost { get; }
+                new global::System.Nullable<bool> Otkazan { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Predmet { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Profesor { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Prostorija { get; set; }
@@ -540,6 +573,43 @@ namespace LightSwitchApplication
                 private static void _ID_aktivnost_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
                 {
                     e.ID_aktivnost_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<bool>>.Entry
+                    Otkazan = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "Otkazan",
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Otkazan_Stub,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Otkazan_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Otkazan_Validate,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Otkazan_GetImplementationValue,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Otkazan_SetImplementationValue,
+                        global::LightSwitchApplication.Aktivnost.DetailsClass.PropertySetProperties._Otkazan_OnValueChanged);
+                private static void _Otkazan_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Aktivnost.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.Aktivnost.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Otkazan, sf);
+                }
+                private static bool _Otkazan_ComputeIsReadOnly(global::LightSwitchApplication.Aktivnost e)
+                {
+                    bool result = false;
+                    e.Otkazan_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Otkazan_Validate(global::LightSwitchApplication.Aktivnost e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Otkazan_Validate(r);
+                }
+                private static global::System.Nullable<bool> _Otkazan_GetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Otkazan;
+                }
+                private static void _Otkazan_SetImplementationValue(global::LightSwitchApplication.Aktivnost.DetailsClass d, global::System.Nullable<bool> v)
+                {
+                    d.ImplementationEntity.Otkazan = v;
+                }
+                private static void _Otkazan_OnValueChanged(global::LightSwitchApplication.Aktivnost e)
+                {
+                    e.Otkazan_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -787,6 +857,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, int>.Data _ID_aktivnost;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::System.Nullable<bool>>.Data _Otkazan;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Aktivnost, global::LightSwitchApplication.Aktivnost.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Predmet;

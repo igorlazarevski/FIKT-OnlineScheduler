@@ -293,6 +293,29 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
+                  Name="TipNaAktivnost"
+                  Kind="Details"
+                  DataType="TipNaAktivnost">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Aktivnost/Properties[TipNaAktivnost]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="TipNaAktivnost1"
+                    Kind="Details"
+                    DataType="TipNaAktivnost">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
                   Name="Vreme_pocetok"
                   Kind="Value"
                   DataType=":DateTime?">

@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.On_line_Scheduler.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="Студенти">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="On_line_rasporedData" />
+      <DisplayName
+        Value="Студент" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="Group"
+            Kind="Group">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Предмети" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="Izbrani_predmetis"
+              Kind="Collection"
+              DataType="CollectionView$Izbrani_predmeti"
+              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Студенти/Properties[Izbrani_predmetis]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Izbrani_predmetisTemplate"
+                Kind="Details"
+                DataType="Izbrani_predmeti">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Semestar2"
+                  IsHidden="True"
+                  Kind="Details"
+                  DataType="Semestar">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Запишан семестар" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Izbrani_predmeti/Properties[Student]" />
+                        <MemberExpression
+                          Member="Semestar" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Semestar3"
+                    Kind="Details"
+                    DataType="Semestar">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="tekoven_semestar"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Тековен семестар" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Izbrani_predmeti/Properties[tekoven_semestar]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="Predmet"
+                  Kind="Details"
+                  DataType="Predmet"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Izbrani_predmeti/Properties[Predmet]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Ime"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Ime]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Profesor"
+                    Kind="Details"
+                    DataType="Profesor"
+                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Profesor]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Ime1"
+                      Kind="Value"
+                      DataType=":String?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Profesor/Properties[Ime]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                    <ContentItem
+                      Name="Prezime"
+                      Kind="Value"
+                      DataType=":String?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Profesor/Properties[Prezime]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                    <ContentItem
+                      Name="Email"
+                      Kind="Value"
+                      DataType=":String?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Profesor/Properties[Email]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Semestar"
+                    Kind="Details"
+                    DataType="Semestar">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Семестар во кој се изучува" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Semestar]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Semestar1"
+                      Kind="Details"
+                      DataType="Semestar">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="br_krediti"
+                    Kind="Value"
+                    DataType=":Int32">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Бр кредити" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[br_krediti]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="StatusPredmet"
+                    Kind="Details"
+                    DataType="StatusPredmet">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[StatusPredmet]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="StatusPredmet1"
+                      Kind="Details"
+                      DataType="StatusPredmet">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Nasoka1"
+                    Kind="Details"
+                    DataType="Nasoka">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Nasoka1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Nasoka"
+                      Kind="Details"
+                      DataType="Nasoka">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Student"
+                  Kind="Details"
+                  DataType="Student"
+                  View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Izbrani_predmeti/Properties[Student]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="SearchIzbrani_predmetis"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Пребарај Предмети" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Студенти/Properties[Izbrani_predmetis]" />
+                        <CallExpression
+                          Target="showSearch" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-search"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="AddIzbrani_predmeti"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Запиши Предмет" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showЗапишиПредмет]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="Студенти/Properties[Izbrani_predmetis]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showЗапишиПредмет]/Parameters[Izbrani_predmeti]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-add"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem.CommandItems>
+          </ContentItem>
+          <ContentItem
+            Name="Group1"
+            Kind="Group">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Распоред" />
+            </ContentItem.Attributes>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Students"
+        PageSize="45"
+        PropertyType="CollectionView$Student">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="StudentsQuery"
+            ReturnType="Student*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="On_line_rasporedData/Members[Students]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Студенти/Properties[Students]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="Predmets"
+        PageSize="45"
+        PropertyType="CollectionView$Predmet">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="PredmetsQuery"
+            ReturnType="Predmet*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="On_line_rasporedData/Members[Predmets]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Студенти/Properties[Predmets]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="Izbrani_predmetis"
+        PageSize="45"
+        PropertyType="CollectionView$Izbrani_predmeti">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Izbrani_predmetisQuery"
+            ReturnType="Izbrani_predmeti*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="On_line_rasporedData/Members[Izbrani_predmetis]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Студенти/Properties[Izbrani_predmetis]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="showСтуденти">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="Студенти" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>

@@ -12,6 +12,7 @@
           <ScalarProperty Name="ID_prostorija" ColumnName="ID_prostorija" />
           <ScalarProperty Name="ID_TipNaAktivnost" ColumnName="ID_TipNaAktivnost" />
           <ScalarProperty Name="ID_Den" ColumnName="ID_Den" />
+          <ScalarProperty Name="Otkazan" ColumnName="Otkazan" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -88,6 +89,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SpisokPolaganjes">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.SpisokPolaganje)">
+        <MappingFragment StoreEntitySet="SpisokPolaganjes">
+          <ScalarProperty Name="ID_spisok" ColumnName="ID_spisok" />
+          <ScalarProperty Name="ID_predmet" ColumnName="ID_predmet" />
+          <ScalarProperty Name="Br_indeks" ColumnName="Br_indeks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="StatusPredmets">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.StatusPredmet)">
         <MappingFragment StoreEntitySet="StatusPredmets">
@@ -126,6 +136,24 @@
         <MappingFragment StoreEntitySet="TipNaAktivnosts">
           <ScalarProperty Name="Ime" ColumnName="Ime" />
           <ScalarProperty Name="ID_tipNaAktivnost" ColumnName="ID_tipNaAktivnost" />
+          <ScalarProperty Name="Povtoruvacki" ColumnName="Povtoruvacki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Aktivnostis">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.vw_Aktivnosti)">
+        <MappingFragment StoreEntitySet="vw_Aktivnostis">
+          <ScalarProperty Name="ID_aktivnost" ColumnName="ID_aktivnost" />
+          <ScalarProperty Name="Br_prostorija" ColumnName="Br_prostorija" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Profesor_Ime" ColumnName="Profesor_Ime" />
+          <ScalarProperty Name="Vreme_pocetok" ColumnName="Vreme_pocetok" />
+          <ScalarProperty Name="Vreme_kraj" ColumnName="Vreme_kraj" />
+          <ScalarProperty Name="otkazan" ColumnName="otkazan" />
+          <ScalarProperty Name="Den" ColumnName="Den" />
+          <ScalarProperty Name="Povtoruvacki" ColumnName="Povtoruvacki" />
+          <ScalarProperty Name="ID_Den" ColumnName="ID_Den" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -9,10 +9,12 @@
     <EntitySet Name="Profesors" EntityType="On_line_rasporedDataStore.Profesor" store:Type="Tables" Schema="dbo" Table="Profesor" />
     <EntitySet Name="Prostorijas" EntityType="On_line_rasporedDataStore.Prostorija" store:Type="Tables" Schema="dbo" Table="Prostorija" />
     <EntitySet Name="Semestars" EntityType="On_line_rasporedDataStore.Semestar" store:Type="Tables" Schema="dbo" Table="Semestar" />
+    <EntitySet Name="SpisokPolaganjes" EntityType="On_line_rasporedDataStore.SpisokPolaganje" store:Type="Tables" Schema="dbo" Table="SpisokPolaganje" />
     <EntitySet Name="StatusPredmets" EntityType="On_line_rasporedDataStore.StatusPredmet" store:Type="Tables" Schema="dbo" Table="StatusPredmet" />
     <EntitySet Name="Students" EntityType="On_line_rasporedDataStore.Student" store:Type="Tables" Schema="dbo" Table="Student" />
     <EntitySet Name="sysdiagrams" EntityType="On_line_rasporedDataStore.sysdiagram" store:Type="Tables" Schema="dbo" Table="sysdiagrams" />
     <EntitySet Name="TipNaAktivnosts" EntityType="On_line_rasporedDataStore.TipNaAktivnost" store:Type="Tables" Schema="dbo" Table="TipNaAktivnost" />
+    <EntitySet Name="vw_Aktivnostis" EntityType="On_line_rasporedDataStore.vw_Aktivnosti" store:Type="Tables" Schema="dbo" Table="vw_Aktivnosti" />
     <AssociationSet Name="FK_Aktivnost_Den" Association="On_line_rasporedDataStore.FK_Aktivnost_Den">
       <End Role="Den" EntitySet="Dens" />
       <End Role="Aktivnost" EntitySet="Aktivnosts" />
@@ -32,6 +34,10 @@
     <AssociationSet Name="FK_Izbrani_predmeti_Predmet" Association="On_line_rasporedDataStore.FK_Izbrani_predmeti_Predmet">
       <End Role="Predmet" EntitySet="Predmets" />
       <End Role="Izbrani_predmeti" EntitySet="Izbrani_predmetis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SpisokPolaganje_Predmet" Association="On_line_rasporedDataStore.FK_SpisokPolaganje_Predmet">
+      <End Role="Predmet" EntitySet="Predmets" />
+      <End Role="SpisokPolaganje" EntitySet="SpisokPolaganjes" />
     </AssociationSet>
     <AssociationSet Name="FK_Aktivnost_Profesor" Association="On_line_rasporedDataStore.FK_Aktivnost_Profesor">
       <End Role="Profesor" EntitySet="Profesors" />
@@ -61,6 +67,10 @@
       <End Role="Student" EntitySet="Students" />
       <End Role="Izbrani_predmeti" EntitySet="Izbrani_predmetis" />
     </AssociationSet>
+    <AssociationSet Name="FK_SpisokPolaganje_Student" Association="On_line_rasporedDataStore.FK_SpisokPolaganje_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="SpisokPolaganje" EntitySet="SpisokPolaganjes" />
+    </AssociationSet>
     <AssociationSet Name="FK_Aktivnost_TipNaAktivnost" Association="On_line_rasporedDataStore.FK_Aktivnost_TipNaAktivnost">
       <End Role="TipNaAktivnost" EntitySet="TipNaAktivnosts" />
       <End Role="Aktivnost" EntitySet="Aktivnosts" />
@@ -73,6 +83,7 @@
     <Property Name="Vreme_pocetok" Type="smalldatetime" />
     <Property Name="Vreme_kraj" Type="smalldatetime" />
     <Property Name="ID_aktivnost" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Otkazan" Type="bit" />
     <Property Name="ID_Den" Type="int" Nullable="false" />
     <Property Name="ID_predmet" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="ID_profesor" Type="int" Nullable="false" />
@@ -145,6 +156,14 @@
     <Property Name="ID_semestar" Type="int" Nullable="false" />
     <Property Name="Br_semestar" Type="int" />
   </EntityType>
+  <EntityType Name="SpisokPolaganje">
+    <Key>
+      <PropertyRef Name="ID_spisok" />
+    </Key>
+    <Property Name="ID_spisok" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_predmet" Type="nvarchar" MaxLength="50" />
+    <Property Name="Br_indeks" Type="nvarchar" MaxLength="20" />
+  </EntityType>
   <EntityType Name="StatusPredmet">
     <Key>
       <PropertyRef Name="ID_Status" />
@@ -181,6 +200,24 @@
     </Key>
     <Property Name="Ime" Type="nvarchar" MaxLength="50" />
     <Property Name="ID_tipNaAktivnost" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Povtoruvacki" Type="bit" />
+  </EntityType>
+  <EntityType Name="vw_Aktivnosti">
+    <Key>
+      <PropertyRef Name="ID_aktivnost" />
+      <PropertyRef Name="ID_Den" />
+    </Key>
+    <Property Name="ID_aktivnost" Type="int" Nullable="false" />
+    <Property Name="Br_prostorija" Type="int" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profesor_Ime" Type="nvarchar" MaxLength="101" />
+    <Property Name="Vreme_pocetok" Type="datetime" />
+    <Property Name="Vreme_kraj" Type="datetime" />
+    <Property Name="otkazan" Type="bit" />
+    <Property Name="Den" Type="nvarchar" MaxLength="50" />
+    <Property Name="Povtoruvacki" Type="bit" />
+    <Property Name="ID_Den" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Aktivnost_Den">
     <End Role="Den" Type="On_line_rasporedDataStore.Den" Multiplicity="1">
@@ -248,6 +285,20 @@
         <PropertyRef Name="ID_predmet" />
       </Principal>
       <Dependent Role="Izbrani_predmeti">
+        <PropertyRef Name="ID_predmet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SpisokPolaganje_Predmet">
+    <End Role="Predmet" Type="On_line_rasporedDataStore.Predmet" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SpisokPolaganje" Type="On_line_rasporedDataStore.SpisokPolaganje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Predmet">
+        <PropertyRef Name="ID_predmet" />
+      </Principal>
+      <Dependent Role="SpisokPolaganje">
         <PropertyRef Name="ID_predmet" />
       </Dependent>
     </ReferentialConstraint>
@@ -346,6 +397,20 @@
         <PropertyRef Name="Br_indeks" />
       </Principal>
       <Dependent Role="Izbrani_predmeti">
+        <PropertyRef Name="Br_indeks" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SpisokPolaganje_Student">
+    <End Role="Student" Type="On_line_rasporedDataStore.Student" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SpisokPolaganje" Type="On_line_rasporedDataStore.SpisokPolaganje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Br_indeks" />
+      </Principal>
+      <Dependent Role="SpisokPolaganje">
         <PropertyRef Name="Br_indeks" />
       </Dependent>
     </ReferentialConstraint>

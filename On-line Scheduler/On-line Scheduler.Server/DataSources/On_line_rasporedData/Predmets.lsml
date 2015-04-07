@@ -77,6 +77,11 @@
         Association="FK_Predmet_Nasoka"
         FromEnd="Predmet"
         ToEnd="Nasoka" />
+      <NavigationProperty
+        Name="SpisokPolaganjes"
+        Association="FK_SpisokPolaganje_Predmet"
+        FromEnd="Predmet"
+        ToEnd="SpisokPolaganje" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -220,7 +225,31 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_SpisokPolaganje_Predmet"
+      Association="FK_SpisokPolaganje_Predmet">
+      <AssociationSetEnd
+        Name="Predmet"
+        EntitySet="Predmets" />
+      <AssociationSetEnd
+        Name="SpisokPolaganje"
+        EntitySet="SpisokPolaganjes" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_SpisokPolaganje_Predmet">
+    <AssociationEnd
+      Name="Predmet"
+      EntityType="Predmet">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SpisokPolaganje"
+      Multiplicity="Many"
+      EntityType="SpisokPolaganje" />
+  </Association>
   <DataService
     Name="On_line_rasporedDataDataService">
     <DataService.Attributes>
@@ -311,6 +340,27 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="On_line_rasporedData/Members[FK_Izbrani_predmeti_Predmet]/Members[Izbrani_predmeti]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID_predmet" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SpisokPolaganje_Predmet">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SpisokPolaganje_Predmet" />
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[FK_SpisokPolaganje_Predmet]/Members[Predmet]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID_predmet" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[FK_SpisokPolaganje_Predmet]/Members[SpisokPolaganje]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID_predmet" />

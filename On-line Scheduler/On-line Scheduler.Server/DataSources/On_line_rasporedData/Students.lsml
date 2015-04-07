@@ -78,6 +78,11 @@
         Association="FK_Student_Nasoka"
         FromEnd="Student"
         ToEnd="Nasoka" />
+      <NavigationProperty
+        Name="SpisokPolaganjes"
+        Association="FK_SpisokPolaganje_Student"
+        FromEnd="Student"
+        ToEnd="SpisokPolaganje" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -196,7 +201,31 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_SpisokPolaganje_Student"
+      Association="FK_SpisokPolaganje_Student">
+      <AssociationSetEnd
+        Name="Student"
+        EntitySet="Students" />
+      <AssociationSetEnd
+        Name="SpisokPolaganje"
+        EntitySet="SpisokPolaganjes" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_SpisokPolaganje_Student">
+    <AssociationEnd
+      Name="Student"
+      EntityType="Student">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SpisokPolaganje"
+      Multiplicity="Many"
+      EntityType="SpisokPolaganje" />
+  </Association>
   <DataService
     Name="On_line_rasporedDataDataService">
     <DataService.Attributes>
@@ -269,6 +298,27 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="On_line_rasporedData/Members[FK_Izbrani_predmeti_Student]/Members[Izbrani_predmeti]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Br_indeks" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SpisokPolaganje_Student">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SpisokPolaganje_Student" />
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[FK_SpisokPolaganje_Student]/Members[Student]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Br_indeks" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[FK_SpisokPolaganje_Student]/Members[SpisokPolaganje]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Br_indeks" />

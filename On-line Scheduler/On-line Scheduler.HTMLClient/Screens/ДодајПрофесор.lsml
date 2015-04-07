@@ -255,6 +255,7 @@
           </ContentItem>
           <ContentItem
             Name="Aktivnosts"
+            IsHidden="True"
             Kind="Group"
             View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
             <ContentItem.Attributes>
@@ -410,6 +411,7 @@
           </ContentItem>
           <ContentItem
             Name="Predmets"
+            IsHidden="True"
             Kind="Group"
             View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
             <ContentItem.Attributes>

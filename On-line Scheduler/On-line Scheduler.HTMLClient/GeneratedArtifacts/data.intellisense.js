@@ -66,6 +66,14 @@
         created: [lightSwitchApplication.Semestar]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.SpisokPolaganje, {
+        /// <field>
+        /// Called when a new spisokPolaganje is created.
+        /// <br/>created(msls.application.SpisokPolaganje entity)
+        /// </field>
+        created: [lightSwitchApplication.SpisokPolaganje]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.StatusPredmet, {
         /// <field>
         /// Called when a new statusPredmet is created.
@@ -96,6 +104,14 @@
         /// <br/>created(msls.application.TipNaAktivnost entity)
         /// </field>
         created: [lightSwitchApplication.TipNaAktivnost]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.vw_Aktivnosti, {
+        /// <field>
+        /// Called when a new vw_Aktivnosti is created.
+        /// <br/>created(msls.application.vw_Aktivnosti entity)
+        /// </field>
+        created: [lightSwitchApplication.vw_Aktivnosti]
     });
 
 }(msls.application));

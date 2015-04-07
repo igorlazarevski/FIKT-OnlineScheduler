@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.On_line_Scheduler.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="Распоред">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="On_line_rasporedData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="vw_AktivnostiList"
+            Kind="Group">
+            <ContentItem
+              Name="vw_Aktivnostis"
+              Kind="Collection"
+              DataType="CollectionView$vw_Aktivnosti"
+              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="vw_Aktivnostis" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Распоред/Properties[vw_Aktivnostis]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="rows"
+                Kind="Details"
+                DataType="vw_Aktivnosti"
+                View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="rows" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Opis"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="vw_Aktivnosti/Properties[Opis]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Large"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="Den"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="vw_Aktivnosti/Properties[Den]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Group"
+                  Kind="Group"
+                  View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Време" />
+                  </ContentItem.Attributes>
+                  <ContentItem
+                    Name="Vreme_pocetok"
+                    Kind="Value"
+                    DataType=":DateTime?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Време" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="vw_Aktivnosti/Properties[Vreme_pocetok]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="StretchToContainer"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="0"
+                              ResultType=":Double" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="0"
+                              ResultType=":Double" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Vreme_kraj"
+                    Kind="Value"
+                    DataType=":DateTime?">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="-" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="vw_Aktivnosti/Properties[Vreme_kraj]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="FixedSize"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="135"
+                              ResultType=":Double" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Profesor_Ime"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="vw_Aktivnosti/Properties[Profesor_Ime]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Ime"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="vw_Aktivnosti/Properties[Ime]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="FitToContent"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Распоред/Properties[vw_Aktivnostis]" />
+                      <CallExpression
+                        Target="viewSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="Searchvw_Aktivnostis"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Search" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Распоред/Properties[vw_Aktivnostis]" />
+                        <CallExpression
+                          Target="showSearch" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-search"
+                          ResultType="Microsoft.LightSwitch:String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem.CommandItems>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="vw_Aktivnostis"
+        PageSize="45"
+        PropertyType="CollectionView$vw_Aktivnosti">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="vw_AktivnostisQuery"
+            ReturnType="vw_Aktivnosti*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="On_line_rasporedData/Members[vw_Aktivnostis]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.SortCriteria>
+              <SortCriterion>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ID_Den" />
+                </ChainExpression>
+              </SortCriterion>
+            </ScreenQueryDefinition.SortCriteria>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Распоред/Properties[vw_Aktivnostis]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="showРаспоред">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="Распоред" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>
