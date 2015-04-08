@@ -66,8 +66,20 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\ДодајПрофесор.lsml.js">
+      <DependentUpon>ДодајПрофесор.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ИзмениПрофесор.lsml.js">
+      <DependentUpon>ИзмениПрофесор.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Распоред.lsml.js">
+      <DependentUpon>Распоред.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Администратор.lsml.js">
       <DependentUpon>Администратор.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Професор.lsml.js">
+      <DependentUpon>Професор.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
@@ -94,6 +106,9 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\ЗапишиПредмет.lsml" />
+    <LightSwitchModel Include="Screens\Студенти.lsml" />
+    <LightSwitchModel Include="Screens\Распоред.lsml" />
     <LightSwitchModel Include="Screens\ИзмениАктивност.lsml" />
     <LightSwitchModel Include="Screens\ДодајАктивност.lsml" />
     <LightSwitchModel Include="Screens\ДодајПрофесор.lsml" />
@@ -103,6 +118,7 @@
     <LightSwitchModel Include="Screens\ДодајПредмет.lsml" />
     <LightSwitchModel Include="Screens\ИзмениПредмет.lsml" />
     <LightSwitchModel Include="Screens\Администратор.lsml" />
+    <LightSwitchModel Include="Screens\Професор.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">

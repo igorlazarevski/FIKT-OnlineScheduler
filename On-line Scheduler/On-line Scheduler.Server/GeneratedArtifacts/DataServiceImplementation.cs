@@ -81,6 +81,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Semestar();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.SpisokPolaganje))
+            {
+                return new global::LightSwitchApplication.Implementation.SpisokPolaganje();
+            }
             if (type == typeof(global::LightSwitchApplication.Implementation.StatusPredmet))
             {
                 return new global::LightSwitchApplication.Implementation.StatusPredmet();
@@ -96,6 +100,10 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::LightSwitchApplication.Implementation.TipNaAktivnost))
             {
                 return new global::LightSwitchApplication.Implementation.TipNaAktivnost();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.vw_Aktivnosti))
+            {
+                return new global::LightSwitchApplication.Implementation.vw_Aktivnosti();
             }
     
             return base.CreateObject(type);
@@ -145,6 +153,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Semestar();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.SpisokPolaganje))
+            {
+                return new global::LightSwitchApplication.Implementation.SpisokPolaganje();
+            }
             if (typeof(T) == typeof(global::LightSwitchApplication.StatusPredmet))
             {
                 return new global::LightSwitchApplication.Implementation.StatusPredmet();
@@ -160,6 +172,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.TipNaAktivnost))
             {
                 return new global::LightSwitchApplication.Implementation.TipNaAktivnost();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.vw_Aktivnosti))
+            {
+                return new global::LightSwitchApplication.Implementation.vw_Aktivnosti();
             }
             return null;
         }
@@ -238,6 +254,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::LightSwitchApplication.Implementation.Semestar);
             }
+            if (typeof(global::LightSwitchApplication.SpisokPolaganje) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.SpisokPolaganje);
+            }
             if (typeof(global::LightSwitchApplication.StatusPredmet) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.StatusPredmet);
@@ -253,6 +273,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.TipNaAktivnost) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.TipNaAktivnost);
+            }
+            if (typeof(global::LightSwitchApplication.vw_Aktivnosti) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.vw_Aktivnosti);
             }
             return null;
         }
@@ -667,6 +691,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Predmet.DetailsClass.IImplementation.SpisokPolaganjes
+        {
+            get
+            {
+                return this.SpisokPolaganjes;
+            }
+        }
+        
         partial void OnID_profesorChanged()
         {
             if (this.__host != null)
@@ -867,6 +899,87 @@ namespace LightSwitchApplication.Implementation
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class SpisokPolaganje :
+        global::LightSwitchApplication.SpisokPolaganje.DetailsClass.IImplementation
+    {
+    
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.SpisokPolaganje.DetailsClass.IImplementation.Predmet
+        {
+            get
+            {
+                return this.Predmet;
+            }
+            set
+            {
+                this.Predmet = (global::LightSwitchApplication.Implementation.Predmet)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Predmet");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.SpisokPolaganje.DetailsClass.IImplementation.Student
+        {
+            get
+            {
+                return this.Student;
+            }
+            set
+            {
+                this.Student = (global::LightSwitchApplication.Implementation.Student)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Student");
+                }
+            }
+        }
+        
+        partial void OnID_predmetChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Predmet");
+            }
+        }
+        
+        partial void OnBr_indeksChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Student");
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class StatusPredmet :
         global::LightSwitchApplication.StatusPredmet.DetailsClass.IImplementation
     {
@@ -949,6 +1062,14 @@ namespace LightSwitchApplication.Implementation
                 {
                     this.__host.RaisePropertyChanged("Nasoka1");
                 }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Student.DetailsClass.IImplementation.SpisokPolaganjes
+        {
+            get
+            {
+                return this.SpisokPolaganjes;
             }
         }
         
@@ -1042,6 +1163,39 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class vw_Aktivnosti :
+        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.IImplementation
+    {
+    
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

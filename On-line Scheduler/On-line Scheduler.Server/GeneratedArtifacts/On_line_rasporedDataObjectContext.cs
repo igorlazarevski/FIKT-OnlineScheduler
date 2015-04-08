@@ -24,6 +24,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Student_Nasoka", "Nasoka", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Nasoka), "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Student), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Predmet", "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Predmet), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Izbrani_predmeti_Predmet", "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Predmet), "Izbrani_predmeti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Izbrani_predmeti), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Predmet", "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Predmet), "SpisokPolaganje", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.SpisokPolaganje), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Profesor", "Profesor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Profesor), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Profesor", "Profesor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Profesor), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_Prostorija", "Prostorija", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Prostorija), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
@@ -31,6 +32,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_Semestar", "Semestar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Semestar), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Predmet_StatusPredmet", "StatusPredmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.StatusPredmet), "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Predmet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Izbrani_predmeti_Student", "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Student), "Izbrani_predmeti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Izbrani_predmeti), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Student", "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Student), "SpisokPolaganje", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.SpisokPolaganje), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_TipNaAktivnost", "TipNaAktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TipNaAktivnost), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
 
 #endregion
@@ -211,6 +213,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<SpisokPolaganje> SpisokPolaganjes
+        {
+            get
+            {
+                if ((_SpisokPolaganjes == null))
+                {
+                    _SpisokPolaganjes = base.CreateObjectSet<SpisokPolaganje>("SpisokPolaganjes");
+                }
+                return _SpisokPolaganjes;
+            }
+        }
+        private ObjectSet<SpisokPolaganje> _SpisokPolaganjes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<StatusPredmet> StatusPredmets
         {
             get
@@ -271,6 +289,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TipNaAktivnost> _TipNaAktivnosts;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<vw_Aktivnosti> vw_Aktivnostis
+        {
+            get
+            {
+                if ((_vw_Aktivnostis == null))
+                {
+                    _vw_Aktivnostis = base.CreateObjectSet<vw_Aktivnosti>("vw_Aktivnostis");
+                }
+                return _vw_Aktivnostis;
+            }
+        }
+        private ObjectSet<vw_Aktivnosti> _vw_Aktivnostis;
 
         #endregion
 
@@ -341,6 +375,14 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the SpisokPolaganjes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSpisokPolaganjes(SpisokPolaganje spisokPolaganje)
+        {
+            base.AddObject("SpisokPolaganjes", spisokPolaganje);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the StatusPredmets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToStatusPredmets(StatusPredmet statusPredmet)
@@ -370,6 +412,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToTipNaAktivnosts(TipNaAktivnost tipNaAktivnost)
         {
             base.AddObject("TipNaAktivnosts", tipNaAktivnost);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the vw_Aktivnostis EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTovw_Aktivnostis(vw_Aktivnosti vw_Aktivnosti)
+        {
+            base.AddObject("vw_Aktivnostis", vw_Aktivnosti);
         }
 
         #endregion
@@ -609,6 +659,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _ID_Den;
         partial void OnID_DenChanging(global::System.Int32 value);
         partial void OnID_DenChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Otkazan
+        {
+            get
+            {
+                return _Otkazan;
+            }
+            set
+            {
+                OnOtkazanChanging(value);
+                ReportPropertyChanging("Otkazan");
+                _Otkazan = value;
+                ReportPropertyChanged("Otkazan");
+                OnOtkazanChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Otkazan;
+        partial void OnOtkazanChanging(Nullable<global::System.Boolean> value);
+        partial void OnOtkazanChanged();
 
         #endregion
 
@@ -1690,6 +1764,28 @@ namespace LightSwitchApplication.Implementation
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Predmet", "SpisokPolaganje")]
+        public EntityCollection<SpisokPolaganje> SpisokPolaganjes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SpisokPolaganje>("LightSwitchApplication.FK_SpisokPolaganje_Predmet", "SpisokPolaganje");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SpisokPolaganje>("LightSwitchApplication.FK_SpisokPolaganje_Predmet", "SpisokPolaganje", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -2279,6 +2375,191 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="SpisokPolaganje")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SpisokPolaganje : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new SpisokPolaganje object.
+        /// </summary>
+        /// <param name="iD_spisok">Initial value of the ID_spisok property.</param>
+        public static SpisokPolaganje CreateSpisokPolaganje(global::System.Int32 iD_spisok)
+        {
+            SpisokPolaganje spisokPolaganje = new SpisokPolaganje();
+            spisokPolaganje.ID_spisok = iD_spisok;
+            return spisokPolaganje;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_spisok
+        {
+            get
+            {
+                return _ID_spisok;
+            }
+            set
+            {
+                if (_ID_spisok != value)
+                {
+                    OnID_spisokChanging(value);
+                    ReportPropertyChanging("ID_spisok");
+                    _ID_spisok = value;
+                    ReportPropertyChanged("ID_spisok");
+                    OnID_spisokChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID_spisok;
+        partial void OnID_spisokChanging(global::System.Int32 value);
+        partial void OnID_spisokChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ID_predmet
+        {
+            get
+            {
+                return _ID_predmet;
+            }
+            set
+            {
+                OnID_predmetChanging(value);
+                ReportPropertyChanging("ID_predmet");
+                _ID_predmet = value;
+                ReportPropertyChanged("ID_predmet");
+                OnID_predmetChanged();
+            }
+        }
+        private global::System.String _ID_predmet;
+        partial void OnID_predmetChanging(global::System.String value);
+        partial void OnID_predmetChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Br_indeks
+        {
+            get
+            {
+                return _Br_indeks;
+            }
+            set
+            {
+                OnBr_indeksChanging(value);
+                ReportPropertyChanging("Br_indeks");
+                _Br_indeks = value;
+                ReportPropertyChanged("Br_indeks");
+                OnBr_indeksChanged();
+            }
+        }
+        private global::System.String _Br_indeks;
+        partial void OnBr_indeksChanging(global::System.String value);
+        partial void OnBr_indeksChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Predmet", "Predmet")]
+        public Predmet Predmet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Predmet>("LightSwitchApplication.FK_SpisokPolaganje_Predmet", "Predmet").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Predmet>("LightSwitchApplication.FK_SpisokPolaganje_Predmet", "Predmet").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Predmet> PredmetReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Predmet>("LightSwitchApplication.FK_SpisokPolaganje_Predmet", "Predmet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Predmet>("LightSwitchApplication.FK_SpisokPolaganje_Predmet", "Predmet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Student", "Student")]
+        public Student Student
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Student>("LightSwitchApplication.FK_SpisokPolaganje_Student", "Student").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Student>("LightSwitchApplication.FK_SpisokPolaganje_Student", "Student").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Student> StudentReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Student>("LightSwitchApplication.FK_SpisokPolaganje_Student", "Student");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Student>("LightSwitchApplication.FK_SpisokPolaganje_Student", "Student", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="StatusPredmet")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -2711,6 +2992,28 @@ namespace LightSwitchApplication.Implementation
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Student", "SpisokPolaganje")]
+        public EntityCollection<SpisokPolaganje> SpisokPolaganjes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SpisokPolaganje>("LightSwitchApplication.FK_SpisokPolaganje_Student", "SpisokPolaganje");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SpisokPolaganje>("LightSwitchApplication.FK_SpisokPolaganje_Student", "SpisokPolaganje", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -2948,6 +3251,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _ID_tipNaAktivnost;
         partial void OnID_tipNaAktivnostChanging(global::System.Int32 value);
         partial void OnID_tipNaAktivnostChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Povtoruvacki
+        {
+            get
+            {
+                return _Povtoruvacki;
+            }
+            set
+            {
+                OnPovtoruvackiChanging(value);
+                ReportPropertyChanging("Povtoruvacki");
+                _Povtoruvacki = value;
+                ReportPropertyChanged("Povtoruvacki");
+                OnPovtoruvackiChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Povtoruvacki;
+        partial void OnPovtoruvackiChanging(Nullable<global::System.Boolean> value);
+        partial void OnPovtoruvackiChanged();
 
         #endregion
 
@@ -2978,6 +3305,308 @@ namespace LightSwitchApplication.Implementation
 
         #endregion
 
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="vw_Aktivnosti")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class vw_Aktivnosti : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new vw_Aktivnosti object.
+        /// </summary>
+        /// <param name="iD_aktivnost">Initial value of the ID_aktivnost property.</param>
+        /// <param name="iD_Den">Initial value of the ID_Den property.</param>
+        public static vw_Aktivnosti Createvw_Aktivnosti(global::System.Int32 iD_aktivnost, global::System.Int32 iD_Den)
+        {
+            vw_Aktivnosti vw_Aktivnosti = new vw_Aktivnosti();
+            vw_Aktivnosti.ID_aktivnost = iD_aktivnost;
+            vw_Aktivnosti.ID_Den = iD_Den;
+            return vw_Aktivnosti;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_aktivnost
+        {
+            get
+            {
+                return _ID_aktivnost;
+            }
+            set
+            {
+                if (_ID_aktivnost != value)
+                {
+                    OnID_aktivnostChanging(value);
+                    ReportPropertyChanging("ID_aktivnost");
+                    _ID_aktivnost = value;
+                    ReportPropertyChanged("ID_aktivnost");
+                    OnID_aktivnostChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID_aktivnost;
+        partial void OnID_aktivnostChanging(global::System.Int32 value);
+        partial void OnID_aktivnostChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Br_prostorija
+        {
+            get
+            {
+                return _Br_prostorija;
+            }
+            set
+            {
+                OnBr_prostorijaChanging(value);
+                ReportPropertyChanging("Br_prostorija");
+                _Br_prostorija = value;
+                ReportPropertyChanged("Br_prostorija");
+                OnBr_prostorijaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Br_prostorija;
+        partial void OnBr_prostorijaChanging(Nullable<global::System.Int32> value);
+        partial void OnBr_prostorijaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Opis
+        {
+            get
+            {
+                return _Opis;
+            }
+            set
+            {
+                OnOpisChanging(value);
+                ReportPropertyChanging("Opis");
+                _Opis = value;
+                ReportPropertyChanged("Opis");
+                OnOpisChanged();
+            }
+        }
+        private global::System.String _Opis;
+        partial void OnOpisChanging(global::System.String value);
+        partial void OnOpisChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Ime
+        {
+            get
+            {
+                return _Ime;
+            }
+            set
+            {
+                OnImeChanging(value);
+                ReportPropertyChanging("Ime");
+                _Ime = value;
+                ReportPropertyChanged("Ime");
+                OnImeChanged();
+            }
+        }
+        private global::System.String _Ime;
+        partial void OnImeChanging(global::System.String value);
+        partial void OnImeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Profesor_Ime
+        {
+            get
+            {
+                return _Profesor_Ime;
+            }
+            set
+            {
+                OnProfesor_ImeChanging(value);
+                ReportPropertyChanging("Profesor_Ime");
+                _Profesor_Ime = value;
+                ReportPropertyChanged("Profesor_Ime");
+                OnProfesor_ImeChanged();
+            }
+        }
+        private global::System.String _Profesor_Ime;
+        partial void OnProfesor_ImeChanging(global::System.String value);
+        partial void OnProfesor_ImeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> Vreme_pocetok
+        {
+            get
+            {
+                return _Vreme_pocetok;
+            }
+            set
+            {
+                OnVreme_pocetokChanging(value);
+                ReportPropertyChanging("Vreme_pocetok");
+                _Vreme_pocetok = value;
+                ReportPropertyChanged("Vreme_pocetok");
+                OnVreme_pocetokChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _Vreme_pocetok;
+        partial void OnVreme_pocetokChanging(Nullable<global::System.DateTime> value);
+        partial void OnVreme_pocetokChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> Vreme_kraj
+        {
+            get
+            {
+                return _Vreme_kraj;
+            }
+            set
+            {
+                OnVreme_krajChanging(value);
+                ReportPropertyChanging("Vreme_kraj");
+                _Vreme_kraj = value;
+                ReportPropertyChanged("Vreme_kraj");
+                OnVreme_krajChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _Vreme_kraj;
+        partial void OnVreme_krajChanging(Nullable<global::System.DateTime> value);
+        partial void OnVreme_krajChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> otkazan
+        {
+            get
+            {
+                return _otkazan;
+            }
+            set
+            {
+                OnotkazanChanging(value);
+                ReportPropertyChanging("otkazan");
+                _otkazan = value;
+                ReportPropertyChanged("otkazan");
+                OnotkazanChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _otkazan;
+        partial void OnotkazanChanging(Nullable<global::System.Boolean> value);
+        partial void OnotkazanChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Den
+        {
+            get
+            {
+                return _Den;
+            }
+            set
+            {
+                OnDenChanging(value);
+                ReportPropertyChanging("Den");
+                _Den = value;
+                ReportPropertyChanged("Den");
+                OnDenChanged();
+            }
+        }
+        private global::System.String _Den;
+        partial void OnDenChanging(global::System.String value);
+        partial void OnDenChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Povtoruvacki
+        {
+            get
+            {
+                return _Povtoruvacki;
+            }
+            set
+            {
+                OnPovtoruvackiChanging(value);
+                ReportPropertyChanging("Povtoruvacki");
+                _Povtoruvacki = value;
+                ReportPropertyChanged("Povtoruvacki");
+                OnPovtoruvackiChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Povtoruvacki;
+        partial void OnPovtoruvackiChanging(Nullable<global::System.Boolean> value);
+        partial void OnPovtoruvackiChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID_Den
+        {
+            get
+            {
+                return _ID_Den;
+            }
+            set
+            {
+                if (_ID_Den != value)
+                {
+                    OnID_DenChanging(value);
+                    ReportPropertyChanging("ID_Den");
+                    _ID_Den = value;
+                    ReportPropertyChanged("ID_Den");
+                    OnID_DenChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID_Den;
+        partial void OnID_DenChanging(global::System.Int32 value);
+        partial void OnID_DenChanged();
+
+        #endregion
+
+    
     }
 
     #endregion

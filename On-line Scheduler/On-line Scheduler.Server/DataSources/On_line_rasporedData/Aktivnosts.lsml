@@ -70,6 +70,13 @@
         Association="FK_Aktivnost_Den"
         FromEnd="Aktivnost"
         ToEnd="Den" />
+      <EntityProperty
+        Name="Otkazan"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -191,6 +198,11 @@
           Nullable="True"
           Type="smalldatetime"
           Property="Aktivnost/Properties[Vreme_kraj]" />
+        <SsdlProperty
+          Name="Otkazan"
+          Nullable="True"
+          Type="bit"
+          Property="Aktivnost/Properties[Otkazan]" />
         <SsdlForeignKeyProperty
           Name="ID_Den"
           Nullable="False"

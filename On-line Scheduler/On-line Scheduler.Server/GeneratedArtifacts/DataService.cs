@@ -348,6 +348,42 @@ namespace LightSwitchApplication
         partial void Semestars_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Semestar, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Inserting(global::LightSwitchApplication.SpisokPolaganje entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Inserted(global::LightSwitchApplication.SpisokPolaganje entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Updating(global::LightSwitchApplication.SpisokPolaganje entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Updated(global::LightSwitchApplication.SpisokPolaganje entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Deleting(global::LightSwitchApplication.SpisokPolaganje entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Deleted(global::LightSwitchApplication.SpisokPolaganje entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Validate(global::LightSwitchApplication.SpisokPolaganje entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SpisokPolaganjes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SpisokPolaganje, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void StatusPredmets_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -490,6 +526,15 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TipNaAktivnosts_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TipNaAktivnost, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void vw_Aktivnostis_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void vw_Aktivnostis_Validate(global::LightSwitchApplication.vw_Aktivnosti entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void vw_Aktivnostis_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.vw_Aktivnosti, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
@@ -1155,6 +1200,82 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.SpisokPolaganje>
+                __SpisokPolaganjesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.SpisokPolaganje>(
+                    "SpisokPolaganjes",
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_CanInsert,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_CanUpdate,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_CanDelete,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_CanRead,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Inserting,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Inserted,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Updating,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Updated,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Deleting,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Deleted,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Validate,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__SpisokPolaganjes_Filter);
+            private static bool __SpisokPolaganjes_CanInsert(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.SpisokPolaganjes_CanInsert(ref result);
+                return result;
+            }
+            private static bool __SpisokPolaganjes_CanUpdate(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.SpisokPolaganjes_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __SpisokPolaganjes_CanDelete(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.SpisokPolaganjes_CanDelete(ref result);
+                return result;
+            }
+            private static bool __SpisokPolaganjes_CanRead(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.SpisokPolaganjes_CanRead(ref result);
+                return result;
+            }
+            private static void __SpisokPolaganjes_Inserting(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e)
+            {
+                d.SpisokPolaganjes_Inserting(e);
+            }
+            private static void __SpisokPolaganjes_Inserted(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e)
+            {
+                d.SpisokPolaganjes_Inserted(e);
+            }
+            private static void __SpisokPolaganjes_Updating(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e)
+            {
+                d.SpisokPolaganjes_Updating(e);
+            }
+            private static void __SpisokPolaganjes_Updated(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e)
+            {
+                d.SpisokPolaganjes_Updated(e);
+            }
+            private static void __SpisokPolaganjes_Deleting(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e)
+            {
+                d.SpisokPolaganjes_Deleting(e);
+            }
+            private static void __SpisokPolaganjes_Deleted(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e)
+            {
+                d.SpisokPolaganjes_Deleted(e);
+            }
+            private static void __SpisokPolaganjes_Validate(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.SpisokPolaganje e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.SpisokPolaganjes_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SpisokPolaganje, bool>> __SpisokPolaganjes_Filter(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SpisokPolaganje, bool>> filter = null;
+                d.SpisokPolaganjes_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.StatusPredmet>
                 __StatusPredmetsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.StatusPredmet>(
                     "StatusPredmets",
@@ -1454,6 +1575,40 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TipNaAktivnost, bool>> filter = null;
                 d.TipNaAktivnosts_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.vw_Aktivnosti>
+                __vw_AktivnostisEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.vw_Aktivnosti>(
+                    "vw_Aktivnostis",
+                    null,
+                    null,
+                    null,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__vw_Aktivnostis_CanRead,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__vw_Aktivnostis_Validate,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__vw_Aktivnostis_Filter);
+            private static bool __vw_Aktivnostis_CanRead(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                bool result = true;
+                d.vw_Aktivnostis_CanRead(ref result);
+                return result;
+            }
+            private static void __vw_Aktivnostis_Validate(global::LightSwitchApplication.On_line_rasporedDataService d, global::LightSwitchApplication.vw_Aktivnosti e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.vw_Aktivnostis_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.vw_Aktivnosti, bool>> __vw_Aktivnostis_Filter(global::LightSwitchApplication.On_line_rasporedDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.vw_Aktivnosti, bool>> filter = null;
+                d.vw_Aktivnostis_Filter(ref filter);
                 return filter;
             }
             

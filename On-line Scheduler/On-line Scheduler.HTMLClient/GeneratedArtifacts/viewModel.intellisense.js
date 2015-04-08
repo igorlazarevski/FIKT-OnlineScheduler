@@ -747,6 +747,14 @@
             data: lightSwitchApplication.Prostorija,
             value: lightSwitchApplication.Prostorija
         },
+        Otkazan: {
+            _$class: msls.ContentItem,
+            _$name: "Otkazan",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ДодајАктивност,
+            data: lightSwitchApplication.Aktivnost,
+            value: Boolean
+        },
         right: {
             _$class: msls.ContentItem,
             _$name: "right",
@@ -876,6 +884,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate2_postRender: [$element, function () { return new lightSwitchApplication.ДодајАктивност().findContentItem("RowTemplate2"); }],
+        /// <field>
+        /// Called after the Otkazan content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Otkazan_postRender: [$element, function () { return new lightSwitchApplication.ДодајАктивност().findContentItem("Otkazan"); }],
         /// <field>
         /// Called after the right content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -1688,6 +1701,177 @@
         ActiveStudent_postRender: [$element, function () { return new lightSwitchApplication.ДодајСтудент().findContentItem("ActiveStudent"); }]
     });
 
+    lightSwitchApplication.ЗапишиПредмет.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ЗапишиПредмет
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.ЗапишиПредмет,
+            value: lightSwitchApplication.ЗапишиПредмет
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.ЗапишиПредмет,
+            value: lightSwitchApplication.Izbrani_predmeti
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Izbrani_predmeti
+        },
+        Predmet: {
+            _$class: msls.ContentItem,
+            _$name: "Predmet",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Predmet
+        },
+        PredmetTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "PredmetTemplate",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.Predmet
+        },
+        Ime1: {
+            _$class: msls.ContentItem,
+            _$name: "Ime1",
+            _$parentName: "PredmetTemplate",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Predmet,
+            value: String
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Izbrani_predmeti
+        },
+        Student: {
+            _$class: msls.ContentItem,
+            _$name: "Student",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Student
+        },
+        RowTemplate1: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate1",
+            _$parentName: "Student",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Student,
+            value: lightSwitchApplication.Student
+        },
+        Ime: {
+            _$class: msls.ContentItem,
+            _$name: "Ime",
+            _$parentName: "RowTemplate1",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Student,
+            value: String
+        },
+        Prezime: {
+            _$class: msls.ContentItem,
+            _$name: "Prezime",
+            _$parentName: "RowTemplate1",
+            screen: lightSwitchApplication.ЗапишиПредмет,
+            data: lightSwitchApplication.Student,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ЗапишиПредмет
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ЗапишиПредмет, {
+        /// <field>
+        /// Called when a new ЗапишиПредмет screen is created.
+        /// <br/>created(msls.application.ЗапишиПредмет screen)
+        /// </field>
+        created: [lightSwitchApplication.ЗапишиПредмет],
+        /// <field>
+        /// Called before changes on an active ЗапишиПредмет screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ЗапишиПредмет screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ЗапишиПредмет],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("left"); }],
+        /// <field>
+        /// Called after the Predmet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Predmet_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("Predmet"); }],
+        /// <field>
+        /// Called after the PredmetTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PredmetTemplate_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("PredmetTemplate"); }],
+        /// <field>
+        /// Called after the Ime1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime1_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("Ime1"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("right"); }],
+        /// <field>
+        /// Called after the Student content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Student_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("Student"); }],
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("RowTemplate1"); }],
+        /// <field>
+        /// Called after the Ime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("Ime"); }],
+        /// <field>
+        /// Called after the Prezime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Prezime_postRender: [$element, function () { return new lightSwitchApplication.ЗапишиПредмет().findContentItem("Prezime"); }]
+    });
+
     lightSwitchApplication.ИзмениАктивност.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
@@ -1806,6 +1990,14 @@
             screen: lightSwitchApplication.ИзмениАктивност,
             data: lightSwitchApplication.Prostorija,
             value: lightSwitchApplication.Prostorija
+        },
+        Otkazan: {
+            _$class: msls.ContentItem,
+            _$name: "Otkazan",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ИзмениАктивност,
+            data: lightSwitchApplication.Aktivnost,
+            value: Boolean
         },
         right: {
             _$class: msls.ContentItem,
@@ -1936,6 +2128,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate2_postRender: [$element, function () { return new lightSwitchApplication.ИзмениАктивност().findContentItem("RowTemplate2"); }],
+        /// <field>
+        /// Called after the Otkazan content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Otkazan_postRender: [$element, function () { return new lightSwitchApplication.ИзмениАктивност().findContentItem("Otkazan"); }],
         /// <field>
         /// Called after the right content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2366,6 +2563,14 @@
             data: lightSwitchApplication.Aktivnost,
             value: lightSwitchApplication.Aktivnost
         },
+        TipNaAktivnost: {
+            _$class: msls.ContentItem,
+            _$name: "TipNaAktivnost",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ИзмениПрофесор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.TipNaAktivnost
+        },
         Vreme_pocetok: {
             _$class: msls.ContentItem,
             _$name: "Vreme_pocetok",
@@ -2527,6 +2732,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         rows_postRender: [$element, function () { return new lightSwitchApplication.ИзмениПрофесор().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the TipNaAktivnost content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TipNaAktivnost_postRender: [$element, function () { return new lightSwitchApplication.ИзмениПрофесор().findContentItem("TipNaAktivnost"); }],
         /// <field>
         /// Called after the Vreme_pocetok content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2759,6 +2969,822 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ActiveStudent_postRender: [$element, function () { return new lightSwitchApplication.ИзмениСтудент().findContentItem("ActiveStudent"); }]
+    });
+
+    lightSwitchApplication.Професор.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.Професор
+        },
+        Group: {
+            _$class: msls.ContentItem,
+            _$name: "Group",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Професор,
+            value: lightSwitchApplication.Професор
+        },
+        Predmets: {
+            _$class: msls.ContentItem,
+            _$name: "Predmets",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Професор,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.Професор,
+                _$entry: {
+                    elementType: lightSwitchApplication.Predmet
+                }
+            }
+        },
+        PredmetsTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "PredmetsTemplate",
+            _$parentName: "Predmets",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.Predmet
+        },
+        Ime: {
+            _$class: msls.ContentItem,
+            _$name: "Ime",
+            _$parentName: "PredmetsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Predmet,
+            value: String
+        },
+        Semestar: {
+            _$class: msls.ContentItem,
+            _$name: "Semestar",
+            _$parentName: "PredmetsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.Semestar
+        },
+        StatusPredmet: {
+            _$class: msls.ContentItem,
+            _$name: "StatusPredmet",
+            _$parentName: "PredmetsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.StatusPredmet
+        },
+        Group1: {
+            _$class: msls.ContentItem,
+            _$name: "Group1",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Професор,
+            value: lightSwitchApplication.Професор
+        },
+        Aktivnosts: {
+            _$class: msls.ContentItem,
+            _$name: "Aktivnosts",
+            _$parentName: "Group1",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Професор,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.Професор,
+                _$entry: {
+                    elementType: lightSwitchApplication.Aktivnost
+                }
+            }
+        },
+        AktivnostsTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "AktivnostsTemplate",
+            _$parentName: "Aktivnosts",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Aktivnost
+        },
+        Den: {
+            _$class: msls.ContentItem,
+            _$name: "Den",
+            _$parentName: "AktivnostsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Den
+        },
+        Predmet: {
+            _$class: msls.ContentItem,
+            _$name: "Predmet",
+            _$parentName: "AktivnostsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Predmet
+        },
+        Ime1: {
+            _$class: msls.ContentItem,
+            _$name: "Ime1",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Predmet,
+            value: String
+        },
+        Prostorija: {
+            _$class: msls.ContentItem,
+            _$name: "Prostorija",
+            _$parentName: "AktivnostsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Prostorija
+        },
+        TipNaAktivnost: {
+            _$class: msls.ContentItem,
+            _$name: "TipNaAktivnost",
+            _$parentName: "AktivnostsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.TipNaAktivnost
+        },
+        Group2: {
+            _$class: msls.ContentItem,
+            _$name: "Group2",
+            _$parentName: "AktivnostsTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Aktivnost
+        },
+        Vreme_pocetok: {
+            _$class: msls.ContentItem,
+            _$name: "Vreme_pocetok",
+            _$parentName: "Group2",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: Date
+        },
+        Vreme_kraj: {
+            _$class: msls.ContentItem,
+            _$name: "Vreme_kraj",
+            _$parentName: "Group2",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Aktivnost,
+            value: Date
+        },
+        Group3: {
+            _$class: msls.ContentItem,
+            _$name: "Group3",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Професор,
+            value: lightSwitchApplication.Професор
+        },
+        SpisokPolaganjes: {
+            _$class: msls.ContentItem,
+            _$name: "SpisokPolaganjes",
+            _$parentName: "Group3",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Професор,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.Професор,
+                _$entry: {
+                    elementType: lightSwitchApplication.SpisokPolaganje
+                }
+            }
+        },
+        SpisokPolaganjesTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "SpisokPolaganjesTemplate",
+            _$parentName: "SpisokPolaganjes",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.SpisokPolaganje,
+            value: lightSwitchApplication.SpisokPolaganje
+        },
+        Predmet1: {
+            _$class: msls.ContentItem,
+            _$name: "Predmet1",
+            _$parentName: "SpisokPolaganjesTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.SpisokPolaganje,
+            value: lightSwitchApplication.Predmet
+        },
+        Ime2: {
+            _$class: msls.ContentItem,
+            _$name: "Ime2",
+            _$parentName: "Predmet1",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Predmet,
+            value: String
+        },
+        Student: {
+            _$class: msls.ContentItem,
+            _$name: "Student",
+            _$parentName: "SpisokPolaganjesTemplate",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.SpisokPolaganje,
+            value: lightSwitchApplication.Student
+        },
+        Ime3: {
+            _$class: msls.ContentItem,
+            _$name: "Ime3",
+            _$parentName: "Student",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Student,
+            value: String
+        },
+        Prezime: {
+            _$class: msls.ContentItem,
+            _$name: "Prezime",
+            _$parentName: "Student",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Student,
+            value: String
+        },
+        Br_indeks: {
+            _$class: msls.ContentItem,
+            _$name: "Br_indeks",
+            _$parentName: "Student",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Student,
+            value: String
+        },
+        Nasoka1: {
+            _$class: msls.ContentItem,
+            _$name: "Nasoka1",
+            _$parentName: "Student",
+            screen: lightSwitchApplication.Професор,
+            data: lightSwitchApplication.Student,
+            value: lightSwitchApplication.Nasoka
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.Професор
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.Професор, {
+        /// <field>
+        /// Called when a new Професор screen is created.
+        /// <br/>created(msls.application.Професор screen)
+        /// </field>
+        created: [lightSwitchApplication.Професор],
+        /// <field>
+        /// Called before changes on an active Професор screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.Професор screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.Професор],
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Group"); }],
+        /// <field>
+        /// Called after the Predmets content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Predmets_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Predmets"); }],
+        /// <field>
+        /// Called after the PredmetsTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PredmetsTemplate_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("PredmetsTemplate"); }],
+        /// <field>
+        /// Called after the Ime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Ime"); }],
+        /// <field>
+        /// Called after the Semestar content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Semestar_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Semestar"); }],
+        /// <field>
+        /// Called after the StatusPredmet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        StatusPredmet_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("StatusPredmet"); }],
+        /// <field>
+        /// Called after the Group1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group1_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Group1"); }],
+        /// <field>
+        /// Called after the Aktivnosts content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Aktivnosts_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Aktivnosts"); }],
+        /// <field>
+        /// Called after the AktivnostsTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AktivnostsTemplate_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("AktivnostsTemplate"); }],
+        /// <field>
+        /// Called after the Den content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Den_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Den"); }],
+        /// <field>
+        /// Called after the Predmet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Predmet_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Predmet"); }],
+        /// <field>
+        /// Called after the Ime1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime1_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Ime1"); }],
+        /// <field>
+        /// Called after the Prostorija content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Prostorija_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Prostorija"); }],
+        /// <field>
+        /// Called after the TipNaAktivnost content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TipNaAktivnost_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("TipNaAktivnost"); }],
+        /// <field>
+        /// Called after the Group2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group2_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Group2"); }],
+        /// <field>
+        /// Called after the Vreme_pocetok content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Vreme_pocetok_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Vreme_pocetok"); }],
+        /// <field>
+        /// Called after the Vreme_kraj content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Vreme_kraj_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Vreme_kraj"); }],
+        /// <field>
+        /// Called after the Group3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group3_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Group3"); }],
+        /// <field>
+        /// Called after the SpisokPolaganjes content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        SpisokPolaganjes_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("SpisokPolaganjes"); }],
+        /// <field>
+        /// Called to render the SpisokPolaganjesTemplate content item.
+        /// <br/>render(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        SpisokPolaganjesTemplate_render: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("SpisokPolaganjesTemplate"); }],
+        /// <field>
+        /// Called after the Predmet1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Predmet1_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Predmet1"); }],
+        /// <field>
+        /// Called after the Ime2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime2_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Ime2"); }],
+        /// <field>
+        /// Called after the Student content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Student_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Student"); }],
+        /// <field>
+        /// Called after the Ime3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime3_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Ime3"); }],
+        /// <field>
+        /// Called after the Prezime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Prezime_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Prezime"); }],
+        /// <field>
+        /// Called after the Br_indeks content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Br_indeks_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Br_indeks"); }],
+        /// <field>
+        /// Called after the Nasoka1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Nasoka1_postRender: [$element, function () { return new lightSwitchApplication.Професор().findContentItem("Nasoka1"); }]
+    });
+
+    lightSwitchApplication.Распоред.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.Распоред
+        },
+        vw_AktivnostiList: {
+            _$class: msls.ContentItem,
+            _$name: "vw_AktivnostiList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.Распоред,
+            value: lightSwitchApplication.Распоред
+        },
+        vw_Aktivnostis: {
+            _$class: msls.ContentItem,
+            _$name: "vw_Aktivnostis",
+            _$parentName: "vw_AktivnostiList",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.Распоред,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.Распоред,
+                _$entry: {
+                    elementType: lightSwitchApplication.vw_Aktivnosti
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "vw_Aktivnostis",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: lightSwitchApplication.vw_Aktivnosti
+        },
+        Opis: {
+            _$class: msls.ContentItem,
+            _$name: "Opis",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: String
+        },
+        Den: {
+            _$class: msls.ContentItem,
+            _$name: "Den",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: String
+        },
+        Group: {
+            _$class: msls.ContentItem,
+            _$name: "Group",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: lightSwitchApplication.vw_Aktivnosti
+        },
+        Vreme_pocetok: {
+            _$class: msls.ContentItem,
+            _$name: "Vreme_pocetok",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: Date
+        },
+        Vreme_kraj: {
+            _$class: msls.ContentItem,
+            _$name: "Vreme_kraj",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: Date
+        },
+        Profesor_Ime: {
+            _$class: msls.ContentItem,
+            _$name: "Profesor_Ime",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: String
+        },
+        Ime: {
+            _$class: msls.ContentItem,
+            _$name: "Ime",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.Распоред,
+            data: lightSwitchApplication.vw_Aktivnosti,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.Распоред
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.Распоред, {
+        /// <field>
+        /// Called when a new Распоред screen is created.
+        /// <br/>created(msls.application.Распоред screen)
+        /// </field>
+        created: [lightSwitchApplication.Распоред],
+        /// <field>
+        /// Called before changes on an active Распоред screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.Распоред screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.Распоред],
+        /// <field>
+        /// Called after the vw_AktivnostiList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        vw_AktivnostiList_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("vw_AktivnostiList"); }],
+        /// <field>
+        /// Called after the vw_Aktivnostis content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        vw_Aktivnostis_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("vw_Aktivnostis"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Opis content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Opis_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Opis"); }],
+        /// <field>
+        /// Called after the Den content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Den_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Den"); }],
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Group"); }],
+        /// <field>
+        /// Called after the Vreme_pocetok content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Vreme_pocetok_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Vreme_pocetok"); }],
+        /// <field>
+        /// Called after the Vreme_kraj content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Vreme_kraj_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Vreme_kraj"); }],
+        /// <field>
+        /// Called after the Profesor_Ime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Profesor_Ime_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Profesor_Ime"); }],
+        /// <field>
+        /// Called after the Ime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime_postRender: [$element, function () { return new lightSwitchApplication.Распоред().findContentItem("Ime"); }]
+    });
+
+    lightSwitchApplication.Студенти.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.Студенти
+        },
+        Group: {
+            _$class: msls.ContentItem,
+            _$name: "Group",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Студенти,
+            value: lightSwitchApplication.Студенти
+        },
+        Izbrani_predmetis: {
+            _$class: msls.ContentItem,
+            _$name: "Izbrani_predmetis",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Студенти,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.Студенти,
+                _$entry: {
+                    elementType: lightSwitchApplication.Izbrani_predmeti
+                }
+            }
+        },
+        Izbrani_predmetisTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "Izbrani_predmetisTemplate",
+            _$parentName: "Izbrani_predmetis",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Izbrani_predmeti
+        },
+        Semestar2: {
+            _$class: msls.ContentItem,
+            _$name: "Semestar2",
+            _$parentName: "Izbrani_predmetisTemplate",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Semestar
+        },
+        tekoven_semestar: {
+            _$class: msls.ContentItem,
+            _$name: "tekoven_semestar",
+            _$parentName: "Izbrani_predmetisTemplate",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: String
+        },
+        Predmet: {
+            _$class: msls.ContentItem,
+            _$name: "Predmet",
+            _$parentName: "Izbrani_predmetisTemplate",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Predmet
+        },
+        Ime: {
+            _$class: msls.ContentItem,
+            _$name: "Ime",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Predmet,
+            value: String
+        },
+        Profesor: {
+            _$class: msls.ContentItem,
+            _$name: "Profesor",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.Profesor
+        },
+        Ime1: {
+            _$class: msls.ContentItem,
+            _$name: "Ime1",
+            _$parentName: "Profesor",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Profesor,
+            value: String
+        },
+        Prezime: {
+            _$class: msls.ContentItem,
+            _$name: "Prezime",
+            _$parentName: "Profesor",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Profesor,
+            value: String
+        },
+        Email: {
+            _$class: msls.ContentItem,
+            _$name: "Email",
+            _$parentName: "Profesor",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Profesor,
+            value: String
+        },
+        Semestar: {
+            _$class: msls.ContentItem,
+            _$name: "Semestar",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.Semestar
+        },
+        br_krediti: {
+            _$class: msls.ContentItem,
+            _$name: "br_krediti",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Predmet,
+            value: Number
+        },
+        StatusPredmet: {
+            _$class: msls.ContentItem,
+            _$name: "StatusPredmet",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.StatusPredmet
+        },
+        Nasoka1: {
+            _$class: msls.ContentItem,
+            _$name: "Nasoka1",
+            _$parentName: "Predmet",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Predmet,
+            value: lightSwitchApplication.Nasoka
+        },
+        Student: {
+            _$class: msls.ContentItem,
+            _$name: "Student",
+            _$parentName: "Izbrani_predmetisTemplate",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Izbrani_predmeti,
+            value: lightSwitchApplication.Student
+        },
+        Group1: {
+            _$class: msls.ContentItem,
+            _$name: "Group1",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.Студенти,
+            data: lightSwitchApplication.Студенти,
+            value: lightSwitchApplication.Студенти
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.Студенти
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.Студенти, {
+        /// <field>
+        /// Called when a new Студенти screen is created.
+        /// <br/>created(msls.application.Студенти screen)
+        /// </field>
+        created: [lightSwitchApplication.Студенти],
+        /// <field>
+        /// Called before changes on an active Студенти screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.Студенти screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.Студенти],
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Group"); }],
+        /// <field>
+        /// Called after the Izbrani_predmetis content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Izbrani_predmetis_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Izbrani_predmetis"); }],
+        /// <field>
+        /// Called after the Izbrani_predmetisTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Izbrani_predmetisTemplate_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Izbrani_predmetisTemplate"); }],
+        /// <field>
+        /// Called after the Semestar2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Semestar2_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Semestar2"); }],
+        /// <field>
+        /// Called after the tekoven_semestar content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        tekoven_semestar_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("tekoven_semestar"); }],
+        /// <field>
+        /// Called after the Predmet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Predmet_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Predmet"); }],
+        /// <field>
+        /// Called after the Ime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Ime"); }],
+        /// <field>
+        /// Called after the Profesor content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Profesor_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Profesor"); }],
+        /// <field>
+        /// Called after the Ime1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Ime1_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Ime1"); }],
+        /// <field>
+        /// Called after the Prezime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Prezime_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Prezime"); }],
+        /// <field>
+        /// Called after the Email content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Email_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Email"); }],
+        /// <field>
+        /// Called after the Semestar content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Semestar_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Semestar"); }],
+        /// <field>
+        /// Called after the br_krediti content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        br_krediti_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("br_krediti"); }],
+        /// <field>
+        /// Called after the StatusPredmet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        StatusPredmet_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("StatusPredmet"); }],
+        /// <field>
+        /// Called after the Nasoka1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Nasoka1_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Nasoka1"); }],
+        /// <field>
+        /// Called after the Student content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Student_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Student"); }],
+        /// <field>
+        /// Called after the Group1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group1_postRender: [$element, function () { return new lightSwitchApplication.Студенти().findContentItem("Group1"); }]
     });
 
 }(msls.application));

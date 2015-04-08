@@ -2181,6 +2181,122 @@
           "name": "LightSwitchServiceApplicationGroup"
         },
         {
+          "id": "SpisokPolaganje*",
+          "name": "SpisokPolaganje*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "SpisokPolaganje" }
+        },
+        {
+          "id": "CollectionView$SpisokPolaganje",
+          "name": "CollectionView$SpisokPolaganje",
+          "kind": "CollectionView",
+          "elementType": { "__id": "SpisokPolaganje" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "SpisokPolaganje" }
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "SpisokPolaganje" }
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "SpisokPolaganje" }
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$SpisokPolaganje/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$SpisokPolaganje/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "SpisokPolaganje" }
+            }
+          ]
+        },
+        {
+          "id": "vw_Aktivnosti*",
+          "name": "vw_Aktivnosti*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "vw_Aktivnosti" }
+        },
+        {
+          "id": "CollectionView$vw_Aktivnosti",
+          "name": "CollectionView$vw_Aktivnosti",
+          "kind": "CollectionView",
+          "elementType": { "__id": "vw_Aktivnosti" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "vw_Aktivnosti" }
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "vw_Aktivnosti" }
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "vw_Aktivnosti" }
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$vw_Aktivnosti/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$vw_Aktivnosti/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "vw_Aktivnosti" }
+            }
+          ]
+        },
+        {
           "id": "Den*",
           "name": "Den*",
           "kind": "Enumerable",
@@ -3279,6 +3395,15 @@
               "fromEnd": { "__id": "FK_Student_Nasoka/Ends[Student]" },
               "propertyType": { "__id": "Nasoka" },
               "toEnd": { "__id": "FK_Student_Nasoka/Ends[Nasoka]" }
+            },
+            {
+              "id": "Student/Properties[SpisokPolaganjes]",
+              "name": "SpisokPolaganjes",
+              "association": { "__id": "FK_SpisokPolaganje_Student" },
+              "elementType": { "__id": "SpisokPolaganje" },
+              "fromEnd": { "__id": "FK_SpisokPolaganje_Student/Ends[Student]" },
+              "propertyType": { "__id": "SpisokPolaganje*" },
+              "toEnd": { "__id": "FK_SpisokPolaganje_Student/Ends[SpisokPolaganje]" }
             }
           ]
         },
@@ -3397,6 +3522,12 @@
               "fromEnd": { "__id": "FK_Aktivnost_TipNaAktivnost/Ends[TipNaAktivnost]" },
               "propertyType": { "__id": "Aktivnost*" },
               "toEnd": { "__id": "FK_Aktivnost_TipNaAktivnost/Ends[Aktivnost]" }
+            },
+            {
+              "id": "TipNaAktivnost/Properties[Povtoruvacki]",
+              "name": "Povtoruvacki",
+              "propertyType": { "__id": ":Boolean?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -3648,6 +3779,26 @@
               ]
             },
             {
+              "id": "On_line_rasporedData/Members[FK_SpisokPolaganje_Predmet]",
+              "name": "FK_SpisokPolaganje_Predmet",
+              "association": { "__id": "FK_SpisokPolaganje_Predmet" },
+              "ends":
+              [
+                {
+                  "properties": [ "ID_predmet" ],
+                  "id": "On_line_rasporedData/Members[FK_SpisokPolaganje_Predmet]/Members[Predmet]",
+                  "name": "Predmet",
+                  "entitySet": { "__id": "On_line_rasporedData/Members[Predmets]" }
+                },
+                {
+                  "properties": [ "ID_predmet" ],
+                  "id": "On_line_rasporedData/Members[FK_SpisokPolaganje_Predmet]/Members[SpisokPolaganje]",
+                  "name": "SpisokPolaganje",
+                  "entitySet": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes]" }
+                }
+              ]
+            },
+            {
               "id": "On_line_rasporedData/Members[FK_Aktivnost_Profesor]",
               "name": "FK_Aktivnost_Profesor",
               "association": { "__id": "FK_Aktivnost_Profesor" },
@@ -3788,6 +3939,26 @@
               ]
             },
             {
+              "id": "On_line_rasporedData/Members[FK_SpisokPolaganje_Student]",
+              "name": "FK_SpisokPolaganje_Student",
+              "association": { "__id": "FK_SpisokPolaganje_Student" },
+              "ends":
+              [
+                {
+                  "properties": [ "Br_indeks" ],
+                  "id": "On_line_rasporedData/Members[FK_SpisokPolaganje_Student]/Members[Student]",
+                  "name": "Student",
+                  "entitySet": { "__id": "On_line_rasporedData/Members[Students]" }
+                },
+                {
+                  "properties": [ "Br_indeks" ],
+                  "id": "On_line_rasporedData/Members[FK_SpisokPolaganje_Student]/Members[SpisokPolaganje]",
+                  "name": "SpisokPolaganje",
+                  "entitySet": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes]" }
+                }
+              ]
+            },
+            {
               "id": "On_line_rasporedData/Members[FK_Aktivnost_TipNaAktivnost]",
               "name": "FK_Aktivnost_TipNaAktivnost",
               "association": { "__id": "FK_Aktivnost_TipNaAktivnost" },
@@ -3883,6 +4054,15 @@
               "entityType": { "__id": "Semestar" }
             },
             {
+              "id": "On_line_rasporedData/Members[SpisokPolaganjes]",
+              "name": "SpisokPolaganjes",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "SpisokPolaganje" },
+              "entityType": { "__id": "SpisokPolaganje" }
+            },
+            {
               "id": "On_line_rasporedData/Members[StatusPredmets]",
               "name": "StatusPredmets",
               "canDelete": true,
@@ -3917,6 +4097,12 @@
               "canUpdate": true,
               "elementType": { "__id": "TipNaAktivnost" },
               "entityType": { "__id": "TipNaAktivnost" }
+            },
+            {
+              "id": "On_line_rasporedData/Members[vw_Aktivnostis]",
+              "name": "vw_Aktivnostis",
+              "elementType": { "__id": "vw_Aktivnosti" },
+              "entityType": { "__id": "vw_Aktivnosti" }
             }
           ],
           "queryOperations":
@@ -4237,6 +4423,44 @@
               ]
             },
             {
+              "id": "On_line_rasporedData/Members[SpisokPolaganjes_Single]",
+              "name": "SpisokPolaganjes_Single",
+              "elementType": { "__id": "SpisokPolaganje" },
+              "query": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes_Single]" },
+              "returnType": { "__id": "SpisokPolaganje" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[SpisokPolaganjes_Single]/Parameters[ID_spisok]",
+                  "name": "ID_spisok",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "On_line_rasporedData/Members[SpisokPolaganjes_SingleOrDefault]",
+              "name": "SpisokPolaganjes_SingleOrDefault",
+              "elementType": { "__id": "SpisokPolaganje" },
+              "query": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes_SingleOrDefault]" },
+              "returnType": { "__id": "SpisokPolaganje" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[SpisokPolaganjes_SingleOrDefault]/Parameters[ID_spisok]",
+                  "name": "ID_spisok",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
               "id": "On_line_rasporedData/Members[StatusPredmets_Single]",
               "name": "StatusPredmets_Single",
               "elementType": { "__id": "StatusPredmet" },
@@ -4387,6 +4611,54 @@
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
+            },
+            {
+              "id": "On_line_rasporedData/Members[vw_Aktivnostis_Single]",
+              "name": "vw_Aktivnostis_Single",
+              "elementType": { "__id": "vw_Aktivnosti" },
+              "query": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis_Single]" },
+              "returnType": { "__id": "vw_Aktivnosti" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[vw_Aktivnostis_Single]/Parameters[ID_aktivnost]",
+                  "name": "ID_aktivnost",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "On_line_rasporedData/Members[vw_Aktivnostis_Single]/Parameters[ID_Den]",
+                  "name": "ID_Den",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "On_line_rasporedData/Members[vw_Aktivnostis_SingleOrDefault]",
+              "name": "vw_Aktivnostis_SingleOrDefault",
+              "elementType": { "__id": "vw_Aktivnosti" },
+              "query": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis_SingleOrDefault]" },
+              "returnType": { "__id": "vw_Aktivnosti" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[vw_Aktivnostis_SingleOrDefault]/Parameters[ID_aktivnost]",
+                  "name": "ID_aktivnost",
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "On_line_rasporedData/Members[vw_Aktivnostis_SingleOrDefault]/Parameters[ID_Den]",
+                  "name": "ID_Den",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
             }
           ]
         },
@@ -4498,6 +4770,15 @@
               "fromEnd": { "__id": "FK_Predmet_Nasoka/Ends[Predmet]" },
               "propertyType": { "__id": "Nasoka" },
               "toEnd": { "__id": "FK_Predmet_Nasoka/Ends[Nasoka]" }
+            },
+            {
+              "id": "Predmet/Properties[SpisokPolaganjes]",
+              "name": "SpisokPolaganjes",
+              "association": { "__id": "FK_SpisokPolaganje_Predmet" },
+              "elementType": { "__id": "SpisokPolaganje" },
+              "fromEnd": { "__id": "FK_SpisokPolaganje_Predmet/Ends[Predmet]" },
+              "propertyType": { "__id": "SpisokPolaganje*" },
+              "toEnd": { "__id": "FK_SpisokPolaganje_Predmet/Ends[SpisokPolaganje]" }
             }
           ]
         },
@@ -4816,6 +5097,12 @@
               "fromEnd": { "__id": "FK_Aktivnost_Den/Ends[Aktivnost]" },
               "propertyType": { "__id": "Den" },
               "toEnd": { "__id": "FK_Aktivnost_Den/Ends[Den]" }
+            },
+            {
+              "id": "Aktivnost/Properties[Otkazan]",
+              "name": "Otkazan",
+              "propertyType": { "__id": ":Boolean?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -4892,322 +5179,212 @@
           ]
         },
         {
-          "displayName": "Додај Активност",
-          "id": "ДодајАктивност",
-          "name": "ДодајАктивност",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[On_line_rasporedData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Додај Активност",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "ДодајАктивност/Properties[Aktivnost]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Предмет",
-                                "name": "Predmet",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Predmet]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Predmet",
-                                    "name": "RowTemplate",
-                                    "kind": "Details",
-                                    "view": { "__id": ":ColumnsLayout" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    },
-                                    "childContentItems":
-                                    [
-                                      {
-                                        "displayName": "Ime",
-                                        "name": "Ime",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "Predmet/Properties[Ime]" }
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Професор",
-                                "name": "Profesor",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Profesor]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Profesor",
-                                    "name": "RowTemplate1",
-                                    "kind": "Details",
-                                    "view": { "__id": ":ColumnsLayout" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    },
-                                    "childContentItems":
-                                    [
-                                      {
-                                        "displayName": "Ime",
-                                        "name": "Ime1",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "Profesor/Properties[Ime]" }
-                                        }
-                                      },
-                                      {
-                                        "displayName": "Prezime",
-                                        "name": "Prezime",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "Profesor/Properties[Prezime]" }
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Ден",
-                                "name": "Den",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Den]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Den",
-                                    "name": "RowTemplate4",
-                                    "kind": "Value",
-                                    "view": { "__id": ":Text" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "Den/Properties[Den1]" }
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Просторија",
-                                "name": "Prostorija",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Prostorija]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Prostorija",
-                                    "name": "RowTemplate2",
-                                    "kind": "Value",
-                                    "view": { "__id": ":Text" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "Prostorija/Properties[Opis]" }
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "right",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Тип на активност",
-                                "name": "TipNaAktivnost",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[TipNaAktivnost]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Tip Na Aktivnost",
-                                    "name": "RowTemplate3",
-                                    "kind": "Value",
-                                    "view": { "__id": ":Text" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "TipNaAktivnost/Properties[Ime]" }
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Време почеток",
-                                "name": "Vreme_pocetok",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Vreme_pocetok]" }
-                                }
-                              },
-                              {
-                                "displayName": "Време крај",
-                                "name": "Vreme_kraj",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Vreme_kraj]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "vw_Aktivnosti/Properties[Opis]" } },
+          "id": "vw_Aktivnosti",
+          "name": "vw_Aktivnosti",
           "methods":
           [
             {
-              "id": "ДодајАктивност/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "ДодајАктивност/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
+              "id": "vw_Aktivnosti/Methods[deleteEntity]",
+              "name": "deleteEntity"
             },
             {
-              "id": "ДодајАктивност/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "ДодајАктивност/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
+              "id": "vw_Aktivnosti/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "vw_Aktivnosti/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
           [
             {
-              "id": "ДодајАктивност/Properties[Aktivnost]",
-              "name": "Aktivnost",
-              "elementType": { "__id": "Aktivnost" },
-              "propertyType": { "__id": "Aktivnost" },
-              ":@IsParameter": { }
+              "__isKeyProperty": 1,
+              "id": "vw_Aktivnosti/Properties[ID_aktivnost]",
+              "name": "ID_aktivnost",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Br_prostorija]",
+              "name": "Br_prostorija",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Opis]",
+              "name": "Opis",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Ime]",
+              "name": "Ime",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Profesor_Ime]",
+              "name": "Profesor_Ime",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 101
+              }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Vreme_pocetok]",
+              "name": "Vreme_pocetok",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Vreme_kraj]",
+              "name": "Vreme_kraj",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[otkazan]",
+              "name": "otkazan",
+              "propertyType": { "__id": ":Boolean?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Den]",
+              "name": "Den",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "vw_Aktivnosti/Properties[Povtoruvacki]",
+              "name": "Povtoruvacki",
+              "propertyType": { "__id": ":Boolean?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "vw_Aktivnosti/Properties[ID_Den]",
+              "name": "ID_Den",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "id": "FK_SpisokPolaganje_Predmet",
+          "name": "FK_SpisokPolaganje_Predmet",
+          "ends":
+          [
+            {
+              "id": "FK_SpisokPolaganje_Predmet/Ends[Predmet]",
+              "name": "Predmet",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Predmet" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_SpisokPolaganje_Predmet/Ends[SpisokPolaganje]",
+              "name": "SpisokPolaganje",
+              "multiplicity": "Many",
+              "entityType": { "__id": "SpisokPolaganje" }
+            }
+          ]
+        },
+        {
+          "id": "FK_SpisokPolaganje_Student",
+          "name": "FK_SpisokPolaganje_Student",
+          "ends":
+          [
+            {
+              "id": "FK_SpisokPolaganje_Student/Ends[Student]",
+              "name": "Student",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Student" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_SpisokPolaganje_Student/Ends[SpisokPolaganje]",
+              "name": "SpisokPolaganje",
+              "multiplicity": "Many",
+              "entityType": { "__id": "SpisokPolaganje" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "SpisokPolaganje/Properties[ID_spisok]" } },
+          "id": "SpisokPolaganje",
+          "name": "SpisokPolaganje",
+          "methods":
+          [
+            {
+              "id": "SpisokPolaganje/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "SpisokPolaganje/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "SpisokPolaganje/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "SpisokPolaganje/Properties[ID_spisok]",
+              "name": "ID_spisok",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "SpisokPolaganje/Properties[Predmet]",
+              "name": "Predmet",
+              "association": { "__id": "FK_SpisokPolaganje_Predmet" },
+              "elementType": { "__id": "Predmet" },
+              "fromEnd": { "__id": "FK_SpisokPolaganje_Predmet/Ends[SpisokPolaganje]" },
+              "propertyType": { "__id": "Predmet" },
+              "toEnd": { "__id": "FK_SpisokPolaganje_Predmet/Ends[Predmet]" }
+            },
+            {
+              "id": "SpisokPolaganje/Properties[Student]",
+              "name": "Student",
+              "association": { "__id": "FK_SpisokPolaganje_Student" },
+              "elementType": { "__id": "Student" },
+              "fromEnd": { "__id": "FK_SpisokPolaganje_Student/Ends[SpisokPolaganje]" },
+              "propertyType": { "__id": "Student" },
+              "toEnd": { "__id": "FK_SpisokPolaganje_Student/Ends[Student]" }
             }
           ]
         },
@@ -6275,23 +6452,6 @@
                 "name": "PredmetsQuery",
                 "elementType": { "__id": "Predmet" },
                 "returnType": { "__id": "Predmet*" },
-                "filterExpression":
-                {
-                  "nodeType": "Equal",
-                  "left":
-                  {
-                    "links":
-                    [
-                      {
-                        "member": { "__id": "Predmet/Properties[ActivePredmet]" }
-                      }
-                    ]
-                  },
-                  "right":
-                  {
-                    "value": true
-                  }
-                },
                 "source":
                 {
                   "member": { "__id": "On_line_rasporedData/Members[Predmets]" }
@@ -6381,6 +6541,336 @@
               {
                 "target": { "__id": "Администратор/Properties[Aktivnosts]/Query" }
               }
+            }
+          ]
+        },
+        {
+          "displayName": "Додај Активност",
+          "id": "ДодајАктивност",
+          "name": "ДодајАктивност",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[On_line_rasporedData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Додај Активност",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ДодајАктивност/Properties[Aktivnost]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Предмет",
+                                "name": "Predmet",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Predmet]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Predmet",
+                                    "name": "RowTemplate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":ColumnsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Ime",
+                                        "name": "Ime",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Predmet/Properties[Ime]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Професор",
+                                "name": "Profesor",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Profesor]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Profesor",
+                                    "name": "RowTemplate1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":ColumnsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Ime",
+                                        "name": "Ime1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Profesor/Properties[Ime]" }
+                                        }
+                                      },
+                                      {
+                                        "displayName": "Prezime",
+                                        "name": "Prezime",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Profesor/Properties[Prezime]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Ден",
+                                "name": "Den",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Den]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Den",
+                                    "name": "RowTemplate4",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Den/Properties[Den1]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Просторија",
+                                "name": "Prostorija",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Prostorija]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Prostorija",
+                                    "name": "RowTemplate2",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Prostorija/Properties[Opis]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Откажи",
+                                "name": "Otkazan",
+                                "kind": "Value",
+                                "view": { "__id": ":FlipSwitchControl" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Otkazan]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Тип на активност",
+                                "name": "TipNaAktivnost",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[TipNaAktivnost]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Tip Na Aktivnost",
+                                    "name": "RowTemplate3",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "TipNaAktivnost/Properties[Ime]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Време почеток",
+                                "name": "Vreme_pocetok",
+                                "kind": "Value",
+                                "view": { "__id": ":DateTimePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Vreme_pocetok]" }
+                                }
+                              },
+                              {
+                                "displayName": "Време крај",
+                                "name": "Vreme_kraj",
+                                "kind": "Value",
+                                "view": { "__id": ":DateTimePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Vreme_kraj]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ДодајАктивност/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ДодајАктивност/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ДодајАктивност/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ДодајАктивност/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ДодајАктивност/Properties[Aktivnost]",
+              "name": "Aktivnost",
+              "elementType": { "__id": "Aktivnost" },
+              "propertyType": { "__id": "Aktivnost" },
+              ":@IsParameter": { }
             }
           ]
         },
@@ -6870,6 +7360,7 @@
                   {
                     "displayName": "Активности",
                     "name": "Aktivnosts",
+                    "isHidden": true,
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
@@ -6994,6 +7485,7 @@
                   {
                     "displayName": "Предмети",
                     "name": "Predmets",
+                    "isHidden": true,
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
@@ -7485,6 +7977,567 @@
               "name": "Student",
               "elementType": { "__id": "Student" },
               "propertyType": { "__id": "Student" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "ЗапишиПредмет",
+          "id": "ЗапишиПредмет",
+          "name": "ЗапишиПредмет",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[On_line_rasporedData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ЗапишиПредмет",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ЗапишиПредмет/Properties[Izbrani_predmeti]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Predmet",
+                                "name": "Predmet",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Izbrani_predmeti/Properties[Predmet]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Predmet",
+                                    "name": "PredmetTemplate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":RowsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Ime",
+                                        "name": "Ime1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Predmet/Properties[Ime]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Student",
+                                "name": "Student",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Izbrani_predmeti/Properties[Student]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Student",
+                                    "name": "RowTemplate1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":ColumnsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Ime",
+                                        "name": "Ime",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Student/Properties[Ime]" }
+                                        }
+                                      },
+                                      {
+                                        "displayName": "Prezime",
+                                        "name": "Prezime",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Student/Properties[Prezime]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ЗапишиПредмет/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ЗапишиПредмет/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ЗапишиПредмет/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ЗапишиПредмет/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ЗапишиПредмет/Properties[Izbrani_predmeti]",
+              "name": "Izbrani_predmeti",
+              "elementType": { "__id": "Izbrani_predmeti" },
+              "propertyType": { "__id": "Izbrani_predmeti" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Измени Активност",
+          "id": "ИзмениАктивност",
+          "name": "ИзмениАктивност",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[On_line_rasporedData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Измени Активност",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ИзмениАктивност/Properties[Aktivnost]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Предмет",
+                                "name": "Predmet",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Predmet]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Predmet",
+                                    "name": "RowTemplate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":ColumnsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Ime",
+                                        "name": "Ime",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Predmet/Properties[Ime]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Професор",
+                                "name": "Profesor",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Profesor]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Profesor",
+                                    "name": "RowTemplate1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":ColumnsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Ime",
+                                        "name": "Ime1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Profesor/Properties[Ime]" }
+                                        }
+                                      },
+                                      {
+                                        "displayName": "Prezime",
+                                        "name": "Prezime",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Profesor/Properties[Prezime]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Ден",
+                                "name": "Den",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Den]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Den",
+                                    "name": "RowTemplate4",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Den/Properties[Den1]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Просторија",
+                                "name": "Prostorija",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Prostorija]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Prostorija",
+                                    "name": "RowTemplate2",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Prostorija/Properties[Opis]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Откажи",
+                                "name": "Otkazan",
+                                "kind": "Value",
+                                "view": { "__id": ":FlipSwitchControl" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Otkazan]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Тип на активност",
+                                "name": "TipNaAktivnost",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[TipNaAktivnost]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Tip Na Aktivnost",
+                                    "name": "RowTemplate3",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "TipNaAktivnost/Properties[Ime]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Време почеток",
+                                "name": "Vreme_pocetok",
+                                "kind": "Value",
+                                "view": { "__id": ":DateTimePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Vreme_pocetok]" }
+                                }
+                              },
+                              {
+                                "displayName": "Време крај",
+                                "name": "Vreme_kraj",
+                                "kind": "Value",
+                                "view": { "__id": ":DateTimePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Vreme_kraj]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ИзмениАктивност/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ИзмениАктивност/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ИзмениАктивност/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ИзмениАктивност/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ИзмениАктивност/Properties[Aktivnost]",
+              "name": "Aktivnost",
+              "elementType": { "__id": "Aktivnost" },
+              "propertyType": { "__id": "Aktivnost" },
               ":@IsParameter": { }
             }
           ]
@@ -8055,6 +9108,24 @@
                             "childContentItems":
                             [
                               {
+                                "displayName": "Tip Na Aktivnost",
+                                "name": "TipNaAktivnost",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[TipNaAktivnost]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TipNaAktivnost/Properties[Ime]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
                                 "displayName": "Vreme pocetok",
                                 "name": "Vreme_pocetok",
                                 "kind": "Value",
@@ -8576,9 +9647,9 @@
           ]
         },
         {
-          "displayName": "Измени Активност",
-          "id": "ИзмениАктивност",
-          "name": "ИзмениАктивност",
+          "displayName": "Професор",
+          "id": "Професор",
+          "name": "Професор",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -8586,7 +9657,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "Измени Активност",
+            "displayName": "Root Content Item",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -8600,35 +9671,207 @@
                 "childContentItems":
                 [
                   {
-                    "displayName": "Details",
-                    "name": "Details",
+                    "displayName": "Предмети",
+                    "name": "Group",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
                       {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
+                        "displayName": "Predmets",
+                        "name": "Predmets",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениАктивност/Properties[Aktivnost]" }
+                          "member": { "__id": "Професор/Properties[Predmets]" }
                         },
                         "childContentItems":
                         [
                           {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
+                            "displayName": "Predmet",
+                            "name": "PredmetsTemplate",
+                            "kind": "Details",
                             "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
                             "childContentItems":
                             [
                               {
-                                "displayName": "Предмет",
+                                "displayName": "Ime",
+                                "name": "Ime",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Predmet/Properties[Ime]" }
+                                }
+                              },
+                              {
+                                "displayName": "Семестар",
+                                "name": "Semestar",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Predmet/Properties[Semestar]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Semestar/Properties[ID_semestar]" }
+                                    }
+                                  ]
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                    "value": "LeftAligned"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Статус",
+                                "name": "StatusPredmet",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Predmet/Properties[StatusPredmet]" }
+                                    },
+                                    {
+                                      "member": { "__id": "StatusPredmet/Properties[Status]" }
+                                    }
+                                  ]
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                    "value": "LeftAligned"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "Професор/Methods[showTab]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "Професор/Methods[showTab]/Parameters[tabName]" },
+                                  "value":
+                                  {
+                                    "value": "Group3"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Пребарај Предмет",
+                        "name": "SearchPredmets",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "Професор/Properties[Predmets]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Predmet/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Активности",
+                    "name": "Group1",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Aktivnosts",
+                        "name": "Aktivnosts",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Професор/Properties[Aktivnosts]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Aktivnost",
+                            "name": "AktivnostsTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Den",
+                                "name": "Den",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Den]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Den/Properties[Den1]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Predmet",
                                 "name": "Predmet",
                                 "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
+                                "view": { "__id": ":ColumnsLayout" },
                                 "dataSource":
                                 {
                                   "member": { "__id": "Aktivnost/Properties[Predmet]" }
@@ -8636,53 +9879,947 @@
                                 "childContentItems":
                                 [
                                   {
-                                    "displayName": "Predmet",
-                                    "name": "RowTemplate",
-                                    "kind": "Details",
-                                    "view": { "__id": ":ColumnsLayout" },
+                                    "displayName": "Ime",
+                                    "name": "Ime1",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Predmet/Properties[Ime]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Prostorija",
+                                "name": "Prostorija",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Prostorija]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Prostorija/Properties[Opis]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Tip Na Aktivnost",
+                                "name": "TipNaAktivnost",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[TipNaAktivnost]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TipNaAktivnost/Properties[Ime]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Време",
+                                "name": "Group2",
+                                "kind": "Group",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Време",
+                                    "name": "Vreme_pocetok",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Vreme_pocetok]" }
+                                    },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "LeftAligned"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "StretchToContainer"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "displayName": "-",
+                                    "name": "Vreme_kraj",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Vreme_kraj]" }
+                                    },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "LeftAligned"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FixedSize"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[Width]" },
+                                        "value": 135
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Пребарај Активност",
+                        "name": "SearchAktivnosts",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "Професор/Properties[Aktivnosts]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Aktivnost/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Додај Активност",
+                        "name": "AddAktivnost",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showДодајАктивност]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Професор/Properties[Aktivnosts]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Измени Активност",
+                        "name": "EditAktivnost",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showИзмениАктивност]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Професор/Properties[Aktivnosts]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showИзмениАктивност]/Parameters[Aktivnost]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "Професор/Properties[Aktivnosts]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Aktivnost/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Список",
+                    "name": "Group3",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Spisok Polaganjes",
+                        "name": "SpisokPolaganjes",
+                        "kind": "Collection",
+                        "view": { "__id": ":Table" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Професор/Properties[SpisokPolaganjes]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Spisok Polaganje",
+                            "name": "SpisokPolaganjesTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":TableRowLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Предмет",
+                                "name": "Predmet1",
+                                "kind": "Details",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "SpisokPolaganje/Properties[Predmet]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Ime",
+                                    "name": "Ime2",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Predmet/Properties[Ime]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Студент",
+                                "name": "Student",
+                                "kind": "Details",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "SpisokPolaganje/Properties[Student]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Ime",
+                                    "name": "Ime3",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Student/Properties[Ime]" }
+                                    }
+                                  },
+                                  {
+                                    "displayName": "Prezime",
+                                    "name": "Prezime",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Student/Properties[Prezime]" }
+                                    }
+                                  },
+                                  {
+                                    "displayName": "Br indeks",
+                                    "name": "Br_indeks",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Student/Properties[Br_indeks]" }
+                                    }
+                                  },
+                                  {
+                                    "displayName": "Nasoka1",
+                                    "name": "Nasoka1",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
                                     "dataSource":
                                     {
                                       "links":
                                       [
+                                        {
+                                          "member": { "__id": "Student/Properties[Nasoka1]" }
+                                        },
+                                        {
+                                          "member": { "__id": "Nasoka/Properties[Nasok]" }
+                                        }
                                       ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                            "value": "FitToContent"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "Професор/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "Професор/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "Професор/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "Професор/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Професор/Properties[Predmets]",
+              "name": "Predmets",
+              "pageSize": 45,
+              "elementType": { "__id": "Predmet" },
+              "propertyType": { "__id": "CollectionView$Predmet" },
+              "query":
+              {
+                "id": "Професор/Properties[Predmets]/Query",
+                "name": "PredmetsQuery",
+                "elementType": { "__id": "Predmet" },
+                "returnType": { "__id": "Predmet*" },
+                "filterExpression":
+                {
+                  "nodeType": "Equal",
+                  "left":
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "Predmet/Properties[ActivePredmet]" }
+                      }
+                    ]
+                  },
+                  "right":
+                  {
+                    "value": true
+                  }
+                },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[Predmets]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "Професор/Properties[Predmets]/Query" }
+              }
+            },
+            {
+              "id": "Професор/Properties[Aktivnosts]",
+              "name": "Aktivnosts",
+              "pageSize": 45,
+              "elementType": { "__id": "Aktivnost" },
+              "propertyType": { "__id": "CollectionView$Aktivnost" },
+              "query":
+              {
+                "id": "Професор/Properties[Aktivnosts]/Query",
+                "name": "AktivnostsQuery",
+                "elementType": { "__id": "Aktivnost" },
+                "returnType": { "__id": "Aktivnost*" },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[Aktivnosts]" }
+                },
+                "sortCriteria":
+                [
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "Aktivnost/Properties[Den]" }
+                      },
+                      {
+                        "member": { "__id": "Den/Properties[ID_Den]" }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "Професор/Properties[Aktivnosts]/Query" }
+              }
+            },
+            {
+              "id": "Професор/Properties[SpisokPolaganjes]",
+              "name": "SpisokPolaganjes",
+              "pageSize": 45,
+              "elementType": { "__id": "SpisokPolaganje" },
+              "propertyType": { "__id": "CollectionView$SpisokPolaganje" },
+              "query":
+              {
+                "id": "Професор/Properties[SpisokPolaganjes]/Query",
+                "name": "SpisokPolaganjesQuery",
+                "elementType": { "__id": "SpisokPolaganje" },
+                "returnType": { "__id": "SpisokPolaganje*" },
+                "filterExpression":
+                {
+                  "nodeType": "Equal",
+                  "left":
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "SpisokPolaganje/Properties[Predmet]" }
+                      },
+                      {
+                        "member": { "__id": "Predmet/Properties[ID_predmet]" }
+                      }
+                    ]
+                  },
+                  "right":
+                  {
+                    "parameter": { "__id": "Професор/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]" }
+                  }
+                },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[SpisokPolaganjes]" }
+                },
+                "parameters":
+                [
+                  {
+                    "id": "Професор/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]",
+                    "name": "ID_predmet",
+                    "parameterType": { "__id": ":String?" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "Професор/Properties[SpisokPolaganjes]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Распоред",
+          "id": "Распоред",
+          "name": "Распоред",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[On_line_rasporedData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "vw Aktivnosti List",
+                    "name": "vw_AktivnostiList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "vw_Aktivnostis",
+                        "name": "vw_Aktivnostis",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Распоред/Properties[vw_Aktivnostis]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Opis",
+                                "name": "Opis",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "vw_Aktivnosti/Properties[Opis]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Den",
+                                "name": "Den",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "vw_Aktivnosti/Properties[Den]" }
+                                }
+                              },
+                              {
+                                "displayName": "Време",
+                                "name": "Group",
+                                "kind": "Group",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Време",
+                                    "name": "Vreme_pocetok",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "vw_Aktivnosti/Properties[Vreme_pocetok]" }
                                     },
-                                    "childContentItems":
+                                    "propertySources":
                                     [
                                       {
-                                        "displayName": "Ime",
-                                        "name": "Ime",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "Predmet/Properties[Ime]" }
-                                        }
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "LeftAligned"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "StretchToContainer"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                        "value": 0
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "displayName": "-",
+                                    "name": "Vreme_kraj",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "vw_Aktivnosti/Properties[Vreme_kraj]" }
+                                    },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "LeftAligned"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FixedSize"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[Width]" },
+                                        "value": 135
                                       }
                                     ]
                                   }
                                 ]
                               },
                               {
-                                "displayName": "Професор",
-                                "name": "Profesor",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
+                                "displayName": "Profesor Ime",
+                                "name": "Profesor_Ime",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "Aktivnost/Properties[Profesor]" }
+                                  "member": { "__id": "vw_Aktivnosti/Properties[Profesor_Ime]" }
+                                }
+                              },
+                              {
+                                "displayName": "Ime",
+                                "name": "Ime",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "vw_Aktivnosti/Properties[Ime]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "Распоред/Properties[vw_Aktivnostis]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$vw_Aktivnosti/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "Searchvw_Aktivnostis",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "Распоред/Properties[vw_Aktivnostis]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$vw_Aktivnosti/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "Распоред/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "Распоред/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "Распоред/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "Распоред/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Распоред/Properties[vw_Aktivnostis]",
+              "name": "vw_Aktivnostis",
+              "pageSize": 45,
+              "elementType": { "__id": "vw_Aktivnosti" },
+              "propertyType": { "__id": "CollectionView$vw_Aktivnosti" },
+              "query":
+              {
+                "id": "Распоред/Properties[vw_Aktivnostis]/Query",
+                "name": "vw_AktivnostisQuery",
+                "elementType": { "__id": "vw_Aktivnosti" },
+                "returnType": { "__id": "vw_Aktivnosti*" },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis]" }
+                },
+                "sortCriteria":
+                [
+                  {
+                    "member": { "__id": "vw_Aktivnosti/Properties[ID_Den]" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "Распоред/Properties[vw_Aktivnostis]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Студент",
+          "id": "Студенти",
+          "name": "Студенти",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[On_line_rasporedData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Студент",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Предмети",
+                    "name": "Group",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Izbrani predmetis",
+                        "name": "Izbrani_predmetis",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Студенти/Properties[Izbrani_predmetis]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Izbrani predmeti",
+                            "name": "Izbrani_predmetisTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Запишан семестар",
+                                "name": "Semestar2",
+                                "isHidden": true,
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Izbrani_predmeti/Properties[Student]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Student/Properties[Semestar]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Semestar/Properties[ID_semestar]" }
+                                    }
+                                  ]
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                    "value": "LeftAligned"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Тековен семестар",
+                                "name": "tekoven_semestar",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Izbrani_predmeti/Properties[tekoven_semestar]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                    "value": "LeftAligned"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Predmet",
+                                "name": "Predmet",
+                                "kind": "Details",
+                                "view": { "__id": ":RowsLayout" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Izbrani_predmeti/Properties[Predmet]" }
                                 },
                                 "childContentItems":
                                 [
                                   {
+                                    "displayName": "Ime",
+                                    "name": "Ime",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Predmet/Properties[Ime]" }
+                                    }
+                                  },
+                                  {
                                     "displayName": "Profesor",
-                                    "name": "RowTemplate1",
+                                    "name": "Profesor",
                                     "kind": "Details",
                                     "view": { "__id": ":ColumnsLayout" },
                                     "dataSource":
                                     {
-                                      "links":
-                                      [
-                                      ]
+                                      "member": { "__id": "Predmet/Properties[Profesor]" }
                                     },
                                     "childContentItems":
                                     [
@@ -8705,136 +10842,183 @@
                                         {
                                           "member": { "__id": "Profesor/Properties[Prezime]" }
                                         }
+                                      },
+                                      {
+                                        "displayName": "Email",
+                                        "name": "Email",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Profesor/Properties[Email]" }
+                                        }
                                       }
                                     ]
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Ден",
-                                "name": "Den",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Den]" }
-                                },
-                                "childContentItems":
-                                [
+                                  },
                                   {
-                                    "displayName": "Den",
-                                    "name": "RowTemplate4",
+                                    "displayName": "Семестар во кој се изучува",
+                                    "name": "Semestar",
                                     "kind": "Value",
                                     "view": { "__id": ":Text" },
                                     "dataSource":
                                     {
-                                      "member": { "__id": "Den/Properties[Den1]" }
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "Predmet/Properties[Semestar]" }
+                                        },
+                                        {
+                                          "member": { "__id": "Semestar/Properties[ID_semestar]" }
+                                        }
+                                      ]
+                                    },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "LeftAligned"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "displayName": "Бр кредити",
+                                    "name": "br_krediti",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Predmet/Properties[br_krediti]" }
+                                    },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "LeftAligned"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "displayName": "Status Predmet",
+                                    "name": "StatusPredmet",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "Predmet/Properties[StatusPredmet]" }
+                                        },
+                                        {
+                                          "member": { "__id": "StatusPredmet/Properties[Status]" }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "displayName": "Nasoka1",
+                                    "name": "Nasoka1",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "Predmet/Properties[Nasoka1]" }
+                                        },
+                                        {
+                                          "member": { "__id": "Nasoka/Properties[Nasok]" }
+                                        }
+                                      ]
                                     }
                                   }
                                 ]
                               },
                               {
-                                "displayName": "Просторија",
-                                "name": "Prostorija",
+                                "displayName": "Student",
+                                "name": "Student",
                                 "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
+                                "view": { "__id": ":ColumnsLayout" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "Aktivnost/Properties[Prostorija]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Prostorija",
-                                    "name": "RowTemplate2",
-                                    "kind": "Value",
-                                    "view": { "__id": ":Text" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "Prostorija/Properties[Opis]" }
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "right",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Тип на активност",
-                                "name": "TipNaAktivnost",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[TipNaAktivnost]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Tip Na Aktivnost",
-                                    "name": "RowTemplate3",
-                                    "kind": "Value",
-                                    "view": { "__id": ":Text" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "TipNaAktivnost/Properties[Ime]" }
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Време почеток",
-                                "name": "Vreme_pocetok",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Vreme_pocetok]" }
+                                  "member": { "__id": "Izbrani_predmeti/Properties[Student]" }
                                 }
-                              },
-                              {
-                                "displayName": "Време крај",
-                                "name": "Vreme_kraj",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Aktivnost/Properties[Vreme_kraj]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
                               }
                             ]
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Пребарај Предмети",
+                        "name": "SearchIzbrani_predmetis",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "Студенти/Properties[Izbrani_predmetis]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$Izbrani_predmeti/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Запиши Предмет",
+                        "name": "AddIzbrani_predmeti",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showЗапишиПредмет]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Студенти/Properties[Izbrani_predmetis]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showЗапишиПредмет]/Parameters[Izbrani_predmeti]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      }
                     ]
+                  },
+                  {
+                    "displayName": "Распоред",
+                    "name": "Group1",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" }
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
                   }
                 ]
               },
@@ -8844,40 +11028,29 @@
                 "kind": "Group",
                 "view": { "__id": ":DialogPages" }
               }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
             ]
           },
           "methods":
           [
             {
-              "id": "ИзмениАктивност/Methods[showTab]",
+              "id": "Студенти/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ИзмениАктивност/Methods[showTab]/Parameters[tabName]",
+                  "id": "Студенти/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ИзмениАктивност/Methods[showDialog]",
+              "id": "Студенти/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ИзмениАктивност/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "Студенти/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -8887,17 +11060,81 @@
           "properties":
           [
             {
-              "id": "ИзмениАктивност/Properties[Aktivnost]",
-              "name": "Aktivnost",
-              "elementType": { "__id": "Aktivnost" },
-              "propertyType": { "__id": "Aktivnost" },
-              ":@IsParameter": { }
+              "id": "Студенти/Properties[Students]",
+              "name": "Students",
+              "pageSize": 45,
+              "elementType": { "__id": "Student" },
+              "propertyType": { "__id": "CollectionView$Student" },
+              "query":
+              {
+                "id": "Студенти/Properties[Students]/Query",
+                "name": "StudentsQuery",
+                "elementType": { "__id": "Student" },
+                "returnType": { "__id": "Student*" },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[Students]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "Студенти/Properties[Students]/Query" }
+              }
+            },
+            {
+              "id": "Студенти/Properties[Predmets]",
+              "name": "Predmets",
+              "pageSize": 45,
+              "elementType": { "__id": "Predmet" },
+              "propertyType": { "__id": "CollectionView$Predmet" },
+              "query":
+              {
+                "id": "Студенти/Properties[Predmets]/Query",
+                "name": "PredmetsQuery",
+                "elementType": { "__id": "Predmet" },
+                "returnType": { "__id": "Predmet*" },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[Predmets]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "Студенти/Properties[Predmets]/Query" }
+              }
+            },
+            {
+              "id": "Студенти/Properties[Izbrani_predmetis]",
+              "name": "Izbrani_predmetis",
+              "pageSize": 45,
+              "elementType": { "__id": "Izbrani_predmeti" },
+              "propertyType": { "__id": "CollectionView$Izbrani_predmeti" },
+              "query":
+              {
+                "id": "Студенти/Properties[Izbrani_predmetis]/Query",
+                "name": "Izbrani_predmetisQuery",
+                "elementType": { "__id": "Izbrani_predmeti" },
+                "returnType": { "__id": "Izbrani_predmeti*" },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[Izbrani_predmetis]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "Студенти/Properties[Izbrani_predmetis]/Query" }
+              }
             }
           ]
         }
       ],
       "methods":
       [
+        {
+          "id": "!module/Methods[showАдминистратор]",
+          "name": "showАдминистратор",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Администратор" } }
+        },
         {
           "id": "!module/Methods[showДодајАктивност]",
           "name": "showДодајАктивност",
@@ -8910,11 +11147,6 @@
               "parameterType": { "__id": "Aktivnost" }
             }
           ]
-        },
-        {
-          "id": "!module/Methods[showАдминистратор]",
-          "name": "showАдминистратор",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "Администратор" } }
         },
         {
           "id": "!module/Methods[showДодајПредмет]",
@@ -8952,6 +11184,32 @@
               "id": "!module/Methods[showДодајСтудент]/Parameters[Student]",
               "name": "Student",
               "parameterType": { "__id": "Student" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showЗапишиПредмет]",
+          "name": "showЗапишиПредмет",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ЗапишиПредмет" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showЗапишиПредмет]/Parameters[Izbrani_predmeti]",
+              "name": "Izbrani_predmeti",
+              "parameterType": { "__id": "Izbrani_predmeti" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showИзмениАктивност]",
+          "name": "showИзмениАктивност",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ИзмениАктивност" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showИзмениАктивност]/Parameters[Aktivnost]",
+              "name": "Aktivnost",
+              "parameterType": { "__id": "Aktivnost" }
             }
           ]
         },
@@ -8995,17 +11253,19 @@
           ]
         },
         {
-          "id": "!module/Methods[showИзмениАктивност]",
-          "name": "showИзмениАктивност",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ИзмениАктивност" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showИзмениАктивност]/Parameters[Aktivnost]",
-              "name": "Aktivnost",
-              "parameterType": { "__id": "Aktivnost" }
-            }
-          ]
+          "id": "!module/Methods[showПрофесор]",
+          "name": "showПрофесор",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Професор" } }
+        },
+        {
+          "id": "!module/Methods[showРаспоред]",
+          "name": "showРаспоред",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Распоред" } }
+        },
+        {
+          "id": "!module/Methods[showСтуденти]",
+          "name": "showСтуденти",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Студенти" } }
         }
       ],
       "navigationItems":
@@ -9014,6 +11274,21 @@
           "id": "!module/NavigationItems[link]",
           "name": "link",
           "method": { "__id": "!module/Methods[showАдминистратор]" }
+        },
+        {
+          "id": "!module/NavigationItems[link2]",
+          "name": "link2",
+          "method": { "__id": "!module/Methods[showПрофесор]" }
+        },
+        {
+          "id": "!module/NavigationItems[link1]",
+          "name": "link1",
+          "method": { "__id": "!module/Methods[showРаспоред]" }
+        },
+        {
+          "id": "!module/NavigationItems[link3]",
+          "name": "link3",
+          "method": { "__id": "!module/Methods[showСтуденти]" }
         }
       ]
     }

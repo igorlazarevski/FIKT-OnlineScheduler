@@ -220,6 +220,8 @@
     </LightSwitchModel>
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Nasokas.lsml" />
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Dens.lsml" />
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\vw_Aktivnostis.lsml" />
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\SpisokPolaganjes.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

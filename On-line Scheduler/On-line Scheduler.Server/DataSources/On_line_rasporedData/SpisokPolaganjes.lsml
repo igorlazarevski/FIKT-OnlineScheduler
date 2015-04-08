@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="TipNaAktivnost">
+    Name="SpisokPolaganje">
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -15,16 +15,8 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="Ime"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <KeyProperty
-        Name="ID_tipNaAktivnost"
+        Name="ID_spisok"
         IsReadOnly="True"
         PropertyType=":Int32">
         <KeyProperty.Attributes>
@@ -34,58 +26,31 @@
         </KeyProperty.Attributes>
       </KeyProperty>
       <NavigationProperty
-        Name="Aktivnosts"
-        Association="FK_Aktivnost_TipNaAktivnost"
-        FromEnd="TipNaAktivnost"
-        ToEnd="Aktivnost" />
-      <EntityProperty
-        Name="Povtoruvacki"
-        PropertyType=":Boolean?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+        Name="Predmet"
+        Association="FK_SpisokPolaganje_Predmet"
+        FromEnd="SpisokPolaganje"
+        ToEnd="Predmet" />
+      <NavigationProperty
+        Name="Student"
+        Association="FK_SpisokPolaganje_Student"
+        FromEnd="SpisokPolaganje"
+        ToEnd="Student" />
     </EntityType.Properties>
   </EntityType>
-  <Association
-    Name="FK_Aktivnost_TipNaAktivnost">
-    <AssociationEnd
-      Name="TipNaAktivnost"
-      Multiplicity="One"
-      EntityType="TipNaAktivnost">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="Aktivnost"
-      Multiplicity="Many"
-      EntityType="Aktivnost" />
-  </Association>
   <EntityContainer
     Name="On_line_rasporedData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="TipNaAktivnosts"
+      Name="SpisokPolaganjes"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="TipNaAktivnost" />
-    <AssociationSet
-      Name="FK_Aktivnost_TipNaAktivnost"
-      Association="FK_Aktivnost_TipNaAktivnost">
-      <AssociationSetEnd
-        Name="TipNaAktivnost"
-        EntitySet="TipNaAktivnosts" />
-      <AssociationSetEnd
-        Name="Aktivnost"
-        EntitySet="Aktivnosts" />
-    </AssociationSet>
+      EntityType="SpisokPolaganje" />
     <QueryOperation
-      Name="TipNaAktivnosts_Single"
-      ReturnType="TipNaAktivnost">
+      Name="SpisokPolaganjes_Single"
+      ReturnType="SpisokPolaganje">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -98,12 +63,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="ID_tipNaAktivnost" />
+                  Member="ID_spisok" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="ID_tipNaAktivnost" />
+                Parameter="ID_spisok" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -111,21 +76,21 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="TipNaAktivnosts" />
+            Member="SpisokPolaganjes" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="ID_tipNaAktivnost"
+        Name="ID_spisok"
         ParameterType="Microsoft.LightSwitch:Int32?">
         <QueryOperationParameter.Attributes>
           <Description
-            Value="The value of the 'ID_tipNaAktivnost' key property of the entity to retrieve." />
+            Value="The value of the 'ID_spisok' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="TipNaAktivnosts_SingleOrDefault"
-      ReturnType="TipNaAktivnost">
+      Name="SpisokPolaganjes_SingleOrDefault"
+      ReturnType="SpisokPolaganje">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -138,12 +103,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="ID_tipNaAktivnost" />
+                  Member="ID_spisok" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="ID_tipNaAktivnost" />
+                Parameter="ID_spisok" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -151,15 +116,15 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="TipNaAktivnosts" />
+            Member="SpisokPolaganjes" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="ID_tipNaAktivnost"
+        Name="ID_spisok"
         ParameterType="Microsoft.LightSwitch:Int32?">
         <QueryOperationParameter.Attributes>
           <Description
-            Value="The value of the 'ID_tipNaAktivnost' key property of the entity to retrieve." />
+            Value="The value of the 'ID_spisok' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -170,50 +135,30 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="TipNaAktivnosts">
+      EntitySet="SpisokPolaganjes">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
           Schema="dbo"
-          Table="TipNaAktivnost" />
+          Table="SpisokPolaganje" />
         <SsdlProperty
-          MaxLength="50"
-          Name="Ime"
-          Nullable="True"
-          Type="nvarchar"
-          Property="TipNaAktivnost/Properties[Ime]" />
-        <SsdlProperty
-          Name="ID_tipNaAktivnost"
+          Name="ID_spisok"
           Nullable="False"
           StoreGeneratedPattern="Identity"
           Type="int"
-          Property="TipNaAktivnost/Properties[ID_tipNaAktivnost]" />
-        <SsdlProperty
-          Name="Povtoruvacki"
+          Property="SpisokPolaganje/Properties[ID_spisok]" />
+        <SsdlForeignKeyProperty
+          MaxLength="50"
+          Name="ID_predmet"
           Nullable="True"
-          Type="bit"
-          Property="TipNaAktivnost/Properties[Povtoruvacki]" />
+          Type="nvarchar"
+          PropertyName="ID_predmet" />
+        <SsdlForeignKeyProperty
+          MaxLength="20"
+          Name="Br_indeks"
+          Nullable="True"
+          Type="nvarchar"
+          PropertyName="Br_indeks" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_Aktivnost_TipNaAktivnost">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_Aktivnost_TipNaAktivnost" />
-        <SsdlAssociationSetEnd
-          End="On_line_rasporedData/Members[FK_Aktivnost_TipNaAktivnost]/Members[TipNaAktivnost]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="ID_tipNaAktivnost" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="On_line_rasporedData/Members[FK_Aktivnost_TipNaAktivnost]/Members[Aktivnost]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="ID_TipNaAktivnost" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>
