@@ -206,6 +206,7 @@
     <Key>
       <PropertyRef Name="ID_aktivnost" />
       <PropertyRef Name="ID_Den" />
+      <PropertyRef Name="Id_Predmet" />
     </Key>
     <Property Name="ID_aktivnost" Type="int" Nullable="false" />
     <Property Name="Br_prostorija" Type="int" />
@@ -218,6 +219,8 @@
     <Property Name="Den" Type="nvarchar" MaxLength="50" />
     <Property Name="Povtoruvacki" Type="bit" />
     <Property Name="ID_Den" Type="int" Nullable="false" />
+    <Property Name="ImePredmet" Type="nvarchar" MaxLength="50" />
+    <Property Name="Id_Predmet" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Aktivnost_Den">
     <End Role="Den" Type="On_line_rasporedDataStore.Den" Multiplicity="1">

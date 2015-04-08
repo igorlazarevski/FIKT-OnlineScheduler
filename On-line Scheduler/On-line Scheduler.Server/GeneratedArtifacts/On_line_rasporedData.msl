@@ -154,6 +154,8 @@
           <ScalarProperty Name="Den" ColumnName="Den" />
           <ScalarProperty Name="Povtoruvacki" ColumnName="Povtoruvacki" />
           <ScalarProperty Name="ID_Den" ColumnName="ID_Den" />
+          <ScalarProperty Name="ImePredmet" ColumnName="ImePredmet" />
+          <ScalarProperty Name="Id_Predmet" ColumnName="Id_Predmet" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

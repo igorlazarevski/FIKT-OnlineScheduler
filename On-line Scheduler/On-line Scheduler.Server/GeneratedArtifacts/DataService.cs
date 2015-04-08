@@ -564,6 +564,21 @@ namespace LightSwitchApplication
         partial void Query1_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IzbranikPredmetiPoStudent_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void IzbranikPredmetiPoStudent_Executing(string Br_indeks);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IzbranikPredmetiPoStudent_PreprocessQuery(string Br_indeks, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Izbrani_predmeti> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void IzbranikPredmetiPoStudent_Executed(string Br_indeks, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Izbrani_predmeti> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void IzbranikPredmetiPoStudent_ExecuteFailed(string Br_indeks, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1670,6 +1685,40 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.Predmet> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Predmet>)args[0];
                 d.Query1_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.Izbrani_predmeti>
+                __IzbranikPredmetiPoStudentEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.Izbrani_predmeti>(
+                    "IzbranikPredmetiPoStudent",
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__IzbranikPredmetiPoStudent_CanExecute,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__IzbranikPredmetiPoStudent_Executing,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__IzbranikPredmetiPoStudent_Executed,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__IzbranikPredmetiPoStudent_Failed,
+                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__IzbranikPredmetiPoStudent_PreprocessQuery);
+            private static bool __IzbranikPredmetiPoStudent_CanExecute(global::LightSwitchApplication.On_line_rasporedDataService d, bool r)
+            {
+                d.IzbranikPredmetiPoStudent_CanExecute(ref r);
+                return r;
+            }
+            private static void __IzbranikPredmetiPoStudent_Executing(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
+            {
+                d.IzbranikPredmetiPoStudent_Executing((string)args[0]);
+            }
+            private static void __IzbranikPredmetiPoStudent_Executed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
+            {
+                d.IzbranikPredmetiPoStudent_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Izbrani_predmeti>)args[1]);
+            }
+            private static void __IzbranikPredmetiPoStudent_Failed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args, global::System.Exception ex)
+            {
+                d.IzbranikPredmetiPoStudent_ExecuteFailed((string)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __IzbranikPredmetiPoStudent_PreprocessQuery(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Izbrani_predmeti> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Izbrani_predmeti>)args[1];
+                d.IzbranikPredmetiPoStudent_PreprocessQuery((string)args[0], ref query);
                 return query;
             }
     

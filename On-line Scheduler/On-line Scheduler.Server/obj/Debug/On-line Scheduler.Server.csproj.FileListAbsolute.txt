@@ -72,3 +72,40 @@ D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\O
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\obj\Debug\On-line Scheduler.Server.csprojResolveAssemblyReference.cache
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\obj\Debug\Application.Server.dll
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\obj\Debug\Application.Server.pdb
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\LSSvcGeneratorsTask.mcs
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\LSServerCodeGeneratorsTask.mcs
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Application.Server.dll.config
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Application.Server.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Application.Server.pdb
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.Data.Edm.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.Data.OData.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.Data.Services.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.AppBridge.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.CodeMarker.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.ExportProvider.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.Extensions.Server.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.ManifestService.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.Model.Xaml.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.Server.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.Server.Host.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.EntityFramework.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.Server.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.PollingDuplex.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.Spatial.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.WindowsAzure.ServiceRuntime.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\Microsoft.LightSwitch.Server.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.EntityFramework.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\bin\Debug\System.ServiceModel.DomainServices.Server.xml
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\obj\Debug\On-line Scheduler.Server.csprojResolveAssemblyReference.cache
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\obj\Debug\Application.Server.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.Server\obj\Debug\Application.Server.pdb

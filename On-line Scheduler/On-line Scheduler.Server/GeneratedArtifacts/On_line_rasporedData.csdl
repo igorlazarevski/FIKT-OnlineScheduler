@@ -160,6 +160,7 @@
     <Key>
       <PropertyRef Name="ID_aktivnost" />
       <PropertyRef Name="ID_Den" />
+      <PropertyRef Name="Id_Predmet" />
     </Key>
     <Property Name="ID_aktivnost" Type="Edm.Int32" Nullable="false" />
     <Property Name="Br_prostorija" Type="Edm.Int32" ConcurrencyMode="Fixed" />
@@ -172,6 +173,8 @@
     <Property Name="Den" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Povtoruvacki" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="ID_Den" Type="Edm.Int32" Nullable="false" />
+    <Property Name="ImePredmet" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Predmet" Type="Edm.String" Nullable="false" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Aktivnost_Den">
     <End Role="Den" Type="LightSwitchApplication.Den" Multiplicity="1" />

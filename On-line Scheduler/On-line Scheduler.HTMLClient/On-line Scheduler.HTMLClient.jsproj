@@ -69,6 +69,9 @@
     <Content Include="Screens\ДодајПрофесор.lsml.js">
       <DependentUpon>ДодајПрофесор.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\ЗапишиПредмет.lsml.js">
+      <DependentUpon>ЗапишиПредмет.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\ИзмениПрофесор.lsml.js">
       <DependentUpon>ИзмениПрофесор.lsml</DependentUpon>
     </Content>
@@ -106,6 +109,7 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AddEditAktivnost.lsml" />
     <LightSwitchModel Include="Screens\ЗапишиПредмет.lsml" />
     <LightSwitchModel Include="Screens\Студенти.lsml" />
     <LightSwitchModel Include="Screens\Распоред.lsml" />

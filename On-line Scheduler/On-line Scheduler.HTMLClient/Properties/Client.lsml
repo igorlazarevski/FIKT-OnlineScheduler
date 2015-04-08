@@ -39,13 +39,13 @@
       Name="link"
       Method="!module/Methods[showАдминистратор]" />
     <ApplicationNavigationMethodLink
-      Name="link2"
-      Method="!module/Methods[showПрофесор]" />
-    <ApplicationNavigationMethodLink
       Name="link1"
       Method="!module/Methods[showРаспоред]" />
     <ApplicationNavigationMethodLink
       Name="link3"
       Method="!module/Methods[showСтуденти]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showПрофесор]" />
   </Application.NavigationItems>
 </Application>

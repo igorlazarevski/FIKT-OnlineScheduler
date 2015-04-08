@@ -2,3 +2,5 @@ c:\users\borche\documents\visual studio 2013\Projects\On-line Scheduler\On-line 
 c:\users\borche\documents\visual studio 2013\Projects\On-line Scheduler\On-line Scheduler\On-line Scheduler.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 D:\FAX\Borche Kostovski KNI\VI semestar\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\On-line Scheduler.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

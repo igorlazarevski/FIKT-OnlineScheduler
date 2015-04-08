@@ -631,9 +631,12 @@ namespace LightSwitchApplication
         /// <param name="ID_Den">
         /// The value of the 'ID_Den' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.vw_Aktivnosti vw_Aktivnostis_Single(global::System.Nullable<int> ID_aktivnost, global::System.Nullable<int> ID_Den)
+        /// <param name="Id_Predmet">
+        /// The value of the 'Id_Predmet' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.vw_Aktivnosti vw_Aktivnostis_Single(global::System.Nullable<int> ID_aktivnost, global::System.Nullable<int> ID_Den, string Id_Predmet)
         {
-            return this.Details.Methods.vw_Aktivnostis_Single.CreateInvocation(ID_aktivnost, ID_Den).Execute();
+            return this.Details.Methods.vw_Aktivnostis_Single.CreateInvocation(ID_aktivnost, ID_Den, Id_Predmet).Execute();
         }
         
         /// <summary>
@@ -645,9 +648,23 @@ namespace LightSwitchApplication
         /// <param name="ID_Den">
         /// The value of the 'ID_Den' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.vw_Aktivnosti vw_Aktivnostis_SingleOrDefault(global::System.Nullable<int> ID_aktivnost, global::System.Nullable<int> ID_Den)
+        /// <param name="Id_Predmet">
+        /// The value of the 'Id_Predmet' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.vw_Aktivnosti vw_Aktivnostis_SingleOrDefault(global::System.Nullable<int> ID_aktivnost, global::System.Nullable<int> ID_Den, string Id_Predmet)
         {
-            return this.Details.Methods.vw_Aktivnostis_SingleOrDefault.CreateInvocation(ID_aktivnost, ID_Den).Execute();
+            return this.Details.Methods.vw_Aktivnostis_SingleOrDefault.CreateInvocation(ID_aktivnost, ID_Den, Id_Predmet).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="Br_indeks">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Izbrani_predmeti> IzbranikPredmetiPoStudent(string Br_indeks)
+        {
+            return this.Details.Methods.IzbranikPredmetiPoStudent.CreateInvocation(Br_indeks).Execute();
         }
         
         #endregion
@@ -927,6 +944,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.vw_Aktivnostis_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti> IzbranikPredmetiPoStudent
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.IzbranikPredmetiPoStudent) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>;
                     }
                 }
                 
@@ -1353,6 +1378,16 @@ namespace LightSwitchApplication
                     c(d, ref d._vw_Aktivnostis_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Entry
+                    IzbranikPredmetiPoStudent = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Entry(
+                        "IzbranikPredmetiPoStudent",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._IzbranikPredmetiPoStudent_Stub);
+                private static void _IzbranikPredmetiPoStudent_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._IzbranikPredmetiPoStudent, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1631,6 +1666,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>.Data _vw_Aktivnostis_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Izbrani_predmeti>.Data _IzbranikPredmetiPoStudent;
             
         }
     

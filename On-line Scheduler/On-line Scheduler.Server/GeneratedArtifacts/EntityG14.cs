@@ -342,6 +342,54 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ID_Den_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ImePredmet
+        {
+            get
+            {
+                return global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.GetValue(this, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.ImePredmet);
+            }
+            set
+            {
+                global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.SetValue(this, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.ImePredmet, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ImePredmet_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ImePredmet_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ImePredmet_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Id_Predmet
+        {
+            get
+            {
+                return global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.GetValue(this, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.Id_Predmet);
+            }
+            set
+            {
+                global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.SetValue(this, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.Id_Predmet, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_Predmet_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_Predmet_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_Predmet_Changed();
+
         #endregion
     
         #region Details Class
@@ -512,6 +560,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string> ImePredmet
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.ImePredmet) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string> Id_Predmet
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.Id_Predmet) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -529,6 +593,8 @@ namespace LightSwitchApplication
                 new string Den { get; set; }
                 new global::System.Nullable<bool> Povtoruvacki { get; set; }
                 new int ID_Den { get; set; }
+                new string ImePredmet { get; set; }
+                new string Id_Predmet { get; set; }
             }
             #pragma warning restore 109
     
@@ -945,6 +1011,80 @@ namespace LightSwitchApplication
                     e.ID_Den_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Entry
+                    ImePredmet = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Entry(
+                        "ImePredmet",
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._ImePredmet_Stub,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._ImePredmet_ComputeIsReadOnly,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._ImePredmet_Validate,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._ImePredmet_GetImplementationValue,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._ImePredmet_SetImplementationValue,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._ImePredmet_OnValueChanged);
+                private static void _ImePredmet_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Data> c, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ImePredmet, sf);
+                }
+                private static bool _ImePredmet_ComputeIsReadOnly(global::LightSwitchApplication.vw_Aktivnosti e)
+                {
+                    bool result = false;
+                    e.ImePredmet_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ImePredmet_Validate(global::LightSwitchApplication.vw_Aktivnosti e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ImePredmet_Validate(r);
+                }
+                private static string _ImePredmet_GetImplementationValue(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ImePredmet;
+                }
+                private static void _ImePredmet_SetImplementationValue(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ImePredmet = v;
+                }
+                private static void _ImePredmet_OnValueChanged(global::LightSwitchApplication.vw_Aktivnosti e)
+                {
+                    e.ImePredmet_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Entry
+                    Id_Predmet = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Entry(
+                        "Id_Predmet",
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._Id_Predmet_Stub,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._Id_Predmet_ComputeIsReadOnly,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._Id_Predmet_Validate,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._Id_Predmet_GetImplementationValue,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._Id_Predmet_SetImplementationValue,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._Id_Predmet_OnValueChanged);
+                private static void _Id_Predmet_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Data> c, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Id_Predmet, sf);
+                }
+                private static bool _Id_Predmet_ComputeIsReadOnly(global::LightSwitchApplication.vw_Aktivnosti e)
+                {
+                    bool result = false;
+                    e.Id_Predmet_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Id_Predmet_Validate(global::LightSwitchApplication.vw_Aktivnosti e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Id_Predmet_Validate(r);
+                }
+                private static string _Id_Predmet_GetImplementationValue(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Id_Predmet;
+                }
+                private static void _Id_Predmet_SetImplementationValue(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Id_Predmet = v;
+                }
+                private static void _Id_Predmet_OnValueChanged(global::LightSwitchApplication.vw_Aktivnosti e)
+                {
+                    e.Id_Predmet_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -979,6 +1119,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, int>.Data _ID_Den;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Data _ImePredmet;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Data _Id_Predmet;
             
         }
     

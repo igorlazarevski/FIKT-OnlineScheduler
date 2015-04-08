@@ -3322,11 +3322,13 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="iD_aktivnost">Initial value of the ID_aktivnost property.</param>
         /// <param name="iD_Den">Initial value of the ID_Den property.</param>
-        public static vw_Aktivnosti Createvw_Aktivnosti(global::System.Int32 iD_aktivnost, global::System.Int32 iD_Den)
+        /// <param name="id_Predmet">Initial value of the Id_Predmet property.</param>
+        public static vw_Aktivnosti Createvw_Aktivnosti(global::System.Int32 iD_aktivnost, global::System.Int32 iD_Den, global::System.String id_Predmet)
         {
             vw_Aktivnosti vw_Aktivnosti = new vw_Aktivnosti();
             vw_Aktivnosti.ID_aktivnost = iD_aktivnost;
             vw_Aktivnosti.ID_Den = iD_Den;
+            vw_Aktivnosti.Id_Predmet = id_Predmet;
             return vw_Aktivnosti;
         }
 
@@ -3603,6 +3605,57 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _ID_Den;
         partial void OnID_DenChanging(global::System.Int32 value);
         partial void OnID_DenChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ImePredmet
+        {
+            get
+            {
+                return _ImePredmet;
+            }
+            set
+            {
+                OnImePredmetChanging(value);
+                ReportPropertyChanging("ImePredmet");
+                _ImePredmet = value;
+                ReportPropertyChanged("ImePredmet");
+                OnImePredmetChanged();
+            }
+        }
+        private global::System.String _ImePredmet;
+        partial void OnImePredmetChanging(global::System.String value);
+        partial void OnImePredmetChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Id_Predmet
+        {
+            get
+            {
+                return _Id_Predmet;
+            }
+            set
+            {
+                if (_Id_Predmet != value)
+                {
+                    OnId_PredmetChanging(value);
+                    ReportPropertyChanging("Id_Predmet");
+                    _Id_Predmet = value;
+                    ReportPropertyChanged("Id_Predmet");
+                    OnId_PredmetChanged();
+                }
+            }
+        }
+        private global::System.String _Id_Predmet;
+        partial void OnId_PredmetChanging(global::System.String value);
+        partial void OnId_PredmetChanged();
 
         #endregion
 
