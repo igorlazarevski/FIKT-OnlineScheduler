@@ -9,6 +9,7 @@
     <meta name="msapplication-TileImage" content="Content/Images/user-logo-144.png" />
     <meta name="msapplication-TileColor" content="#0072c6" />
     <link rel="icon" href="Content/Images/user-logo.ico" type="image/x-icon" />
+    <script src="scripts/customscripts.js"></script>
     
     <title>On-line Scheduler.HTMLClient</title>
 
@@ -50,8 +51,9 @@
     <script type="text/javascript" src="Scripts/Generated/generatedAssets.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            GetCurrentUser();
             msls._run()
-            .then(null, function failure(error) {
+            .then(ShowDefaultScreen, function failure(error) {
                 alert(error);
             });
         });

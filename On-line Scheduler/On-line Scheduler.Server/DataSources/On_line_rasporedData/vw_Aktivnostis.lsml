@@ -121,6 +121,13 @@
             Value="50" />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <EntityProperty
+        Name="BR_Semestar"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -407,6 +414,11 @@
           Nullable="False"
           Type="nvarchar"
           Property="vw_Aktivnosti/Properties[Id_Predmet]" />
+        <SsdlProperty
+          Name="BR_Semestar"
+          Nullable="True"
+          Type="int"
+          Property="vw_Aktivnosti/Properties[BR_Semestar]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

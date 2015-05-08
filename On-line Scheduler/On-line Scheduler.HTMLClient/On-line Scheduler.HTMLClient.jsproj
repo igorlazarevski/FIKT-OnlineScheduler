@@ -66,6 +66,9 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\Welcome.lsml.js">
+      <DependentUpon>Welcome.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\ДодајПрофесор.lsml.js">
       <DependentUpon>ДодајПрофесор.lsml</DependentUpon>
     </Content>
@@ -84,6 +87,10 @@
     <Content Include="Screens\Професор.lsml.js">
       <DependentUpon>Професор.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\Студенти.lsml.js">
+      <DependentUpon>Студенти.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\CustomScripts.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -110,6 +117,7 @@
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\AddEditAktivnost.lsml" />
+    <LightSwitchModel Include="Screens\Welcome.lsml" />
     <LightSwitchModel Include="Screens\ЗапишиПредмет.lsml" />
     <LightSwitchModel Include="Screens\Студенти.lsml" />
     <LightSwitchModel Include="Screens\Распоред.lsml" />

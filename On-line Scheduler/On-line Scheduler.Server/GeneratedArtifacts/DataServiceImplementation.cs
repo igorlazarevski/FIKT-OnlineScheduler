@@ -37,19 +37,19 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> Query1()
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> query;
-            query = this.GetQuery<global::LightSwitchApplication.Implementation.Predmet>("Predmets");
-            return query;
-        }
-    
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Izbrani_predmeti> IzbranikPredmetiPoStudent(string Br_indeks)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Izbrani_predmeti> query;
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::LightSwitchApplication.Implementation.Izbrani_predmeti>("Izbrani_predmetis"),
                 (i) => (i.Student.Br_indeks.CompareTo(Br_indeks) == 0));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> Query1()
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> query;
+            query = this.GetQuery<global::LightSwitchApplication.Implementation.Predmet>("Predmets");
             return query;
         }
     

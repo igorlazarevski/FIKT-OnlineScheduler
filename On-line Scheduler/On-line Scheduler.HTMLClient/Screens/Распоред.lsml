@@ -23,6 +23,35 @@
             Name="vw_AktivnostiList"
             Kind="Group">
             <ContentItem
+              Name="BR_Semestar"
+              Kind="Value"
+              DataType=":Int32">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Приказот е за семестар: " />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Распоред/Properties[BR_Semestar]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="LeftAligned"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
               Name="vw_Aktivnostis"
               Kind="Collection"
               DataType="CollectionView$vw_Aktivnosti"
@@ -410,7 +439,21 @@
             Name="vw_AktivnostisQuery"
             ReturnType="vw_Aktivnosti*">
             <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="vw_Aktivnosti/Properties[BR_Semestar]" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ParameterExpression
+                      Parameter="BR_Semestar" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
@@ -418,6 +461,11 @@
                   Member="On_line_rasporedData/Members[vw_Aktivnostis]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="BR_Semestar"
+                ParameterType=":Int32?" />
+            </ScreenQueryDefinition.Parameters>
             <ScreenQueryDefinition.SortCriteria>
               <SortCriterion>
                 <ChainExpression>
@@ -431,10 +479,25 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Распоред/Properties[vw_Aktivnostis]/Query" />
+              Target="Распоред/Properties[vw_Aktivnostis]/Query">
+              <ArgumentExpression
+                Parameter="BR_Semestar">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Распоред/Properties[BR_Semestar]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="BR_Semestar"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
     </Screen.Properties>
   </Screen>
   <Application.Methods>

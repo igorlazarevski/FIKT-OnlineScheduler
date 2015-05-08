@@ -390,6 +390,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Id_Predmet_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> BR_Semestar
+        {
+            get
+            {
+                return global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.GetValue(this, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.BR_Semestar);
+            }
+            set
+            {
+                global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.SetValue(this, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.BR_Semestar, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BR_Semestar_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BR_Semestar_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BR_Semestar_Changed();
+
         #endregion
     
         #region Details Class
@@ -576,6 +600,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::System.Nullable<int>> BR_Semestar
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties.BR_Semestar) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -595,6 +627,7 @@ namespace LightSwitchApplication
                 new int ID_Den { get; set; }
                 new string ImePredmet { get; set; }
                 new string Id_Predmet { get; set; }
+                new global::System.Nullable<int> BR_Semestar { get; set; }
             }
             #pragma warning restore 109
     
@@ -1085,6 +1118,43 @@ namespace LightSwitchApplication
                     e.Id_Predmet_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::System.Nullable<int>>.Entry
+                    BR_Semestar = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "BR_Semestar",
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._BR_Semestar_Stub,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._BR_Semestar_ComputeIsReadOnly,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._BR_Semestar_Validate,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._BR_Semestar_GetImplementationValue,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._BR_Semestar_SetImplementationValue,
+                        global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.PropertySetProperties._BR_Semestar_OnValueChanged);
+                private static void _BR_Semestar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BR_Semestar, sf);
+                }
+                private static bool _BR_Semestar_ComputeIsReadOnly(global::LightSwitchApplication.vw_Aktivnosti e)
+                {
+                    bool result = false;
+                    e.BR_Semestar_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _BR_Semestar_Validate(global::LightSwitchApplication.vw_Aktivnosti e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.BR_Semestar_Validate(r);
+                }
+                private static global::System.Nullable<int> _BR_Semestar_GetImplementationValue(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d)
+                {
+                    return d.ImplementationEntity.BR_Semestar;
+                }
+                private static void _BR_Semestar_SetImplementationValue(global::LightSwitchApplication.vw_Aktivnosti.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.BR_Semestar = v;
+                }
+                private static void _BR_Semestar_OnValueChanged(global::LightSwitchApplication.vw_Aktivnosti e)
+                {
+                    e.BR_Semestar_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1125,6 +1195,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, string>.Data _Id_Predmet;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass, global::System.Nullable<int>>.Data _BR_Semestar;
             
         }
     

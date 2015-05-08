@@ -3656,6 +3656,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Id_Predmet;
         partial void OnId_PredmetChanging(global::System.String value);
         partial void OnId_PredmetChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> BR_Semestar
+        {
+            get
+            {
+                return _BR_Semestar;
+            }
+            set
+            {
+                OnBR_SemestarChanging(value);
+                ReportPropertyChanging("BR_Semestar");
+                _BR_Semestar = value;
+                ReportPropertyChanged("BR_Semestar");
+                OnBR_SemestarChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _BR_Semestar;
+        partial void OnBR_SemestarChanging(Nullable<global::System.Int32> value);
+        partial void OnBR_SemestarChanged();
 
         #endregion
 

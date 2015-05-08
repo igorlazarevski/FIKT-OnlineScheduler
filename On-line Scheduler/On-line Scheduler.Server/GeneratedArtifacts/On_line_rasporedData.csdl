@@ -175,6 +175,7 @@
     <Property Name="ID_Den" Type="Edm.Int32" Nullable="false" />
     <Property Name="ImePredmet" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Id_Predmet" Type="Edm.String" Nullable="false" MaxLength="50" />
+    <Property Name="BR_Semestar" Type="Edm.Int32" ConcurrencyMode="Fixed" />
   </EntityType>
   <Association Name="FK_Aktivnost_Den">
     <End Role="Den" Type="LightSwitchApplication.Den" Multiplicity="1" />

@@ -43,3 +43,16 @@ myapp.Распоред.vw_AktivnostiList_Tap_execute = function (screen) {
         elem.isVisible = false;
     }
 };
+myapp.Распоред.created = function (screen) {
+    GetCurrentUser();
+    if (myapp.CurrentUser && myapp.CurrentUser.Semestar)
+        screen.BR_Semestar = parseInt(myapp.CurrentUser.Semestar);
+    else
+        screen.BR_Semestar = 0;
+
+    document.addEventListener("DOMNodeInserted", function (e) {
+        if (e.target.id == 'msls-navmenu') {
+            ApplyPermissionsToMenu(e.target);
+        }
+    }, false);
+};

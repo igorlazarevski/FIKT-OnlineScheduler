@@ -221,6 +221,7 @@
     <Property Name="ID_Den" Type="int" Nullable="false" />
     <Property Name="ImePredmet" Type="nvarchar" MaxLength="50" />
     <Property Name="Id_Predmet" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BR_Semestar" Type="int" />
   </EntityType>
   <Association Name="FK_Aktivnost_Den">
     <End Role="Den" Type="On_line_rasporedDataStore.Den" Multiplicity="1">

@@ -25,12 +25,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:Semestar" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:Student" />
     </EntityType.Attributes>
   </EntityType>
@@ -182,6 +176,12 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:SpisokPolaganje" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Semestar" />
     </EntityType.Attributes>
   </EntityType>
 </Application>

@@ -8,6 +8,28 @@
         $toODataString = msls._toODataString,
         $defineShowScreen = msls._defineShowScreen;
 
+    function AddEditAktivnost(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditAktivnost screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Aktivnost" type="msls.application.Aktivnost">
+        /// Gets or sets the aktivnost for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditAktivnost.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditAktivnost", parameters);
+    }
+
     function Администратор(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the Администратор screen.
@@ -302,6 +324,9 @@
         /// <field name="vw_Aktivnostis" type="msls.VisualCollection" elementType="msls.application.vw_Aktivnosti">
         /// Gets the vw_Aktivnostis for this screen.
         /// </field>
+        /// <field name="BR_Semestar" type="Number">
+        /// Gets or sets the bR_Semestar for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.Распоред.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -342,9 +367,9 @@
         $Screen.call(this, dataWorkspace, "Студенти", parameters);
     }
 
-    function AddEditAktivnost(parameters, dataWorkspace) {
+    function Welcome(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the AddEditAktivnost screen.
+        /// Represents the Welcome screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -352,19 +377,24 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
-        /// <field name="Aktivnost" type="msls.application.Aktivnost">
-        /// Gets or sets the aktivnost for this screen.
+        /// <field name="Profesor" type="msls.application.Profesor">
+        /// Gets or sets the profesor for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.AddEditAktivnost.Details">
+        /// <field name="details" type="msls.application.Welcome.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "AddEditAktivnost", parameters);
+        $Screen.call(this, dataWorkspace, "Welcome", parameters);
     }
 
     msls._addToNamespace("msls.application", {
+
+        AddEditAktivnost: $defineScreen(AddEditAktivnost, [
+            { name: "Aktivnost", kind: "local", type: lightSwitchApplication.Aktivnost }
+        ], [
+        ]),
 
         Администратор: $defineScreen(Администратор, [
             {
@@ -551,10 +581,11 @@
         Распоред: $defineScreen(Распоред, [
             {
                 name: "vw_Aktivnostis", kind: "collection", elementType: lightSwitchApplication.vw_Aktivnosti,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.vw_Aktivnostis.orderBy("ID_Den");
+                createQuery: function (BR_Semestar) {
+                    return this.dataWorkspace.On_line_rasporedData.vw_Aktivnostis.filter("" + ((BR_Semestar === undefined || BR_Semestar === null) ? "false" : "((BR_Semestar ne null) and (BR_Semestar eq " + $toODataString(BR_Semestar, "Int32?") + "))") + "").orderBy("ID_Den");
                 }
-            }
+            },
+            { name: "BR_Semestar", kind: "local", type: Number }
         ], [
             { name: "ShowAddEditActivity_Tap" },
             { name: "ScheduleExam" },
@@ -590,10 +621,22 @@
         ], [
         ]),
 
-        AddEditAktivnost: $defineScreen(AddEditAktivnost, [
-            { name: "Aktivnost", kind: "local", type: lightSwitchApplication.Aktivnost }
+        Welcome: $defineScreen(Welcome, [
+            { name: "Profesor", kind: "local", type: lightSwitchApplication.Profesor }
         ], [
         ]),
+
+        showAddEditAktivnost: $defineShowScreen(function showAddEditAktivnost(Aktivnost, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditAktivnost screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditAktivnost", parameters, options);
+        }),
 
         showАдминистратор: $defineShowScreen(function showАдминистратор(options) {
             /// <summary>
@@ -751,16 +794,16 @@
             return lightSwitchApplication.showScreen("Студенти", parameters, options);
         }),
 
-        showAddEditAktivnost: $defineShowScreen(function showAddEditAktivnost(Aktivnost, options) {
+        showWelcome: $defineShowScreen(function showWelcome(Profesor, options) {
             /// <summary>
-            /// Asynchronously navigates forward to the AddEditAktivnost screen.
+            /// Asynchronously navigates forward to the Welcome screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("AddEditAktivnost", parameters, options);
+            return lightSwitchApplication.showScreen("Welcome", parameters, options);
         })
 
     });

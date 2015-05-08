@@ -11,6 +11,11 @@ myapp.Професор.Vreme_kraj_postRender = function (element, contentItem) {
 myapp.Професор.Список_postRender = function (element, contentItem) {
 };
 myapp.Професор.created = function (screen) {
+    document.addEventListener("DOMNodeInserted", function (e) {
+        if (e.target.id == 'msls-navmenu') {
+            ApplyPermissionsToMenu(e.target);
+        }
+    }, false);
 };
 myapp.Професор.Predmets_ItemTap_execute = function (screen) {
     screen.ID_predmet = screen.Predmets.selectedItem.ID_predmet;

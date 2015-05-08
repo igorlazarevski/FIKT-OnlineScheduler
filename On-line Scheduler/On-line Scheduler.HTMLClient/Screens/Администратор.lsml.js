@@ -8,3 +8,10 @@ myapp.Администратор.Vreme_kraj_postRender = function (element, cont
     element.innerHTML = contentItem.value.format("HH:mm");
 
 };
+myapp.Администратор.created = function (screen) {
+    document.addEventListener("DOMNodeInserted", function (e) {
+        if (e.target.id == 'msls-navmenu') {
+            ApplyPermissionsToMenu(e.target);
+        }
+    }, false);
+};
