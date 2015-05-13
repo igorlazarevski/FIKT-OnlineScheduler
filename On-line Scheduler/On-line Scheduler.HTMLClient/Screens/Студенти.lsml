@@ -354,6 +354,35 @@
                 Value="Предмети" />
             </ContentItem.Attributes>
             <ContentItem
+              Name="Br_indeks"
+              Kind="Value"
+              DataType=":String">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Индекс: " />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Студенти/Properties[Br_indeks]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="LeftAligned"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
               Name="Izbrani_predmetis"
               Kind="Collection"
               DataType="CollectionView$Izbrani_predmeti"
@@ -451,6 +480,10 @@
                   Kind="Details"
                   DataType="Predmet"
                   View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Предмет" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -835,7 +868,23 @@
             Name="Izbrani_predmetisQuery"
             ReturnType="Izbrani_predmeti*">
             <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Izbrani_predmeti/Properties[Student]" />
+                      <MemberExpression
+                        Member="Br_indeks" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ParameterExpression
+                      Parameter="Br_indeks" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
@@ -843,12 +892,25 @@
                   Member="On_line_rasporedData/Members[Izbrani_predmetis]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="Br_indeks"
+                ParameterType=":String?" />
+            </ScreenQueryDefinition.Parameters>
           </ScreenQueryDefinition>
         </ScreenCollectionProperty.Query>
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Студенти/Properties[Izbrani_predmetis]/Query" />
+              Target="Студенти/Properties[Izbrani_predmetis]/Query">
+              <ArgumentExpression
+                Parameter="Br_indeks">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Студенти/Properties[Br_indeks]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -922,6 +984,13 @@
       <ScreenProperty
         Name="BR_Semestar"
         PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Br_indeks"
+        PropertyType=":String">
         <ScreenProperty.Attributes>
           <Required />
         </ScreenProperty.Attributes>

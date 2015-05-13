@@ -69,6 +69,9 @@ myapp.Студенти.created = function (screen) {
     else
         screen.BR_Semestar = 0;
 
+    if (myapp.CurrentUser && myapp.CurrentUser.UserName)
+        screen.Br_indeks = myapp.CurrentUser.UserName;
+
     document.addEventListener("DOMNodeInserted", function (e) {
         if (e.target.id == 'msls-navmenu') {
             ApplyPermissionsToMenu(e.target);
