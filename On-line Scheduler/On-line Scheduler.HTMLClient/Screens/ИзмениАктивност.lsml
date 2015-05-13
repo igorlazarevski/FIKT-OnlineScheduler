@@ -91,7 +91,48 @@
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
+                  Name="Predmet1"
+                  Kind="Details"
+                  DataType="Predmet"
+                  View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Aktivnost/Properties[Predmet]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Ime2"
+                    Kind="Value"
+                    DataType=":String?"
+                    View="Microsoft.LightSwitch.MobileWeb:Text">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Ime]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
                   Name="Profesor"
+                  IsHidden="True"
                   Kind="Details"
                   DataType="Profesor">
                   <ContentItem.Attributes>

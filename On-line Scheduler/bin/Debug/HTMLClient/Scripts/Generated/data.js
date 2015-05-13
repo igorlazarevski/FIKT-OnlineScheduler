@@ -456,6 +456,9 @@ window.myapp = msls.application;
         /// <field name="Id_Predmet" type="String">
         /// Gets or sets the id_Predmet for this vw_Aktivnosti.
         /// </field>
+        /// <field name="BR_Semestar" type="Number">
+        /// Gets or sets the bR_Semestar for this vw_Aktivnosti.
+        /// </field>
         /// <field name="details" type="msls.application.vw_Aktivnosti.Details">
         /// Gets the details for this vw_Aktivnosti.
         /// </field>
@@ -659,7 +662,8 @@ window.myapp = msls.application;
             { name: "Povtoruvacki", type: Boolean },
             { name: "ID_Den", type: Number },
             { name: "ImePredmet", type: String },
-            { name: "Id_Predmet", type: String }
+            { name: "Id_Predmet", type: String },
+            { name: "BR_Semestar", type: Number }
         ]),
 
         On_line_rasporedData: $defineDataService(On_line_rasporedData, lightSwitchApplication.rootUri + "/On_line_rasporedData.svc", [
@@ -700,6 +704,15 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "IzbranikPredmetiPoStudent", value: function (Br_indeks) {
+                    return new $DataServiceQuery({ _entitySet: this.Izbrani_predmetis },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/IzbranikPredmetiPoStudent()",
+                        {
+                            Br_indeks: $toODataString(Br_indeks, "String?")
+                        });
+                }
+            },
+            {
                 name: "Nasokas_SingleOrDefault", value: function (ID_Nasoka) {
                     return new $DataServiceQuery({ _entitySet: this.Nasokas },
                         lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/Nasokas(" + "ID_Nasoka=" + $toODataString(ID_Nasoka, "Int32?") + ")"
@@ -714,10 +727,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Query1", value: function () {
+                name: "GetPredmetByID", value: function (ID_predmet) {
                     return new $DataServiceQuery({ _entitySet: this.Predmets },
-                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/Query1()",
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/GetPredmetByID()",
                         {
+                            ID_predmet: $toODataString(ID_predmet, "String?")
                         });
                 }
             },
@@ -726,6 +740,15 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.Profesors },
                         lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/Profesors(" + "ID_profesor=" + $toODataString(ID_profesor, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "GetProfesorByUsername", value: function (Korisnicko_ime) {
+                    return new $DataServiceQuery({ _entitySet: this.Profesors },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/GetProfesorByUsername()",
+                        {
+                            Korisnicko_ime: $toODataString(Korisnicko_ime, "String?")
+                        });
                 }
             },
             {
@@ -782,15 +805,6 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.vw_Aktivnostis },
                         lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/vw_Aktivnostis(" + "ID_aktivnost=" + $toODataString(ID_aktivnost, "Int32?") + "," + "ID_Den=" + $toODataString(ID_Den, "Int32?") + "," + "Id_Predmet=" + $toODataString(Id_Predmet, "String?") + ")"
                     );
-                }
-            },
-            {
-                name: "IzbranikPredmetiPoStudent", value: function (Br_indeks) {
-                    return new $DataServiceQuery({ _entitySet: this.Izbrani_predmetis },
-                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/IzbranikPredmetiPoStudent()",
-                        {
-                            Br_indeks: $toODataString(Br_indeks, "String?")
-                        });
                 }
             }
         ]),

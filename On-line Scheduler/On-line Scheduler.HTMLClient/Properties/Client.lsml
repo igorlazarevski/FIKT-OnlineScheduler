@@ -38,9 +38,6 @@
   </GlobalAttributeGroup>
   <Application.NavigationItems>
     <ApplicationNavigationMethodLink
-      Name="link1"
-      Method="!module/Methods[showРаспоред]" />
-    <ApplicationNavigationMethodLink
       Name="link"
       Method="!module/Methods[showАдминистратор]" />
     <ApplicationNavigationMethodLink

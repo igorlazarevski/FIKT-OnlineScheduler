@@ -56,3 +56,23 @@ myapp.Распоред.created = function (screen) {
         }
     }, false);
 };
+
+myapp.Распоред.rows_postRender = function (element, contentItem) {
+    if (contentItem.value.Ime == 'Предавања')
+        element.parentElement.id = "Predavanje";
+    else
+        if (contentItem.value.Ime == 'Испит')
+            element.parentElement.id = "Ispit";
+
+        else
+            if (contentItem.value.Ime == 'Консултации')
+                element.parentElement.id = "Konsultacii";
+
+            else
+                if (contentItem.value.Ime == 'Колоквиум')
+                    element.parentElement.id = "Kolokvium";
+
+                else
+                    if (contentItem.value.Ime == 'Вежби')
+                        element.parentElement.id = "Vezbi";
+};

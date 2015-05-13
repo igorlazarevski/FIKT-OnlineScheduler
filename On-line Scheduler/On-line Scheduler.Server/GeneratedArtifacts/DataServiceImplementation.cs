@@ -46,10 +46,21 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> Query1()
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> GetPredmetByID(string ID_predmet)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> query;
-            query = this.GetQuery<global::LightSwitchApplication.Implementation.Predmet>("Predmets");
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Predmet>("Predmets"),
+                (p) => (p.ID_predmet.CompareTo(ID_predmet) == 0));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Profesor> GetProfesorByUsername(string Korisnicko_ime)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Profesor> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Profesor>("Profesors"),
+                (p) => (p.Korisnicko_ime.CompareTo(Korisnicko_ime) == 0));
             return query;
         }
     

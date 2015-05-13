@@ -6,8 +6,9 @@
 /* Font families for screen and dialog headers.  Font families for content inside a screen 
     or dialog are determined by the theme's global font family setting. */
 .msls-header .ui-title {
-    font-family: 'Segoe Light', 'Segoe UI Light', 'Segoe UI', 'Segoe WP Light', 'Roboto Light','Frutiger','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Century Gothic';
     font-weight: 200;
+    font-size: 29px;
 }
 
 /* Customizable font styles for screen controls */
@@ -35,4 +36,32 @@
 @media 
 screen and (max-width: 400px) and (orientation: portrait), 
 screen and (max-width: 640px) and (max-height: 400px) and (orientation: landscape) {
+}
+
+#Predavanje
+{
+  
+   color: #44B1CD;
+}
+
+
+#Ispit
+{
+   
+    color: #FC8C64;
+}
+
+#Kolokvium
+{
+    color:#F09F24;
+}
+
+#Konsultacii
+{
+    color: #929292;
+}
+
+#Vezbi
+{
+    color: #4D469B;
 }

@@ -62,7 +62,7 @@ function ShowDefaultScreen(a,b) {
         GetCurrentUser();
         if (myapp.CurrentUser) {
             if (myapp.CurrentUser.Role == "Student")
-                myapp.showРаспоред();
+                myapp.showСтуденти();
             else if (myapp.CurrentUser.Role == "Profesor")
                 myapp.showПрофесор();
             else if (myapp.CurrentUser.Role == "Administrator")

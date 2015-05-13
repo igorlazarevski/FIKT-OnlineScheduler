@@ -276,3 +276,10 @@ C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debu
 C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Content\Resources\Generated\model.json
 C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Content\Resources\msls.lang-en-us.resjson
 C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\ЗапишиПредмет.lsml.js
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Scripts\CustomScripts.js
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\bin\FIKT.RoleMembershipProvider.dll
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\WEB\GetUser.ashx
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\Студенти.lsml.js
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\Welcome.lsml.js
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\ДодајАктивност.lsml.js
+C:\Projects\FIKT-OnlineScheduler\FIKT-OnlineScheduler\On-line Scheduler\bin\Debug\HTMLClient\Screens\ИзмениАктивност.lsml.js

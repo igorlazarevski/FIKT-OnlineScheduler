@@ -220,7 +220,7 @@
     <LightSwitchModel Include="DataSources\On_line_rasporedData\TipNaAktivnosts.lsml" />
     <LightSwitchModel Include="Properties\DataSources\On_line_rasporedData.lsml" />
     <LightSwitchModel Include="DataSources\On_line_rasporedData\StatusPredmets.lsml" />
-    <LightSwitchModel Include="DataSources\On_line_rasporedData\Query1.lsml">
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\GetPredmetByID.lsml">
       <DependentUpon>Predmets.lsml</DependentUpon>
     </LightSwitchModel>
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Nasokas.lsml" />
@@ -229,6 +229,9 @@
     <LightSwitchModel Include="DataSources\On_line_rasporedData\SpisokPolaganjes.lsml" />
     <LightSwitchModel Include="DataSources\On_line_rasporedData\IzbranikPredmetiPoStudent.lsml">
       <DependentUpon>Izbrani_predmetis.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\GetProfesorByUsername.lsml">
+      <DependentUpon>Profesors.lsml</DependentUpon>
     </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

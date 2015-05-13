@@ -452,9 +452,12 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> Query1()
+        /// <param name="ID_predmet">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Predmet> GetPredmetByID(string ID_predmet)
         {
-            return this.Details.Methods.Query1.CreateInvocation().Execute();
+            return this.Details.Methods.GetPredmetByID.CreateInvocation(ID_predmet).Execute();
         }
         
         /// <summary>
@@ -477,6 +480,17 @@ namespace LightSwitchApplication
         public global::LightSwitchApplication.Profesor Profesors_SingleOrDefault(global::System.Nullable<int> ID_profesor)
         {
             return this.Details.Methods.Profesors_SingleOrDefault.CreateInvocation(ID_profesor).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="Korisnicko_ime">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Profesor> GetProfesorByUsername(string Korisnicko_ime)
+        {
+            return this.Details.Methods.GetProfesorByUsername.CreateInvocation(Korisnicko_ime).Execute();
         }
         
         /// <summary>
@@ -803,11 +817,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet> Query1
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet> GetPredmetByID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Query1) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>;
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.GetPredmetByID) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>;
                     }
                 }
                 
@@ -824,6 +838,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.Profesors_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor> GetProfesorByUsername
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties.GetProfesorByUsername) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>;
                     }
                 }
                 
@@ -1200,12 +1222,12 @@ namespace LightSwitchApplication
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry
-                    Query1 = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
-                        "Query1",
-                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._Query1_Stub);
-                private static void _Query1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                    GetPredmetByID = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Entry(
+                        "GetPredmetByID",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._GetPredmetByID_Stub);
+                private static void _GetPredmetByID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Query1, sf);
+                    c(d, ref d._GetPredmetByID, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1226,6 +1248,16 @@ namespace LightSwitchApplication
                 private static void _Profesors_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
                 {
                     c(d, ref d._Profesors_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Entry
+                    GetProfesorByUsername = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Entry(
+                        "GetProfesorByUsername",
+                        global::LightSwitchApplication.On_line_rasporedData.DetailsClass.MethodSetProperties._GetProfesorByUsername_Stub);
+                private static void _GetProfesorByUsername_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Data> c, global::LightSwitchApplication.On_line_rasporedData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._GetProfesorByUsername, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1614,13 +1646,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Predmets_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data _Query1;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Predmet>.Data _GetPredmetByID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Data _Profesors_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Data _Profesors_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Profesor>.Data _GetProfesorByUsername;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.On_line_rasporedData, global::LightSwitchApplication.On_line_rasporedData.DetailsClass, global::LightSwitchApplication.Prostorija>.Data _Prostorijas_Single;

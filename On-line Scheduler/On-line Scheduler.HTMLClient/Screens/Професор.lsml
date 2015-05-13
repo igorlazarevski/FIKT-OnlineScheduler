@@ -24,7 +24,7 @@
             Kind="Group">
             <ContentItem.Attributes>
               <DisplayName
-                Value="Предмети" />
+                Value="Предмети и Списоци" />
             </ContentItem.Attributes>
             <ContentItem
               Name="Predmets"
@@ -186,6 +186,7 @@
               </ContentItem>
               <ContentItem
                 Name="ShowAtendees"
+                IsHidden="True"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -198,6 +199,16 @@
                       <ChainExpression>
                         <CallExpression
                           Target="Професор/Methods[ShowAtendees_Tap]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-list"
+                          ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

@@ -727,10 +727,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Query1", value: function () {
+                name: "GetPredmetByID", value: function (ID_predmet) {
                     return new $DataServiceQuery({ _entitySet: this.Predmets },
-                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/Query1()",
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/GetPredmetByID()",
                         {
+                            ID_predmet: $toODataString(ID_predmet, "String?")
                         });
                 }
             },
@@ -739,6 +740,15 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.Profesors },
                         lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/Profesors(" + "ID_profesor=" + $toODataString(ID_profesor, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "GetProfesorByUsername", value: function (Korisnicko_ime) {
+                    return new $DataServiceQuery({ _entitySet: this.Profesors },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/GetProfesorByUsername()",
+                        {
+                            Korisnicko_ime: $toODataString(Korisnicko_ime, "String?")
+                        });
                 }
             },
             {

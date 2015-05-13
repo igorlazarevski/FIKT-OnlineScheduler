@@ -18,6 +18,7 @@ myapp.Професор.created = function (screen) {
     }, false);
 };
 myapp.Професор.Predmets_ItemTap_execute = function (screen) {
+    screen.findContentItem('ShowAtendees').isVisible = true;
     screen.ID_predmet = screen.Predmets.selectedItem.ID_predmet;
     
     //screen.showTab('Список');

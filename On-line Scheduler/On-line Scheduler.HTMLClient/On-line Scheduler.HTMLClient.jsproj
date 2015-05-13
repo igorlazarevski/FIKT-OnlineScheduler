@@ -69,11 +69,17 @@
     <Content Include="Screens\Welcome.lsml.js">
       <DependentUpon>Welcome.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\ДодајАктивност.lsml.js">
+      <DependentUpon>ДодајАктивност.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\ДодајПрофесор.lsml.js">
       <DependentUpon>ДодајПрофесор.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\ЗапишиПредмет.lsml.js">
       <DependentUpon>ЗапишиПредмет.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ИзмениАктивност.lsml.js">
+      <DependentUpon>ИзмениАктивност.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\ИзмениПрофесор.lsml.js">
       <DependentUpon>ИзмениПрофесор.lsml</DependentUpon>

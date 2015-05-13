@@ -115,6 +115,7 @@
                 Kind="Group">
                 <ContentItem
                   Name="Student"
+                  IsHidden="True"
                   Kind="Details"
                   DataType="Student">
                   <ContentItem.DataSource>
