@@ -806,6 +806,15 @@ window.myapp = msls.application;
                         lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/vw_Aktivnostis(" + "ID_aktivnost=" + $toODataString(ID_aktivnost, "Int32?") + "," + "ID_Den=" + $toODataString(ID_Den, "Int32?") + "," + "Id_Predmet=" + $toODataString(Id_Predmet, "String?") + ")"
                     );
                 }
+            },
+            {
+                name: "ActivitiesByStudent", value: function (Subjects) {
+                    return new $DataServiceQuery({ _entitySet: this.vw_Aktivnostis },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/ActivitiesByStudent()",
+                        {
+                            Subjects: $toODataString(Subjects, "String?")
+                        });
+                }
             }
         ]),
 

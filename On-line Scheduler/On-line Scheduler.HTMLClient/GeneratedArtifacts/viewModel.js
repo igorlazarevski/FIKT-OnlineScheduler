@@ -377,11 +377,20 @@
         /// <field name="Izbrani_predmetis" type="msls.VisualCollection" elementType="msls.application.Izbrani_predmeti">
         /// Gets the izbrani_predmetis for this screen.
         /// </field>
-        /// <field name="vw_Aktivnostis" type="msls.VisualCollection" elementType="msls.application.vw_Aktivnosti">
-        /// Gets the vw_Aktivnostis for this screen.
+        /// <field name="Br_indeks" type="String">
+        /// Gets or sets the br_indeks for this screen.
         /// </field>
-        /// <field name="BR_Semestar" type="Number">
-        /// Gets or sets the bR_Semestar for this screen.
+        /// <field name="Predmet" type="String">
+        /// Gets or sets the predmet for this screen.
+        /// </field>
+        /// <field name="ActivitiesByStudent" type="msls.VisualCollection" elementType="msls.application.vw_Aktivnosti">
+        /// Gets the activitiesByStudent for this screen.
+        /// </field>
+        /// <field name="Subjects" type="String">
+        /// Gets or sets the subjects for this screen.
+        /// </field>
+        /// <field name="BR_Semestar1" type="Number">
+        /// Gets or sets the bR_Semestar1 for this screen.
         /// </field>
         /// <field name="details" type="msls.application.Студенти.Details">
         /// Gets the details for this screen.
@@ -616,20 +625,24 @@
             },
             {
                 name: "Izbrani_predmetis", kind: "collection", elementType: lightSwitchApplication.Izbrani_predmeti,
-                createQuery: function () {
-                    return this.dataWorkspace.On_line_rasporedData.Izbrani_predmetis.expand("Student").expand("Student.Semestar").expand("Predmet").expand("Predmet.Profesor").expand("Predmet.Semestar").expand("Predmet.StatusPredmet").expand("Predmet.Nasoka1");
+                createQuery: function (Br_indeks) {
+                    return this.dataWorkspace.On_line_rasporedData.Izbrani_predmetis.filter("" + ((Br_indeks === undefined || Br_indeks === null) ? "false" : "(Student/Br_indeks eq " + $toODataString(Br_indeks, "String?") + ")") + "").expand("Student").expand("Student.Semestar").expand("Predmet").expand("Predmet.Profesor").expand("Predmet.Semestar").expand("Predmet.StatusPredmet").expand("Predmet.Nasoka1");
                 }
             },
+            { name: "Br_indeks", kind: "local", type: String },
+            { name: "Predmet", kind: "local", type: String },
             {
-                name: "vw_Aktivnostis", kind: "collection", elementType: lightSwitchApplication.vw_Aktivnosti,
-                createQuery: function (BR_Semestar) {
-                    return this.dataWorkspace.On_line_rasporedData.vw_Aktivnostis.filter("" + ((BR_Semestar === undefined || BR_Semestar === null) ? "false" : "((BR_Semestar ne null) and (BR_Semestar eq " + $toODataString(BR_Semestar, "Int32?") + "))") + "").orderBy("ID_Den").thenBy("Vreme_pocetok");
+                name: "ActivitiesByStudent", kind: "collection", elementType: lightSwitchApplication.vw_Aktivnosti,
+                createQuery: function (Subjects, BR_Semestar) {
+                    return this.dataWorkspace.On_line_rasporedData.ActivitiesByStudent(Subjects).filter("" + ((BR_Semestar === undefined || BR_Semestar === null) ? "false" : "((BR_Semestar ne null) and (BR_Semestar eq " + $toODataString(BR_Semestar, "Int32?") + "))") + "");
                 }
             },
-            { name: "BR_Semestar", kind: "local", type: Number }
+            { name: "Subjects", kind: "local", type: String },
+            { name: "BR_Semestar1", kind: "local", type: Number }
         ], [
             { name: "ScheduleExam" },
-            { name: "vw_Aktivnostis_ItemTap" }
+            { name: "vw_Aktivnostis_ItemTap" },
+            { name: "ActivitiesByStudent_ItemTap" }
         ]),
 
         showAddEditAktivnost: $defineShowScreen(function showAddEditAktivnost(Aktivnost, options) {

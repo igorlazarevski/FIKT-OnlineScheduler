@@ -4660,6 +4660,25 @@
                   "parameterType": { "__id": ":String?" }
                 }
               ]
+            },
+            {
+              "id": "On_line_rasporedData/Members[ActivitiesByStudent]",
+              "name": "ActivitiesByStudent",
+              "elementType": { "__id": "vw_Aktivnosti" },
+              "query": { "__id": "On_line_rasporedData/Members[ActivitiesByStudent]" },
+              "returnType": { "__id": "vw_Aktivnosti*" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[ActivitiesByStudent]/Parameters[Subjects]",
+                  "name": "Subjects",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
             }
           ]
         },
@@ -11545,19 +11564,39 @@
                         ]
                       },
                       {
-                        "displayName": "vw Aktivnostis",
-                        "name": "vw_Aktivnostis",
+                        "displayName": "Subjects",
+                        "name": "Subjects",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Студенти/Properties[Subjects]" }
+                        }
+                      },
+                      {
+                        "displayName": "BR Semestar1",
+                        "name": "BR_Semestar1",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Студенти/Properties[BR_Semestar1]" }
+                        }
+                      },
+                      {
+                        "displayName": "Activities By Student",
+                        "name": "ActivitiesByStudent",
                         "kind": "Collection",
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Студенти/Properties[vw_Aktivnostis]" }
+                          "member": { "__id": "Студенти/Properties[ActivitiesByStudent]" }
                         },
                         "childContentItems":
                         [
                           {
                             "displayName": "vw Aktivnosti",
-                            "name": "vw_AktivnostisTemplate",
+                            "name": "ActivitiesByStudentTemplate",
                             "kind": "Details",
                             "view": { "__id": ":RowsLayout" },
                             "dataSource":
@@ -11570,7 +11609,7 @@
                             [
                               {
                                 "displayName": "Den",
-                                "name": "Den",
+                                "name": "Den1",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
@@ -11580,24 +11619,17 @@
                               },
                               {
                                 "displayName": "Ime Predmet",
-                                "name": "ImePredmet",
+                                "name": "ImePredmet1",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
                                   "member": { "__id": "vw_Aktivnosti/Properties[ImePredmet]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Large"
-                                  }
-                                ]
+                                }
                               },
                               {
                                 "displayName": "Opis",
-                                "name": "Opis",
+                                "name": "Opis1",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
@@ -11606,67 +11638,37 @@
                                 }
                               },
                               {
-                                "displayName": "Group2",
-                                "name": "Group2",
+                                "displayName": "Group3",
+                                "name": "Group3",
                                 "kind": "Group",
                                 "view": { "__id": ":ColumnsLayout" },
                                 "childContentItems":
                                 [
                                   {
                                     "displayName": "Време",
-                                    "name": "Vreme_pocetok",
+                                    "name": "Vreme_pocetok1",
                                     "kind": "Value",
                                     "view": { "__id": ":Text" },
                                     "dataSource":
                                     {
                                       "member": { "__id": "vw_Aktivnosti/Properties[Vreme_pocetok]" }
-                                    },
-                                    "propertySources":
-                                    [
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
-                                        "value": "LeftAligned"
-                                      },
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                        "value": "FixedSize"
-                                      },
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[Width]" },
-                                        "value": 38
-                                      }
-                                    ]
+                                    }
                                   },
                                   {
                                     "displayName": "-",
-                                    "name": "Vreme_kraj",
+                                    "name": "Vreme_kraj1",
                                     "kind": "Value",
                                     "view": { "__id": ":Text" },
                                     "dataSource":
                                     {
                                       "member": { "__id": "vw_Aktivnosti/Properties[Vreme_kraj]" }
-                                    },
-                                    "propertySources":
-                                    [
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
-                                        "value": "LeftAligned"
-                                      },
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                        "value": "FixedSize"
-                                      },
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[Width]" },
-                                        "value": 48
-                                      }
-                                    ]
+                                    }
                                   }
                                 ]
                               },
                               {
                                 "displayName": "Profesor Ime",
-                                "name": "Profesor_Ime",
+                                "name": "Profesor_Ime1",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
@@ -11676,7 +11678,7 @@
                               },
                               {
                                 "displayName": "Ime",
-                                "name": "Ime2",
+                                "name": "Ime3",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
@@ -11690,14 +11692,10 @@
                         "propertySources":
                         [
                           {
-                            "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                            "value": "FitToContent"
-                          },
-                          {
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "Студенти/Methods[vw_Aktivnostis_ItemTap]" }
+                              "target": { "__id": "Студенти/Methods[ActivitiesByStudent_ItemTap]" }
                             }
                           }
                         ]
@@ -11763,6 +11761,23 @@
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
+                      {
+                        "displayName": "Индекс: ",
+                        "name": "Br_indeks",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Студенти/Properties[Br_indeks]" }
+                        },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                            "value": "LeftAligned"
+                          }
+                        ]
+                      },
                       {
                         "displayName": "Izbrani predmetis",
                         "name": "Izbrani_predmetis",
@@ -11834,7 +11849,7 @@
                                 ]
                               },
                               {
-                                "displayName": "Predmet",
+                                "displayName": "Предмет",
                                 "name": "Predmet",
                                 "kind": "Details",
                                 "view": { "__id": ":RowsLayout" },
@@ -12099,6 +12114,10 @@
             {
               "id": "Студенти/Methods[vw_Aktivnostis_ItemTap]",
               "name": "vw_Aktivnostis_ItemTap"
+            },
+            {
+              "id": "Студенти/Methods[ActivitiesByStudent_ItemTap]",
+              "name": "ActivitiesByStudent_ItemTap"
             }
           ],
           "properties":
@@ -12159,14 +12178,57 @@
                 "name": "Izbrani_predmetisQuery",
                 "elementType": { "__id": "Izbrani_predmeti" },
                 "returnType": { "__id": "Izbrani_predmeti*" },
+                "filterExpression":
+                {
+                  "nodeType": "Equal",
+                  "left":
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "Izbrani_predmeti/Properties[Student]" }
+                      },
+                      {
+                        "member": { "__id": "Student/Properties[Br_indeks]" }
+                      }
+                    ]
+                  },
+                  "right":
+                  {
+                    "parameter": { "__id": "Студенти/Properties[Izbrani_predmetis]/Query/Parameters[Br_indeks]" }
+                  }
+                },
                 "source":
                 {
                   "member": { "__id": "On_line_rasporedData/Members[Izbrani_predmetis]" }
-                }
+                },
+                "parameters":
+                [
+                  {
+                    "id": "Студенти/Properties[Izbrani_predmetis]/Query/Parameters[Br_indeks]",
+                    "name": "Br_indeks",
+                    "parameterType": { "__id": ":String?" }
+                  }
+                ]
               },
               "source":
               {
-                "target": { "__id": "Студенти/Properties[Izbrani_predmetis]/Query" }
+                "target": { "__id": "Студенти/Properties[Izbrani_predmetis]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Студенти/Properties[Izbrani_predmetis]/Query/Parameters[Br_indeks]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "Студенти/Properties[Br_indeks]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             },
             {
@@ -12243,6 +12305,109 @@
             {
               "id": "Студенти/Properties[BR_Semestar]",
               "name": "BR_Semestar",
+              "elementType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "Студенти/Properties[Br_indeks]",
+              "name": "Br_indeks",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Студенти/Properties[Predmet]",
+              "name": "Predmet",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Студенти/Properties[ActivitiesByStudent]",
+              "name": "ActivitiesByStudent",
+              "pageSize": 45,
+              "elementType": { "__id": "vw_Aktivnosti" },
+              "propertyType": { "__id": "CollectionView$vw_Aktivnosti" },
+              "query":
+              {
+                "id": "Студенти/Properties[ActivitiesByStudent]/Query",
+                "name": "ActivitiesByStudentQuery",
+                "elementType": { "__id": "vw_Aktivnosti" },
+                "returnType": { "__id": "vw_Aktivnosti*" },
+                "filterExpression":
+                {
+                  "nodeType": "Equal",
+                  "left":
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "vw_Aktivnosti/Properties[BR_Semestar]" }
+                      }
+                    ]
+                  },
+                  "right":
+                  {
+                    "parameter": { "__id": "Студенти/Properties[ActivitiesByStudent]/Query/Parameters[BR_Semestar]" }
+                  }
+                },
+                "source":
+                {
+                  "member": { "__id": "On_line_rasporedData/Members[ActivitiesByStudent]" }
+                },
+                "parameters":
+                [
+                  {
+                    "id": "Студенти/Properties[ActivitiesByStudent]/Query/Parameters[BR_Semestar]",
+                    "name": "BR_Semestar",
+                    "parameterType": { "__id": ":Int32?" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "Студенти/Properties[ActivitiesByStudent]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "On_line_rasporedData/Members[ActivitiesByStudent]/Parameters[Subjects]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "Студенти/Properties[Subjects]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Студенти/Properties[ActivitiesByStudent]/Query/Parameters[BR_Semestar]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "Студенти/Properties[BR_Semestar1]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "Студенти/Properties[Subjects]",
+              "name": "Subjects",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Студенти/Properties[BR_Semestar1]",
+              "name": "BR_Semestar1",
               "elementType": { "__id": ":Int32" },
               "propertyType": { "__id": ":Int32" },
               ":@Required": { }
@@ -12413,7 +12578,15 @@
         {
           "id": "!module/Methods[showСтуденти]",
           "name": "showСтуденти",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "Студенти" } }
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Студенти" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showСтуденти]/Parameters[BR_Semestar]",
+              "name": "BR_Semestar",
+              "parameterType": { "__id": ":Int32" }
+            }
+          ]
         }
       ],
       "navigationItems":
@@ -12422,11 +12595,6 @@
           "id": "!module/NavigationItems[link]",
           "name": "link",
           "method": { "__id": "!module/Methods[showАдминистратор]" }
-        },
-        {
-          "id": "!module/NavigationItems[link3]",
-          "name": "link3",
-          "method": { "__id": "!module/Methods[showСтуденти]" }
         },
         {
           "id": "!module/NavigationItems[link2]",
