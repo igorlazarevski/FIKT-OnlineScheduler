@@ -64,13 +64,6 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.vw_Aktivnosti> ActivitiesByStudent(string Subjects)
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.vw_Aktivnosti> query;
-            query = this.GetQuery<global::LightSwitchApplication.Implementation.vw_Aktivnosti>("vw_Aktivnostis");
-            return query;
-        }
-    
     #endregion
 
     #region Protected Methods

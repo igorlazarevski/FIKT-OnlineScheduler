@@ -29,7 +29,7 @@
                 Value="Распоред" />
             </ContentItem.Attributes>
             <ContentItem
-              Name="BR_Semestar1"
+              Name="BR_Semestar"
               Kind="Value"
               DataType=":Int32">
               <ContentItem.Attributes>
@@ -40,30 +40,25 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Студенти/Properties[BR_Semestar1]" />
+                      Member="Студенти/Properties[BR_Semestar]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="LeftAligned"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
-              Name="Subjects"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.Attributes>
-                <DisplayName
-                  Value="Избрани предмети: " />
-              </ContentItem.Attributes>
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Студенти/Properties[Subjects]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="ActivitiesByStudent"
+              Name="vw_Aktivnostis"
               Kind="Collection"
               DataType="CollectionView$vw_Aktivnosti"
               View="Microsoft.LightSwitch.MobileWeb:TileList">
@@ -71,12 +66,12 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Студенти/Properties[ActivitiesByStudent]" />
+                      Member="Студенти/Properties[vw_Aktivnostis]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="ActivitiesByStudentTemplate"
+                Name="vw_AktivnostisTemplate"
                 Kind="Details"
                 DataType="vw_Aktivnosti">
                 <ContentItem.DataSource>
@@ -85,7 +80,7 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Den1"
+                  Name="Den"
                   Kind="Value"
                   DataType=":String?">
                   <ContentItem.DataSource>
@@ -98,7 +93,7 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="ImePredmet1"
+                  Name="ImePredmet"
                   Kind="Value"
                   DataType=":String?">
                   <ContentItem.DataSource>
@@ -109,9 +104,21 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Large"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
-                  Name="Opis1"
+                  Name="Opis"
                   Kind="Value"
                   DataType=":String?">
                   <ContentItem.DataSource>
@@ -124,11 +131,11 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Group3"
+                  Name="Group2"
                   Kind="Group"
                   View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                   <ContentItem
-                    Name="Vreme_pocetok1"
+                    Name="Vreme_pocetok"
                     Kind="Value"
                     DataType=":DateTime?">
                     <ContentItem.Attributes>
@@ -143,9 +150,41 @@
                         </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="FixedSize"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="38"
+                              ResultType=":Double" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
                   </ContentItem>
                   <ContentItem
-                    Name="Vreme_kraj1"
+                    Name="Vreme_kraj"
                     Kind="Value"
                     DataType=":DateTime?">
                     <ContentItem.Attributes>
@@ -160,10 +199,42 @@
                         </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="LeftAligned"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="FixedSize"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="48"
+                              ResultType=":Double" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
-                  Name="Profesor_Ime1"
+                  Name="Profesor_Ime"
                   Kind="Value"
                   DataType=":String?">
                   <ContentItem.DataSource>
@@ -176,7 +247,7 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Ime3"
+                  Name="Ime2"
                   Kind="Value"
                   DataType=":String?">
                   <ContentItem.DataSource>
@@ -191,11 +262,21 @@
               </ContentItem>
               <ContentItem.PropertySources>
                 <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="FitToContent"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
                   Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="Студенти/Methods[ActivitiesByStudent_ItemTap]" />
+                        Target="Студенти/Methods[vw_Aktivnostis_ItemTap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -210,6 +291,17 @@
                     Value="Пребарај Активност" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Студенти/Properties[vw_Aktivnostis]" />
+                        <CallExpression
+                          Target="showSearch" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
                     <ScreenExpressionTree>
@@ -713,8 +805,6 @@
         Name="ScheduleExam" />
       <ScreenMethod
         Name="vw_Aktivnostis_ItemTap" />
-      <ScreenMethod
-        Name="ActivitiesByStudent_ItemTap" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -824,27 +914,13 @@
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
-      <ScreenProperty
-        Name="Br_indeks"
-        PropertyType=":String">
-        <ScreenProperty.Attributes>
-          <Required />
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
-      <ScreenProperty
-        Name="Predmet"
-        PropertyType=":String">
-        <ScreenProperty.Attributes>
-          <Required />
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
       <ScreenCollectionProperty
-        Name="ActivitiesByStudent"
+        Name="vw_Aktivnostis"
         PageSize="45"
         PropertyType="CollectionView$vw_Aktivnosti">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="ActivitiesByStudentQuery"
+            Name="vw_AktivnostisQuery"
             ReturnType="vw_Aktivnosti*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree>
@@ -866,7 +942,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="On_line_rasporedData/Members[ActivitiesByStudent]" />
+                  Member="On_line_rasporedData/Members[vw_Aktivnostis]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
             <ScreenQueryDefinition.Parameters>
@@ -874,24 +950,31 @@
                 Name="BR_Semestar"
                 ParameterType=":Int32?" />
             </ScreenQueryDefinition.Parameters>
+            <ScreenQueryDefinition.SortCriteria>
+              <SortCriterion>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ID_Den" />
+                </ChainExpression>
+              </SortCriterion>
+              <SortCriterion>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Vreme_pocetok" />
+                </ChainExpression>
+              </SortCriterion>
+            </ScreenQueryDefinition.SortCriteria>
           </ScreenQueryDefinition>
         </ScreenCollectionProperty.Query>
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Студенти/Properties[ActivitiesByStudent]/Query">
-              <ArgumentExpression
-                Parameter="Subjects">
-                <ChainExpression>
-                  <MemberExpression
-                    Member="Студенти/Properties[Subjects]" />
-                </ChainExpression>
-              </ArgumentExpression>
+              Target="Студенти/Properties[vw_Aktivnostis]/Query">
               <ArgumentExpression
                 Parameter="BR_Semestar">
                 <ChainExpression>
                   <MemberExpression
-                    Member="Студенти/Properties[BR_Semestar1]" />
+                    Member="Студенти/Properties[BR_Semestar]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -899,15 +982,15 @@
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
       <ScreenProperty
-        Name="Subjects"
-        PropertyType=":String">
+        Name="BR_Semestar"
+        PropertyType=":Int32">
         <ScreenProperty.Attributes>
           <Required />
         </ScreenProperty.Attributes>
       </ScreenProperty>
       <ScreenProperty
-        Name="BR_Semestar1"
-        PropertyType=":Int32">
+        Name="Br_indeks"
+        PropertyType=":String">
         <ScreenProperty.Attributes>
           <Required />
         </ScreenProperty.Attributes>

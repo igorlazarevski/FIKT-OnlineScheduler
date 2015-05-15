@@ -594,21 +594,6 @@ namespace LightSwitchApplication
         partial void GetProfesorByUsername_ExecuteFailed(string Korisnicko_ime, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActivitiesByStudent_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ActivitiesByStudent_Executing(string Subjects);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActivitiesByStudent_PreprocessQuery(string Subjects, ref global::System.Linq.IQueryable<global::LightSwitchApplication.vw_Aktivnosti> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ActivitiesByStudent_Executed(string Subjects, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.vw_Aktivnosti> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ActivitiesByStudent_ExecuteFailed(string Subjects, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1783,40 +1768,6 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.Profesor> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Profesor>)args[1];
                 d.GetProfesorByUsername_PreprocessQuery((string)args[0], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.vw_Aktivnosti>
-                __ActivitiesByStudentEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.On_line_rasporedDataService, global::LightSwitchApplication.vw_Aktivnosti>(
-                    "ActivitiesByStudent",
-                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__ActivitiesByStudent_CanExecute,
-                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__ActivitiesByStudent_Executing,
-                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__ActivitiesByStudent_Executed,
-                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__ActivitiesByStudent_Failed,
-                    global::LightSwitchApplication.On_line_rasporedDataService.DetailsClass.__ActivitiesByStudent_PreprocessQuery);
-            private static bool __ActivitiesByStudent_CanExecute(global::LightSwitchApplication.On_line_rasporedDataService d, bool r)
-            {
-                d.ActivitiesByStudent_CanExecute(ref r);
-                return r;
-            }
-            private static void __ActivitiesByStudent_Executing(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
-            {
-                d.ActivitiesByStudent_Executing((string)args[0]);
-            }
-            private static void __ActivitiesByStudent_Executed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
-            {
-                d.ActivitiesByStudent_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.vw_Aktivnosti>)args[1]);
-            }
-            private static void __ActivitiesByStudent_Failed(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args, global::System.Exception ex)
-            {
-                d.ActivitiesByStudent_ExecuteFailed((string)args[0], ex);
-            }
-            private static global::System.Linq.IQueryable __ActivitiesByStudent_PreprocessQuery(global::LightSwitchApplication.On_line_rasporedDataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.vw_Aktivnosti> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.vw_Aktivnosti>)args[1];
-                d.ActivitiesByStudent_PreprocessQuery((string)args[0], ref query);
                 return query;
             }
     
