@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ДодајАктивност">
+    Name="ModifyActivity">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
       <DisplayName
-        Value="Додај Активност" />
+        Value="Измени Активност" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ДодајАктивност/Properties[Aktivnost]" />
+                      Member="ModifyActivity/Properties[Aktivnost]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -108,10 +108,6 @@
                     Kind="Value"
                     DataType=":String?"
                     View="Microsoft.LightSwitch.MobileWeb:Text">
-                    <ContentItem.Attributes>
-                      <DisplayName
-                        Value="Предмет" />
-                    </ContentItem.Attributes>
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -437,10 +433,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showДодајАктивност">
+      Name="showModifyActivity">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ДодајАктивност" />
+          TargetScreen="ModifyActivity" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
         Name="Aktivnost"

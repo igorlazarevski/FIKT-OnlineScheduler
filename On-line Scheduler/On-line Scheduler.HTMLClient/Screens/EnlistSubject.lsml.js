@@ -1,6 +1,6 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
-myapp.ЗапишиПредмет.beforeApplyChanges = function (screen) {
+myapp.EnlistSubject.beforeApplyChanges = function (screen) {
     brKrediti += screen.Izbrani_predmeti.Predmet.br_krediti;
 
     if (brKrediti > 36) {
@@ -11,7 +11,7 @@ myapp.ЗапишиПредмет.beforeApplyChanges = function (screen) {
         return false;
     }
 };
-myapp.ЗапишиПредмет.created = function (screen) {
+myapp.EnlistSubject.created = function (screen) {
     // Write code here.
     msls.application.activeDataWorkspace.On_line_rasporedData.Students_SingleOrDefault(myapp.CurrentUser.UserName).execute().then(function (data) {
         screen.Izbrani_predmeti.Student = data.results[0];

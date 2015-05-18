@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="Администратор">
+    Name="Administrator">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Администратор/Properties[Predmets]" />
+                      Member="Administrator/Properties[Predmets]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -217,7 +217,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="Администратор/Properties[Predmets]" />
+                        Member="Administrator/Properties[Predmets]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -239,7 +239,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Администратор/Properties[Predmets]" />
+                          Member="Administrator/Properties[Predmets]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -270,12 +270,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајПредмет]">
+                          Target="!module/Methods[showAddSubject]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Predmets]" />
+                              Collection="Administrator/Properties[Predmets]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајПредмет]/Parameters[Predmet]" />
+                              TargetParameter="!module/Methods[showAddSubject]/Parameters[Predmet]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -306,16 +306,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showИзмениПредмет]">
+                          Target="!module/Methods[showModifySubject]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Predmets]" />
+                              Collection="Administrator/Properties[Predmets]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Predmet">
                             <ChainExpression>
                               <MemberExpression
-                                Member="Администратор/Properties[Predmets]" />
+                                Member="Administrator/Properties[Predmets]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -358,7 +358,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Администратор/Properties[Students]" />
+                      Member="Administrator/Properties[Students]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -499,7 +499,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Администратор/Properties[Students]" />
+                          Member="Administrator/Properties[Students]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -530,12 +530,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајСтудент]">
+                          Target="!module/Methods[showAddStudent]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Students]" />
+                              Collection="Administrator/Properties[Students]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајСтудент]/Parameters[Student]" />
+                              TargetParameter="!module/Methods[showAddStudent]/Parameters[Student]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -566,16 +566,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајСтудент]">
+                          Target="!module/Methods[showAddStudent]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Students]" />
+                              Collection="Administrator/Properties[Students]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Student">
                             <ChainExpression>
                               <MemberExpression
-                                Member="Администратор/Properties[Students]" />
+                                Member="Administrator/Properties[Students]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -618,7 +618,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Администратор/Properties[Profesors]" />
+                      Member="Administrator/Properties[Profesors]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -801,7 +801,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Администратор/Properties[Profesors]" />
+                          Member="Administrator/Properties[Profesors]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -832,12 +832,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајПрофесор]">
+                          Target="!module/Methods[showAddProfesor]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Profesors]" />
+                              Collection="Administrator/Properties[Profesors]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајПрофесор]/Parameters[Profesor]" />
+                              TargetParameter="!module/Methods[showAddProfesor]/Parameters[Profesor]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -868,16 +868,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајПрофесор]">
+                          Target="!module/Methods[showAddProfesor]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Profesors]" />
+                              Collection="Administrator/Properties[Profesors]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Profesor">
                             <ChainExpression>
                               <MemberExpression
-                                Member="Администратор/Properties[Profesors]" />
+                                Member="Administrator/Properties[Profesors]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -916,7 +916,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Администратор/Properties[Aktivnosts]" />
+                      Member="Administrator/Properties[Aktivnosts]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -924,6 +924,10 @@
                 Name="AktivnostsTemplate"
                 Kind="Details"
                 DataType="Aktivnost">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Акивност" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
@@ -1240,7 +1244,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Администратор/Properties[Aktivnosts]" />
+                          Member="Administrator/Properties[Aktivnosts]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -1271,12 +1275,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајАктивност]">
+                          Target="!module/Methods[showAddActivity]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Aktivnosts]" />
+                              Collection="Administrator/Properties[Aktivnosts]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" />
+                              TargetParameter="!module/Methods[showAddActivity]/Parameters[Aktivnost]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -1307,16 +1311,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showИзмениАктивност]">
+                          Target="!module/Methods[showModifyActivity]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Администратор/Properties[Aktivnosts]" />
+                              Collection="Administrator/Properties[Aktivnosts]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Aktivnost">
                             <ChainExpression>
                               <MemberExpression
-                                Member="Администратор/Properties[Aktivnosts]" />
+                                Member="Administrator/Properties[Aktivnosts]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -1415,7 +1419,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Администратор/Properties[Predmets]/Query" />
+              Target="Administrator/Properties[Predmets]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -1449,7 +1453,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Администратор/Properties[Students]/Query" />
+              Target="Administrator/Properties[Students]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -1483,7 +1487,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Администратор/Properties[Profesors]/Query" />
+              Target="Administrator/Properties[Profesors]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -1519,7 +1523,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Администратор/Properties[Aktivnosts]/Query" />
+              Target="Administrator/Properties[Aktivnosts]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -1527,10 +1531,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showАдминистратор">
+      Name="showAdministrator">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="Администратор" />
+          TargetScreen="Administrator" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

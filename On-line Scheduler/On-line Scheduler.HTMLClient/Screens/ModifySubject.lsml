@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ИзмениАктивност">
+    Name="ModifySubject">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
       <DisplayName
-        Value="Измени Активност" />
+        Value="Предмет" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -32,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="Aktivnost"
+              DataType="Predmet"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ИзмениАктивност/Properties[Aktivnost]" />
+                      Member="ModifySubject/Properties[Predmet]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -50,89 +50,139 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="Predmet"
-                  Kind="Details"
-                  DataType="Predmet">
+                  Name="ID_predmet"
+                  IsHidden="True"
+                  Kind="Value"
+                  DataType=":String">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="Предмет" />
+                      Value="ID предмет" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Aktivnost/Properties[Predmet]" />
+                          Member="Predmet/Properties[ID_predmet]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Ime"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Име" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Predmet/Properties[Ime]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="StatusPredmet"
+                  Kind="Details"
+                  DataType="StatusPredmet">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Статус" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Predmet/Properties[StatusPredmet]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate"
+                    Name="StatusPredmet1"
                     Kind="Details"
-                    DataType="Predmet"
-                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                    DataType="StatusPredmet">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
-                    <ContentItem
-                      Name="Ime"
-                      Kind="Value"
-                      DataType=":String?">
-                      <ContentItem.DataSource>
-                        <ScreenExpressionTree>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="Predmet/Properties[Ime]" />
-                          </ChainExpression>
-                        </ScreenExpressionTree>
-                      </ContentItem.DataSource>
-                    </ContentItem>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
-                  Name="Predmet1"
+                  Name="Nasoka1"
                   Kind="Details"
-                  DataType="Predmet"
-                  View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                  DataType="Nasoka">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Насока" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Aktivnost/Properties[Predmet]" />
+                          Member="Predmet/Properties[Nasoka1]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="Ime2"
-                    Kind="Value"
-                    DataType=":String?"
-                    View="Microsoft.LightSwitch.MobileWeb:Text">
+                    Name="Nasoka"
+                    Kind="Details"
+                    DataType="Nasoka">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="Predmet/Properties[Ime]" />
-                        </ChainExpression>
+                        <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
-                    <ContentItem.PropertySources>
-                      <ControlPropertySource
-                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
-                        <ScreenExpressionTree>
-                          <ChainExpression>
-                            <ConstantExpression
-                              Value="LeftAligned"
-                              ResultType=":String" />
-                          </ChainExpression>
-                        </ScreenExpressionTree>
-                      </ControlPropertySource>
-                    </ContentItem.PropertySources>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
+                  Name="br_krediti"
+                  Kind="Value"
+                  DataType=":Int32">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Бр кредити" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Predmet/Properties[br_krediti]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="right"
+                Kind="Group">
+                <ContentItem
                   Name="Profesor"
-                  IsHidden="True"
                   Kind="Details"
                   DataType="Profesor">
                   <ContentItem.Attributes>
@@ -143,12 +193,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Aktivnost/Properties[Profesor]" />
+                          Member="Predmet/Properties[Profesor]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate1"
+                    Name="Profesor1"
                     Kind="Details"
                     DataType="Profesor"
                     View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
@@ -186,25 +236,25 @@
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
-                  Name="Den"
+                  Name="Semestar"
                   Kind="Details"
-                  DataType="Den">
+                  DataType="Semestar">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="Ден" />
+                      Value="Семестар" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Aktivnost/Properties[Den]" />
+                          Member="Predmet/Properties[Semestar]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate4"
+                    Name="Semestar1"
                     Kind="Details"
-                    DataType="Den">
+                    DataType="Semestar">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
@@ -213,132 +263,18 @@
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
-                  Name="Prostorija"
-                  Kind="Details"
-                  DataType="Prostorija">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Просторија" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Aktivnost/Properties[Prostorija]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate2"
-                    Kind="Details"
-                    DataType="Prostorija">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="Otkazan"
+                  Name="ActivePredmet"
                   Kind="Value"
                   DataType=":Boolean?">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="Откажи" />
+                      Value="Активен Предмет" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Aktivnost/Properties[Otkazan]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="200"
-                          ResultType=":Double" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="400"
-                          ResultType=":Double" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="right"
-                Kind="Group">
-                <ContentItem
-                  Name="TipNaAktivnost"
-                  Kind="Details"
-                  DataType="TipNaAktivnost">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Тип на активност" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Aktivnost/Properties[TipNaAktivnost]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate3"
-                    Kind="Details"
-                    DataType="TipNaAktivnost">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="Vreme_pocetok"
-                  Kind="Value"
-                  DataType=":DateTime?">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Време почеток" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Aktivnost/Properties[Vreme_pocetok]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Vreme_kraj"
-                  Kind="Value"
-                  DataType=":DateTime?">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Време крај" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Aktivnost/Properties[Vreme_kraj]" />
+                          Member="Predmet/Properties[ActivePredmet]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -423,24 +359,82 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="Aktivnost"
-        PropertyType="Aktivnost">
+        Name="Predmet"
+        PropertyType="Predmet">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
       </ScreenProperty>
+      <ScreenCollectionProperty
+        Name="Profesors"
+        PageSize="45"
+        PropertyType="CollectionView$Profesor">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="ProfesorsQuery"
+            ReturnType="Profesor*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="On_line_rasporedData/Members[Profesors]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ModifySubject/Properties[Profesors]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="Aktivnosts"
+        PageSize="45"
+        PropertyType="CollectionView$Aktivnost">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="AktivnostsQuery"
+            ReturnType="Aktivnost*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ModifySubject/Properties[Profesors]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Aktivnosts" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ModifySubject/Properties[Aktivnosts]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showИзмениАктивност">
+      Name="showModifySubject">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ИзмениАктивност" />
+          TargetScreen="ModifySubject" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="Aktivnost"
-        ParameterType="Aktivnost" />
+        Name="Predmet"
+        ParameterType="Predmet" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

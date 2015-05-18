@@ -5806,8 +5806,8 @@
         },
         {
           "displayName": "Администратор",
-          "id": "Администратор",
-          "name": "Администратор",
+          "id": "Administrator",
+          "name": "Administrator",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -5842,7 +5842,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Администратор/Properties[Predmets]" }
+                          "member": { "__id": "Administrator/Properties[Predmets]" }
                         },
                         "childContentItems":
                         [
@@ -5971,7 +5971,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Администратор/Properties[Predmets]" }
+                                  "member": { "__id": "Administrator/Properties[Predmets]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Predmet/Methods[viewSelected]" }
@@ -5998,7 +5998,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Администратор/Properties[Predmets]" }
+                                  "member": { "__id": "Administrator/Properties[Predmets]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Predmet/Methods[showSearch]" }
@@ -6023,11 +6023,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајПредмет]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Predmets]" } },
+                              "target": { "__id": "!module/Methods[showAddSubject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Predmets]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајПредмет]/Parameters[Predmet]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddSubject]/Parameters[Predmet]" }
                               }
                             }
                           },
@@ -6048,18 +6048,18 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showИзмениПредмет]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Predmets]" } },
+                              "target": { "__id": "!module/Methods[showModifySubject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Predmets]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showИзмениПредмет]/Parameters[Predmet]" },
+                                  "parameter": { "__id": "!module/Methods[showModifySubject]/Parameters[Predmet]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "Администратор/Properties[Predmets]" }
+                                        "member": { "__id": "Administrator/Properties[Predmets]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Predmet/Properties[selectedItem]" }
@@ -6092,7 +6092,7 @@
                         "view": { "__id": ":Table" },
                         "dataSource":
                         {
-                          "member": { "__id": "Администратор/Properties[Students]" }
+                          "member": { "__id": "Administrator/Properties[Students]" }
                         },
                         "childContentItems":
                         [
@@ -6198,7 +6198,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Администратор/Properties[Students]" }
+                                  "member": { "__id": "Administrator/Properties[Students]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Student/Methods[showSearch]" }
@@ -6223,11 +6223,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајСтудент]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Students]" } },
+                              "target": { "__id": "!module/Methods[showAddStudent]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Students]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајСтудент]/Parameters[Student]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddStudent]/Parameters[Student]" }
                               }
                             }
                           },
@@ -6248,18 +6248,18 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајСтудент]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Students]" } },
+                              "target": { "__id": "!module/Methods[showAddStudent]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Students]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showДодајСтудент]/Parameters[Student]" },
+                                  "parameter": { "__id": "!module/Methods[showAddStudent]/Parameters[Student]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "Администратор/Properties[Students]" }
+                                        "member": { "__id": "Administrator/Properties[Students]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Student/Properties[selectedItem]" }
@@ -6292,7 +6292,7 @@
                         "view": { "__id": ":Table" },
                         "dataSource":
                         {
-                          "member": { "__id": "Администратор/Properties[Profesors]" }
+                          "member": { "__id": "Administrator/Properties[Profesors]" }
                         },
                         "childContentItems":
                         [
@@ -6421,7 +6421,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Администратор/Properties[Profesors]" }
+                                  "member": { "__id": "Administrator/Properties[Profesors]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Profesor/Methods[showSearch]" }
@@ -6446,11 +6446,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајПрофесор]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Profesors]" } },
+                              "target": { "__id": "!module/Methods[showAddProfesor]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Profesors]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајПрофесор]/Parameters[Profesor]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddProfesor]/Parameters[Profesor]" }
                               }
                             }
                           },
@@ -6471,18 +6471,18 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајПрофесор]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Profesors]" } },
+                              "target": { "__id": "!module/Methods[showAddProfesor]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Profesors]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showДодајПрофесор]/Parameters[Profesor]" },
+                                  "parameter": { "__id": "!module/Methods[showAddProfesor]/Parameters[Profesor]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "Администратор/Properties[Profesors]" }
+                                        "member": { "__id": "Administrator/Properties[Profesors]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Profesor/Properties[selectedItem]" }
@@ -6515,12 +6515,12 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Администратор/Properties[Aktivnosts]" }
+                          "member": { "__id": "Administrator/Properties[Aktivnosts]" }
                         },
                         "childContentItems":
                         [
                           {
-                            "displayName": "Aktivnost",
+                            "displayName": "Акивност",
                             "name": "AktivnostsTemplate",
                             "kind": "Details",
                             "view": { "__id": ":RowsLayout" },
@@ -6730,7 +6730,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Администратор/Properties[Aktivnosts]" }
+                                  "member": { "__id": "Administrator/Properties[Aktivnosts]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Aktivnost/Methods[showSearch]" }
@@ -6755,11 +6755,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајАктивност]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Aktivnosts]" } },
+                              "target": { "__id": "!module/Methods[showAddActivity]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Aktivnosts]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddActivity]/Parameters[Aktivnost]" }
                               }
                             }
                           },
@@ -6780,18 +6780,18 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showИзмениАктивност]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Администратор/Properties[Aktivnosts]" } },
+                              "target": { "__id": "!module/Methods[showModifyActivity]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Administrator/Properties[Aktivnosts]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showИзмениАктивност]/Parameters[Aktivnost]" },
+                                  "parameter": { "__id": "!module/Methods[showModifyActivity]/Parameters[Aktivnost]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "Администратор/Properties[Aktivnosts]" }
+                                        "member": { "__id": "Administrator/Properties[Aktivnosts]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Aktivnost/Properties[selectedItem]" }
@@ -6830,24 +6830,24 @@
           "methods":
           [
             {
-              "id": "Администратор/Methods[showTab]",
+              "id": "Administrator/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "Администратор/Methods[showTab]/Parameters[tabName]",
+                  "id": "Administrator/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Администратор/Methods[showDialog]",
+              "id": "Administrator/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "Администратор/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "Administrator/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -6857,14 +6857,14 @@
           "properties":
           [
             {
-              "id": "Администратор/Properties[Predmets]",
+              "id": "Administrator/Properties[Predmets]",
               "name": "Predmets",
               "pageSize": 45,
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "CollectionView$Predmet" },
               "query":
               {
-                "id": "Администратор/Properties[Predmets]/Query",
+                "id": "Administrator/Properties[Predmets]/Query",
                 "name": "PredmetsQuery",
                 "elementType": { "__id": "Predmet" },
                 "returnType": { "__id": "Predmet*" },
@@ -6889,18 +6889,18 @@
               },
               "source":
               {
-                "target": { "__id": "Администратор/Properties[Predmets]/Query" }
+                "target": { "__id": "Administrator/Properties[Predmets]/Query" }
               }
             },
             {
-              "id": "Администратор/Properties[Students]",
+              "id": "Administrator/Properties[Students]",
               "name": "Students",
               "pageSize": 45,
               "elementType": { "__id": "Student" },
               "propertyType": { "__id": "CollectionView$Student" },
               "query":
               {
-                "id": "Администратор/Properties[Students]/Query",
+                "id": "Administrator/Properties[Students]/Query",
                 "name": "StudentsQuery",
                 "elementType": { "__id": "Student" },
                 "returnType": { "__id": "Student*" },
@@ -6917,18 +6917,18 @@
               },
               "source":
               {
-                "target": { "__id": "Администратор/Properties[Students]/Query" }
+                "target": { "__id": "Administrator/Properties[Students]/Query" }
               }
             },
             {
-              "id": "Администратор/Properties[Profesors]",
+              "id": "Administrator/Properties[Profesors]",
               "name": "Profesors",
               "pageSize": 45,
               "elementType": { "__id": "Profesor" },
               "propertyType": { "__id": "CollectionView$Profesor" },
               "query":
               {
-                "id": "Администратор/Properties[Profesors]/Query",
+                "id": "Administrator/Properties[Profesors]/Query",
                 "name": "ProfesorsQuery",
                 "elementType": { "__id": "Profesor" },
                 "returnType": { "__id": "Profesor*" },
@@ -6945,18 +6945,18 @@
               },
               "source":
               {
-                "target": { "__id": "Администратор/Properties[Profesors]/Query" }
+                "target": { "__id": "Administrator/Properties[Profesors]/Query" }
               }
             },
             {
-              "id": "Администратор/Properties[Aktivnosts]",
+              "id": "Administrator/Properties[Aktivnosts]",
               "name": "Aktivnosts",
               "pageSize": 45,
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "CollectionView$Aktivnost" },
               "query":
               {
-                "id": "Администратор/Properties[Aktivnosts]/Query",
+                "id": "Administrator/Properties[Aktivnosts]/Query",
                 "name": "AktivnostsQuery",
                 "elementType": { "__id": "Aktivnost" },
                 "returnType": { "__id": "Aktivnost*" },
@@ -6981,15 +6981,15 @@
               },
               "source":
               {
-                "target": { "__id": "Администратор/Properties[Aktivnosts]/Query" }
+                "target": { "__id": "Administrator/Properties[Aktivnosts]/Query" }
               }
             }
           ]
         },
         {
           "displayName": "Додај Активност",
-          "id": "ДодајАктивност",
-          "name": "ДодајАктивност",
+          "id": "AddActivity",
+          "name": "AddActivity",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -7024,7 +7024,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ДодајАктивност/Properties[Aktivnost]" }
+                          "member": { "__id": "AddActivity/Properties[Aktivnost]" }
                         },
                         "childContentItems":
                         [
@@ -7312,24 +7312,24 @@
           "methods":
           [
             {
-              "id": "ДодајАктивност/Methods[showTab]",
+              "id": "AddActivity/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ДодајАктивност/Methods[showTab]/Parameters[tabName]",
+                  "id": "AddActivity/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ДодајАктивност/Methods[showDialog]",
+              "id": "AddActivity/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ДодајАктивност/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "AddActivity/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -7339,7 +7339,7 @@
           "properties":
           [
             {
-              "id": "ДодајАктивност/Properties[Aktivnost]",
+              "id": "AddActivity/Properties[Aktivnost]",
               "name": "Aktivnost",
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "Aktivnost" },
@@ -7349,8 +7349,8 @@
         },
         {
           "displayName": "Предмет",
-          "id": "ДодајПредмет",
-          "name": "ДодајПредмет",
+          "id": "AddSubject",
+          "name": "AddSubject",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -7385,7 +7385,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ДодајПредмет/Properties[Predmet]" }
+                          "member": { "__id": "AddSubject/Properties[Predmet]" }
                         },
                         "childContentItems":
                         [
@@ -7589,24 +7589,24 @@
           "methods":
           [
             {
-              "id": "ДодајПредмет/Methods[showTab]",
+              "id": "AddSubject/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ДодајПредмет/Methods[showTab]/Parameters[tabName]",
+                  "id": "AddSubject/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ДодајПредмет/Methods[showDialog]",
+              "id": "AddSubject/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ДодајПредмет/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "AddSubject/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -7616,21 +7616,21 @@
           "properties":
           [
             {
-              "id": "ДодајПредмет/Properties[Predmet]",
+              "id": "AddSubject/Properties[Predmet]",
               "name": "Predmet",
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "Predmet" },
               ":@IsParameter": { }
             },
             {
-              "id": "ДодајПредмет/Properties[Aktivnosts]",
+              "id": "AddSubject/Properties[Aktivnosts]",
               "name": "Aktivnosts",
               "pageSize": 15,
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "CollectionView$Aktivnost" },
               "query":
               {
-                "id": "ДодајПредмет/Properties[Aktivnosts]/Query",
+                "id": "AddSubject/Properties[Aktivnosts]/Query",
                 "name": "AktivnostsQuery",
                 "elementType": { "__id": "Aktivnost" },
                 "returnType": { "__id": "Aktivnost*" },
@@ -7639,7 +7639,7 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ДодајПредмет/Properties[Predmet]" }
+                      "member": { "__id": "AddSubject/Properties[Predmet]" }
                     },
                     {
                       "member": { "__id": "Predmet/Properties[Aktivnosts]" }
@@ -7649,15 +7649,15 @@
               },
               "source":
               {
-                "target": { "__id": "ДодајПредмет/Properties[Aktivnosts]/Query" }
+                "target": { "__id": "AddSubject/Properties[Aktivnosts]/Query" }
               }
             }
           ]
         },
         {
           "displayName": "Професор",
-          "id": "ДодајПрофесор",
-          "name": "ДодајПрофесор",
+          "id": "AddProfesor",
+          "name": "AddProfesor",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -7692,7 +7692,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ДодајПрофесор/Properties[Profesor]" }
+                          "member": { "__id": "AddProfesor/Properties[Profesor]" }
                         },
                         "childContentItems":
                         [
@@ -7845,7 +7845,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "ДодајПрофесор/Properties[Aktivnosts]" }
+                          "member": { "__id": "AddProfesor/Properties[Aktivnosts]" }
                         },
                         "childContentItems":
                         [
@@ -7915,7 +7915,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ДодајПрофесор/Properties[Aktivnosts]" }
+                                  "member": { "__id": "AddProfesor/Properties[Aktivnosts]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Aktivnost/Methods[viewSelected]" }
@@ -7943,11 +7943,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајАктивност]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "ДодајПрофесор/Properties[Aktivnosts]" } },
+                              "target": { "__id": "!module/Methods[showAddActivity]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "AddProfesor/Properties[Aktivnosts]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddActivity]/Parameters[Aktivnost]" }
                               }
                             }
                           }
@@ -7970,7 +7970,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "ДодајПрофесор/Properties[Predmets]" }
+                          "member": { "__id": "AddProfesor/Properties[Predmets]" }
                         },
                         "childContentItems":
                         [
@@ -8040,7 +8040,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ДодајПрофесор/Properties[Predmets]" }
+                                  "member": { "__id": "AddProfesor/Properties[Predmets]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Predmet/Methods[viewSelected]" }
@@ -8072,11 +8072,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајПредмет]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "ДодајПрофесор/Properties[Predmets]" } },
+                              "target": { "__id": "!module/Methods[showAddSubject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "AddProfesor/Properties[Predmets]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајПредмет]/Parameters[Predmet]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddSubject]/Parameters[Predmet]" }
                               }
                             }
                           }
@@ -8108,24 +8108,24 @@
           "methods":
           [
             {
-              "id": "ДодајПрофесор/Methods[showTab]",
+              "id": "AddProfesor/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ДодајПрофесор/Methods[showTab]/Parameters[tabName]",
+                  "id": "AddProfesor/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ДодајПрофесор/Methods[showDialog]",
+              "id": "AddProfesor/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ДодајПрофесор/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "AddProfesor/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -8135,21 +8135,21 @@
           "properties":
           [
             {
-              "id": "ДодајПрофесор/Properties[Profesor]",
+              "id": "AddProfesor/Properties[Profesor]",
               "name": "Profesor",
               "elementType": { "__id": "Profesor" },
               "propertyType": { "__id": "Profesor" },
               ":@IsParameter": { }
             },
             {
-              "id": "ДодајПрофесор/Properties[Aktivnosts]",
+              "id": "AddProfesor/Properties[Aktivnosts]",
               "name": "Aktivnosts",
               "pageSize": 15,
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "CollectionView$Aktivnost" },
               "query":
               {
-                "id": "ДодајПрофесор/Properties[Aktivnosts]/Query",
+                "id": "AddProfesor/Properties[Aktivnosts]/Query",
                 "name": "AktivnostsQuery",
                 "elementType": { "__id": "Aktivnost" },
                 "returnType": { "__id": "Aktivnost*" },
@@ -8158,7 +8158,7 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ДодајПрофесор/Properties[Profesor]" }
+                      "member": { "__id": "AddProfesor/Properties[Profesor]" }
                     },
                     {
                       "member": { "__id": "Profesor/Properties[Aktivnosts]" }
@@ -8168,18 +8168,18 @@
               },
               "source":
               {
-                "target": { "__id": "ДодајПрофесор/Properties[Aktivnosts]/Query" }
+                "target": { "__id": "AddProfesor/Properties[Aktivnosts]/Query" }
               }
             },
             {
-              "id": "ДодајПрофесор/Properties[Predmets]",
+              "id": "AddProfesor/Properties[Predmets]",
               "name": "Predmets",
               "pageSize": 15,
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "CollectionView$Predmet" },
               "query":
               {
-                "id": "ДодајПрофесор/Properties[Predmets]/Query",
+                "id": "AddProfesor/Properties[Predmets]/Query",
                 "name": "PredmetsQuery",
                 "elementType": { "__id": "Predmet" },
                 "returnType": { "__id": "Predmet*" },
@@ -8188,7 +8188,7 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ДодајПрофесор/Properties[Profesor]" }
+                      "member": { "__id": "AddProfesor/Properties[Profesor]" }
                     },
                     {
                       "member": { "__id": "Profesor/Properties[Predmets]" }
@@ -8198,15 +8198,15 @@
               },
               "source":
               {
-                "target": { "__id": "ДодајПрофесор/Properties[Predmets]/Query" }
+                "target": { "__id": "AddProfesor/Properties[Predmets]/Query" }
               }
             }
           ]
         },
         {
           "displayName": "Студент",
-          "id": "ДодајСтудент",
-          "name": "ДодајСтудент",
+          "id": "AddStudent",
+          "name": "AddStudent",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -8241,7 +8241,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ДодајСтудент/Properties[Student]" }
+                          "member": { "__id": "AddStudent/Properties[Student]" }
                         },
                         "childContentItems":
                         [
@@ -8419,24 +8419,24 @@
           "methods":
           [
             {
-              "id": "ДодајСтудент/Methods[showTab]",
+              "id": "AddStudent/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ДодајСтудент/Methods[showTab]/Parameters[tabName]",
+                  "id": "AddStudent/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ДодајСтудент/Methods[showDialog]",
+              "id": "AddStudent/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ДодајСтудент/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "AddStudent/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -8446,7 +8446,7 @@
           "properties":
           [
             {
-              "id": "ДодајСтудент/Properties[Student]",
+              "id": "AddStudent/Properties[Student]",
               "name": "Student",
               "elementType": { "__id": "Student" },
               "propertyType": { "__id": "Student" },
@@ -8455,9 +8455,9 @@
           ]
         },
         {
-          "displayName": "ЗапишиПредмет",
-          "id": "ЗапишиПредмет",
-          "name": "ЗапишиПредмет",
+          "displayName": "Запиши предмет",
+          "id": "EnlistSubject",
+          "name": "EnlistSubject",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -8465,7 +8465,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "ЗапишиПредмет",
+            "displayName": "Запиши предмет",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -8492,7 +8492,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ЗапишиПредмет/Properties[Izbrani_predmeti]" }
+                          "member": { "__id": "EnlistSubject/Properties[Izbrani_predmeti]" }
                         },
                         "childContentItems":
                         [
@@ -8651,24 +8651,24 @@
           "methods":
           [
             {
-              "id": "ЗапишиПредмет/Methods[showTab]",
+              "id": "EnlistSubject/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ЗапишиПредмет/Methods[showTab]/Parameters[tabName]",
+                  "id": "EnlistSubject/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ЗапишиПредмет/Methods[showDialog]",
+              "id": "EnlistSubject/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ЗапишиПредмет/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "EnlistSubject/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -8678,7 +8678,7 @@
           "properties":
           [
             {
-              "id": "ЗапишиПредмет/Properties[Izbrani_predmeti]",
+              "id": "EnlistSubject/Properties[Izbrani_predmeti]",
               "name": "Izbrani_predmeti",
               "elementType": { "__id": "Izbrani_predmeti" },
               "propertyType": { "__id": "Izbrani_predmeti" },
@@ -8688,8 +8688,8 @@
         },
         {
           "displayName": "Измени Активност",
-          "id": "ИзмениАктивност",
-          "name": "ИзмениАктивност",
+          "id": "ModifyActivity",
+          "name": "ModifyActivity",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -8724,7 +8724,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениАктивност/Properties[Aktivnost]" }
+                          "member": { "__id": "ModifyActivity/Properties[Aktivnost]" }
                         },
                         "childContentItems":
                         [
@@ -9012,24 +9012,24 @@
           "methods":
           [
             {
-              "id": "ИзмениАктивност/Methods[showTab]",
+              "id": "ModifyActivity/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ИзмениАктивност/Methods[showTab]/Parameters[tabName]",
+                  "id": "ModifyActivity/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ИзмениАктивност/Methods[showDialog]",
+              "id": "ModifyActivity/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ИзмениАктивност/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "ModifyActivity/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -9039,7 +9039,7 @@
           "properties":
           [
             {
-              "id": "ИзмениАктивност/Properties[Aktivnost]",
+              "id": "ModifyActivity/Properties[Aktivnost]",
               "name": "Aktivnost",
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "Aktivnost" },
@@ -9049,8 +9049,8 @@
         },
         {
           "displayName": "Предмет",
-          "id": "ИзмениПредмет",
-          "name": "ИзмениПредмет",
+          "id": "ModifySubject",
+          "name": "ModifySubject",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -9085,7 +9085,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениПредмет/Properties[Predmet]" }
+                          "member": { "__id": "ModifySubject/Properties[Predmet]" }
                         },
                         "childContentItems":
                         [
@@ -9315,24 +9315,24 @@
           "methods":
           [
             {
-              "id": "ИзмениПредмет/Methods[showTab]",
+              "id": "ModifySubject/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ИзмениПредмет/Methods[showTab]/Parameters[tabName]",
+                  "id": "ModifySubject/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ИзмениПредмет/Methods[showDialog]",
+              "id": "ModifySubject/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ИзмениПредмет/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "ModifySubject/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -9342,21 +9342,21 @@
           "properties":
           [
             {
-              "id": "ИзмениПредмет/Properties[Predmet]",
+              "id": "ModifySubject/Properties[Predmet]",
               "name": "Predmet",
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "Predmet" },
               ":@IsParameter": { }
             },
             {
-              "id": "ИзмениПредмет/Properties[Profesors]",
+              "id": "ModifySubject/Properties[Profesors]",
               "name": "Profesors",
               "pageSize": 45,
               "elementType": { "__id": "Profesor" },
               "propertyType": { "__id": "CollectionView$Profesor" },
               "query":
               {
-                "id": "ИзмениПредмет/Properties[Profesors]/Query",
+                "id": "ModifySubject/Properties[Profesors]/Query",
                 "name": "ProfesorsQuery",
                 "elementType": { "__id": "Profesor" },
                 "returnType": { "__id": "Profesor*" },
@@ -9367,18 +9367,18 @@
               },
               "source":
               {
-                "target": { "__id": "ИзмениПредмет/Properties[Profesors]/Query" }
+                "target": { "__id": "ModifySubject/Properties[Profesors]/Query" }
               }
             },
             {
-              "id": "ИзмениПредмет/Properties[Aktivnosts]",
+              "id": "ModifySubject/Properties[Aktivnosts]",
               "name": "Aktivnosts",
               "pageSize": 45,
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "CollectionView$Aktivnost" },
               "query":
               {
-                "id": "ИзмениПредмет/Properties[Aktivnosts]/Query",
+                "id": "ModifySubject/Properties[Aktivnosts]/Query",
                 "name": "AktivnostsQuery",
                 "elementType": { "__id": "Aktivnost" },
                 "returnType": { "__id": "Aktivnost*" },
@@ -9387,7 +9387,7 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ИзмениПредмет/Properties[Profesors]" }
+                      "member": { "__id": "ModifySubject/Properties[Profesors]" }
                     },
                     {
                       "member": { "__id": "CollectionView$Profesor/Properties[selectedItem]" }
@@ -9400,15 +9400,15 @@
               },
               "source":
               {
-                "target": { "__id": "ИзмениПредмет/Properties[Aktivnosts]/Query" }
+                "target": { "__id": "ModifySubject/Properties[Aktivnosts]/Query" }
               }
             }
           ]
         },
         {
-          "displayName": "ПрофесороТ",
-          "id": "ИзмениПрофесор",
-          "name": "ИзмениПрофесор",
+          "displayName": "Професор",
+          "id": "ModifyProfesor",
+          "name": "ModifyProfesor",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -9416,7 +9416,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "ПрофесороТ",
+            "displayName": "Професор",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -9443,7 +9443,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениПрофесор/Properties[Profesor]" }
+                          "member": { "__id": "ModifyProfesor/Properties[Profesor]" }
                         },
                         "childContentItems":
                         [
@@ -9595,7 +9595,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениПрофесор/Properties[Aktivnosts]" }
+                          "member": { "__id": "ModifyProfesor/Properties[Aktivnosts]" }
                         },
                         "childContentItems":
                         [
@@ -9683,7 +9683,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ИзмениПрофесор/Properties[Aktivnosts]" }
+                                  "member": { "__id": "ModifyProfesor/Properties[Aktivnosts]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Aktivnost/Methods[viewSelected]" }
@@ -9709,7 +9709,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениПрофесор/Properties[Predmets]" }
+                          "member": { "__id": "ModifyProfesor/Properties[Predmets]" }
                         },
                         "childContentItems":
                         [
@@ -9779,7 +9779,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "ИзмениПрофесор/Properties[Predmets]" }
+                                  "member": { "__id": "ModifyProfesor/Properties[Predmets]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Predmet/Methods[viewSelected]" }
@@ -9815,24 +9815,24 @@
           "methods":
           [
             {
-              "id": "ИзмениПрофесор/Methods[showTab]",
+              "id": "ModifyProfesor/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ИзмениПрофесор/Methods[showTab]/Parameters[tabName]",
+                  "id": "ModifyProfesor/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ИзмениПрофесор/Methods[showDialog]",
+              "id": "ModifyProfesor/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ИзмениПрофесор/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "ModifyProfesor/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -9842,21 +9842,21 @@
           "properties":
           [
             {
-              "id": "ИзмениПрофесор/Properties[Profesor]",
+              "id": "ModifyProfesor/Properties[Profesor]",
               "name": "Profesor",
               "elementType": { "__id": "Profesor" },
               "propertyType": { "__id": "Profesor" },
               ":@IsParameter": { }
             },
             {
-              "id": "ИзмениПрофесор/Properties[Aktivnosts]",
+              "id": "ModifyProfesor/Properties[Aktivnosts]",
               "name": "Aktivnosts",
               "pageSize": 15,
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "CollectionView$Aktivnost" },
               "query":
               {
-                "id": "ИзмениПрофесор/Properties[Aktivnosts]/Query",
+                "id": "ModifyProfesor/Properties[Aktivnosts]/Query",
                 "name": "AktivnostsQuery",
                 "elementType": { "__id": "Aktivnost" },
                 "returnType": { "__id": "Aktivnost*" },
@@ -9865,7 +9865,7 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ИзмениПрофесор/Properties[Profesor]" }
+                      "member": { "__id": "ModifyProfesor/Properties[Profesor]" }
                     },
                     {
                       "member": { "__id": "Profesor/Properties[Aktivnosts]" }
@@ -9875,18 +9875,18 @@
               },
               "source":
               {
-                "target": { "__id": "ИзмениПрофесор/Properties[Aktivnosts]/Query" }
+                "target": { "__id": "ModifyProfesor/Properties[Aktivnosts]/Query" }
               }
             },
             {
-              "id": "ИзмениПрофесор/Properties[Predmets]",
+              "id": "ModifyProfesor/Properties[Predmets]",
               "name": "Predmets",
               "pageSize": 15,
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "CollectionView$Predmet" },
               "query":
               {
-                "id": "ИзмениПрофесор/Properties[Predmets]/Query",
+                "id": "ModifyProfesor/Properties[Predmets]/Query",
                 "name": "PredmetsQuery",
                 "elementType": { "__id": "Predmet" },
                 "returnType": { "__id": "Predmet*" },
@@ -9895,7 +9895,7 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ИзмениПрофесор/Properties[Profesor]" }
+                      "member": { "__id": "ModifyProfesor/Properties[Profesor]" }
                     },
                     {
                       "member": { "__id": "Profesor/Properties[Predmets]" }
@@ -9905,15 +9905,15 @@
               },
               "source":
               {
-                "target": { "__id": "ИзмениПрофесор/Properties[Predmets]/Query" }
+                "target": { "__id": "ModifyProfesor/Properties[Predmets]/Query" }
               }
             }
           ]
         },
         {
           "displayName": "Студент",
-          "id": "ИзмениСтудент",
-          "name": "ИзмениСтудент",
+          "id": "ModifyStudent",
+          "name": "ModifyStudent",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -9948,7 +9948,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ИзмениСтудент/Properties[Student]" }
+                          "member": { "__id": "ModifyStudent/Properties[Student]" }
                         },
                         "childContentItems":
                         [
@@ -10116,24 +10116,24 @@
           "methods":
           [
             {
-              "id": "ИзмениСтудент/Methods[showTab]",
+              "id": "ModifyStudent/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ИзмениСтудент/Methods[showTab]/Parameters[tabName]",
+                  "id": "ModifyStudent/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ИзмениСтудент/Methods[showDialog]",
+              "id": "ModifyStudent/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ИзмениСтудент/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "ModifyStudent/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -10143,7 +10143,7 @@
           "properties":
           [
             {
-              "id": "ИзмениСтудент/Properties[Student]",
+              "id": "ModifyStudent/Properties[Student]",
               "name": "Student",
               "elementType": { "__id": "Student" },
               "propertyType": { "__id": "Student" },
@@ -10153,8 +10153,8 @@
         },
         {
           "displayName": "Професор",
-          "id": "Професор",
-          "name": "Професор",
+          "id": "Profesors",
+          "name": "Profesors",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -10162,7 +10162,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "Root Content Item",
+            "displayName": "Професор",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -10189,7 +10189,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Професор/Properties[Predmets]" }
+                          "member": { "__id": "Profesors/Properties[Predmets]" }
                         },
                         "childContentItems":
                         [
@@ -10275,7 +10275,7 @@
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "Професор/Methods[Predmets_ItemTap]" }
+                              "target": { "__id": "Profesors/Methods[Predmets_ItemTap]" }
                             }
                           }
                         ]
@@ -10297,7 +10297,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Професор/Properties[Predmets]" }
+                                  "member": { "__id": "Profesors/Properties[Predmets]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Predmet/Methods[showSearch]" }
@@ -10323,7 +10323,7 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "Професор/Methods[ShowAtendees_Tap]" }
+                              "target": { "__id": "Profesors/Methods[ShowAtendees_Tap]" }
                             }
                           },
                           {
@@ -10348,7 +10348,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Професор/Properties[Aktivnosts]" }
+                          "member": { "__id": "Profesors/Properties[Aktivnosts]" }
                         },
                         "childContentItems":
                         [
@@ -10510,7 +10510,7 @@
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "Професор/Methods[Aktivnosts_ItemTap]" }
+                              "target": { "__id": "Profesors/Methods[Aktivnosts_ItemTap]" }
                             }
                           }
                         ]
@@ -10532,7 +10532,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Професор/Properties[Aktivnosts]" }
+                                  "member": { "__id": "Profesors/Properties[Aktivnosts]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Aktivnost/Methods[showSearch]" }
@@ -10557,11 +10557,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showДодајАктивност]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Професор/Properties[Aktivnosts]" } },
+                              "target": { "__id": "!module/Methods[showAddActivity]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Profesors/Properties[Aktivnosts]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddActivity]/Parameters[Aktivnost]" }
                               }
                             }
                           },
@@ -10582,18 +10582,18 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showИзмениАктивност]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Професор/Properties[Aktivnosts]" } },
+                              "target": { "__id": "!module/Methods[showModifyActivity]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Profesors/Properties[Aktivnosts]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showИзмениАктивност]/Parameters[Aktivnost]" },
+                                  "parameter": { "__id": "!module/Methods[showModifyActivity]/Parameters[Aktivnost]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "Професор/Properties[Aktivnosts]" }
+                                        "member": { "__id": "Profesors/Properties[Aktivnosts]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Aktivnost/Properties[selectedItem]" }
@@ -10622,7 +10622,7 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "Професор/Methods[CancelActivity_Tap]" }
+                              "target": { "__id": "Profesors/Methods[CancelActivity_Tap]" }
                             }
                           },
                           {
@@ -10648,7 +10648,7 @@
                         "view": { "__id": ":Table" },
                         "dataSource":
                         {
-                          "member": { "__id": "Професор/Properties[SpisokPolaganjes]" }
+                          "member": { "__id": "Profesors/Properties[SpisokPolaganjes]" }
                         },
                         "childContentItems":
                         [
@@ -10792,7 +10792,7 @@
                         "view": { "__id": ":Table" },
                         "dataSource":
                         {
-                          "member": { "__id": "Професор/Properties[SpisokPolaganjes]" }
+                          "member": { "__id": "Profesors/Properties[SpisokPolaganjes]" }
                         },
                         "childContentItems":
                         [
@@ -10865,73 +10865,73 @@
           "methods":
           [
             {
-              "id": "Професор/Methods[showTab]",
+              "id": "Profesors/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "Професор/Methods[showTab]/Parameters[tabName]",
+                  "id": "Profesors/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Професор/Methods[showDialog]",
+              "id": "Profesors/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "Професор/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "Profesors/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Професор/Methods[Predmets_ItemTap]",
+              "id": "Profesors/Methods[Predmets_ItemTap]",
               "name": "Predmets_ItemTap"
             },
             {
-              "id": "Професор/Methods[Predmets_ItemTap1]",
+              "id": "Profesors/Methods[Predmets_ItemTap1]",
               "name": "Predmets_ItemTap1"
             },
             {
-              "id": "Професор/Methods[Predmets_ItemTap2]",
+              "id": "Profesors/Methods[Predmets_ItemTap2]",
               "name": "Predmets_ItemTap2"
             },
             {
-              "id": "Професор/Methods[ShowAtendees]",
+              "id": "Profesors/Methods[ShowAtendees]",
               "name": "ShowAtendees"
             },
             {
-              "id": "Професор/Methods[ShowAtendees_Tap]",
+              "id": "Profesors/Methods[ShowAtendees_Tap]",
               "name": "ShowAtendees_Tap"
             },
             {
-              "id": "Професор/Methods[CancelActivity]",
+              "id": "Profesors/Methods[CancelActivity]",
               "name": "CancelActivity"
             },
             {
-              "id": "Професор/Methods[CancelActivity_Tap]",
+              "id": "Profesors/Methods[CancelActivity_Tap]",
               "name": "CancelActivity_Tap"
             },
             {
-              "id": "Професор/Methods[Aktivnosts_ItemTap]",
+              "id": "Profesors/Methods[Aktivnosts_ItemTap]",
               "name": "Aktivnosts_ItemTap"
             }
           ],
           "properties":
           [
             {
-              "id": "Професор/Properties[Predmets]",
+              "id": "Profesors/Properties[Predmets]",
               "name": "Predmets",
               "pageSize": 45,
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "CollectionView$Predmet" },
               "query":
               {
-                "id": "Професор/Properties[Predmets]/Query",
+                "id": "Profesors/Properties[Predmets]/Query",
                 "name": "PredmetsQuery",
                 "elementType": { "__id": "Predmet" },
                 "returnType": { "__id": "Predmet*" },
@@ -10959,18 +10959,18 @@
               },
               "source":
               {
-                "target": { "__id": "Професор/Properties[Predmets]/Query" }
+                "target": { "__id": "Profesors/Properties[Predmets]/Query" }
               }
             },
             {
-              "id": "Професор/Properties[Aktivnosts]",
+              "id": "Profesors/Properties[Aktivnosts]",
               "name": "Aktivnosts",
               "pageSize": 45,
               "elementType": { "__id": "Aktivnost" },
               "propertyType": { "__id": "CollectionView$Aktivnost" },
               "query":
               {
-                "id": "Професор/Properties[Aktivnosts]/Query",
+                "id": "Profesors/Properties[Aktivnosts]/Query",
                 "name": "AktivnostsQuery",
                 "elementType": { "__id": "Aktivnost" },
                 "returnType": { "__id": "Aktivnost*" },
@@ -10995,18 +10995,18 @@
               },
               "source":
               {
-                "target": { "__id": "Професор/Properties[Aktivnosts]/Query" }
+                "target": { "__id": "Profesors/Properties[Aktivnosts]/Query" }
               }
             },
             {
-              "id": "Професор/Properties[SpisokPolaganjes]",
+              "id": "Profesors/Properties[SpisokPolaganjes]",
               "name": "SpisokPolaganjes",
               "pageSize": 45,
               "elementType": { "__id": "SpisokPolaganje" },
               "propertyType": { "__id": "CollectionView$SpisokPolaganje" },
               "query":
               {
-                "id": "Професор/Properties[SpisokPolaganjes]/Query",
+                "id": "Profesors/Properties[SpisokPolaganjes]/Query",
                 "name": "SpisokPolaganjesQuery",
                 "elementType": { "__id": "SpisokPolaganje" },
                 "returnType": { "__id": "SpisokPolaganje*" },
@@ -11027,7 +11027,7 @@
                   },
                   "right":
                   {
-                    "parameter": { "__id": "Професор/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]" }
+                    "parameter": { "__id": "Profesors/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]" }
                   }
                 },
                 "source":
@@ -11037,7 +11037,7 @@
                 "parameters":
                 [
                   {
-                    "id": "Професор/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]",
+                    "id": "Profesors/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]",
                     "name": "ID_predmet",
                     "parameterType": { "__id": ":String?" }
                   }
@@ -11045,17 +11045,17 @@
               },
               "source":
               {
-                "target": { "__id": "Професор/Properties[SpisokPolaganjes]/Query" },
+                "target": { "__id": "Profesors/Properties[SpisokPolaganjes]/Query" },
                 "arguments":
                 [
                   {
-                    "parameter": { "__id": "Професор/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]" },
+                    "parameter": { "__id": "Profesors/Properties[SpisokPolaganjes]/Query/Parameters[ID_predmet]" },
                     "value":
                     {
                       "links":
                       [
                         {
-                          "member": { "__id": "Професор/Properties[ID_predmet]" }
+                          "member": { "__id": "Profesors/Properties[ID_predmet]" }
                         }
                       ]
                     }
@@ -11064,7 +11064,7 @@
               }
             },
             {
-              "id": "Професор/Properties[ID_predmet]",
+              "id": "Profesors/Properties[ID_predmet]",
               "name": "ID_predmet",
               "elementType": { "__id": ":String" },
               "propertyType": { "__id": ":String" },
@@ -11074,8 +11074,8 @@
         },
         {
           "displayName": "Распоред",
-          "id": "Распоред",
-          "name": "Распоред",
+          "id": "Schedule",
+          "name": "Schedule",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -11083,7 +11083,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "Root Content Item",
+            "displayName": "Распоред",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -11110,7 +11110,7 @@
                         "view": { "__id": ":Text" },
                         "dataSource":
                         {
-                          "member": { "__id": "Распоред/Properties[BR_Semestar]" }
+                          "member": { "__id": "Schedule/Properties[BR_Semestar]" }
                         },
                         "propertySources":
                         [
@@ -11127,7 +11127,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Распоред/Properties[vw_Aktivnostis]" }
+                          "member": { "__id": "Schedule/Properties[vw_Aktivnostis]" }
                         },
                         "childContentItems":
                         [
@@ -11283,7 +11283,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Распоред/Properties[vw_Aktivnostis]" }
+                                  "member": { "__id": "Schedule/Properties[vw_Aktivnostis]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$vw_Aktivnosti/Methods[viewSelected]" }
@@ -11310,7 +11310,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Распоред/Properties[vw_Aktivnostis]" }
+                                  "member": { "__id": "Schedule/Properties[vw_Aktivnostis]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$vw_Aktivnosti/Methods[showSearch]" }
@@ -11336,7 +11336,7 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "Распоред/Methods[ScheduleExam_Tap]" }
+                              "target": { "__id": "Schedule/Methods[ScheduleExam_Tap]" }
                             }
                           },
                           {
@@ -11352,7 +11352,7 @@
                         "property": { "__id": ":RootControl/Properties[Tap]" },
                         "source":
                         {
-                          "target": { "__id": "Распоред/Methods[vw_AktivnostiList_Tap]" }
+                          "target": { "__id": "Schedule/Methods[vw_AktivnostiList_Tap]" }
                         }
                       }
                     ]
@@ -11377,57 +11377,57 @@
           "methods":
           [
             {
-              "id": "Распоред/Methods[showTab]",
+              "id": "Schedule/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "Распоред/Methods[showTab]/Parameters[tabName]",
+                  "id": "Schedule/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Распоред/Methods[showDialog]",
+              "id": "Schedule/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "Распоред/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "Schedule/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Распоред/Methods[ShowAddEditActivity_Tap]",
+              "id": "Schedule/Methods[ShowAddEditActivity_Tap]",
               "name": "ShowAddEditActivity_Tap"
             },
             {
-              "id": "Распоред/Methods[ScheduleExam]",
+              "id": "Schedule/Methods[ScheduleExam]",
               "name": "ScheduleExam"
             },
             {
-              "id": "Распоред/Methods[ScheduleExam_Tap]",
+              "id": "Schedule/Methods[ScheduleExam_Tap]",
               "name": "ScheduleExam_Tap"
             },
             {
-              "id": "Распоред/Methods[vw_AktivnostiList_Tap]",
+              "id": "Schedule/Methods[vw_AktivnostiList_Tap]",
               "name": "vw_AktivnostiList_Tap"
             }
           ],
           "properties":
           [
             {
-              "id": "Распоред/Properties[vw_Aktivnostis]",
+              "id": "Schedule/Properties[vw_Aktivnostis]",
               "name": "vw_Aktivnostis",
               "pageSize": 45,
               "elementType": { "__id": "vw_Aktivnosti" },
               "propertyType": { "__id": "CollectionView$vw_Aktivnosti" },
               "query":
               {
-                "id": "Распоред/Properties[vw_Aktivnostis]/Query",
+                "id": "Schedule/Properties[vw_Aktivnostis]/Query",
                 "name": "vw_AktivnostisQuery",
                 "elementType": { "__id": "vw_Aktivnosti" },
                 "returnType": { "__id": "vw_Aktivnosti*" },
@@ -11445,7 +11445,7 @@
                   },
                   "right":
                   {
-                    "parameter": { "__id": "Распоред/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" }
+                    "parameter": { "__id": "Schedule/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" }
                   }
                 },
                 "source":
@@ -11455,7 +11455,7 @@
                 "parameters":
                 [
                   {
-                    "id": "Распоред/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]",
+                    "id": "Schedule/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]",
                     "name": "BR_Semestar",
                     "parameterType": { "__id": ":Int32?" }
                   }
@@ -11469,17 +11469,17 @@
               },
               "source":
               {
-                "target": { "__id": "Распоред/Properties[vw_Aktivnostis]/Query" },
+                "target": { "__id": "Schedule/Properties[vw_Aktivnostis]/Query" },
                 "arguments":
                 [
                   {
-                    "parameter": { "__id": "Распоред/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" },
+                    "parameter": { "__id": "Schedule/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" },
                     "value":
                     {
                       "links":
                       [
                         {
-                          "member": { "__id": "Распоред/Properties[BR_Semestar]" }
+                          "member": { "__id": "Schedule/Properties[BR_Semestar]" }
                         }
                       ]
                     }
@@ -11488,7 +11488,7 @@
               }
             },
             {
-              "id": "Распоред/Properties[BR_Semestar]",
+              "id": "Schedule/Properties[BR_Semestar]",
               "name": "BR_Semestar",
               "elementType": { "__id": ":Int32" },
               "propertyType": { "__id": ":Int32" },
@@ -11498,8 +11498,8 @@
         },
         {
           "displayName": "Студент",
-          "id": "Студенти",
-          "name": "Студенти",
+          "id": "Students",
+          "name": "Students",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -11534,7 +11534,7 @@
                         "view": { "__id": ":Text" },
                         "dataSource":
                         {
-                          "member": { "__id": "Студенти/Properties[BR_Semestar]" }
+                          "member": { "__id": "Students/Properties[BR_Semestar]" }
                         },
                         "propertySources":
                         [
@@ -11551,7 +11551,7 @@
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Студенти/Properties[vw_Aktivnostis]" }
+                          "member": { "__id": "Students/Properties[vw_Aktivnostis]" }
                         },
                         "childContentItems":
                         [
@@ -11697,7 +11697,7 @@
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "Студенти/Methods[vw_Aktivnostis_ItemTap]" }
+                              "target": { "__id": "Students/Methods[vw_Aktivnostis_ItemTap]" }
                             }
                           }
                         ]
@@ -11719,7 +11719,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Студенти/Properties[vw_Aktivnostis]" }
+                                  "member": { "__id": "Students/Properties[vw_Aktivnostis]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$vw_Aktivnosti/Methods[showSearch]" }
@@ -11745,7 +11745,7 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "Студенти/Methods[ScheduleExam]" }
+                              "target": { "__id": "Students/Methods[ScheduleExam]" }
                             }
                           },
                           {
@@ -11764,13 +11764,30 @@
                     "childContentItems":
                     [
                       {
+                        "displayName": "Индекс: ",
+                        "name": "Br_indeks",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Students/Properties[Br_indeks]" }
+                        },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                            "value": "LeftAligned"
+                          }
+                        ]
+                      },
+                      {
                         "displayName": "Izbrani predmetis",
                         "name": "Izbrani_predmetis",
                         "kind": "Collection",
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "Студенти/Properties[Izbrani_predmetis]" }
+                          "member": { "__id": "Students/Properties[Izbrani_predmetis]" }
                         },
                         "childContentItems":
                         [
@@ -11834,7 +11851,7 @@
                                 ]
                               },
                               {
-                                "displayName": "Predmet",
+                                "displayName": "Предмет",
                                 "name": "Predmet",
                                 "kind": "Details",
                                 "view": { "__id": ":RowsLayout" },
@@ -12008,7 +12025,7 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "Студенти/Properties[Izbrani_predmetis]" }
+                                  "member": { "__id": "Students/Properties[Izbrani_predmetis]" }
                                 },
                                 {
                                   "target": { "__id": "CollectionView$Izbrani_predmeti/Methods[showSearch]" }
@@ -12033,11 +12050,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showЗапишиПредмет]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "Студенти/Properties[Izbrani_predmetis]" } },
+                              "target": { "__id": "!module/Methods[showEnlistSubject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "Students/Properties[Izbrani_predmetis]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showЗапишиПредмет]/Parameters[Izbrani_predmeti]" }
+                                "targetParameter": { "__id": "!module/Methods[showEnlistSubject]/Parameters[Izbrani_predmeti]" }
                               }
                             }
                           },
@@ -12069,49 +12086,49 @@
           "methods":
           [
             {
-              "id": "Студенти/Methods[showTab]",
+              "id": "Students/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "Студенти/Methods[showTab]/Parameters[tabName]",
+                  "id": "Students/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Студенти/Methods[showDialog]",
+              "id": "Students/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "Студенти/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "Students/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "Студенти/Methods[ScheduleExam]",
+              "id": "Students/Methods[ScheduleExam]",
               "name": "ScheduleExam"
             },
             {
-              "id": "Студенти/Methods[vw_Aktivnostis_ItemTap]",
+              "id": "Students/Methods[vw_Aktivnostis_ItemTap]",
               "name": "vw_Aktivnostis_ItemTap"
             }
           ],
           "properties":
           [
             {
-              "id": "Студенти/Properties[Students]",
+              "id": "Students/Properties[Students]",
               "name": "Students",
               "pageSize": 45,
               "elementType": { "__id": "Student" },
               "propertyType": { "__id": "CollectionView$Student" },
               "query":
               {
-                "id": "Студенти/Properties[Students]/Query",
+                "id": "Students/Properties[Students]/Query",
                 "name": "StudentsQuery",
                 "elementType": { "__id": "Student" },
                 "returnType": { "__id": "Student*" },
@@ -12122,18 +12139,18 @@
               },
               "source":
               {
-                "target": { "__id": "Студенти/Properties[Students]/Query" }
+                "target": { "__id": "Students/Properties[Students]/Query" }
               }
             },
             {
-              "id": "Студенти/Properties[Predmets]",
+              "id": "Students/Properties[Predmets]",
               "name": "Predmets",
               "pageSize": 45,
               "elementType": { "__id": "Predmet" },
               "propertyType": { "__id": "CollectionView$Predmet" },
               "query":
               {
-                "id": "Студенти/Properties[Predmets]/Query",
+                "id": "Students/Properties[Predmets]/Query",
                 "name": "PredmetsQuery",
                 "elementType": { "__id": "Predmet" },
                 "returnType": { "__id": "Predmet*" },
@@ -12144,40 +12161,83 @@
               },
               "source":
               {
-                "target": { "__id": "Студенти/Properties[Predmets]/Query" }
+                "target": { "__id": "Students/Properties[Predmets]/Query" }
               }
             },
             {
-              "id": "Студенти/Properties[Izbrani_predmetis]",
+              "id": "Students/Properties[Izbrani_predmetis]",
               "name": "Izbrani_predmetis",
               "pageSize": 45,
               "elementType": { "__id": "Izbrani_predmeti" },
               "propertyType": { "__id": "CollectionView$Izbrani_predmeti" },
               "query":
               {
-                "id": "Студенти/Properties[Izbrani_predmetis]/Query",
+                "id": "Students/Properties[Izbrani_predmetis]/Query",
                 "name": "Izbrani_predmetisQuery",
                 "elementType": { "__id": "Izbrani_predmeti" },
                 "returnType": { "__id": "Izbrani_predmeti*" },
+                "filterExpression":
+                {
+                  "nodeType": "Equal",
+                  "left":
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "Izbrani_predmeti/Properties[Student]" }
+                      },
+                      {
+                        "member": { "__id": "Student/Properties[Br_indeks]" }
+                      }
+                    ]
+                  },
+                  "right":
+                  {
+                    "parameter": { "__id": "Students/Properties[Izbrani_predmetis]/Query/Parameters[Br_indeks]" }
+                  }
+                },
                 "source":
                 {
                   "member": { "__id": "On_line_rasporedData/Members[Izbrani_predmetis]" }
-                }
+                },
+                "parameters":
+                [
+                  {
+                    "id": "Students/Properties[Izbrani_predmetis]/Query/Parameters[Br_indeks]",
+                    "name": "Br_indeks",
+                    "parameterType": { "__id": ":String?" }
+                  }
+                ]
               },
               "source":
               {
-                "target": { "__id": "Студенти/Properties[Izbrani_predmetis]/Query" }
+                "target": { "__id": "Students/Properties[Izbrani_predmetis]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Students/Properties[Izbrani_predmetis]/Query/Parameters[Br_indeks]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "Students/Properties[Br_indeks]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             },
             {
-              "id": "Студенти/Properties[vw_Aktivnostis]",
+              "id": "Students/Properties[vw_Aktivnostis]",
               "name": "vw_Aktivnostis",
               "pageSize": 45,
               "elementType": { "__id": "vw_Aktivnosti" },
               "propertyType": { "__id": "CollectionView$vw_Aktivnosti" },
               "query":
               {
-                "id": "Студенти/Properties[vw_Aktivnostis]/Query",
+                "id": "Students/Properties[vw_Aktivnostis]/Query",
                 "name": "vw_AktivnostisQuery",
                 "elementType": { "__id": "vw_Aktivnosti" },
                 "returnType": { "__id": "vw_Aktivnosti*" },
@@ -12195,7 +12255,7 @@
                   },
                   "right":
                   {
-                    "parameter": { "__id": "Студенти/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" }
+                    "parameter": { "__id": "Students/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" }
                   }
                 },
                 "source":
@@ -12205,7 +12265,7 @@
                 "parameters":
                 [
                   {
-                    "id": "Студенти/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]",
+                    "id": "Students/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]",
                     "name": "BR_Semestar",
                     "parameterType": { "__id": ":Int32?" }
                   }
@@ -12222,17 +12282,17 @@
               },
               "source":
               {
-                "target": { "__id": "Студенти/Properties[vw_Aktivnostis]/Query" },
+                "target": { "__id": "Students/Properties[vw_Aktivnostis]/Query" },
                 "arguments":
                 [
                   {
-                    "parameter": { "__id": "Студенти/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" },
+                    "parameter": { "__id": "Students/Properties[vw_Aktivnostis]/Query/Parameters[BR_Semestar]" },
                     "value":
                     {
                       "links":
                       [
                         {
-                          "member": { "__id": "Студенти/Properties[BR_Semestar]" }
+                          "member": { "__id": "Students/Properties[BR_Semestar]" }
                         }
                       ]
                     }
@@ -12241,10 +12301,17 @@
               }
             },
             {
-              "id": "Студенти/Properties[BR_Semestar]",
+              "id": "Students/Properties[BR_Semestar]",
               "name": "BR_Semestar",
               "elementType": { "__id": ":Int32" },
               "propertyType": { "__id": ":Int32" },
+              ":@Required": { }
+            },
+            {
+              "id": "Students/Properties[Br_indeks]",
+              "name": "Br_indeks",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
               ":@Required": { }
             }
           ]
@@ -12279,141 +12346,141 @@
           ]
         },
         {
-          "id": "!module/Methods[showАдминистратор]",
-          "name": "showАдминистратор",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "Администратор" } }
+          "id": "!module/Methods[showAdministrator]",
+          "name": "showAdministrator",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Administrator" } }
         },
         {
-          "id": "!module/Methods[showДодајАктивност]",
-          "name": "showДодајАктивност",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ДодајАктивност" } },
+          "id": "!module/Methods[showAddActivity]",
+          "name": "showAddActivity",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddActivity" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showДодајАктивност]/Parameters[Aktivnost]",
+              "id": "!module/Methods[showAddActivity]/Parameters[Aktivnost]",
               "name": "Aktivnost",
               "parameterType": { "__id": "Aktivnost" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showДодајПредмет]",
-          "name": "showДодајПредмет",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ДодајПредмет" } },
+          "id": "!module/Methods[showAddSubject]",
+          "name": "showAddSubject",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddSubject" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showДодајПредмет]/Parameters[Predmet]",
+              "id": "!module/Methods[showAddSubject]/Parameters[Predmet]",
               "name": "Predmet",
               "parameterType": { "__id": "Predmet" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showДодајПрофесор]",
-          "name": "showДодајПрофесор",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ДодајПрофесор" } },
+          "id": "!module/Methods[showAddProfesor]",
+          "name": "showAddProfesor",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddProfesor" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showДодајПрофесор]/Parameters[Profesor]",
+              "id": "!module/Methods[showAddProfesor]/Parameters[Profesor]",
               "name": "Profesor",
               "parameterType": { "__id": "Profesor" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showДодајСтудент]",
-          "name": "showДодајСтудент",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ДодајСтудент" } },
+          "id": "!module/Methods[showAddStudent]",
+          "name": "showAddStudent",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddStudent" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showДодајСтудент]/Parameters[Student]",
+              "id": "!module/Methods[showAddStudent]/Parameters[Student]",
               "name": "Student",
               "parameterType": { "__id": "Student" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showЗапишиПредмет]",
-          "name": "showЗапишиПредмет",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ЗапишиПредмет" } },
+          "id": "!module/Methods[showEnlistSubject]",
+          "name": "showEnlistSubject",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EnlistSubject" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showЗапишиПредмет]/Parameters[Izbrani_predmeti]",
+              "id": "!module/Methods[showEnlistSubject]/Parameters[Izbrani_predmeti]",
               "name": "Izbrani_predmeti",
               "parameterType": { "__id": "Izbrani_predmeti" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showИзмениАктивност]",
-          "name": "showИзмениАктивност",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ИзмениАктивност" } },
+          "id": "!module/Methods[showModifyActivity]",
+          "name": "showModifyActivity",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ModifyActivity" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showИзмениАктивност]/Parameters[Aktivnost]",
+              "id": "!module/Methods[showModifyActivity]/Parameters[Aktivnost]",
               "name": "Aktivnost",
               "parameterType": { "__id": "Aktivnost" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showИзмениПредмет]",
-          "name": "showИзмениПредмет",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ИзмениПредмет" } },
+          "id": "!module/Methods[showModifySubject]",
+          "name": "showModifySubject",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ModifySubject" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showИзмениПредмет]/Parameters[Predmet]",
+              "id": "!module/Methods[showModifySubject]/Parameters[Predmet]",
               "name": "Predmet",
               "parameterType": { "__id": "Predmet" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showИзмениПрофесор]",
-          "name": "showИзмениПрофесор",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ИзмениПрофесор" } },
+          "id": "!module/Methods[showModifyProfesor]",
+          "name": "showModifyProfesor",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ModifyProfesor" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showИзмениПрофесор]/Parameters[Profesor]",
+              "id": "!module/Methods[showModifyProfesor]/Parameters[Profesor]",
               "name": "Profesor",
               "parameterType": { "__id": "Profesor" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showИзмениСтудент]",
-          "name": "showИзмениСтудент",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ИзмениСтудент" } },
+          "id": "!module/Methods[showModifyStudent]",
+          "name": "showModifyStudent",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ModifyStudent" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showИзмениСтудент]/Parameters[Student]",
+              "id": "!module/Methods[showModifyStudent]/Parameters[Student]",
               "name": "Student",
               "parameterType": { "__id": "Student" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showПрофесор]",
-          "name": "showПрофесор",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "Професор" } }
+          "id": "!module/Methods[showProfesors]",
+          "name": "showProfesors",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Profesors" } }
         },
         {
-          "id": "!module/Methods[showРаспоред]",
-          "name": "showРаспоред",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "Распоред" } }
+          "id": "!module/Methods[showSchedule]",
+          "name": "showSchedule",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Schedule" } }
         },
         {
-          "id": "!module/Methods[showСтуденти]",
-          "name": "showСтуденти",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "Студенти" } }
+          "id": "!module/Methods[showStudents]",
+          "name": "showStudents",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Students" } }
         }
       ],
       "navigationItems":
@@ -12421,17 +12488,17 @@
         {
           "id": "!module/NavigationItems[link]",
           "name": "link",
-          "method": { "__id": "!module/Methods[showАдминистратор]" }
+          "method": { "__id": "!module/Methods[showAdministrator]" }
         },
         {
           "id": "!module/NavigationItems[link3]",
           "name": "link3",
-          "method": { "__id": "!module/Methods[showСтуденти]" }
+          "method": { "__id": "!module/Methods[showStudents]" }
         },
         {
           "id": "!module/NavigationItems[link2]",
           "name": "link2",
-          "method": { "__id": "!module/Methods[showПрофесор]" }
+          "method": { "__id": "!module/Methods[showProfesors]" }
         }
       ]
     }

@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="Студенти">
+    Name="Students">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
@@ -40,7 +40,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Студенти/Properties[BR_Semestar]" />
+                      Member="Students/Properties[BR_Semestar]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -66,7 +66,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Студенти/Properties[vw_Aktivnostis]" />
+                      Member="Students/Properties[vw_Aktivnostis]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -276,7 +276,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="Студенти/Methods[vw_Aktivnostis_ItemTap]" />
+                        Target="Students/Methods[vw_Aktivnostis_ItemTap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -296,7 +296,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Студенти/Properties[vw_Aktivnostis]" />
+                          Member="Students/Properties[vw_Aktivnostis]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -328,7 +328,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Студенти/Methods[ScheduleExam]" />
+                          Target="Students/Methods[ScheduleExam]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -365,7 +365,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Студенти/Properties[Br_indeks]" />
+                      Member="Students/Properties[Br_indeks]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -391,7 +391,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Студенти/Properties[Izbrani_predmetis]" />
+                      Member="Students/Properties[Izbrani_predmetis]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -703,7 +703,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Студенти/Properties[Izbrani_predmetis]" />
+                          Member="Students/Properties[Izbrani_predmetis]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -734,12 +734,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showЗапишиПредмет]">
+                          Target="!module/Methods[showEnlistSubject]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Студенти/Properties[Izbrani_predmetis]" />
+                              Collection="Students/Properties[Izbrani_predmetis]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showЗапишиПредмет]/Parameters[Izbrani_predmeti]" />
+                              TargetParameter="!module/Methods[showEnlistSubject]/Parameters[Izbrani_predmeti]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -829,7 +829,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Студенти/Properties[Students]/Query" />
+              Target="Students/Properties[Students]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -855,7 +855,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Студенти/Properties[Predmets]/Query" />
+              Target="Students/Properties[Predmets]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -902,12 +902,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Студенти/Properties[Izbrani_predmetis]/Query">
+              Target="Students/Properties[Izbrani_predmetis]/Query">
               <ArgumentExpression
                 Parameter="Br_indeks">
                 <ChainExpression>
                   <MemberExpression
-                    Member="Студенти/Properties[Br_indeks]" />
+                    Member="Students/Properties[Br_indeks]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -969,12 +969,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Студенти/Properties[vw_Aktivnostis]/Query">
+              Target="Students/Properties[vw_Aktivnostis]/Query">
               <ArgumentExpression
                 Parameter="BR_Semestar">
                 <ChainExpression>
                   <MemberExpression
-                    Member="Студенти/Properties[BR_Semestar]" />
+                    Member="Students/Properties[BR_Semestar]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -999,10 +999,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showСтуденти">
+      Name="showStudents">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="Студенти" />
+          TargetScreen="Students" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ИзмениПредмет">
+    Name="AddSubject">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
@@ -27,7 +27,7 @@
             View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
             <ContentItem.Attributes>
               <DisplayName
-                Value="Details" />
+                Value="Детали" />
             </ContentItem.Attributes>
             <ContentItem
               Name="columns"
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ИзмениПредмет/Properties[Predmet]" />
+                      Member="AddSubject/Properties[Predmet]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -51,7 +51,6 @@
                 Kind="Group">
                 <ContentItem
                   Name="ID_predmet"
-                  IsHidden="True"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.Attributes>
@@ -85,31 +84,21 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="StatusPredmet"
-                  Kind="Details"
-                  DataType="StatusPredmet">
+                  Name="br_krediti"
+                  Kind="Value"
+                  DataType=":Int32">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="Статус" />
+                      Value="Бр кредити" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Predmet/Properties[StatusPredmet]" />
+                          Member="Predmet/Properties[br_krediti]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem
-                    Name="StatusPredmet1"
-                    Kind="Details"
-                    DataType="StatusPredmet">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
                 <ContentItem
                   Name="Nasoka1"
@@ -138,23 +127,6 @@
                     </ContentItem.DataSource>
                   </ContentItem>
                 </ContentItem>
-                <ContentItem
-                  Name="br_krediti"
-                  Kind="Value"
-                  DataType=":Int32">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Бр кредити" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Predmet/Properties[br_krediti]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
@@ -182,9 +154,37 @@
                 Name="right"
                 Kind="Group">
                 <ContentItem
+                  Name="StatusPredmet"
+                  Kind="Details"
+                  DataType="StatusPredmet">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Статус" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Predmet/Properties[StatusPredmet]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="StatusPredmet1"
+                    Kind="Details"
+                    DataType="StatusPredmet">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
                   Name="Profesor"
                   Kind="Details"
-                  DataType="Profesor">
+                  DataType="Profesor"
+                  View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Професор" />
@@ -198,10 +198,10 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="Profesor1"
+                    Name="ProfesorTemplate"
                     Kind="Details"
                     DataType="Profesor"
-                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                    View="Microsoft.LightSwitch.MobileWeb:Summary">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
@@ -366,34 +366,8 @@
         </ScreenProperty.Attributes>
       </ScreenProperty>
       <ScreenCollectionProperty
-        Name="Profesors"
-        PageSize="45"
-        PropertyType="CollectionView$Profesor">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="ProfesorsQuery"
-            ReturnType="Profesor*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <MemberExpression
-                  Member="On_line_rasporedData/Members[Profesors]" />
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="ИзмениПредмет/Properties[Profesors]/Query" />
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
-      <ScreenCollectionProperty
         Name="Aktivnosts"
-        PageSize="45"
+        PageSize="15"
         PropertyType="CollectionView$Aktivnost">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
@@ -406,9 +380,7 @@
               <QuerySourceExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="ИзмениПредмет/Properties[Profesors]" />
-                  <MemberExpression
-                    Member="selectedItem" />
+                    Member="AddSubject/Properties[Predmet]" />
                   <MemberExpression
                     Member="Aktivnosts" />
                 </ChainExpression>
@@ -419,7 +391,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ИзмениПредмет/Properties[Aktivnosts]/Query" />
+              Target="AddSubject/Properties[Aktivnosts]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -427,10 +399,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showИзмениПредмет">
+      Name="showAddSubject">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ИзмениПредмет" />
+          TargetScreen="AddSubject" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
         Name="Predmet"

@@ -5,10 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="Професор">
+    Name="Profesors">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
+      <DisplayName
+        Value="Професор" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -35,7 +37,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Професор/Properties[Predmets]" />
+                      Member="Profesors/Properties[Predmets]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -146,7 +148,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="Професор/Methods[Predmets_ItemTap]" />
+                        Target="Profesors/Methods[Predmets_ItemTap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -166,7 +168,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Професор/Properties[Predmets]" />
+                          Member="Profesors/Properties[Predmets]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -198,7 +200,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Професор/Methods[ShowAtendees_Tap]" />
+                          Target="Profesors/Methods[ShowAtendees_Tap]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -232,7 +234,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Професор/Properties[Aktivnosts]" />
+                      Member="Profesors/Properties[Aktivnosts]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -455,7 +457,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="Професор/Methods[Aktivnosts_ItemTap]" />
+                        Target="Profesors/Methods[Aktivnosts_ItemTap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -475,7 +477,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Професор/Properties[Aktivnosts]" />
+                          Member="Profesors/Properties[Aktivnosts]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -506,12 +508,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showДодајАктивност]">
+                          Target="!module/Methods[showAddActivity]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Професор/Properties[Aktivnosts]" />
+                              Collection="Profesors/Properties[Aktivnosts]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showДодајАктивност]/Parameters[Aktivnost]" />
+                              TargetParameter="!module/Methods[showAddActivity]/Parameters[Aktivnost]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -542,16 +544,16 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showИзмениАктивност]">
+                          Target="!module/Methods[showModifyActivity]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="Професор/Properties[Aktivnosts]" />
+                              Collection="Profesors/Properties[Aktivnosts]" />
                           </CallExpression.Attributes>
                           <ArgumentExpression
                             Parameter="Aktivnost">
                             <ChainExpression>
                               <MemberExpression
-                                Member="Професор/Properties[Aktivnosts]" />
+                                Member="Profesors/Properties[Aktivnosts]" />
                               <MemberExpression
                                 Member="selectedItem" />
                             </ChainExpression>
@@ -586,7 +588,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Професор/Methods[CancelActivity_Tap]" />
+                          Target="Profesors/Methods[CancelActivity_Tap]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -621,7 +623,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Професор/Properties[SpisokPolaganjes]" />
+                      Member="Profesors/Properties[SpisokPolaganjes]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -794,7 +796,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Професор/Properties[SpisokPolaganjes]" />
+                      Member="Profesors/Properties[SpisokPolaganjes]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -948,7 +950,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Професор/Properties[Predmets]/Query" />
+              Target="Profesors/Properties[Predmets]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -984,7 +986,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Професор/Properties[Aktivnosts]/Query" />
+              Target="Profesors/Properties[Aktivnosts]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -1031,12 +1033,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Професор/Properties[SpisokPolaganjes]/Query">
+              Target="Profesors/Properties[SpisokPolaganjes]/Query">
               <ArgumentExpression
                 Parameter="ID_predmet">
                 <ChainExpression>
                   <MemberExpression
-                    Member="Професор/Properties[ID_predmet]" />
+                    Member="Profesors/Properties[ID_predmet]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -1054,10 +1056,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showПрофесор">
+      Name="showProfesors">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="Професор" />
+          TargetScreen="Profesors" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

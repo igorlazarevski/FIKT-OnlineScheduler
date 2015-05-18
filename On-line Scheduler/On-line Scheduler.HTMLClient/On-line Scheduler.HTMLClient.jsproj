@@ -67,35 +67,41 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\AddEditAktivnost.lsml.js">
+      <DependentUpon>AddEditAktivnost.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddStudent.lsml.js">
+      <DependentUpon>AddStudent.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Welcome.lsml.js">
       <DependentUpon>Welcome.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ДодајАктивност.lsml.js">
-      <DependentUpon>ДодајАктивност.lsml</DependentUpon>
+    <Content Include="Screens\AddActivity.lsml.js">
+      <DependentUpon>AddActivity.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ДодајПрофесор.lsml.js">
-      <DependentUpon>ДодајПрофесор.lsml</DependentUpon>
+    <Content Include="Screens\AddProfesor.lsml.js">
+      <DependentUpon>AddProfesor.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ЗапишиПредмет.lsml.js">
-      <DependentUpon>ЗапишиПредмет.lsml</DependentUpon>
+    <Content Include="Screens\EnlistSubject.lsml.js">
+      <DependentUpon>EnlistSubject.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ИзмениАктивност.lsml.js">
-      <DependentUpon>ИзмениАктивност.lsml</DependentUpon>
+    <Content Include="Screens\ModifyActivity.lsml.js">
+      <DependentUpon>ModifyActivity.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\ИзмениПрофесор.lsml.js">
-      <DependentUpon>ИзмениПрофесор.lsml</DependentUpon>
+    <Content Include="Screens\ModifyProfesor.lsml.js">
+      <DependentUpon>ModifyProfesor.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\Распоред.lsml.js">
-      <DependentUpon>Распоред.lsml</DependentUpon>
+    <Content Include="Screens\Schedule.lsml.js">
+      <DependentUpon>Schedule.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\Администратор.lsml.js">
-      <DependentUpon>Администратор.lsml</DependentUpon>
+    <Content Include="Screens\Administrator.lsml.js">
+      <DependentUpon>Administrator.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\Професор.lsml.js">
-      <DependentUpon>Професор.lsml</DependentUpon>
+    <Content Include="Screens\Profesors.lsml.js">
+      <DependentUpon>Profesors.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\Студенти.lsml.js">
-      <DependentUpon>Студенти.lsml</DependentUpon>
+    <Content Include="Screens\Students.lsml.js">
+      <DependentUpon>Students.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\CustomScripts.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
@@ -125,19 +131,19 @@
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\AddEditAktivnost.lsml" />
     <LightSwitchModel Include="Screens\Welcome.lsml" />
-    <LightSwitchModel Include="Screens\ЗапишиПредмет.lsml" />
-    <LightSwitchModel Include="Screens\Студенти.lsml" />
-    <LightSwitchModel Include="Screens\Распоред.lsml" />
-    <LightSwitchModel Include="Screens\ИзмениАктивност.lsml" />
-    <LightSwitchModel Include="Screens\ДодајАктивност.lsml" />
-    <LightSwitchModel Include="Screens\ДодајПрофесор.lsml" />
-    <LightSwitchModel Include="Screens\ИзмениПрофесор.lsml" />
-    <LightSwitchModel Include="Screens\ИзмениСтудент.lsml" />
-    <LightSwitchModel Include="Screens\ДодајСтудент.lsml" />
-    <LightSwitchModel Include="Screens\ДодајПредмет.lsml" />
-    <LightSwitchModel Include="Screens\ИзмениПредмет.lsml" />
-    <LightSwitchModel Include="Screens\Администратор.lsml" />
-    <LightSwitchModel Include="Screens\Професор.lsml" />
+    <LightSwitchModel Include="Screens\EnlistSubject.lsml" />
+    <LightSwitchModel Include="Screens\Students.lsml" />
+    <LightSwitchModel Include="Screens\Schedule.lsml" />
+    <LightSwitchModel Include="Screens\ModifyActivity.lsml" />
+    <LightSwitchModel Include="Screens\AddActivity.lsml" />
+    <LightSwitchModel Include="Screens\AddProfesor.lsml" />
+    <LightSwitchModel Include="Screens\ModifyProfesor.lsml" />
+    <LightSwitchModel Include="Screens\ModifyStudent.lsml" />
+    <LightSwitchModel Include="Screens\AddStudent.lsml" />
+    <LightSwitchModel Include="Screens\AddSubject.lsml" />
+    <LightSwitchModel Include="Screens\ModifySubject.lsml" />
+    <LightSwitchModel Include="Screens\Administrator.lsml" />
+    <LightSwitchModel Include="Screens\Profesors.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">

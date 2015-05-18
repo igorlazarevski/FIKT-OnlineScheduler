@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ИзмениПрофесор">
+    Name="ModifyProfesor">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
       <DisplayName
-        Value="ПрофесороТ" />
+        Value="Професор" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ИзмениПрофесор/Properties[Profesor]" />
+                      Member="ModifyProfesor/Properties[Profesor]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -274,7 +274,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ИзмениПрофесор/Properties[Aktivnosts]" />
+                      Member="ModifyProfesor/Properties[Aktivnosts]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -384,7 +384,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ИзмениПрофесор/Properties[Aktivnosts]" />
+                        Member="ModifyProfesor/Properties[Aktivnosts]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -414,7 +414,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ИзмениПрофесор/Properties[Predmets]" />
+                      Member="ModifyProfesor/Properties[Predmets]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -509,7 +509,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ИзмениПрофесор/Properties[Predmets]" />
+                        Member="ModifyProfesor/Properties[Predmets]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -594,7 +594,7 @@
               <QuerySourceExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="ИзмениПрофесор/Properties[Profesor]" />
+                    Member="ModifyProfesor/Properties[Profesor]" />
                   <MemberExpression
                     Member="Aktivnosts" />
                 </ChainExpression>
@@ -605,7 +605,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ИзмениПрофесор/Properties[Aktivnosts]/Query" />
+              Target="ModifyProfesor/Properties[Aktivnosts]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -624,7 +624,7 @@
               <QuerySourceExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="ИзмениПрофесор/Properties[Profesor]" />
+                    Member="ModifyProfesor/Properties[Profesor]" />
                   <MemberExpression
                     Member="Predmets" />
                 </ChainExpression>
@@ -635,7 +635,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ИзмениПрофесор/Properties[Predmets]/Query" />
+              Target="ModifyProfesor/Properties[Predmets]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -643,10 +643,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showИзмениПрофесор">
+      Name="showModifyProfesor">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ИзмениПрофесор" />
+          TargetScreen="ModifyProfesor" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
         Name="Profesor"

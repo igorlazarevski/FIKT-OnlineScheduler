@@ -62,11 +62,11 @@ function ShowDefaultScreen(a,b) {
         GetCurrentUser();
         if (myapp.CurrentUser) {
             if (myapp.CurrentUser.Role == "Student")
-                myapp.showСтуденти();
+                myapp.showStudents();
             else if (myapp.CurrentUser.Role == "Profesor")
-                myapp.showПрофесор();
+                myapp.showProfesors();
             else if (myapp.CurrentUser.Role == "Administrator")
-                myapp.showАдминистратор();
+                myapp.showAdministrator();
         }
     }, 500);
 }

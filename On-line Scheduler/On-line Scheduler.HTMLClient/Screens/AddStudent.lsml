@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ДодајСтудент">
+    Name="AddStudent">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ДодајСтудент/Properties[Student]" />
+                      Member="AddStudent/Properties[Student]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -321,10 +321,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showДодајСтудент">
+      Name="showAddStudent">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ДодајСтудент" />
+          TargetScreen="AddStudent" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
         Name="Student"

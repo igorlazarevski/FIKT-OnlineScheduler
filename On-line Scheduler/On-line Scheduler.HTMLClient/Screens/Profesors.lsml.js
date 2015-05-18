@@ -1,33 +1,26 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
-myapp.Професор.Vreme_pocetok_postRender = function (element, contentItem) {
+myapp.Profesors.Vreme_pocetok_postRender = function (element, contentItem) {
     element.innerHTML = contentItem.value.format("HH:mm");
 
 };
-myapp.Професор.Vreme_kraj_postRender = function (element, contentItem) {
+myapp.Profesors.Vreme_kraj_postRender = function (element, contentItem) {
     element.innerHTML = contentItem.value.format("HH:mm");
 
 };
-myapp.Професор.Список_postRender = function (element, contentItem) {
+myapp.Profesors.Список_postRender = function (element, contentItem) {
 };
-myapp.Професор.created = function (screen) {
-    document.addEventListener("DOMNodeInserted", function (e) {
-        if (e.target.id == 'msls-navmenu') {
-            ApplyPermissionsToMenu(e.target);
-        }
-    }, false);
-};
-myapp.Професор.Predmets_ItemTap_execute = function (screen) {
+myapp.Profesors.Predmets_ItemTap_execute = function (screen) {
     screen.findContentItem('ShowAtendees').isVisible = true;
     screen.ID_predmet = screen.Predmets.selectedItem.ID_predmet;
     
     //screen.showTab('Список');
     //screen.showPopup('PopUpSpisok');
 };
-myapp.Професор.ShowAtendees_Tap_execute = function (screen) {
+myapp.Profesors.ShowAtendees_Tap_execute = function (screen) {
     screen.showPopup('PopUpSpisok');
 };
-myapp.Професор.CancelActivity_Tap_execute = function (screen) {
+myapp.Profesors.CancelActivity_Tap_execute = function (screen) {
     //Ovde kod za otkazuvawe na prisustvo
     var selected = screen.Aktivnosts.selectedItem;
     myapp.showAddEditAktivnost(null, {
@@ -57,6 +50,13 @@ myapp.Професор.CancelActivity_Tap_execute = function (screen) {
     }
     )
 };
-myapp.Професор.Aktivnosts_ItemTap_execute = function (screen) {
+myapp.Profesors.Aktivnosts_ItemTap_execute = function (screen) {
     screen.findContentItem('CancelActivity').isVisible = true;
+};
+myapp.Profesors.created = function (screen) {
+    document.addEventListener("DOMNodeInserted", function (e) {
+        if (e.target.id == 'msls-navmenu') {
+            ApplyPermissionsToMenu(e.target);
+        }
+    }, false);
 };

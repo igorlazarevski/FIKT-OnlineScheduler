@@ -1,47 +1,49 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
-myapp.Студенти.Vreme_pocetok_postRender = function (element, contentItem) {
+
+myapp.Schedule.Vreme_pocetok_postRender = function (element, contentItem) {
     element.innerHTML = contentItem.value.format("HH:mm");
+
 };
-myapp.Студенти.Vreme_kraj_postRender = function (element, contentItem) {
+myapp.Schedule.Vreme_kraj_postRender = function (element, contentItem) {
     element.innerHTML = contentItem.value.format("HH:mm");
+
 };
-myapp.Студенти.ScheduleExam_execute = function (screen) {
+
+myapp.Schedule.ScheduleExam_Tap_execute = function (screen) {
     var schedule = new myapp.SpisokPolaganje;
     msls.application.activeDataWorkspace.On_line_rasporedData.Predmets_SingleOrDefault(screen.vw_Aktivnostis.selectedItem.Id_Predmet)
-    .execute().then(function (odgovor) {
+    .execute().then(function(odgovor){    
         schedule.Predmet = odgovor.results[0];
-        msls.application.activeDataWorkspace.On_line_rasporedData.Students_SingleOrDefault(myapp.CurrentUser.UserName).execute().then(function (rez) {
+        msls.application.activeDataWorkspace.On_line_rasporedData.Students_SingleOrDefault('1').execute().then(function (rez) {
             schedule.Student = rez.results[0];
 
             myapp.activeDataWorkspace.On_line_rasporedData.saveChanges().then(function () {
                 alert('Регистрацијата е успешна!');
             }, function (e) {
-                alert('Регистрацијата не е успешна! Проблем:' + e.message);
+                alert('Регистрацијата не е успешна! Проблем:'+e.message);
             });
         });
     });
 };
 
-
-myapp.Студенти.vw_Aktivnostis_ItemTap_execute = function (screen) {
-    if (screen.vw_Aktivnostis.selectedItem && !screen.vw_Aktivnostis.selectedItem.Povtoruvacki) {
+myapp.Schedule.vw_AktivnostiList_Tap_execute = function (screen) {
+    if(screen.vw_Aktivnostis.selectedItem && !screen.vw_Aktivnostis.selectedItem.Povtoruvacki)
+    {
         //najdi go elementot
         var elem = screen.findContentItem("ScheduleExam");
         //pokazi go
         elem.isVisible = true;
     }
-    else {
+    else
+    {
         //najdi go elementot
         var elem = screen.findContentItem("ScheduleExam");
         //skrij go
         elem.isVisible = false;
     }
 };
-
-
-
-myapp.Студенти.vw_AktivnostisTemplate_postRender = function (element, contentItem) {
+myapp.Schedule.rows_postRender = function (element, contentItem) {
     if (contentItem.value.Ime == 'Предавања')
         element.parentElement.id = "Predavanje";
     else
@@ -60,17 +62,12 @@ myapp.Студенти.vw_AktivnostisTemplate_postRender = function (element, co
                     if (contentItem.value.Ime == 'Вежби')
                         element.parentElement.id = "Vezbi";
 };
-
-
-myapp.Студенти.created = function (screen) {
+myapp.Schedule.created = function (screen) {
     GetCurrentUser();
     if (myapp.CurrentUser && myapp.CurrentUser.Semestar)
         screen.BR_Semestar = parseInt(myapp.CurrentUser.Semestar);
     else
         screen.BR_Semestar = 0;
-
-    if (myapp.CurrentUser && myapp.CurrentUser.UserName)
-        screen.Br_indeks = myapp.CurrentUser.UserName;
 
     document.addEventListener("DOMNodeInserted", function (e) {
         if (e.target.id == 'msls-navmenu') {

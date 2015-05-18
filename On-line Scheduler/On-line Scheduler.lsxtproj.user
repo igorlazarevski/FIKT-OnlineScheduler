@@ -7,5 +7,14 @@
     <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
     <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration</GrantedPermissions>
     <SchemaManagementDatabaseIncludesSecurityObjects>True</SchemaManagementDatabaseIncludesSecurityObjects>
+    <EncryptedPublishConnectionString />
+    <EncryptedPublishSchemaConnectionString />
+    <EncryptedClientConnectionString />
+    <EncryptedAdministratorPassword />
+    <PublishUserName />
+    <EncryptedPublishUserPassword />
+    <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
+    <AzureManagementThumbprint />
+    <SharePointServerToServerCertificatePassword />
   </PropertyGroup>
 </Project>

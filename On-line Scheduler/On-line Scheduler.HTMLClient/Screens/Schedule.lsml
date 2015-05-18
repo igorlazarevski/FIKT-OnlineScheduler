@@ -5,10 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="Распоред">
+    Name="Schedule">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="On_line_rasporedData" />
+      <DisplayName
+        Value="Распоред" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -34,7 +36,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Распоред/Properties[BR_Semestar]" />
+                      Member="Schedule/Properties[BR_Semestar]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -64,7 +66,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Распоред/Properties[vw_Aktivnostis]" />
+                      Member="Schedule/Properties[vw_Aktivnostis]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -295,7 +297,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="Распоред/Properties[vw_Aktivnostis]" />
+                        Member="Schedule/Properties[vw_Aktivnostis]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -317,7 +319,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Распоред/Properties[vw_Aktivnostis]" />
+                          Member="Schedule/Properties[vw_Aktivnostis]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -349,7 +351,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Распоред/Methods[ScheduleExam_Tap]" />
+                          Target="Schedule/Methods[ScheduleExam_Tap]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -372,7 +374,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <CallExpression
-                      Target="Распоред/Methods[vw_AktivnostiList_Tap]" />
+                      Target="Schedule/Methods[vw_AktivnostiList_Tap]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ControlPropertySource>
@@ -479,12 +481,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Распоред/Properties[vw_Aktivnostis]/Query">
+              Target="Schedule/Properties[vw_Aktivnostis]/Query">
               <ArgumentExpression
                 Parameter="BR_Semestar">
                 <ChainExpression>
                   <MemberExpression
-                    Member="Распоред/Properties[BR_Semestar]" />
+                    Member="Schedule/Properties[BR_Semestar]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -502,10 +504,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showРаспоред">
+      Name="showSchedule">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="Распоред" />
+          TargetScreen="Schedule" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>
