@@ -128,6 +128,20 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Predmet"
+        Association="vw_Aktivnosti_Predmet"
+        FromEnd="vw_Aktivnosti"
+        ToEnd="Predmet" />
+      <KeyProperty
+        Name="Br_indeks"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="20" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -155,16 +169,36 @@
                 NodeType="And">
                 <BinaryExpression.Left>
                   <BinaryExpression
-                    NodeType="Equal">
+                    NodeType="And">
                     <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Id_Predmet" />
-                      </ChainExpression>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Br_indeks" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Br_indeks" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
-                      <ParameterExpression
-                        Parameter="Id_Predmet" />
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Id_Predmet" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Id_Predmet" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Left>
@@ -231,6 +265,14 @@
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id_Predmet' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Br_indeks"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Br_indeks' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -251,16 +293,36 @@
                 NodeType="And">
                 <BinaryExpression.Left>
                   <BinaryExpression
-                    NodeType="Equal">
+                    NodeType="And">
                     <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Id_Predmet" />
-                      </ChainExpression>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Br_indeks" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Br_indeks" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
-                      <ParameterExpression
-                        Parameter="Id_Predmet" />
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Id_Predmet" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Id_Predmet" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Left>
@@ -327,6 +389,14 @@
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id_Predmet' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Br_indeks"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Br_indeks' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -419,6 +489,12 @@
           Nullable="True"
           Type="int"
           Property="vw_Aktivnosti/Properties[BR_Semestar]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Br_indeks"
+          Nullable="False"
+          Type="nvarchar"
+          Property="vw_Aktivnosti/Properties[Br_indeks]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

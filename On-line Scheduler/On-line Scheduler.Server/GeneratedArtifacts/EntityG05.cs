@@ -339,6 +339,29 @@ namespace LightSwitchApplication
             }
         }
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.vw_Aktivnosti> vw_Aktivnostis
+        {
+            get
+            {
+                return global::LightSwitchApplication.Predmet.DetailsClass.GetValue(this, global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.vw_Aktivnostis);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.vw_Aktivnosti> vw_AktivnostisQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Predmet.DetailsClass.GetQuery(this, global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.vw_Aktivnostis);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -509,6 +532,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti> vw_Aktivnostis
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.vw_Aktivnostis) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -526,6 +557,7 @@ namespace LightSwitchApplication
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation StatusPredmet { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Nasoka1 { get; set; }
                 new global::System.Collections.IEnumerable SpisokPolaganjes { get; }
+                new global::System.Collections.IEnumerable vw_Aktivnostis { get; }
             }
             #pragma warning restore 109
     
@@ -931,6 +963,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.SpisokPolaganjes;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>.Entry
+                    vw_Aktivnostis = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>.Entry(
+                        "vw_Aktivnostis",
+                        global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties._vw_Aktivnostis_Stub,
+                        global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties._vw_Aktivnostis_GetReferencedEntities,
+                        global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties._vw_Aktivnostis_GetEntityCollection);
+                private static void _vw_Aktivnostis_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Predmet.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>.Data> c, global::LightSwitchApplication.Predmet.DetailsClass d, object sf)
+                {
+                    c(d, ref d._vw_Aktivnostis, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.vw_Aktivnosti> _vw_Aktivnostis_GetReferencedEntities(global::LightSwitchApplication.Predmet.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.vw_Aktivnosti, global::LightSwitchApplication.vw_Aktivnosti.DetailsClass>(global::LightSwitchApplication.Predmet.DetailsClass.PropertySetProperties.vw_Aktivnostis, ref d._vw_Aktivnostis);
+                }
+                private static global::System.Collections.IEnumerable _vw_Aktivnostis_GetEntityCollection(global::LightSwitchApplication.Predmet.DetailsClass d)
+                {
+                    return d.ImplementationEntity.vw_Aktivnostis;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -965,6 +1017,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.SpisokPolaganje>.Data _SpisokPolaganjes;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Predmet, global::LightSwitchApplication.Predmet.DetailsClass, global::LightSwitchApplication.vw_Aktivnosti>.Data _vw_Aktivnostis;
             
         }
     

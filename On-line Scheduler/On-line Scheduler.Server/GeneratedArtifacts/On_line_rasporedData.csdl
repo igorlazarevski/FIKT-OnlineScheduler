@@ -66,6 +66,7 @@
     <NavigationProperty Name="StatusPredmet" Relationship="LightSwitchApplication.FK_Predmet_StatusPredmet" ToRole="StatusPredmet" FromRole="Predmet" />
     <NavigationProperty Name="Nasoka1" Relationship="LightSwitchApplication.FK_Predmet_Nasoka" ToRole="Nasoka" FromRole="Predmet" />
     <NavigationProperty Name="SpisokPolaganjes" Relationship="LightSwitchApplication.FK_SpisokPolaganje_Predmet" ToRole="SpisokPolaganje" FromRole="Predmet" />
+    <NavigationProperty Name="vw_Aktivnostis" Relationship="LightSwitchApplication.vw_Aktivnosti_Predmet" ToRole="vw_Aktivnosti" FromRole="Predmet" />
   </EntityType>
   <EntityType Name="Profesor">
     <Key>
@@ -161,6 +162,7 @@
       <PropertyRef Name="ID_aktivnost" />
       <PropertyRef Name="ID_Den" />
       <PropertyRef Name="Id_Predmet" />
+      <PropertyRef Name="Br_indeks" />
     </Key>
     <Property Name="ID_aktivnost" Type="Edm.Int32" Nullable="false" />
     <Property Name="Br_prostorija" Type="Edm.Int32" ConcurrencyMode="Fixed" />
@@ -176,6 +178,8 @@
     <Property Name="ImePredmet" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Id_Predmet" Type="Edm.String" Nullable="false" MaxLength="50" />
     <Property Name="BR_Semestar" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Br_indeks" Type="Edm.String" Nullable="false" MaxLength="20" />
+    <NavigationProperty Name="Predmet" Relationship="LightSwitchApplication.vw_Aktivnosti_Predmet" ToRole="Predmet" FromRole="vw_Aktivnosti" />
   </EntityType>
   <Association Name="FK_Aktivnost_Den">
     <End Role="Den" Type="LightSwitchApplication.Den" Multiplicity="1" />
@@ -357,6 +361,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="vw_Aktivnosti_Predmet">
+    <End Role="Predmet" Type="LightSwitchApplication.Predmet" Multiplicity="1" />
+    <End Role="vw_Aktivnosti" Type="LightSwitchApplication.vw_Aktivnosti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Predmet">
+        <PropertyRef Name="ID_predmet" />
+      </Principal>
+      <Dependent Role="vw_Aktivnosti">
+        <PropertyRef Name="Id_Predmet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="On_line_rasporedData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Aktivnosts" EntityType="LightSwitchApplication.Aktivnost" />
     <EntitySet Name="Dens" EntityType="LightSwitchApplication.Den" />
@@ -431,6 +447,10 @@
     <AssociationSet Name="FK_Aktivnost_TipNaAktivnost" Association="LightSwitchApplication.FK_Aktivnost_TipNaAktivnost">
       <End Role="TipNaAktivnost" EntitySet="TipNaAktivnosts" />
       <End Role="Aktivnost" EntitySet="Aktivnosts" />
+    </AssociationSet>
+    <AssociationSet Name="vw_Aktivnosti_Predmet" Association="LightSwitchApplication.vw_Aktivnosti_Predmet">
+      <End Role="Predmet" EntitySet="Predmets" />
+      <End Role="vw_Aktivnosti" EntitySet="vw_Aktivnostis" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

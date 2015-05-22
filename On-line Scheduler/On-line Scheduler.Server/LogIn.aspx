@@ -9,17 +9,17 @@
     <style type="text/css">
         /* Here you can customize your login screen */
         html {
-            background: #ffffff;
+            background: #F1F1F1;
         }
 
         html,
         body,
         .labelStyle {
-            color: #444444;
+            color: #2b2b2b;
         }
 
         h1 {
-            color: #444444;
+            color: #2b2b2b;
         }
 
         .requiredStyle {
@@ -28,12 +28,12 @@
 
         input.buttonStyle {
             color: #444444;
-            background-color: #f1f1f1;
-            border: 1px solid #ababab;
+            background-color: #E6FFEE;
+            border: 1px solid #3D663F;
         }
 
             input.buttonStyle:hover {
-                background-color: #dfebf4;
+                background-color: #f1f1f1;
             }
 
             input.buttonStyle:active {
@@ -61,17 +61,17 @@
         }
 
         html, body {
-            font-family: 'Segoe UI','Frutiger','Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-family: 'Century Gothic';
             font-size: 16px;
             font-weight: normal;
         }
 
         h1 {
-            font-family: 'Segoe Light','Segoe UI Light','Frutiger','Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-family: 'Century Gothic';
             font-size: 40px;
             text-align: left;
             letter-spacing: -1pt;
-            font-weight: normal!important;
+            font-weight: normal !important;
             margin-bottom: 12px;
         }
 
@@ -86,7 +86,7 @@
         }
 
         .labelStyle {
-            font-family: 'Segoe UI Semibold', 'Frutiger','Helvetica Neue Semibold',Helvetica,Arial,sans-serif;
+            font-family: 'Century Gothic';
             font-weight: 700;
         }
 
@@ -99,7 +99,7 @@
         }
 
         input.buttonStyle {
-            font-family: 'Segoe UI','Frutiger','Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-family: 'Century Gothic';
             padding: 5px 10px;
             font-weight: bold;
             border-radius: 0px;
@@ -119,6 +119,7 @@
             width: 100%;
             max-width: 292px;
             line-height: 36px;
+            border-color: #3D663F;
         }
 
         .submit-login {
@@ -138,30 +139,59 @@
         .checkStyle label {
             font-size: 15px;
         }
+
+
+
+
+        .headerHome {
+            background-color: #E6FFEE;
+            height: 122px;
+            background-image: url(images/FIKT_Logo.png);
+            background-position-x: center;
+            background-repeat: no-repeat;
+        }
+
+        .footerHome {
+            height: 80px;
+            background-color: #E6FFEE;
+            background-image: url(images/FIKT_Logo.png);
+            background-position-x: center;
+            background-repeat: no-repeat;
+            display: block;
+        }
+
+        #Najavuvanje {
+            text-align: center;
+        }
+
+        form {
+            height: 450px;
+        }
     </style>
 </head>
 <body>
+    <div class="headerHome"></div>
     <form id="LogInForm" runat="server">
         <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false">
             <LayoutTemplate>
                 <div class="accountInfo">
-                    <h1>Log In</h1>
+                    <h1 id="Najavuvanje">Најавување</h1>
                     <div style="margin-bottom: 10px;">
-                        <asp:Label ID="UsernameLabel" runat="server" AssociatedControlID="Username" Text="Username:" CssClass="labelStyle" />
-                        <asp:RequiredFieldValidator ID="UsernameRequired" runat="server" ControlToValidate="Username" ValidationGroup="LoginUserValidationGroup" Text="*" ToolTip="Username is required" CssClass="requiredStyle" />
+                        <asp:Label ID="UsernameLabel" runat="server" AssociatedControlID="Username" Text="Корисничко име:" CssClass="labelStyle" />
+                        <asp:RequiredFieldValidator ID="UsernameRequired" runat="server" ControlToValidate="Username" ValidationGroup="LoginUserValidationGroup" Text="*" ToolTip="Внесот на корисничко име е задолжително" CssClass="requiredStyle" />
                         <asp:TextBox ID="Username" runat="server" CssClass="textBoxStyle" />
                     </div>
                     <div style="margin-bottom: 10px;">
-                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" Text="Password:" CssClass="labelStyle" />
-                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ValidationGroup="LoginUserValidationGroup" Text="*" ToolTip="Password is required" CssClass="requiredStyle" />
+                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" Text="Лозинка:" CssClass="labelStyle" />
+                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ValidationGroup="LoginUserValidationGroup" Text="*" ToolTip="Внесот на лозинка е задолжително" CssClass="requiredStyle" />
                         <asp:TextBox ID="Password" runat="server" TextMode="Password" CssClass="textBoxStyle" />
                     </div>
                     <div class="submit-login">
                         <div class="rememberme">
-                            <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." CssClass="checkStyle" />
+                            <asp:CheckBox ID="RememberMe" runat="server" Text="Запамeти ме наредниот пат" CssClass="checkStyle" />
                         </div>
                         <div style="margin-bottom: 10px;" class="logInBtn">
-                            <asp:Button ID="LoginButton" runat="server" CommandName="Login" ValidationGroup="LoginUserValidationGroup" Text="LOG IN" Width="112" Height="38" CssClass="buttonStyle" />
+                            <asp:Button ID="LoginButton" runat="server" CommandName="Login" ValidationGroup="LoginUserValidationGroup" Text="ВЛЕЗ ВО СИСТЕМОТ" Width="310" Height="38" CssClass="buttonStyle" />
                         </div>
                     </div>
                     <span class="failureNotification">
@@ -172,5 +202,7 @@
             </LayoutTemplate>
         </asp:Login>
     </form>
+    <div class="footerHome">
+    </div>
 </body>
 </html>

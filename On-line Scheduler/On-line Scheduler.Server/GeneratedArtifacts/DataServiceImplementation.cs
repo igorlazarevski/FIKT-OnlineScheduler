@@ -64,6 +64,33 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> GetPredmetsByProfesor(string Korisnicko_ime)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Predmet> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Predmet>("Predmets"),
+                (p) => (p.Profesor.Korisnicko_ime.CompareTo(Korisnicko_ime) == 0));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Aktivnost> AktivnostByProfesor(string Korisnicko_ime)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Aktivnost> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Aktivnost>("Aktivnosts"),
+                (a) => (a.Profesor.Korisnicko_ime.CompareTo(Korisnicko_ime) == 0));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.vw_Aktivnosti> vw_AktivnostiPerStudent(string Br_indeks)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.vw_Aktivnosti> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.vw_Aktivnosti>("vw_Aktivnostis"),
+                (v) => (v.Br_indeks.CompareTo(Br_indeks) == 0));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -719,6 +746,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Predmet.DetailsClass.IImplementation.vw_Aktivnostis
+        {
+            get
+            {
+                return this.vw_Aktivnostis;
+            }
+        }
+        
         partial void OnID_profesorChanged()
         {
             if (this.__host != null)
@@ -1216,6 +1251,30 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.IImplementation
     {
     
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.vw_Aktivnosti.DetailsClass.IImplementation.Predmet
+        {
+            get
+            {
+                return this.Predmet;
+            }
+            set
+            {
+                this.Predmet = (global::LightSwitchApplication.Implementation.Predmet)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Predmet");
+                }
+            }
+        }
+        
+        partial void OnId_PredmetChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Predmet");
+            }
+        }
+        
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

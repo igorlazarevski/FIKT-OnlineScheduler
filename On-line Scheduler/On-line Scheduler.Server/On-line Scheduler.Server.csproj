@@ -208,7 +208,9 @@
     <Content Include="WEB\GetUser.ashx" />
     <_ServerFile Include="LogIn.aspx" />
     <_ServerFile Include="LogOut.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Aktivnosts.lsml" />
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Izbrani_predmetis.lsml" />
     <LightSwitchModel Include="DataSources\On_line_rasporedData\Predmets.lsml" />
@@ -232,6 +234,15 @@
     </LightSwitchModel>
     <LightSwitchModel Include="DataSources\On_line_rasporedData\GetProfesorByUsername.lsml">
       <DependentUpon>Profesors.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\GetPredmetsByProfesor.lsml">
+      <DependentUpon>Predmets.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\AktivnostByProfesor.lsml">
+      <DependentUpon>Aktivnosts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\On_line_rasporedData\vw_AktivnostiPerStudent.lsml">
+      <DependentUpon>vw_Aktivnostis.lsml</DependentUpon>
     </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -54,9 +54,18 @@ myapp.Profesors.Aktivnosts_ItemTap_execute = function (screen) {
     screen.findContentItem('CancelActivity').isVisible = true;
 };
 myapp.Profesors.created = function (screen) {
+    GetCurrentUser();
+    if (myapp.CurrentUser && myapp.CurrentUser.UserName) {
+        screen.Korisnicko_ime1 = myapp.CurrentUser.UserName;
+        screen.Korisnicko_ime = myapp.CurrentUser.UserName;
+    }
+
     document.addEventListener("DOMNodeInserted", function (e) {
         if (e.target.id == 'msls-navmenu') {
             ApplyPermissionsToMenu(e.target);
         }
     }, false);
+};
+myapp.Profesors.Aktivnosts_ItemTap1_execute = function (screen) {
+    screen.findContentItem('CancelActivity').isVisible = true;
 };

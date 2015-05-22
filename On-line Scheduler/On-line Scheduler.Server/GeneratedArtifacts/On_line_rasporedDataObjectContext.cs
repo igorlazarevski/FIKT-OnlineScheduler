@@ -34,6 +34,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Izbrani_predmeti_Student", "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Student), "Izbrani_predmeti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Izbrani_predmeti), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_SpisokPolaganje_Student", "Student", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Student), "SpisokPolaganje", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.SpisokPolaganje), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Aktivnost_TipNaAktivnost", "TipNaAktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TipNaAktivnost), "Aktivnost", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Aktivnost), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "vw_Aktivnosti_Predmet", "Predmet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Predmet), "vw_Aktivnosti", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.vw_Aktivnosti), true)]
 
 #endregion
 
@@ -1786,6 +1787,28 @@ namespace LightSwitchApplication.Implementation
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "vw_Aktivnosti_Predmet", "vw_Aktivnosti")]
+        public EntityCollection<vw_Aktivnosti> vw_Aktivnostis
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<vw_Aktivnosti>("LightSwitchApplication.vw_Aktivnosti_Predmet", "vw_Aktivnosti");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<vw_Aktivnosti>("LightSwitchApplication.vw_Aktivnosti_Predmet", "vw_Aktivnosti", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -3323,12 +3346,14 @@ namespace LightSwitchApplication.Implementation
         /// <param name="iD_aktivnost">Initial value of the ID_aktivnost property.</param>
         /// <param name="iD_Den">Initial value of the ID_Den property.</param>
         /// <param name="id_Predmet">Initial value of the Id_Predmet property.</param>
-        public static vw_Aktivnosti Createvw_Aktivnosti(global::System.Int32 iD_aktivnost, global::System.Int32 iD_Den, global::System.String id_Predmet)
+        /// <param name="br_indeks">Initial value of the Br_indeks property.</param>
+        public static vw_Aktivnosti Createvw_Aktivnosti(global::System.Int32 iD_aktivnost, global::System.Int32 iD_Den, global::System.String id_Predmet, global::System.String br_indeks)
         {
             vw_Aktivnosti vw_Aktivnosti = new vw_Aktivnosti();
             vw_Aktivnosti.ID_aktivnost = iD_aktivnost;
             vw_Aktivnosti.ID_Den = iD_Den;
             vw_Aktivnosti.Id_Predmet = id_Predmet;
+            vw_Aktivnosti.Br_indeks = br_indeks;
             return vw_Aktivnosti;
         }
 
@@ -3680,10 +3705,79 @@ namespace LightSwitchApplication.Implementation
         private Nullable<global::System.Int32> _BR_Semestar;
         partial void OnBR_SemestarChanging(Nullable<global::System.Int32> value);
         partial void OnBR_SemestarChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Br_indeks
+        {
+            get
+            {
+                return _Br_indeks;
+            }
+            set
+            {
+                if (_Br_indeks != value)
+                {
+                    OnBr_indeksChanging(value);
+                    ReportPropertyChanging("Br_indeks");
+                    _Br_indeks = value;
+                    ReportPropertyChanged("Br_indeks");
+                    OnBr_indeksChanged();
+                }
+            }
+        }
+        private global::System.String _Br_indeks;
+        partial void OnBr_indeksChanging(global::System.String value);
+        partial void OnBr_indeksChanged();
 
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "vw_Aktivnosti_Predmet", "Predmet")]
+        public Predmet Predmet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Predmet>("LightSwitchApplication.vw_Aktivnosti_Predmet", "Predmet").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Predmet>("LightSwitchApplication.vw_Aktivnosti_Predmet", "Predmet").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Predmet> PredmetReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Predmet>("LightSwitchApplication.vw_Aktivnosti_Predmet", "Predmet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Predmet>("LightSwitchApplication.vw_Aktivnosti_Predmet", "Predmet", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
 
     #endregion

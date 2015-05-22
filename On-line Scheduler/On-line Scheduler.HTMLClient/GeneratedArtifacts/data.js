@@ -165,6 +165,9 @@ window.myapp = msls.application;
         /// <field name="SpisokPolaganjes" type="msls.EntityCollection" elementType="msls.application.SpisokPolaganje">
         /// Gets the spisokPolaganjes for this predmet.
         /// </field>
+        /// <field name="vw_Aktivnostis" type="msls.EntityCollection" elementType="msls.application.vw_Aktivnosti">
+        /// Gets the vw_Aktivnostis for this predmet.
+        /// </field>
         /// <field name="details" type="msls.application.Predmet.Details">
         /// Gets the details for this predmet.
         /// </field>
@@ -459,6 +462,12 @@ window.myapp = msls.application;
         /// <field name="BR_Semestar" type="Number">
         /// Gets or sets the bR_Semestar for this vw_Aktivnosti.
         /// </field>
+        /// <field name="Predmet" type="msls.application.Predmet">
+        /// Gets or sets the predmet for this vw_Aktivnosti.
+        /// </field>
+        /// <field name="Br_indeks" type="String">
+        /// Gets or sets the br_indeks for this vw_Aktivnosti.
+        /// </field>
         /// <field name="details" type="msls.application.vw_Aktivnosti.Details">
         /// Gets the details for this vw_Aktivnosti.
         /// </field>
@@ -577,7 +586,8 @@ window.myapp = msls.application;
             { name: "br_krediti", type: Number },
             { name: "StatusPredmet", kind: "reference", type: StatusPredmet },
             { name: "Nasoka1", kind: "reference", type: Nasoka },
-            { name: "SpisokPolaganjes", kind: "collection", elementType: SpisokPolaganje }
+            { name: "SpisokPolaganjes", kind: "collection", elementType: SpisokPolaganje },
+            { name: "vw_Aktivnostis", kind: "collection", elementType: vw_Aktivnosti }
         ]),
 
         Profesor: $defineEntity(Profesor, [
@@ -663,7 +673,9 @@ window.myapp = msls.application;
             { name: "ID_Den", type: Number },
             { name: "ImePredmet", type: String },
             { name: "Id_Predmet", type: String },
-            { name: "BR_Semestar", type: Number }
+            { name: "BR_Semestar", type: Number },
+            { name: "Predmet", kind: "reference", type: Predmet },
+            { name: "Br_indeks", type: String }
         ]),
 
         On_line_rasporedData: $defineDataService(On_line_rasporedData, lightSwitchApplication.rootUri + "/On_line_rasporedData.svc", [
@@ -801,10 +813,37 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "vw_Aktivnostis_SingleOrDefault", value: function (ID_aktivnost, ID_Den, Id_Predmet) {
+                name: "vw_Aktivnostis_SingleOrDefault", value: function (ID_aktivnost, ID_Den, Id_Predmet, Br_indeks) {
                     return new $DataServiceQuery({ _entitySet: this.vw_Aktivnostis },
-                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/vw_Aktivnostis(" + "ID_aktivnost=" + $toODataString(ID_aktivnost, "Int32?") + "," + "ID_Den=" + $toODataString(ID_Den, "Int32?") + "," + "Id_Predmet=" + $toODataString(Id_Predmet, "String?") + ")"
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/vw_Aktivnostis(" + "ID_aktivnost=" + $toODataString(ID_aktivnost, "Int32?") + "," + "ID_Den=" + $toODataString(ID_Den, "Int32?") + "," + "Id_Predmet=" + $toODataString(Id_Predmet, "String?") + "," + "Br_indeks=" + $toODataString(Br_indeks, "String?") + ")"
                     );
+                }
+            },
+            {
+                name: "GetPredmetsByProfesor", value: function (Korisnicko_ime) {
+                    return new $DataServiceQuery({ _entitySet: this.Predmets },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/GetPredmetsByProfesor()",
+                        {
+                            Korisnicko_ime: $toODataString(Korisnicko_ime, "String?")
+                        });
+                }
+            },
+            {
+                name: "AktivnostByProfesor", value: function (Korisnicko_ime) {
+                    return new $DataServiceQuery({ _entitySet: this.Aktivnosts },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/AktivnostByProfesor()",
+                        {
+                            Korisnicko_ime: $toODataString(Korisnicko_ime, "String?")
+                        });
+                }
+            },
+            {
+                name: "vw_AktivnostiPerStudent", value: function (Br_indeks) {
+                    return new $DataServiceQuery({ _entitySet: this.vw_Aktivnostis },
+                        lightSwitchApplication.rootUri + "/On_line_rasporedData.svc" + "/vw_AktivnostiPerStudent()",
+                        {
+                            Br_indeks: $toODataString(Br_indeks, "String?")
+                        });
                 }
             }
         ]),

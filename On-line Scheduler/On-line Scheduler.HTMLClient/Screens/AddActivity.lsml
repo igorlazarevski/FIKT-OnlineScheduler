@@ -52,7 +52,8 @@
                 <ContentItem
                   Name="Predmet"
                   Kind="Details"
-                  DataType="Predmet">
+                  DataType="Predmet"
+                  View="Microsoft.LightSwitch.MobileWeb:GroupCustomControl">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Предмет" />
@@ -66,28 +67,17 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate"
-                    Kind="Details"
-                    DataType="Predmet"
-                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                    Name="Ime"
+                    Kind="Value"
+                    DataType=":String?">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
-                        <ChainExpression />
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Ime]" />
+                        </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
-                    <ContentItem
-                      Name="Ime"
-                      Kind="Value"
-                      DataType=":String?">
-                      <ContentItem.DataSource>
-                        <ScreenExpressionTree>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="Predmet/Properties[Ime]" />
-                          </ChainExpression>
-                        </ScreenExpressionTree>
-                      </ContentItem.DataSource>
-                    </ContentItem>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem

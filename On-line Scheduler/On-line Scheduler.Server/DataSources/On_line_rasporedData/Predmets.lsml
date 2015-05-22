@@ -82,6 +82,11 @@
         Association="FK_SpisokPolaganje_Predmet"
         FromEnd="Predmet"
         ToEnd="SpisokPolaganje" />
+      <NavigationProperty
+        Name="vw_Aktivnostis"
+        Association="vw_Aktivnosti_Predmet"
+        FromEnd="Predmet"
+        ToEnd="vw_Aktivnosti" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -235,6 +240,16 @@
         Name="SpisokPolaganje"
         EntitySet="SpisokPolaganjes" />
     </AssociationSet>
+    <AssociationSet
+      Name="vw_Aktivnosti_Predmets"
+      Association="vw_Aktivnosti_Predmet">
+      <AssociationSetEnd
+        Name="vw_Aktivnosti"
+        EntitySet="vw_Aktivnostis" />
+      <AssociationSetEnd
+        Name="Predmet"
+        EntitySet="Predmets" />
+    </AssociationSet>
   </EntityContainer>
   <Association
     Name="FK_SpisokPolaganje_Predmet">
@@ -249,6 +264,24 @@
       Name="SpisokPolaganje"
       Multiplicity="Many"
       EntityType="SpisokPolaganje" />
+  </Association>
+  <Association
+    Name="vw_Aktivnosti_Predmet">
+    <Association.Attributes>
+      <UserDefined />
+    </Association.Attributes>
+    <AssociationEnd
+      Name="vw_Aktivnosti"
+      Multiplicity="Many"
+      EntityType="vw_Aktivnosti" />
+    <AssociationEnd
+      Name="Predmet"
+      Multiplicity="One"
+      EntityType="Predmet">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
   </Association>
   <DataService
     Name="On_line_rasporedDataDataService">
@@ -361,6 +394,27 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="On_line_rasporedData/Members[FK_SpisokPolaganje_Predmet]/Members[SpisokPolaganje]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID_predmet" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="vw_Aktivnosti_Predmets">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="vw_Aktivnosti_Predmets" />
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[vw_Aktivnosti_Predmets]/Members[vw_Aktivnosti]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Predmet" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="On_line_rasporedData/Members[vw_Aktivnosti_Predmets]/Members[Predmet]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID_predmet" />

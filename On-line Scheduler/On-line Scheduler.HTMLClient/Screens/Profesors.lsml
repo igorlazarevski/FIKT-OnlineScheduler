@@ -457,7 +457,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="Profesors/Methods[Aktivnosts_ItemTap]" />
+                        Target="Profesors/Methods[Aktivnosts_ItemTap1]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -911,6 +911,8 @@
         Name="CancelActivity_Tap" />
       <ScreenMethod
         Name="Aktivnosts_ItemTap" />
+      <ScreenMethod
+        Name="Aktivnosts_ItemTap1" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -924,17 +926,39 @@
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree>
                 <BinaryExpression
-                  NodeType="Equal">
+                  NodeType="And">
                   <BinaryExpression.Left>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="Predmet/Properties[ActivePredmet]" />
-                    </ChainExpression>
+                    <BinaryExpression
+                      NodeType="Equal">
+                      <BinaryExpression.Left>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[ActivePredmet]" />
+                        </ChainExpression>
+                      </BinaryExpression.Left>
+                      <BinaryExpression.Right>
+                        <ConstantExpression
+                          Value="True"
+                          ResultType=":Boolean?" />
+                      </BinaryExpression.Right>
+                    </BinaryExpression>
                   </BinaryExpression.Left>
                   <BinaryExpression.Right>
-                    <ConstantExpression
-                      Value="True"
-                      ResultType=":Boolean?" />
+                    <BinaryExpression
+                      NodeType="Equal">
+                      <BinaryExpression.Left>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Predmet/Properties[Profesor]" />
+                          <MemberExpression
+                            Member="Korisnicko_ime" />
+                        </ChainExpression>
+                      </BinaryExpression.Left>
+                      <BinaryExpression.Right>
+                        <ParameterExpression
+                          Parameter="Korisnicko_ime" />
+                      </BinaryExpression.Right>
+                    </BinaryExpression>
                   </BinaryExpression.Right>
                 </BinaryExpression>
               </QueryFilterExpressionTree>
@@ -945,12 +969,25 @@
                   Member="On_line_rasporedData/Members[Predmets]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="Korisnicko_ime"
+                ParameterType=":String?" />
+            </ScreenQueryDefinition.Parameters>
           </ScreenQueryDefinition>
         </ScreenCollectionProperty.Query>
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Profesors/Properties[Predmets]/Query" />
+              Target="Profesors/Properties[Predmets]/Query">
+              <ArgumentExpression
+                Parameter="Korisnicko_ime">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Profesors/Properties[Korisnicko_ime]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -963,7 +1000,23 @@
             Name="AktivnostsQuery"
             ReturnType="Aktivnost*">
             <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Aktivnost/Properties[Profesor]" />
+                      <MemberExpression
+                        Member="Korisnicko_ime" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ParameterExpression
+                      Parameter="Korisnicko_ime" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
@@ -971,6 +1024,11 @@
                   Member="On_line_rasporedData/Members[Aktivnosts]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="Korisnicko_ime"
+                ParameterType=":String?" />
+            </ScreenQueryDefinition.Parameters>
             <ScreenQueryDefinition.SortCriteria>
               <SortCriterion>
                 <ChainExpression>
@@ -986,7 +1044,15 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Profesors/Properties[Aktivnosts]/Query" />
+              Target="Profesors/Properties[Aktivnosts]/Query">
+              <ArgumentExpression
+                Parameter="Korisnicko_ime">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Profesors/Properties[Korisnicko_ime1]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -1047,6 +1113,20 @@
       </ScreenCollectionProperty>
       <ScreenProperty
         Name="ID_predmet"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Korisnicko_ime"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Korisnicko_ime1"
         PropertyType=":String">
         <ScreenProperty.Attributes>
           <Required />

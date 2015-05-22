@@ -157,6 +157,7 @@
           <ScalarProperty Name="ImePredmet" ColumnName="ImePredmet" />
           <ScalarProperty Name="Id_Predmet" ColumnName="Id_Predmet" />
           <ScalarProperty Name="BR_Semestar" ColumnName="BR_Semestar" />
+          <ScalarProperty Name="Br_indeks" ColumnName="Br_indeks" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

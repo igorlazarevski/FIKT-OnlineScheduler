@@ -24,8 +24,8 @@ myapp.Students.ScheduleExam_execute = function (screen) {
 };
 
 
-myapp.Students.vw_Aktivnostis_ItemTap_execute = function (screen) {
-    if (screen.vw_Aktivnostis.selectedItem && !screen.vw_Aktivnostis.selectedItem.Povtoruvacki) {
+myapp.Students.vw_AktivnostiPerStudent_execute = function (screen) {
+    if (screen.vw_AktivnostiPerStudent.selectedItem && !screen.vw_AktivnostiPerStudent.selectedItem.Povtoruvacki) {
         //najdi go elementot
         var elem = screen.findContentItem("ScheduleExam");
         //pokazi go
@@ -40,8 +40,25 @@ myapp.Students.vw_Aktivnostis_ItemTap_execute = function (screen) {
 };
 
 
+myapp.Students.created = function (screen) {
+    GetCurrentUser();
+    if (myapp.CurrentUser && myapp.CurrentUser.UserName) {
+        screen.Br_indeks1 = myapp.CurrentUser.UserName;
+        screen.Br_indeks = myapp.CurrentUser.UserName;
+    }
+    else {
+        screen.Br_indeks1 = '0';
+        screen.Br_indeks = '0';
+    }
 
-myapp.Students.vw_AktivnostisTemplate_postRender = function (element, contentItem) {
+    document.addEventListener("DOMNodeInserted", function (e) {
+        if (e.target.id == 'msls-navmenu') {
+            ApplyPermissionsToMenu(e.target);
+        }
+    }, false);
+};
+
+myapp.Students.vw_AktivnostiPerStudentTemplate_postRender = function (element, contentItem) {
     if (contentItem.value.Ime == 'Предавања')
         element.parentElement.id = "Predavanje";
     else
@@ -60,21 +77,34 @@ myapp.Students.vw_AktivnostisTemplate_postRender = function (element, contentIte
                     if (contentItem.value.Ime == 'Вежби')
                         element.parentElement.id = "Vezbi";
 };
-
-
-myapp.Students.created = function (screen) {
-    GetCurrentUser();
-    if (myapp.CurrentUser && myapp.CurrentUser.Semestar)
-        screen.BR_Semestar = parseInt(myapp.CurrentUser.Semestar);
-    else
-        screen.BR_Semestar = 0;
-
-    if (myapp.CurrentUser && myapp.CurrentUser.UserName)
-        screen.Br_indeks = myapp.CurrentUser.UserName;
-
-    document.addEventListener("DOMNodeInserted", function (e) {
-        if (e.target.id == 'msls-navmenu') {
-            ApplyPermissionsToMenu(e.target);
-        }
-    }, false);
+myapp.Students.otkazan_render = function (element, contentItem) {
+    // Write code here.
+    if(contentItem.value)
+    {
+        element.innerHTML = '<span class="otkazan">ОТКАЖАН</span>';
+    }
+};
+myapp.Students.vw_AktivnostiPerStudent_ItemTap_execute = function (screen) {
+    if (screen.vw_AktivnostiPerStudent.selectedItem && !screen.vw_AktivnostiPerStudent.selectedItem.Povtoruvacki) {
+        //najdi go elementot
+        var elem = screen.findContentItem("ScheduleExam");
+        //pokazi go
+        elem.isVisible = true;
+    }
+    else {
+        //najdi go elementot
+        var elem = screen.findContentItem("ScheduleExam");
+        //skrij go
+        elem.isVisible = false;
+    }
+};
+myapp.Students.Vreme_pocetok1_postRender = function (element, contentItem) {
+    element.innerHTML = contentItem.value.format("HH:mm");
+};
+myapp.Students.Vreme_kraj1_postRender = function (element, contentItem) {
+    element.innerHTML = contentItem.value.format("HH:mm");
+};
+myapp.Students.Shedule_Tap_execute = function (screen) {
+    // Write code here.
+alert('tapnat sum')
 };
