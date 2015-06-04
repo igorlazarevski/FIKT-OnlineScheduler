@@ -8,7 +8,7 @@ myapp.Students.Vreme_kraj_postRender = function (element, contentItem) {
 };
 myapp.Students.ScheduleExam_execute = function (screen) {
     var schedule = new myapp.SpisokPolaganje;
-    msls.application.activeDataWorkspace.On_line_rasporedData.Predmets_SingleOrDefault(screen.vw_Aktivnostis.selectedItem.Id_Predmet)
+    msls.application.activeDataWorkspace.On_line_rasporedData.Predmets_SingleOrDefault(screen.vw_AktivnostiPerStudent.selectedItem.Id_Predmet)
     .execute().then(function (odgovor) {
         schedule.Predmet = odgovor.results[0];
         msls.application.activeDataWorkspace.On_line_rasporedData.Students_SingleOrDefault(myapp.CurrentUser.UserName).execute().then(function (rez) {
@@ -105,6 +105,5 @@ myapp.Students.Vreme_kraj1_postRender = function (element, contentItem) {
     element.innerHTML = contentItem.value.format("HH:mm");
 };
 myapp.Students.Shedule_Tap_execute = function (screen) {
-    // Write code here.
-alert('tapnat sum')
+    
 };
