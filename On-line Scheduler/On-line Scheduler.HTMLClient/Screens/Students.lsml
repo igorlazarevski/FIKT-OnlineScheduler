@@ -229,6 +229,7 @@
             <ContentItem.CommandItems>
               <ContentItem
                 Name="Searchvw_Aktivnostis"
+                IsHidden="True"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName

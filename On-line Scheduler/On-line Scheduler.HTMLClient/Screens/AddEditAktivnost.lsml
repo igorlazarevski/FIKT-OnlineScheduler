@@ -50,9 +50,31 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
+                  Name="Den"
+                  Kind="Details"
+                  DataType="Den"
+                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Ден" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Aktivnost/Properties[Den]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="Vreme_pocetok"
                   Kind="Value"
                   DataType=":DateTime?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Време почеток" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -61,23 +83,15 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[TimePickerEnabled]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="False"
-                            ResultType=":Boolean" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
                   Name="Vreme_kraj"
                   Kind="Value"
                   DataType=":DateTime?">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Време крај" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -86,24 +100,16 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[TimePickerEnabled]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="False"
-                            ResultType=":Boolean" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
                   Name="Predmet"
                   Kind="Details"
                   DataType="Predmet"
                   View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Предмет" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -114,10 +120,50 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
+                  Name="Profesor"
+                  Kind="Details"
+                  DataType="Profesor"
+                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Професор" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Aktivnost/Properties[Profesor]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Prostorija"
+                  Kind="Details"
+                  DataType="Prostorija"
+                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Просторија" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Aktivnost/Properties[Prostorija]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="TipNaAktivnost"
                   Kind="Details"
                   DataType="TipNaAktivnost"
                   View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Тип на активност" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -155,6 +201,7 @@
                 Kind="Group">
                 <ContentItem
                   Name="Otkazan"
+                  IsHidden="True"
                   Kind="Value"
                   DataType=":Boolean?">
                   <ContentItem.DataSource>

@@ -3744,6 +3744,26 @@
               ]
             },
             {
+              "id": "On_line_rasporedData/Members[vw_Aktivnosti_Predmets]",
+              "name": "vw_Aktivnosti_Predmets",
+              "association": { "__id": "vw_Aktivnosti_Predmet" },
+              "ends":
+              [
+                {
+                  "properties": [ "Id_Predmet" ],
+                  "id": "On_line_rasporedData/Members[vw_Aktivnosti_Predmets]/Members[vw_Aktivnosti]",
+                  "name": "vw_Aktivnosti",
+                  "entitySet": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis]" }
+                },
+                {
+                  "properties": [ "ID_predmet" ],
+                  "id": "On_line_rasporedData/Members[vw_Aktivnosti_Predmets]/Members[Predmet]",
+                  "name": "Predmet",
+                  "entitySet": { "__id": "On_line_rasporedData/Members[Predmets]" }
+                }
+              ]
+            },
+            {
               "id": "On_line_rasporedData/Members[FK_Aktivnost_Profesor]",
               "name": "FK_Aktivnost_Profesor",
               "association": { "__id": "FK_Aktivnost_Profesor" },
@@ -3922,26 +3942,6 @@
                   "entitySet": { "__id": "On_line_rasporedData/Members[Aktivnosts]" }
                 }
               ]
-            },
-            {
-              "id": "On_line_rasporedData/Members[vw_Aktivnosti_Predmets]",
-              "name": "vw_Aktivnosti_Predmets",
-              "association": { "__id": "vw_Aktivnosti_Predmet" },
-              "ends":
-              [
-                {
-                  "properties": [ "Id_Predmet" ],
-                  "id": "On_line_rasporedData/Members[vw_Aktivnosti_Predmets]/Members[vw_Aktivnosti]",
-                  "name": "vw_Aktivnosti",
-                  "entitySet": { "__id": "On_line_rasporedData/Members[vw_Aktivnostis]" }
-                },
-                {
-                  "properties": [ "ID_predmet" ],
-                  "id": "On_line_rasporedData/Members[vw_Aktivnosti_Predmets]/Members[Predmet]",
-                  "name": "Predmet",
-                  "entitySet": { "__id": "On_line_rasporedData/Members[Predmets]" }
-                }
-              ]
             }
           ],
           "entitySets":
@@ -4107,6 +4107,25 @@
                   "id": "On_line_rasporedData/Members[Aktivnosts_SingleOrDefault]/Parameters[ID_aktivnost]",
                   "name": "ID_aktivnost",
                   "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "On_line_rasporedData/Members[AktivnostByProfesor]",
+              "name": "AktivnostByProfesor",
+              "elementType": { "__id": "Aktivnost" },
+              "query": { "__id": "On_line_rasporedData/Members[AktivnostByProfesor]" },
+              "returnType": { "__id": "Aktivnost*" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[Aktivnosts]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[AktivnostByProfesor]/Parameters[Korisnicko_ime]",
+                  "name": "Korisnicko_ime",
+                  "parameterType": { "__id": ":String?" }
                 }
               ]
             },
@@ -4296,6 +4315,25 @@
                 {
                   "id": "On_line_rasporedData/Members[GetPredmetByID]/Parameters[ID_predmet]",
                   "name": "ID_predmet",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "On_line_rasporedData/Members[GetPredmetsByProfesor]",
+              "name": "GetPredmetsByProfesor",
+              "elementType": { "__id": "Predmet" },
+              "query": { "__id": "On_line_rasporedData/Members[GetPredmetsByProfesor]" },
+              "returnType": { "__id": "Predmet*" },
+              "source":
+              {
+                "member": { "__id": "On_line_rasporedData/Members[Predmets]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "On_line_rasporedData/Members[GetPredmetsByProfesor]/Parameters[Korisnicko_ime]",
+                  "name": "Korisnicko_ime",
                   "parameterType": { "__id": ":String?" }
                 }
               ]
@@ -4687,44 +4725,6 @@
                 {
                   "id": "On_line_rasporedData/Members[vw_Aktivnostis_SingleOrDefault]/Parameters[Br_indeks]",
                   "name": "Br_indeks",
-                  "parameterType": { "__id": ":String?" }
-                }
-              ]
-            },
-            {
-              "id": "On_line_rasporedData/Members[GetPredmetsByProfesor]",
-              "name": "GetPredmetsByProfesor",
-              "elementType": { "__id": "Predmet" },
-              "query": { "__id": "On_line_rasporedData/Members[GetPredmetsByProfesor]" },
-              "returnType": { "__id": "Predmet*" },
-              "source":
-              {
-                "member": { "__id": "On_line_rasporedData/Members[Predmets]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "On_line_rasporedData/Members[GetPredmetsByProfesor]/Parameters[Korisnicko_ime]",
-                  "name": "Korisnicko_ime",
-                  "parameterType": { "__id": ":String?" }
-                }
-              ]
-            },
-            {
-              "id": "On_line_rasporedData/Members[AktivnostByProfesor]",
-              "name": "AktivnostByProfesor",
-              "elementType": { "__id": "Aktivnost" },
-              "query": { "__id": "On_line_rasporedData/Members[AktivnostByProfesor]" },
-              "returnType": { "__id": "Aktivnost*" },
-              "source":
-              {
-                "member": { "__id": "On_line_rasporedData/Members[Aktivnosts]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "On_line_rasporedData/Members[AktivnostByProfesor]/Parameters[Korisnicko_ime]",
-                  "name": "Korisnicko_ime",
                   "parameterType": { "__id": ":String?" }
                 }
               ]
@@ -5588,6 +5588,27 @@
           ]
         },
         {
+          "id": "vw_Aktivnosti_Predmet",
+          "name": "vw_Aktivnosti_Predmet",
+          ":@UserDefined": { },
+          "ends":
+          [
+            {
+              "id": "vw_Aktivnosti_Predmet/Ends[vw_Aktivnosti]",
+              "name": "vw_Aktivnosti",
+              "multiplicity": "Many",
+              "entityType": { "__id": "vw_Aktivnosti" }
+            },
+            {
+              "id": "vw_Aktivnosti_Predmet/Ends[Predmet]",
+              "name": "Predmet",
+              "multiplicity": "One",
+              "entityType": { "__id": "Predmet" },
+              ":@DeleteRule": { "action": "Unset" }
+            }
+          ]
+        },
+        {
           "displayName": "Додај Активност",
           "id": "AddActivity",
           "name": "AddActivity",
@@ -5983,41 +6004,45 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Vreme pocetok",
+                                "displayName": "Ден",
+                                "name": "Den",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Den]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Den/Properties[Den1]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Време почеток",
                                 "name": "Vreme_pocetok",
                                 "kind": "Value",
                                 "view": { "__id": ":DateTimePicker" },
                                 "dataSource":
                                 {
                                   "member": { "__id": "Aktivnost/Properties[Vreme_pocetok]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":DateTimePicker/Properties[TimePickerEnabled]" },
-                                    "value": false
-                                  }
-                                ]
+                                }
                               },
                               {
-                                "displayName": "Vreme kraj",
+                                "displayName": "Време крај",
                                 "name": "Vreme_kraj",
                                 "kind": "Value",
                                 "view": { "__id": ":DateTimePicker" },
                                 "dataSource":
                                 {
                                   "member": { "__id": "Aktivnost/Properties[Vreme_kraj]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":DateTimePicker/Properties[TimePickerEnabled]" },
-                                    "value": false
-                                  }
-                                ]
+                                }
                               },
                               {
-                                "displayName": "Predmet",
+                                "displayName": "Предмет",
                                 "name": "Predmet",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
@@ -6035,7 +6060,43 @@
                                 }
                               },
                               {
-                                "displayName": "Tip Na Aktivnost",
+                                "displayName": "Професор",
+                                "name": "Profesor",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Profesor]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Profesor/Properties[Korisnicko_ime]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Просторија",
+                                "name": "Prostorija",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "Aktivnost/Properties[Prostorija]" }
+                                    },
+                                    {
+                                      "member": { "__id": "Prostorija/Properties[Opis]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Тип на активност",
                                 "name": "TipNaAktivnost",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
@@ -6075,6 +6136,7 @@
                               {
                                 "displayName": "Otkazan",
                                 "name": "Otkazan",
+                                "isHidden": true,
                                 "kind": "Value",
                                 "view": { "__id": ":FlipSwitchControl" },
                                 "dataSource":
@@ -10459,11 +10521,15 @@
                                       },
                                       {
                                         "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                        "value": "StretchToContainer"
+                                        "value": "FixedSize"
                                       },
                                       {
                                         "property": { "__id": ":RootControl/Properties[MinWidth]" },
                                         "value": 0
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[Width]" },
+                                        "value": 150
                                       }
                                     ]
                                   },
@@ -10493,6 +10559,16 @@
                                     ]
                                   }
                                 ]
+                              },
+                              {
+                                "displayName": "Откажан",
+                                "name": "Otkazan",
+                                "kind": "Value",
+                                "view": { "__id": ":ValueCustomControl" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Aktivnost/Properties[Otkazan]" }
+                                }
                               }
                             ]
                           }
@@ -11786,6 +11862,7 @@
                       {
                         "displayName": "Пребарај Активност",
                         "name": "Searchvw_Aktivnostis",
+                        "isHidden": true,
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -12430,27 +12507,6 @@
               "elementType": { "__id": "Profesor" },
               "propertyType": { "__id": "Profesor" },
               ":@IsParameter": { }
-            }
-          ]
-        },
-        {
-          "id": "vw_Aktivnosti_Predmet",
-          "name": "vw_Aktivnosti_Predmet",
-          ":@UserDefined": { },
-          "ends":
-          [
-            {
-              "id": "vw_Aktivnosti_Predmet/Ends[vw_Aktivnosti]",
-              "name": "vw_Aktivnosti",
-              "multiplicity": "Many",
-              "entityType": { "__id": "vw_Aktivnosti" }
-            },
-            {
-              "id": "vw_Aktivnosti_Predmet/Ends[Predmet]",
-              "name": "Predmet",
-              "multiplicity": "One",
-              "entityType": { "__id": "Predmet" },
-              ":@DeleteRule": { "action": "Unset" }
             }
           ]
         }

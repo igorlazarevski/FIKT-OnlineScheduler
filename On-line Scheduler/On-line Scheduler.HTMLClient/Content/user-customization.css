@@ -68,6 +68,6 @@ screen and (max-width: 640px) and (max-height: 400px) and (orientation: landscap
 
 .otkazan{
     color: red;
-    font-size: x-large;
+    font-size: 12pt;
     font-style:oblique;
 }

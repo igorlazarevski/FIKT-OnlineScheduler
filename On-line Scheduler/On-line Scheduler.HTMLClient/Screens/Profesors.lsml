@@ -383,7 +383,7 @@
                         <ScreenExpressionTree>
                           <ChainExpression>
                             <ConstantExpression
-                              Value="StretchToContainer"
+                              Value="FixedSize"
                               ResultType=":String" />
                           </ChainExpression>
                         </ScreenExpressionTree>
@@ -394,6 +394,16 @@
                           <ChainExpression>
                             <ConstantExpression
                               Value="0"
+                              ResultType=":Double" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Width]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="150"
                               ResultType=":Double" />
                           </ChainExpression>
                         </ScreenExpressionTree>
@@ -449,6 +459,24 @@
                       </ControlPropertySource>
                     </ContentItem.PropertySources>
                   </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Otkazan"
+                  Kind="Value"
+                  DataType=":Boolean?"
+                  View="Microsoft.LightSwitch.MobileWeb:ValueCustomControl">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Откажан" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Aktivnost/Properties[Otkazan]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
                 </ContentItem>
               </ContentItem>
               <ContentItem.PropertySources>

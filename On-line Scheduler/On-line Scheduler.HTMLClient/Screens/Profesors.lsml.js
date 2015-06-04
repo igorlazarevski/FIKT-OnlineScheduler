@@ -41,11 +41,32 @@ myapp.Profesors.CancelActivity_Tap_execute = function (screen) {
             }
         },
         beforeShown: function (AddEditAktivnostScreen) {
-            //var newActivity = new myapp.Aktivnost();
+            var newActivity = new myapp.Aktivnost();
+            var pocetok = selected.Vreme_pocetok;
+            var currentDate = GetDateForTheSubject(selected.Den.ID_Den - 1);
+            pocetok.setMonth(currentDate.getMonth());
+            pocetok.setDate(currentDate.getDay());
+            pocetok.setYear(currentDate.getFullYear());
+            pocetok.setTime(selected.Vreme_pocetok.getTime());
+            newActivity.setVreme_pocetok(pocetok);
+
+            var kraj = selected.Vreme_kraj;
+            kraj.setMonth(currentDate.getMonth());
+            kraj.setDate(currentDate.getDay());
+            kraj.setYear(currentDate.getFullYear());
+            kraj.setTime(selected.Vreme_kraj.getTime());
+            newActivity.setVreme_kraj(kraj);
+
+            newActivity.setOtkazan(true);
+            newActivity.setDen(selected.Den);
+            newActivity.setPredmet(selected.Predmet);
+            newActivity.setProfesor(selected.Profesor);
+            newActivity.setProstorija(selected.Prostorija);
+            newActivity.setTipNaAktivnost(selected.TipNaAktivnost);
             //napolni ja novata aktivnost so parametri potrebni
             // Za vreme pocetok i kraj dadi go vremeto od aktivnosta za predmetot i dadi mu na korisnikot da moze da ja smeni samo datata a ne i vremeto,
             //dokolku e ne povtoruvacki, nema da moze ni datumot da go smeni tuku samo da go otkaze
-            //AddEditAktivnostScreen.Aktivnost = newActivity;
+            AddEditAktivnostScreen.Aktivnost = newActivity;
         }
     }
     )
@@ -68,4 +89,9 @@ myapp.Profesors.created = function (screen) {
 };
 myapp.Profesors.Aktivnosts_ItemTap1_execute = function (screen) {
     screen.findContentItem('CancelActivity').isVisible = true;
+};
+myapp.Profesors.Otkazan_render = function (element, contentItem) {
+    if (contentItem.value) {
+        element.innerHTML = '<span class="otkazan">ОТКАЖАН</span>';
+    }
 };

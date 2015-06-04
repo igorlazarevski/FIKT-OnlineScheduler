@@ -336,6 +336,14 @@
             data: lightSwitchApplication.Aktivnost,
             value: lightSwitchApplication.Aktivnost
         },
+        Den: {
+            _$class: msls.ContentItem,
+            _$name: "Den",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditAktivnost,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Den
+        },
         Vreme_pocetok: {
             _$class: msls.ContentItem,
             _$name: "Vreme_pocetok",
@@ -359,6 +367,22 @@
             screen: lightSwitchApplication.AddEditAktivnost,
             data: lightSwitchApplication.Aktivnost,
             value: lightSwitchApplication.Predmet
+        },
+        Profesor: {
+            _$class: msls.ContentItem,
+            _$name: "Profesor",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditAktivnost,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Profesor
+        },
+        Prostorija: {
+            _$class: msls.ContentItem,
+            _$name: "Prostorija",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditAktivnost,
+            data: lightSwitchApplication.Aktivnost,
+            value: lightSwitchApplication.Prostorija
         },
         TipNaAktivnost: {
             _$class: msls.ContentItem,
@@ -419,6 +443,11 @@
         /// </field>
         left_postRender: [$element, function () { return new lightSwitchApplication.AddEditAktivnost().findContentItem("left"); }],
         /// <field>
+        /// Called after the Den content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Den_postRender: [$element, function () { return new lightSwitchApplication.AddEditAktivnost().findContentItem("Den"); }],
+        /// <field>
         /// Called after the Vreme_pocetok content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -433,6 +462,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Predmet_postRender: [$element, function () { return new lightSwitchApplication.AddEditAktivnost().findContentItem("Predmet"); }],
+        /// <field>
+        /// Called after the Profesor content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Profesor_postRender: [$element, function () { return new lightSwitchApplication.AddEditAktivnost().findContentItem("Profesor"); }],
+        /// <field>
+        /// Called after the Prostorija content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Prostorija_postRender: [$element, function () { return new lightSwitchApplication.AddEditAktivnost().findContentItem("Prostorija"); }],
         /// <field>
         /// Called after the TipNaAktivnost content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3310,6 +3349,14 @@
             data: lightSwitchApplication.Aktivnost,
             value: Date
         },
+        Otkazan: {
+            _$class: msls.ContentItem,
+            _$name: "Otkazan",
+            _$parentName: "AktivnostsTemplate",
+            screen: lightSwitchApplication.Profesors,
+            data: lightSwitchApplication.Aktivnost,
+            value: Boolean
+        },
         Список: {
             _$class: msls.ContentItem,
             _$name: "Список",
@@ -3652,6 +3699,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Vreme_kraj_postRender: [$element, function () { return new lightSwitchApplication.Profesors().findContentItem("Vreme_kraj"); }],
+        /// <field>
+        /// Called to render the Otkazan content item.
+        /// <br/>render(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Otkazan_render: [$element, function () { return new lightSwitchApplication.Profesors().findContentItem("Otkazan"); }],
         /// <field>
         /// Called after the Список content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

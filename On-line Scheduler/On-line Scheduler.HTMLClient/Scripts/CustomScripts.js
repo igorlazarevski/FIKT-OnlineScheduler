@@ -70,3 +70,19 @@ function ShowDefaultScreen(a,b) {
         }
     }, 500);
 }
+
+
+function GetDateForTheSubject(den)
+{
+    var monday = getMonday(new Date());
+    var newDate = new Date(monday);
+    newDate.setDate(monday.getDate() + den);
+    return newDate;
+}
+
+function getMonday(d) {
+    d = new Date(d);
+    var day = d.getDay(),
+        diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+    return new Date(d.setDate(diff));
+}
